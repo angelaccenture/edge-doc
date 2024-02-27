@@ -1,9 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-const nav = document.getElementById('ul');
-if (nav && nav.children.length === 1) {
-	nav.classList.add('nav-tabs');
-  }
-
+document.getElementById('ul').classList.add('nav-tabs');
 
 window.addEventListener("load", function() {
 	// store tabs variable
