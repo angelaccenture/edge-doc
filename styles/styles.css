@@ -208,6 +208,11 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+/*New Styles for Summit*/
+header, footer {
+  display: none;
+}
 .blue-one {
   background-color: var(--blue-color);  
 }
