@@ -1,8 +1,6 @@
-document.getElementById('ul').classList.add('nav-tabs');
-
 window.addEventListener("load", function() {
 	// store tabs variable
-  var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
   function myTabClicks(tabClickEvent) {
 		for (var i = 0; i < myTabs.length; i++) {
 			myTabs[i].classList.remove("active");
