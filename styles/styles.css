@@ -210,12 +210,13 @@ main .section.highlight {
 }
 
 /*New Styles for Summit*/
-header, footer {
+header, footer, .blue-two, .blue-three, .green-one {
   display: none;
+  border: 1px solid transparent;
 }
 .blue-one {
   background-color: var(--blue-color);  
 }
-.blue-two, .blue-three, .green-one {
-  display: none;
+.blue-two, .blue-three {
+  color: var(--blue-color);  
 }
