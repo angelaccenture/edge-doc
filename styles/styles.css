@@ -208,7 +208,9 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
-
+.blue-one {
+  background-color: var(--blue-color);  
+}
 .blue-two, .blue-three {
   display: none;
 }
