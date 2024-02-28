@@ -4,4 +4,8 @@ $(document).ready(function() {
         $(".blue-two").show();
         $(".blue-one").hide();
       });
+    $(".blue-two").click(function(){
+        $(".blue-three").show();
+        $(".blue-two").hide();
+      });
     });
