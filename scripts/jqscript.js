@@ -1,10 +1,26 @@
 $(document).ready(function() {
-    console.log("test");
+    console.log("put delay on show of buttons");
     $(".blue-one").click(function(){
         $(".blue-two").show();
         $(".blue-one").hide();
       });
     $(".blue-two").click(function(){
+        $(".blue-three").show();
+        $(".blue-two").hide();
+      });
+      $(".blue-three").click(function(){
+        $(".green-one").show();
+        $(".blue-three").hide();
+      });
+      $(".green-one").click(function(){
+        $(".green-two").show();
+        $(".green-one").hide();
+      });
+      $(".green-two").click(function(){
+        $(".green-three").show();
+        $(".green-three").hide();
+      });
+      $(".green-three").click(function(){
         $(".blue-three").show();
         $(".blue-two").hide();
       });

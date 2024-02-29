@@ -183,16 +183,16 @@ main .section.highlight {
 }
 
 /*New Styles for Summit*/
-header, footer, .blue-two, .blue-three, .green-one {
+header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three {
   display: none;
 }
-.blue-one,.blue-two, .blue-three, .green-one {
-  border: 1px solid transparent;
+.blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three {
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
     height: 100%;
+    padding: 10%;
 }
 .blue-one, green-one, red-one {
     color: white;
@@ -202,4 +202,10 @@ header, footer, .blue-two, .blue-three, .green-one {
 }
 .blue-two, .blue-three {
   color: var(--blue-color);  
+}
+.green-one {
+  background-color: var(--green-color);
+}
+.green-two, .green-three {
+  color: var(--green-color);  
 }
