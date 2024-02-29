@@ -193,7 +193,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     width: 100%;
     height: 100%;
 }
-.blue-one, green-one, red-one {
+.blue-one, .green-one, .red-one, .red-five {
     color: white;
 } 
 .blue-one {
@@ -206,5 +206,11 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   background-color: var(--green-color);
 }
 .green-two, .green-three {
+  color: var(--green-color);  
+}
+.red-one, .red-five {
+  background-color: var(--red-color);
+}
+.red-two, .red-three, .red-four {
   color: var(--green-color);  
 }
