@@ -469,7 +469,7 @@ function decorateSections(main) {
  * Gets placeholders object.
  * @param {string} [prefix] Location of placeholders
  * @returns {object} Window placeholders object
- */
+ 
 // eslint-disable-next-line import/prefer-default-export
 async function fetchPlaceholders(prefix = 'default') {
   window.placeholders = window.placeholders || {};
@@ -501,7 +501,7 @@ async function fetchPlaceholders(prefix = 'default') {
   }
   return window.placeholders[`${prefix}`];
 }
-
+*/
 /**
  * Updates all section status in a container element.
  * @param {Element} main The container element
