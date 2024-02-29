@@ -20,9 +20,22 @@ $(document).ready(function() {
         $(".green-three").show();
         $(".green-two").hide();
       });
-      $("#carousel-1-slide-5").click(function(){
-        console.log("figure out within carousel");
-        $(".red-one").show();
-        $(".green-three").hide();
+      
+      /*Green Three is a carousel*/
+      
+      $(".red-one").click(function(){
+        $(".red-two").show();
+        $(".red-one").hide();
       });
+      $(".red-two").click(function(){
+        $(".red-three").show();
+        $(".red-two").hide();
+      });
+
+       /*Red Three is a carousel*/
+
+      $(".red-four").click(function(){
+        $(".red-five").show();
+        $(".red-four").hide();
+      }); 
     });
