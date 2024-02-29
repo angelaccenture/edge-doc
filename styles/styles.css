@@ -238,5 +238,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     background-color: white;
 }
 .blue-two .mainbutton .button {
+    color: white;
+}
+.blue-two .mainbutton .button {
     background-color: var(--blue-color);
 }
