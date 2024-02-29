@@ -204,7 +204,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   position: absolute;
   bottom: 3%;
 }
-.button-container:first-child {
+.blue-one > .button-container {
   bottom: 5%;
   border: 1px solid black;
 }
