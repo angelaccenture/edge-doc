@@ -194,7 +194,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     height: 100%;
 }
 .default-content-wrapper {
-  padding: 8% 2%;
+  padding: 8% 5%;
+}
+.button-container:first {
+  margin-top: 90%;
 }
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
