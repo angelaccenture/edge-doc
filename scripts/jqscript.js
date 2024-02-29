@@ -39,4 +39,20 @@ $(document).ready(function() {
         $(".red-five").show();
         $(".red-four").hide();
       }); 
+      $(".red-five").click(function(){
+        $(".blue-end-one").show();
+        $(".red-five").hide();
+      }); 
+      $(".blue-end-one").click(function(){
+        $(".blue-end-two").show();
+        $(".blue-end-one").hide();
+      }); 
+      $(".blue-end-two").click(function(){
+        $(".blue-end-three").show();
+        $(".blue-end-two").hide();
+      });
+      $(".blue-end-three").click(function(){
+        $(".blue-end-four").show();
+        $(".blue-end-three").hide();
+      });
     });
