@@ -20,6 +20,11 @@ $(document).ready(function() {
         $(".green-three").show();
         $(".green-two").hide();
       });
+    
+      $("#carousel-1-slide-5").click(function(){
+        $(".red-one").show();
+        $(".green-three").hide();
+      });
       
       /*Green Three is a carousel*/
       
