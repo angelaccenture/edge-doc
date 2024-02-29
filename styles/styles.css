@@ -197,13 +197,18 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   padding: 8% 5%;
 }
 .button-container {
-    margin-bottom: 0;
-    text-align: center;
+  margin-bottom: 0;
+  text-align: center;
+  width: 90%;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 5%;
+}
+.button {
     width: 343px;
+    display: inline-block;
     height: 44px;
-    vertical-align: middle;
-    position: absolute;
-    bottom: 5%;
+    text-align: center;
 }
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
@@ -211,7 +216,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-.blue-one .button-container, .blue-end-one .button-container, .blue-end-two .button-container {
+.blue-one .button, .blue-end-one .button, .blue-end-two .button {
   background-color: white;
 }
 .blue-two, .blue-three, .blue-end-four {
