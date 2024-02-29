@@ -196,7 +196,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .default-content-wrapper {
   padding: 8% 5%;
 }
-.button-container {
+.button-container:first-of-type {
   margin-bottom: 0;
   text-align: center;
   width: 90%;
