@@ -187,8 +187,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   display: none;
 }
 .blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
-    top: 0;
-    left: 0;
+    top: 10%;
+    left: 10%;
     position: absolute;
     width: 100%;
     height: 100%;
