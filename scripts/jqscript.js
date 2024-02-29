@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log("put delay on show of buttons");
-    $(".blue-one").click(function(){
+    $(".blue-one .button").click(function(){
         $(".blue-two").show();
         $(".blue-one").hide();
       });
