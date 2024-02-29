@@ -17,16 +17,11 @@ $(document).ready(function() {
         $(".green-one").hide();
       });
       $(".green-two").click(function(){
-        $(".green-three").show();
+        $(".green-three").show().addClass('currentcar');
         $(".green-two").hide();
       });
       
-      $("#carousel-1-slide-5").click(function(){
-        console.log("Clicking Last Slide")
-        $(".red-one").show();
-        $(".green-three").hide();
-      });
-      
+        
       /*Green Three is a carousel*/
       
       $(".red-one").click(function(){
@@ -34,7 +29,7 @@ $(document).ready(function() {
         $(".red-one").hide();
       });
       $(".red-two").click(function(){
-        $(".red-three").show();
+        $(".red-three").show().addClass('currentcar');;
         $(".red-two").hide();
       });
 

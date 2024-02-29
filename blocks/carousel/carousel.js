@@ -43,6 +43,7 @@ function showSlide(block, slideIndex = 0) {
   if (slideIndex >= slides.length) {
     document.getElementsByClassName('red-one')[0].style.display = 'block';
     document.getElementsByClassName('green-three')[0].style.display = 'none';
+    document.getElementsByClassName('green-three')[0].classList.remove('currentcar');
   }
 }
 
