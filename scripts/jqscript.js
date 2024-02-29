@@ -18,7 +18,7 @@ $(document).ready(function() {
       });
       $(".green-two").click(function(){
         $(".green-three").show();
-        $(".green-three").hide();
+        $(".green-two").hide();
       });
       $(".green-three").click(function(){
         $(".blue-three").show();
