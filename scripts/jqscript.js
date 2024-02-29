@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".section .button-container").addClass("mainbutton");
+    $(".button-container").addClass("mainbutton");
     $(".blue-two .button-container")[1].removeClass("mainbutton");
 
 
