@@ -17,7 +17,7 @@ $(document).ready(function() {
         $(".green-one").hide();
       });
       $(".green-two").click(function(){
-        $(".green-three").show().addClass('currentcar');
+        $(".green-three").show().addClass('greencar');
         $(".green-two").hide();
       });
       
@@ -29,7 +29,7 @@ $(document).ready(function() {
         $(".red-one").hide();
       });
       $(".red-two").click(function(){
-        $(".red-three").show().addClass('currentcar');;
+        $(".red-three").show().addClass('redcar');;
         $(".red-two").hide();
       });
 
