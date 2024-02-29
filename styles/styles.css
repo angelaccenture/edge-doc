@@ -205,18 +205,16 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   bottom: 3%;
 }
 .mainbutton {
-  bottom: 5%;
+  bottom: 8%;
   border: 1px solid black;
 }
-/*Make this within the button container first
-.button {
+.mainbutton .button {
     width: 343px;
     display: inline-block;
     height: 44px;
     text-align: center;
-    backround-color: red;
+    background-color: red;
 }
-*/
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
 } 
