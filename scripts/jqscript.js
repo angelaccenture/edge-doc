@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $(".section .button-container.first").addClass("firstbutton");
+
+
     $(".blue-one .button").click(function(){
         $(".blue-two").show();
         $(".blue-one").hide();
