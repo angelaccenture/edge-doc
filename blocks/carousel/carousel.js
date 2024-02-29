@@ -42,9 +42,16 @@ function showSlide(block, slideIndex = 0) {
   }
   if (slideIndex >= slides.length) {
     if (document.getElementsByClassName('green-three')[0].hasClass('greencar')) {
+      console.log("green");
       document.getElementsByClassName('red-one')[0].style.display = 'block';
       document.getElementsByClassName('green-three')[0].style.display = 'none';
       document.getElementsByClassName('green-three')[0].classList.remove('greencar');
+    }
+    if (document.getElementsByClassName('red-three')[0].hasClass('redcar')) {
+      console.log("red");
+      document.getElementsByClassName('red-four')[0].style.display = 'block';
+      document.getElementsByClassName('red-three')[0].style.display = 'none';
+      document.getElementsByClassName('red-three')[0].classList.remove('redcar');
     }
   }
 }
