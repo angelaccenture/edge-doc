@@ -197,7 +197,11 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   padding: 8% 5%;
 }
 .button-container {
-  margin-top: 90%;
+  margin-top: 93%;
+  width: 343px;
+  height: 44px;
+  margin-bottom: 0;
+  text-align: center;
 }
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
