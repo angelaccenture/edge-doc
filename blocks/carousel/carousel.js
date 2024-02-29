@@ -31,7 +31,7 @@ function updateActiveSlide(slide) {
 function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.carousel-slide');
   let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
-  if (slideIndex <= slides.length) {
+  if (slideIndex < slides.length) {
   const activeSlide = slides[realSlideIndex];
   activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
   block.querySelector('.carousel-slides').scrollTo({
