@@ -42,8 +42,8 @@ function showSlide(block, slideIndex = 0) {
   }
   if (slideIndex >= slides.length) {
     console.log(document.getElementsByClassName('red-one'));
-    document.getElementsByClassName('red-one').style.display = 'block';
-    document.getElementsByClassName('green-three').style.display = 'none';
+    document.getElementsByClassName('red-one')[0].style.display = 'block';
+    document.getElementsByClassName('green-three')[0].style.display = 'none';
   }
 }
 
