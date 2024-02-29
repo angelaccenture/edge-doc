@@ -196,7 +196,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .default-content-wrapper {
   padding: 8% 5%;
 }
-.button-container:first {
+.button-container:first-child {
   margin-top: 90%;
 }
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
