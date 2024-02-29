@@ -222,8 +222,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-two, .blue-three, .blue-end-four {
   color: var(--blue-color);  
 }
-.blue-two .button, .blue-three .button, .blue-end-four .button {
-  background-color: white;
+.blue-two .button:first-of-type, .blue-three .button:first-of-type, .blue-end-four .button:first-of-type {
+  background-color: var(--blue-color);
 }
 .green-one {
   background-color: var(--green-color);
