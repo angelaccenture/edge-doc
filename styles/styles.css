@@ -237,9 +237,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     text-align: center;
     background-color: white;
 }
-.blue-two .mainbutton .button {
+.blue-two .mainbutton .button, .blue-three .mainbutton .button  {
     color: white;
 }
-.blue-two .mainbutton .button {
+.blue-two .mainbutton .button, .blue-three .mainbutton .button {
     background-color: var(--blue-color);
 }
