@@ -20,8 +20,9 @@ $(document).ready(function() {
         $(".green-three").show();
         $(".green-two").hide();
       });
-    
+      
       $("#carousel-1-slide-5").click(function(){
+        console.log("Clicking Last Slide")
         $(".red-one").show();
         $(".green-three").hide();
       });
