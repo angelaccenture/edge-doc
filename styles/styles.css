@@ -204,7 +204,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   position: absolute;
   bottom: 5%;
 }
-.button {
+.button:first-of-type {
     width: 343px;
     display: inline-block;
     height: 44px;
@@ -216,11 +216,14 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-.blue-one .button, .blue-end-one .button, .blue-end-two .button {
+.blue-one .button:first-of-type, .blue-end-one .button:first-of-type, .blue-end-two .button:first-of-type {
   background-color: white;
 }
 .blue-two, .blue-three, .blue-end-four {
   color: var(--blue-color);  
+}
+.blue-two .button, .blue-three .button, .blue-end-four .button {
+  background-color: white;
 }
 .green-one {
   background-color: var(--green-color);
