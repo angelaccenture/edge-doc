@@ -212,5 +212,5 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   background-color: var(--red-color);
 }
 .red-two, .red-three, .red-four {
-  color: var(--green-color);  
+  color: var(--red-color);  
 }
