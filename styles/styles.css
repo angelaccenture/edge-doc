@@ -187,11 +187,14 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   display: none;
 }
 .blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
-    top: 10%;
-    left: 10%;
+    top: 0%;
+    left: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
+}
+.default-content-wrapper {
+  padding: 8% 2%;
 }
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
