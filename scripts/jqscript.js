@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".button-container").addClass("mainbutton");
-    $(".blue-two").removeClass("mainbutton");
+    $(".blue-two p.button-container").removeClass("mainbutton");
 
 
     $(".blue-one .button").click(function(){
