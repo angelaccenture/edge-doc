@@ -20,9 +20,9 @@ $(document).ready(function() {
         $(".green-three").show();
         $(".green-two").hide();
       });
-      $(".green-three").click(function(){
+      $("#carousel-1-slide-5").click(function(){
         console.log("figure out within carousel");
-       // $(".blue-three").show();
-       // $(".blue-two").hide();
+        $(".red-one").show();
+        $(".green-three").hide();
       });
     });
