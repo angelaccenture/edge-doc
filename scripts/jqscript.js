@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".section .button-container.first").addClass("firstbutton");
+    $(".section .button-container.[0]").addClass("firstbutton");
 
 
     $(".blue-one .button").click(function(){
