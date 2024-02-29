@@ -1,22 +1,21 @@
 $(document).ready(function() {
-    console.log("put delay on show of buttons");
     $(".blue-one .button").click(function(){
         $(".blue-two").show();
         $(".blue-one").hide();
       });
-    $(".blue-two").click(function(){
+    $(".blue-two .button").click(function(){
         $(".blue-three").show();
         $(".blue-two").hide();
       });
-      $(".blue-three").click(function(){
+      $(".blue-three .button").click(function(){
         $(".green-one").show();
         $(".blue-three").hide();
       });
-      $(".green-one").click(function(){
+      $(".green-one .button").click(function(){
         $(".green-two").show();
         $(".green-one").hide();
       });
-      $(".green-two").click(function(){
+      $(".green-two .button").click(function(){
         $(".green-three").show().addClass('greencar');
         $(".green-two").hide();
       });
