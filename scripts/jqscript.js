@@ -21,7 +21,8 @@ $(document).ready(function() {
         $(".green-two").hide();
       });
       $(".green-three").click(function(){
-        $(".blue-three").show();
-        $(".blue-two").hide();
+        console.log("figure out within carousel");
+       // $(".blue-three").show();
+       // $(".blue-two").hide();
       });
     });
