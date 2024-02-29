@@ -40,11 +40,10 @@ function showSlide(block, slideIndex = 0) {
       behavior: 'smooth',
     });
   }
-  if (slideIndex >= slides.length {
+  if (slideIndex >= slides.length) {
     if ( document.getElementsByClassName('green-three')[0].style-display = 'block') {
       console.log("Green");
     }
-   
     document.getElementsByClassName('red-one')[0].style.display = 'block';
     document.getElementsByClassName('green-three')[0].style.display = 'none';
   }
