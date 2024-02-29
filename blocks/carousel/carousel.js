@@ -34,8 +34,10 @@ function showSlide(block, slideIndex = 0) {
   if (slideIndex >= slides.length) realSlideIndex = 0;
   const activeSlide = slides[realSlideIndex];
   if (slides.length - 1) {
-    console.log("yes");
     activeSlide.setAttribute('class', 'angel');
+  }
+  else {
+    activeSlide.setAttribute('class', 'dakota')
   }
   console.log(activeSlide);
 
