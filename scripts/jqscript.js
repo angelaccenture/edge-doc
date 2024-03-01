@@ -58,4 +58,6 @@ $(document).ready(function() {
         $(".blue-end-four").show();
         $(".blue-end-three").hide();
       });
+
+      $('blue-one p:last-child').addClass("headphones");
     });
