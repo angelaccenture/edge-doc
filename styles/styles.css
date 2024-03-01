@@ -202,6 +202,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
+
 .blue-two, .blue-three, .blue-end-four {
   color: var(--blue-color);  
 }
@@ -233,7 +234,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .mainbutton .button {
     width: 343px;
     display: inline-block;
-    height: 44px;
+    padding: 12px 72px;
     text-align: center;
     background-color: white;
 }
@@ -242,4 +243,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .blue-two .mainbutton .button, .blue-three .mainbutton .button {
     background-color: var(--blue-color);
+}
+.blue-one a {
+  color: var(--blue-color);
 }
