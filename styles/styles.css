@@ -139,7 +139,6 @@ p {
   font-weight: 400;
   line-height: 18.2px;
 }
-
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
   display: none;
 }
@@ -153,13 +152,13 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .default-content-wrapper {
   padding: 8% 5%;
 }
+/*Colors*/
 .blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
 } 
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-
 .blue-two, .blue-three, .blue-end-four {
   color: var(--blue-color);  
 }
@@ -175,7 +174,16 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .red-two, .red-three, .red-four {
   color: var(--red-color);  
 }
-
+/*Spacing*/
+.blue-one h1 {
+  max-width: 50%;
+}
+.blue-one h3 {
+  max-width: 55%;
+}
+.blue-three h2 {
+  max-width: 70%;
+}
 /*Button Styles*/
 .button-container {
   margin-bottom: 0;
