@@ -59,5 +59,5 @@ $(document).ready(function() {
         $(".blue-end-three").hide();
       });
 
-      $('blue-one p:last-child').addClass("headphones");
+      $('.blue-one p:last-child').addClass("headphones");
     });
