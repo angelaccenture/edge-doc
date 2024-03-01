@@ -218,3 +218,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one a {
   color: var(--blue-color);
 }
+/*Other Stuff*/
+.headphone {
+  position: absolute;
+  bottom: 3%;
+  text-align: center;
+  width: 90%;
+}
