@@ -14,7 +14,7 @@ export default function decorate(block) {
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
+      if (div.children.length === 1) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
 
     });
@@ -25,4 +25,4 @@ export default function decorate(block) {
 }
 
 
-/*<button type="button" class="VAR" title="VAR">VAR</button>*/
+/*<button type="button" class="VAR">VAR</button>*/
