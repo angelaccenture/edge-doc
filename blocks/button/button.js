@@ -1,9 +1,8 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  console.log("test 1");
-  const cols = [...block.firstElementChild.children];
-  block.classList.add(`columns-${cols.length}-cols`);
+  console.log("test 2");
+  
 
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
@@ -12,6 +11,9 @@ export default function decorate(block) {
     if (row.firstElementChild) button.className="first";
     else button.className="second";
     while (row.firstElementChild) button.append(row.firstElementChild);
+    const cols = [...block.firstElementChild.children];
+    block.classList.add(`columns-${cols.length}-cols`);
+
     [...button.children].forEach((div) => {
       if (row.firstElementChild) div.className="first";
       else div.className="second";
