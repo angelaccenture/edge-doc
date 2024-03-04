@@ -1,7 +1,4 @@
 $(document).ready(function() {
-   // $(".button-container").addClass("mainbutton");
-   // $(".blue-two p.button-container:eq(1)").removeClass("mainbutton");
-
 
     $(".blue-one .button").click(function(){
         $(".blue-two").show();

@@ -186,7 +186,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   max-width: 70%;
 }
 
-/*Button Styles*/
+/*Button Styles 
+
 .button-container {
   margin-bottom: 0;
   text-align: center;
@@ -221,7 +222,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .green-two a {
     color: var(--green-color);
-}
+}-- REWRITE*/
 /*Other Stuff*/
 .headphones {
   position: absolute;
