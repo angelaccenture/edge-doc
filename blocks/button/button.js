@@ -1,15 +1,16 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  console.log("test 2");
+  console.log("test 3");
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
     button.className="first";
-    
+    console.log(div.firstChild);
+
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      console.log(div.firstChild);
+      
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
 
