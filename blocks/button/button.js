@@ -9,11 +9,11 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'buttonmain';
       //else div.className = 'cards-card-body';
-      div.className = row.firstElementChild;
+      div.className = "var";
     });
     ul.append(li);
   });
-  ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+ // ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
 }
