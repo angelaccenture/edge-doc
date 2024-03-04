@@ -8,7 +8,7 @@ export default function decorate(block) {
     console.log(row.firstElementChild);
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      if (div.children.length === 1 && row.firstElementChild) div.className="first";
+      if (row.firstElementChild) div.className="first";
       else div.className="second";
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       //else div.className = 'cards-card-body';
