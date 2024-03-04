@@ -10,6 +10,6 @@ const button = document.createElement('button');
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
-    button.append(li);
+   //button.append(li);
   block.append(button);
 }
