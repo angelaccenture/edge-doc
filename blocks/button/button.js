@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log("new test");
-    $(".button-wrapper").next().replaceWith("button");
+    $(".button-wrapper").next().next().addClass("test");
 });
 
 
