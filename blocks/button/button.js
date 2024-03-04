@@ -11,12 +11,8 @@ export default function decorate(block) {
 
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      div.remove();
+      //     div.remove();
       //After I pull class name, then remove these
-
-      if (div.children.length === 1) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
-
     });
     main.append(button);
   });
