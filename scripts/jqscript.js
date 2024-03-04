@@ -1,10 +1,10 @@
 $(document).ready(function() {
-/*
-    $(".blue-one .button").click(function(){
+
+  $(".blueonebutton").on("click",function(){
         $(".blue-two").show();
         $(".blue-one").hide();
-      });
-    $(".blue-two .button").click(function(){
+  });
+ /*   $(".blue-two .button").click(function(){
         $(".blue-three").show();
         $(".blue-two").hide();
       });
