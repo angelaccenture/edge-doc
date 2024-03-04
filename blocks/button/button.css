@@ -18,6 +18,7 @@
     font-weight: 600;
     line-height: 22.4px;
     letter-spacing: 0.32px;
+    border: none;
 }
 .textbutton {
     display: block;
@@ -25,6 +26,12 @@
     border: none;
     background: none;
 }
+.acceptbutton {
+    color: white;
+}
 .blueonebutton {
     color: var(--blue-color);
+}
+.acceptbutton {
+    background-color: var(--blue-color);
 }
