@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-  $(".blueonebutton").on("click", function(){
-        console.log("blue button");
-        $(".blue-two").show();
-        $(".blue-one").hide();
+  $('.button').on("click", ".blueonebutton", function() {
+      console.log("blue button");
+      $(".blue-two").show();
+      $(".blue-one").hide();
+
   });
  /*   $(".blue-two .button").click(function(){
         $(".blue-three").show();
