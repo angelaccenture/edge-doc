@@ -1,6 +1,6 @@
 
 export default function decorate(block) {
-  console.log("test 4a");
+  console.log("test 5a");
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
@@ -10,7 +10,8 @@ export default function decorate(block) {
    
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-     replace('div','span');
+     newdiv = replace('div','span');
+     return newdiv;
     });
     main.append(button);
   });
