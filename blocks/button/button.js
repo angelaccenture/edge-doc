@@ -7,8 +7,9 @@ export default function decorate(block) {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
+      //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'buttonmain';
+      //else div.className = 'cards-card-body';
+      div.className = "Var goes here";
     });
     ul.append(li);
   });
@@ -16,3 +17,6 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 }
+
+
+/*<button type="button" class="VAR" title="VAR">VAR</button>*/
