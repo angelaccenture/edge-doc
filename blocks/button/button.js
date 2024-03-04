@@ -6,12 +6,12 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('button');
     li.className = "var";
-   
+   /*
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
      // if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       div.className = 'var';
-    });
+    });*/
     main.append(li);
   });
   main.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
