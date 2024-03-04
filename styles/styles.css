@@ -190,10 +190,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .button-wrapper {
   margin-bottom: 0;
   text-align: center;
-  width: 90%;
+  width: 100%;
   vertical-align: middle;
   position: absolute;
-  bottom: 3%;
+  bottom: 7%;
 }
 /*Button Styles 
 .button-container {
