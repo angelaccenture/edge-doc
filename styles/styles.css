@@ -185,43 +185,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-three h2 {
   max-width: 70%;
 }
-
-/*Button Styles 
-.button-container {
-  margin-bottom: 0;
-  text-align: center;
-  width: 90%;
-  vertical-align: middle;
-  position: absolute;
-  bottom: 3%;
-}
-.mainbutton {
-  bottom: 8%;
-}
-.mainbutton .button {
-    width: 343px;
-    display: inline-block;
-    padding: 12px 0px;
-    text-align: center;
-    background-color: white;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22.4px;
-    letter-spacing: 0.32px;
-}
-.blue-two .mainbutton .button, .blue-three .mainbutton .button, .green-two .mainbutton .button  {
-    color: white;
-}
-.blue-two .mainbutton .button, .blue-three .mainbutton .button {
-    background-color: var(--blue-color);
-}
-.blue-one a {
-  color: var(--blue-color);
-}
-.green-two a {
-    color: var(--green-color);
-}-- REWRITE*/
 /*Other Stuff*/
 .headphones {
   position: absolute;

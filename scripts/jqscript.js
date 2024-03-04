@@ -1,13 +1,10 @@
 $(document).ready(function() {
 
   $('.button').on("click", ".blueonebutton", function() {
-      console.log("blue button");
       $(".blue-two").show();
       $(".blue-one").hide();
-
   });
   $('.button').on("click", ".acceptbutton", function() {
-    console.log("accept");
     $(".blue-three").show();
     $(".blue-two").hide();
 
@@ -16,24 +13,23 @@ $(document).ready(function() {
     console.log("decline TBD");
 
   });
- /*   $(".blue-two .button").click(function(){
-        $(".blue-three").show();
-        $(".blue-two").hide();
-      });
-      $(".blue-three .button").click(function(){
-        $(".green-one").show();
-        $(".blue-three").hide();
-      });
-      $(".green-one .button").click(function(){
-        $(".green-two").show();
-        $(".green-one").hide();
-      });
-      $(".green-two .button").click(function(){
-        $(".green-three").show().addClass('greencar');
-        $(".green-two").hide();
-      });
-      */
-      /*Green Three is a carousel*/
+  $('.button').on("click", ".bluethreebutton", function() {
+    $(".green-one").show();
+    $(".blue-three").hide();
+
+  });
+  $('.button').on("click", ".greenonebutton", function() {
+    $(".green-two").show();
+    $(".green-one").hide();
+
+  });
+  $('.button').on("click", ".greentwobutton", function() {
+    $(".green-three").show().addClass('greencar');
+    $(".green-two").hide();
+
+  });
+
+   /*Green Three is a carousel*/
       
       $(".red-one").click(function(){
         $(".red-two").show();

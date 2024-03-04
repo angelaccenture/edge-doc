@@ -26,12 +26,19 @@
     border: none;
     background: none;
 }
-.acceptbutton {
+.acceptbutton, .bluethreebutton, .greenonebutton {
     color: white;
 }
-.blueonebutton {
+.blueonebutton, .declinebutton {
     color: var(--blue-color);
 }
-.acceptbutton {
+.acceptbutton, .bluethreebutton {
     background-color: var(--blue-color);
 }
+.greenonebutton {
+    background-color: var(--green-color);
+}
+.greentwobutton {
+    color:  var(--green-color);
+}
+
