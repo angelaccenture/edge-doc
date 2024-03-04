@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    console.log("jquery new button");
-    $(".button").append("button");
+    console.log("new test");
+    $(".button-wrapper").next().replaceWith("button");
 });
 
 
