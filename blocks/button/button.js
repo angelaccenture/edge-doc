@@ -6,9 +6,8 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
     button.setAttribute('type','button');
-
     button.className="first";
-    button.append.row.firstElementChild.innerHTML;
+    //button.append.row.firstElementChild.innerHTML;
 
     console.log(row.firstElementChild.innerHTML);
 
