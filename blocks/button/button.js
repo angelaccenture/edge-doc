@@ -4,8 +4,9 @@ export default function decorate(block) {
   /* change to ul, li */
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
-    const li = document.createElement('button');
-    li.className = "var";
+    const button = document.createElement('button');
+    button.className = "var";
+    button.setAttribute('type', 'button');
    /*
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
