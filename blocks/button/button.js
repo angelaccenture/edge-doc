@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  console.log("test 2");
+  console.log("test 3");
   
 
   const main = document.createElement('div');
