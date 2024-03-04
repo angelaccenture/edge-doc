@@ -4,8 +4,10 @@ export default function decorate(block) {
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
-    button.className = 'class';
     console.log(row.firstElementChild);
+    if (row.firstElementChild) div.className="first";
+    else div.className="second";
+
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       if (row.firstElementChild) div.className="first";
