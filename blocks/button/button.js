@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  console.log("test 4a");
+  console.log("test 1a");
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
@@ -11,7 +11,8 @@ export default function decorate(block) {
    
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      $(div).replaceWith($('<span/>'));
+      var element = document.querySelector('div');
+        element.outerHTML = element.innerHTML
     });
     main.append(button);
   });
