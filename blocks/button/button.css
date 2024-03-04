@@ -22,3 +22,6 @@
 .textbutton {
 
 }
+.blueonebutton {
+    color: var(--blue-color);
+}
