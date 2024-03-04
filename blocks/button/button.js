@@ -10,9 +10,7 @@ export default function decorate(block) {
    
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-     newdiv = replace('div','span');
-     return newdiv;
-    });
+   });
     main.append(button);
   });
   block.textContent = '';
