@@ -4,10 +4,10 @@
     width: 100%;
     vertical-align: middle;
     position: absolute;
-    bottom: 7%;
+    bottom: 5%;
 }
 .fullbutton {
-    bottom: 8%;
+    margin-bottom: 2%;
     width: 343px;
     display: inline-block;
     padding: 12px 0px;
@@ -20,7 +20,10 @@
     letter-spacing: 0.32px;
 }
 .textbutton {
-
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: none;
 }
 .blueonebutton {
     color: var(--blue-color);
