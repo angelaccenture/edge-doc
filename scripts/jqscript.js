@@ -6,6 +6,16 @@ $(document).ready(function() {
       $(".blue-one").hide();
 
   });
+  $('.button').on("click", ".acceptbutton", function() {
+    console.log("accept");
+    $(".blue-three").show();
+    $(".blue-two").hide();
+
+  });
+  $('.button').on("click", ".declinebutton", function() {
+    console.log("decline TBD");
+
+  });
  /*   $(".blue-two .button").click(function(){
         $(".blue-three").show();
         $(".blue-two").hide();
