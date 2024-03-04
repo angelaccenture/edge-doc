@@ -8,15 +8,15 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
     console.log(row.firstElementChild);
-    if (row.firstElementChild) button.className="first";
-    else button.className="second";
+    //if (row.firstElementChild) button.className="first";
+    //else button.className="second";
     while (row.firstElementChild) button.append(row.firstElementChild);
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
 
     [...button.children].forEach((div) => {
-      if (row.firstElementChild) div.className="first";
-      else div.className="second";
+      //if (row.firstElementChild) div.className="first";
+      //else div.className="second";
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       //else div.className = 'cards-card-body';
     });
