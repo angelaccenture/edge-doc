@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $(".button-container").addClass("mainbutton");
-    $(".blue-two p.button-container:eq(1)").removeClass("mainbutton");
+   // $(".button-container").addClass("mainbutton");
+   // $(".blue-two p.button-container:eq(1)").removeClass("mainbutton");
 
 
     $(".blue-one .button").click(function(){
@@ -60,5 +60,4 @@ $(document).ready(function() {
       });
 
       $('.blue-one p:last-child').addClass("headphones");
-     // $('<a').replaceWith( "<button" );;
     });
