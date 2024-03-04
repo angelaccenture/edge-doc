@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  $(".blueonebutton").on("click",function(){
+  $(".blueonebutton").on("click", function(){
+        console.log("blue button");
         $(".blue-two").show();
         $(".blue-one").hide();
   });
