@@ -186,8 +186,16 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   max-width: 70%;
 }
 
+/*Button Styles*/
+.button-wrapper {
+  margin-bottom: 0;
+  text-align: center;
+  width: 90%;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 3%;
+}
 /*Button Styles 
-
 .button-container {
   margin-bottom: 0;
   text-align: center;
