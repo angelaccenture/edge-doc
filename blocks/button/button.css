@@ -26,7 +26,7 @@
     border: none;
     background: none;
 }
-.acceptbutton, .bluethreebutton, .greenonebutton {
+.acceptbutton, .bluethreebutton, .greentwobutton {
     color: white;
 }
 .blueonebutton, .declinebutton {
@@ -36,9 +36,9 @@
     background-color: var(--blue-color);
 }
 .greenonebutton {
-    background-color: var(--green-color);
+    color: var(--green-color);
 }
 .greentwobutton {
-    color:  var(--green-color);
+    background-color:  var(--green-color);
 }
 
