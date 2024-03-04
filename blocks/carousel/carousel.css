@@ -168,3 +168,10 @@
     --slide-content-width: auto;
   }
 }
+.carousel-wrapper {
+  height: 100%;
+  position: relative;
+}
+.carousel {
+  height: 95%;
+}
