@@ -4,7 +4,6 @@ export default function decorate(block) {
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
-    row.firstElementChild.innerHTML;
     console.log(row.firstElementChild);
     if (row.firstElementChild) button.className="first";
     else button.className="second";
@@ -12,12 +11,15 @@ export default function decorate(block) {
 
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-
       if (row.firstElementChild) div.className="first";
       else div.className="second";
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       //else div.className = 'cards-card-body';
     });
+    const elements = document.getElementsByClassName("second");
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
     main.append(button);
   });
   main.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
