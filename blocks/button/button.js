@@ -4,6 +4,7 @@ export default function decorate(block) {
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
+    row.firstElementChild.innerHTML;
     console.log(row.firstElementChild);
     if (row.firstElementChild) button.className="first";
     else button.className="second";
@@ -11,6 +12,7 @@ export default function decorate(block) {
 
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
+
       if (row.firstElementChild) div.className="first";
       else div.className="second";
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
