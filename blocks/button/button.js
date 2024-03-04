@@ -4,6 +4,7 @@ export default function decorate(block) {
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
+    button.className = 'class';
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
