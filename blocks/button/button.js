@@ -9,7 +9,7 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
       //if (div.children.length === 1 && div.querySelector('picture')) div.className = 'buttonmain';
       //else div.className = 'cards-card-body';
-      div.className = "Var goes here";
+      div.className = row.firstElementChild;
     });
     ul.append(li);
   });
