@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+/*
     $(".blue-one .button").click(function(){
         $(".blue-two").show();
         $(".blue-one").hide();
@@ -20,8 +20,7 @@ $(document).ready(function() {
         $(".green-three").show().addClass('greencar');
         $(".green-two").hide();
       });
-      
-        
+      */
       /*Green Three is a carousel*/
       
       $(".red-one").click(function(){
