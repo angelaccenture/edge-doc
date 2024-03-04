@@ -7,7 +7,7 @@ export default function decorate(block) {
     console.log(row.firstElementChild);
     if (row.firstElementChild) button.className="first";
     else button.className="second";
-    console.log("test new 3");
+    console.log("test new43");
 
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
