@@ -30,16 +30,16 @@ $(document).ready(function() {
   });
 
    /*Green Three is a carousel*/
-      
-      $(".red-one").click(function(){
-        $(".red-two").show();
-        $(".red-one").hide();
-      });
-      $(".red-two").click(function(){
-        $(".red-three").show().addClass('redcar');;
-        $(".red-two").hide();
-      });
+   $('.button').on("click", ".redonebutton", function() {
+    $(".red-two").show();
+    $(".red-one").hide();
 
+  });
+  $('.button').on("click", ".redtwobutton", function() {
+    $(".red-three").show().addClass('redcar');;
+        $(".red-two").hide();
+
+  });  
        /*Red Three is a carousel*/
 
       $(".red-four").click(function(){
