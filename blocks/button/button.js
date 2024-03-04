@@ -7,12 +7,11 @@ export default function decorate(block) {
     const button = document.createElement('button');
     button.className = "var";
     button.setAttribute('type', 'button');
-   /*
-    while (row.firstElementChild) li.append(row.firstElementChild);
+   while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
      // if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       div.className = 'var';
-    });*/
+    });
     main.append(li);
   });
  // main.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
