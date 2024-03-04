@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  console.log("test 1");
+  console.log("test 21");
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
@@ -12,7 +12,7 @@ export default function decorate(block) {
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
 
-      if (row.firstElementChild).replaceWith(function() { return this.innerHTML; });
+      if (row.firstElementChild) row.firstElementChild.replaceWith(function() { return this.innerHTML; });
       else div.remove();
       //     div.remove();
       //After I pull class name, then remove these
