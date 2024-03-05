@@ -16,6 +16,7 @@ async function createForm(formHref) {
     if (field) {
       form.append(field);
     }
+    console.log("test");
     console.log(formHref);
   });
 
