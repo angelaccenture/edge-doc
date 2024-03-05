@@ -85,6 +85,7 @@ async function handleSubmit(form) {
   } finally {
     form.setAttribute('data-submitting', 'false');
   }
+  console.log("Submitted form");
 }
 
 export default async function decorate(block) {
