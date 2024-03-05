@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+/*
   $('.button').on("click", ".blueonebutton", function() {
       $(".blue-two").show();
       $(".blue-one").hide();
@@ -28,9 +28,9 @@ $(document).ready(function() {
     $(".green-two").hide();
 
   });
-
+*/
    /*Green Three is a carousel*/
-   $('.button').on("click", ".redonebutton", function() {
+/*   $('.button').on("click", ".redonebutton", function() {
     $(".red-two").show();
     $(".red-one").hide();
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
     $(".red-three").show().addClass('redcar');;
         $(".red-two").hide();
 
-  });  
+  });  */
        /*Red Three is a carousel*/
 
       $(".red-four").click(function(){
