@@ -16,6 +16,7 @@ async function createForm(formHref) {
     if (field) {
       form.append(field);
     }
+    console.log(formHref);
   });
 
   // group fields into fieldsets
