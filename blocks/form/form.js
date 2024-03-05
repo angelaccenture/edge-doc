@@ -1,7 +1,6 @@
 import createField from './form-fields.js';
 import { sampleRUM } from '../../scripts/aem.js';
 
-console.log("form code yes");
 async function createForm(formHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);

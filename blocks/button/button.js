@@ -1,6 +1,5 @@
 
 export default function decorate(block) {
-  //console.log("test 5a");
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
