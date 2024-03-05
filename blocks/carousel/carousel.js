@@ -32,13 +32,25 @@ function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.carousel-slide');
   let realSlideIndex = slideIndex < 0 ? slides.length - 1 : slideIndex;
   if (slideIndex < slides.length) {
-  const activeSlide = slides[realSlideIndex];
-  activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
-  block.querySelector('.carousel-slides').scrollTo({
-    top: 0,
-    left: activeSlide.offsetLeft,
-    behavior: 'smooth',
-  });
+    const activeSlide = slides[realSlideIndex];
+    activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
+    block.querySelector('.carousel-slides').scrollTo({
+      top: 0,
+      left: activeSlide.offsetLeft,
+      behavior: 'smooth',
+    });
+  }
+  if (slideIndex >= slides.length) {
+    if (document.getElementsByClassName('green-three')[0].classList.contains('greencar')) {
+      document.getElementsByClassName('red-one')[0].style.display = 'block';
+      document.getElementsByClassName('green-three')[0].style.display = 'none';
+      document.getElementsByClassName('green-three')[0].classList.remove('greencar');
+    }
+    if (document.getElementsByClassName('red-three')[0].classList.contains('redcar')) {
+      document.getElementsByClassName('red-four')[0].style.display = 'block';
+      document.getElementsByClassName('red-three')[0].style.display = 'none';
+      document.getElementsByClassName('red-three')[0].classList.remove('redcar');
+    }
   }
 }
 
