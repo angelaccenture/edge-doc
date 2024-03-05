@@ -96,10 +96,13 @@ export default async function decorate(block) {
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
+    console.log("submit button");
     e.preventDefault();
+    console.log("submit button after prevent");
     const valid = form.checkValidity();
     if (valid) {
       handleSubmit(form);
+      console.log("if submit");
     } else {
       const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
       if (firstInvalidEl) {

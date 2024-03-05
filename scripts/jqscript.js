@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log("form test 1")
+  console.log("form test 2")
 /*
   $('.button').on("click", ".blueonebutton", function() {
       $(".blue-two").show();
