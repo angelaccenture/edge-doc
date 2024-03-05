@@ -1,6 +1,5 @@
 import createField from './form-fields.js';
 import { sampleRUM } from '../../scripts/aem.js';
-console.log("forms start here");
 
 async function createForm(formHref) {
   const { pathname } = new URL(formHref);
@@ -16,6 +15,7 @@ async function createForm(formHref) {
     if (field) {
       form.append(field);
     }
+    console.log("test");
     console.log(formHref);
   });
 
@@ -85,6 +85,7 @@ async function handleSubmit(form) {
   } finally {
     form.setAttribute('data-submitting', 'false');
   }
+  console.log("Submitted form");
 }
 
 export default async function decorate(block) {
@@ -95,10 +96,13 @@ export default async function decorate(block) {
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
+    console.log("submit button");
     e.preventDefault();
+    console.log("submit button after prevent");
     const valid = form.checkValidity();
     if (valid) {
       handleSubmit(form);
+      console.log("if submit");
     } else {
       const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
       if (firstInvalidEl) {
