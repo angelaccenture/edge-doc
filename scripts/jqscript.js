@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("form test 1")
 /*
   $('.button').on("click", ".blueonebutton", function() {
       $(".blue-two").show();
