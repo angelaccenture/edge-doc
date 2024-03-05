@@ -35,11 +35,13 @@ $(document).ready(function() {
 
   });
   $('.button').on("click", ".redtwobutton", function() {
-    $(".red-three").show().addClass('redcar');;
+        $(".red-three").show().addClass('redcar');;
         $(".red-two").hide();
 
   });  
-       /*Red Three is a carousel*/
+     /*Red Three is a form and carousel*/
+    $(".red-three").show();
+
 
       $(".red-four").click(function(){
         $(".red-five").show();
