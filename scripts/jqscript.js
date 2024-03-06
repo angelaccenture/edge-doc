@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  console.log("test 1");
+  console.log("test 2");
   $('.button').on("click", ".blueonebutton", function() {
-      console.log("Blue One and Two")
+      console.log("Blue One and Two");
       $(".blue-two").show();
       $(".blue-one").hide();
   });
