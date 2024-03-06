@@ -153,6 +153,6 @@
 .firstformv {
   position: relative;
 }
-.formnextfirst, .formnextsecond, .formnextthird {
+.button .formnextfirst, .button .formnextsecond, .button .formnextthird {
   background-color: var(--red-color);
 }
