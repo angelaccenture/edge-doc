@@ -154,11 +154,9 @@
   position: relative;
 }
 .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
-  background-color: var(--red-color);
-  color: white;
-}
-.firstformv, .secondformv, .thirdformv {
-  background-color: var(--red-color);
-  color: white;
-  padding-right: 15px;
+    background-color: var(--red-color);
+    color: white;
+    margin-right: 15px;
+    border: none;
+    padding: 8px 24px;
 }

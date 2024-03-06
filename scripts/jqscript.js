@@ -42,9 +42,9 @@ $(document).ready(function() {
      /*Red Three -- Form Section*/
      $('.red-three-new').on("click", ".formnextfirst", function() {
       $(".form .second, .formnextsecond").addClass("show");
-      /*Show all buttons*/
+      $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
-      /*Hide Button Set*/
+      $(".firstformv").hide();
     }); 
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").show();
