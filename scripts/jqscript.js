@@ -41,7 +41,7 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three-new').on("click", ".formnextfirst", function() {
-      $(".form .second").addClass("show");
+      $(".form .second, .formnextsecond").addClass("show");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
