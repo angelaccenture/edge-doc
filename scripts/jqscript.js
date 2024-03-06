@@ -64,6 +64,7 @@ $(document).ready(function() {
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
+      $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
