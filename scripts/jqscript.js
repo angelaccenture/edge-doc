@@ -60,7 +60,7 @@ $(document).ready(function() {
       $("h3").hide();
     });
     $('.red-three-new').on("click", ".recordstory", function() {
-      $(".record").show();
+      $(".record-wrapper").show();
       $(".button .stoprecording").show();
       $(".button .example, .button .recordstory").hide();
       $(".recordexample-wrapper").hide();
