@@ -7,10 +7,13 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     li.className="carousel-slide-indicator";
+    const button = document.createElement('button');
+    li.append(button);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
+      //const removediv = div.parentNode;
+      //removediv.insertBefore(div.firstChild, div);
+      //removediv.removeChild(div);
     });
     ol.append(li);
   });
