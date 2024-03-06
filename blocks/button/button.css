@@ -37,7 +37,7 @@
     text-decoration-line: underline;
 
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory {
     color: white;
 }
 .blueonebutton, .declinebutton {
@@ -55,6 +55,6 @@
 .redonebutton {
     color: var(--red-color);
 }
-.redtwobutton {
+.redtwobutton, .recordstory {
     background-color:  var(--red-color);
 }
