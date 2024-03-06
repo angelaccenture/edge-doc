@@ -4,19 +4,19 @@ $(document).ready(function() {
       $(".blue-two").show();
       $(".blue-one").hide();
   });
+  $('.blue-one p:last-child').addClass("headphones");
+
   $('.button').on("click", ".acceptbutton", function() {
     $(".blue-three").show();
     $(".blue-two").hide();
-
   });
   $('.button').on("click", ".declinebutton", function() {
-    console.log("decline TBD");
-
+    $(".blue-one").show();
+    $(".blue-two").hide();
   });
   $('.button').on("click", ".bluethreebutton", function() {
     $(".green-one").show();
     $(".blue-three").hide();
-
   });
   $('.button').on("click", ".greenonebutton", function() {
     $(".green-two").show();
@@ -39,10 +39,14 @@ $(document).ready(function() {
         $(".red-two").hide();
 
   });  
-     /*Red Three is a form and carousel*/
-    $(".red-three").show();
 
+     /*Red Three -- Form Section*/
+     $(".red-four").click(function(){
+      $(".red-five").show();
+      $(".red-four").hide();
+    });
 
+/*Post
       $(".red-four").click(function(){
         $(".red-five").show();
         $(".red-four").hide();
@@ -63,9 +67,9 @@ $(document).ready(function() {
         $(".blue-end-four").show();
         $(".blue-end-three").hide();
       });
-
-      $('.blue-one p:last-child').addClass("headphones");
-
-      /*Form Section*/
+*/
       
+
+   
+
     });
