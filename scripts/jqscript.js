@@ -68,6 +68,8 @@ $(document).ready(function() {
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
         console.log("form");
+        $('#form-believed')[0].reset();
+        console.log("empty");
     }); 
 /*Post
       $(".red-four").click(function(){
