@@ -69,6 +69,7 @@ $(document).ready(function() {
     $(".formbutton").on("click", ".firstformv", function() {
         console.log("form");
         $('#form-believed').val("");
+        $('#form-believed').val($(this).attr("value"));
         console.log("empty");
     }); 
 /*Post
