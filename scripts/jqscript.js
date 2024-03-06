@@ -70,8 +70,7 @@ $(document).ready(function() {
         console.log("form");
         $('#form-believed').val("");
         console.log("empty");
-        console.log("'.firstformv'.val()");
-        $('#form-believed').val();
+        $('#form-believed').val($(this).html());
         
     }); 
 /*Post
