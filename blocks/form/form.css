@@ -142,8 +142,11 @@
 .button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
   display: none;
 }
-.show {
+.showgrid {
   display: inline-grid !important;
+}
+.show {
+  display: block !important;
 }
 .hide {
   display: none !important;

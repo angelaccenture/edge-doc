@@ -41,19 +41,19 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
-      $(".form .second, .formnextsecond").addClass("show");
+      $(".form .second, .formnextsecond").addClass("showgrid");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
     }); 
     $('.red-three').on("click", ".formnextsecond", function() {
-      $(".form .third, .formnextthird").addClass("show");
+      $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
-      $(".button .example").show();
+      $(".button .example, .button .recordstory").addClass("show");
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
@@ -61,7 +61,7 @@ $(document).ready(function() {
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
-      $(".button .stoprecording").show();
+      $(".button .stoprecording").addClass("show");
       $(".button .example, .button .recordstory").hide();
       $(".recordexample-wrapper").hide();
     }); 
