@@ -65,7 +65,10 @@ $(document).ready(function() {
       $(".button .example, .button .recordstory").hide();
       $(".recordexample-wrapper").hide();
     }); 
-
+    /*form buttons*/
+    $(".formbutton").on("click", ".firstformv", function() {
+        console.log("form");
+    }); 
 /*Post
       $(".red-four").click(function(){
         $(".red-five").show();
