@@ -144,12 +144,15 @@
   display: none;
 }
 .show {
-  display: inline-grid;
+  display: inline-grid !important;
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 /*Buttons*/
 .firstformv {
   position: relative;
+}
+.formnextfirst, .formnextsecond, .formnextthird {
+  background-color: var(--red-color);
 }
