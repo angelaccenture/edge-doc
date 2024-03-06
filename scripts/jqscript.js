@@ -63,15 +63,23 @@ $(document).ready(function() {
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
-      $(".button .stoprecording").delay(1000).queue(function(next){
-            $(this).addClass("fullshow");
-            next();
-         });
-     // $(".button .stoprecording").delay( 800 ).addClass("fullshow");
       $('.red-three').css("background-color","#EB1000");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
+      $(".button .stoprecording").delay(30000).queue(function(next){
+        $(this).addClass("fullshow");
+        next();
+      });
+      $(".button .continue").delay(90000).queue(function(next){
+          $(this).addClass("fullshow");
+          $('.button .stoprecording').removeClass("fullshow");
+      next();
+      });
+    });
+    $('.button').on("click", ".recordstory", function() {
+      $('.button .stoprecording').removeClass("fullshow");
+      $('.button .continue').addClass("fullshow");
     });
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {

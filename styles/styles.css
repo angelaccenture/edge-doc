@@ -153,7 +153,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   padding: 8% 5%;
 }
 /*Colors*/
-.blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
+.blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two, .record {
     color: white;
 } 
 .blue-one, .blue-end-one, .blue-end-two {
