@@ -137,7 +137,7 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .formnextsecond, .thirdformv, .formnextthird {
+.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .formnextsecond, .thirdformv, .formnextthird, .recordexample-wrapper, .recordstory, .example, .record-wrapper, .redo {
     display: none;
 }
 /*Buttons*/

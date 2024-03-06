@@ -53,7 +53,6 @@ $(document).ready(function() {
       /*Hide Button Set*/
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
-      console.log("form third");
       $(".form .second, .formnextsecond").show();
       /*Show all buttons*/
       $(".form .first, .formnextfirst").hide();
