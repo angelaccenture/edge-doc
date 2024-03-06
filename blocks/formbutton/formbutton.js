@@ -9,7 +9,7 @@ export default function decorate(block) {
    
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      console.log(div);
+      console.log(div.parentNode);
    });
     main.append(button);
   });
