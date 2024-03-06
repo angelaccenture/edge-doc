@@ -35,16 +35,18 @@ $(document).ready(function() {
 
   });
   $('.button').on("click", ".redtwobutton", function() {
-        $(".red-three").show().addClass('redcar');;
+        $(".red-three").show().addClass('redcar');
         $(".red-two").hide();
 
   });  
-
      /*Red Three -- Form Section*/
-     $(".red-four").click(function(){
-      $(".red-five").show();
-      $(".red-four").hide();
-    });
+     $('.red-three').on("click", ".formnextfirst", function() {
+      $(".form .second, .formnextsecond").show();
+      /*Show all buttons*/
+      $(".form .first, .formnextfirst").hide();
+      /*Hide Button Set*/
+
+}); 
 
 /*Post
       $(".red-four").click(function(){
