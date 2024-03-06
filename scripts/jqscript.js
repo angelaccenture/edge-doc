@@ -52,6 +52,12 @@ $(document).ready(function() {
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
     }); 
+    $('.red-three-new').on("click", ".formnextthird", function() {
+      $(".button .example, .button .recordstory").addClass("show");
+      $(".recordexample").show();
+      $(".form .third, .formnextthird").addClass("hide");
+      $(".thirdformv").hide();
+    }); 
 
 /*Post
       $(".red-four").click(function(){
