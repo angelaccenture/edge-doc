@@ -146,7 +146,7 @@
   display: inline-grid !important;
 }
 .show {
-  display: block !important;
+  display: inline-block !important;
 }
 .hide {
   display: none !important;
