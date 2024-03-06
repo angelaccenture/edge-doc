@@ -9,7 +9,9 @@ export default function decorate(block) {
    
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
-      //replace div with span tag
+      const removediv = div.parentNode;
+      removediv.insertBefore(div.firstChild, div);
+      removediv.removeChild(div);
    });
     main.append(button);
   });
