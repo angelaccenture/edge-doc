@@ -58,6 +58,7 @@ $(document).ready(function() {
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
       $("h3").hide();
+      $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
