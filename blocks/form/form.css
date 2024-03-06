@@ -150,13 +150,7 @@
   display: none !important;
 }
 /*Buttons*/
-.firstformv {
-  position: relative;
-}
 .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
     background-color: var(--red-color);
     color: white;
-    margin-right: 15px;
-    border: none;
-    padding: 8px 24px;
 }

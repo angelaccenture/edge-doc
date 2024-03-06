@@ -40,23 +40,17 @@ $(document).ready(function() {
 
   });  
      /*Red Three -- Form Section*/
-     $('.red-three-new').on("click", ".formnextfirst", function() {
+    $('.red-three-new').on("click", ".formnextfirst", function() {
       $(".form .second, .formnextsecond").addClass("show");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
     }); 
-    $('.red-three').on("click", ".formnextsecond", function() {
-      $(".form .third, .formnextthird").show();
-      /*Show all buttons*/
-      $(".form .second, .formnextthird").hide();
-      /*Hide Button Set*/
-    }); 
-    $('.red-three').on("click", ".formnextthird", function() {
-      $(".form .second, .formnextsecond").show();
-      /*Show all buttons*/
-      $(".form .first, .formnextfirst").hide();
-      /*Hide Button Set*/
+    $('.red-three-new').on("click", ".formnextsecond", function() {
+      $(".form .third, .formnextthird").addClass("show");
+      $(".thirdformv").show();
+      $(".form .second, .formnextsecond").addClass("hide");
+      $(".secondformv").hide();
     }); 
 
 /*Post
