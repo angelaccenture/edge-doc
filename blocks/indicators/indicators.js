@@ -2,8 +2,9 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  const parent = ol.parentNode.className("carousel");
   const ol = document.createElement('ol');
+  const parent = ol.parentNode;
+  parent.className("carousel");
   ol.className = 'carousel-slide-indicators';
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
