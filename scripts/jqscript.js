@@ -41,7 +41,7 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three-new').on("click", ".formnextfirst", function() {
-      $(".form .second, .formnextsecond").addClass("show");
+      $(".form .second").addClass("show");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
@@ -67,12 +67,21 @@ $(document).ready(function() {
     }); 
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
-        console.log("form");
-        $('#form-believed').val("");
-        console.log("empty");
-        $('#form-believed').val($(this).html());
-        
+      $('#form-believed').val("");
+     $('#form-believed').val($(this).html());    
+    });
+    $(".formbutton").on("click", ".secondformv", function() {
+      $('#form-described').val("");
+     $('#form-described').val($(this).html());    
     }); 
+    $(".formbutton").on("click", ".thirdformv", function() {
+      $('#form-makefeel').val("");
+     $('#form-makefeel').val($(this).html());    
+    });
+    /*Show next buttons */
+    $("#form-believed").on("input", function() {
+      console.log($(this).val()); 
+   });
 /*Post
       $(".red-four").click(function(){
         $(".red-five").show();
