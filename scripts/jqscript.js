@@ -68,6 +68,7 @@ $(document).ready(function() {
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
+      
       $(".button .stoprecording").delay(30000).queue(function(next){
         $(this).addClass("fullshow");
         next();
@@ -75,8 +76,9 @@ $(document).ready(function() {
       $(".button .continue").delay(90000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-      next();
+        next();
       });
+      
     });
     $('.button').on("click", ".recordstory", function() {
       $('.button .stoprecording').removeClass("fullshow");
