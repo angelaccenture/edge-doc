@@ -61,8 +61,7 @@
 }
 
 .form input:hover {
-  border: 1px solid var(--text-color);
-}
+  }
 
 .form .button {
   max-width: 225px;
