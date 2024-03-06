@@ -53,10 +53,11 @@ $(document).ready(function() {
       $(".secondformv").hide();
     }); 
     $('.red-three-new').on("click", ".formnextthird", function() {
-      $(".button .example, .button .recordstory").addClass("show");
-      $(".recordexample").show();
+      $(".button .example, .button .recordstory").show();
+      $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
+      $("h3").hide();
     }); 
 
 /*Post
