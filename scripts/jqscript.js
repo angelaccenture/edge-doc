@@ -79,8 +79,8 @@ $(document).ready(function() {
      $('#form-makefeel').val($(this).html());    
     });
     /*Show next buttons when user enters in form */
-    $("#form-believed").on("input", "keyup", "keydown", "keypress", function() {
-      alert($(this).val());
+    $("#form-believed").change(function(){
+     console.log("YES");
  });
     $("#form-believed").on("input propertychange", function() {
       console.log("value yes");
