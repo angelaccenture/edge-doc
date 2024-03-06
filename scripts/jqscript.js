@@ -73,17 +73,17 @@ $(document).ready(function() {
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(90000).queue(function(next){
+     /* $(".button .continue").delay(90000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-        next();
+        next();*/
       });
-      
+
     });
-    $('.button').on("click", ".recordstory", function() {
+  /*  $('.button').on("click", ".recordstory", function() {
       $('.button .stoprecording').removeClass("fullshow");
       $('.button .continue').addClass("fullshow");
-    });
+    });*/
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
