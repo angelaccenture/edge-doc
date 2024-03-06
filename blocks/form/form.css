@@ -145,8 +145,11 @@
 .showgrid {
   display: inline-grid !important;
 }
-.show {
+.fullshow {
   display: inline-block !important;
+}
+.textshow {
+  display: block !important;
 }
 .hide {
   display: none !important;

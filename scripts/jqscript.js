@@ -53,7 +53,8 @@ $(document).ready(function() {
       $(".secondformv").hide();
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
-      $(".button .example, .button .recordstory").addClass("show");
+      $(".button .example").addClass("textshow");
+      $(".button .recordstory").addClass("fullshow");
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
@@ -62,7 +63,7 @@ $(document).ready(function() {
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
-      $(".button .stoprecording").addClass("show");
+      $(".button .stoprecording").addClass("fullshow");
       $(".button .example, .button .recordstory").hide();
       $(".recordexample-wrapper").hide();
     }); 
