@@ -68,15 +68,16 @@ $(document).ready(function() {
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
-     $('#form-believed').val($(this).html());    
+      $('#form-believed').val($(this).html());    
     });
     $(".formbutton").on("click", ".secondformv", function() {
+      console.log("secondformv");
       $('#form-described').val("");
-     $('#form-described').val($(this).html());    
+      $('#form-described').val($(this).html());    
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
-     $('#form-makefeel').val($(this).html());    
+      $('#form-makefeel').val($(this).html());    
     });
     /*Show next buttons when user enters in form */
     $("#form-believed").change(function(){
