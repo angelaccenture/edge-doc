@@ -1,13 +1,15 @@
-.fullbutton {
+.button {
+    display: inline-block;
     margin-bottom: 0;
     text-align: center;
     width: 100%;
+}
+.fullbutton {
     vertical-align: middle;
     position: absolute;
     bottom: 5%;
     margin-bottom: 2%;
     width: 343px;
-    display: inline-block;
     padding: 12px 0px;
     text-align: center;
     background-color: white;
