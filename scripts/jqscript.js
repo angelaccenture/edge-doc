@@ -63,7 +63,7 @@ $(document).ready(function() {
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
-      $(".button .stoprecording").addClass("fullshow");
+      $(".button .stoprecording").delay( 800 ).addClass("fullshow");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
