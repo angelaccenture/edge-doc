@@ -10,7 +10,6 @@ export default function decorate(block) {
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       //replace div with span tag
-      div.unwrap();
    });
     main.append(button);
   });
