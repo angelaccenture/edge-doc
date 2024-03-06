@@ -20,16 +20,15 @@
     border: none;
 }
 .textbutton {
-    margin-bottom: 0;
     text-align: center;
     width: 100%;
     vertical-align: middle;
     position: absolute;
-    bottom: 5%;
     display: block;
     margin: 0 auto;
     border: none;
     background: none;
+    margin-top: 3%;
 }
 .acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton {
     color: white;
