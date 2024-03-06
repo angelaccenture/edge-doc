@@ -8,6 +8,7 @@ export default function decorate(block) {
     const li = document.createElement('li');
     li.className="carousel-slide-indicator";
     const button = document.createElement('button');
+    button.setAttribute('type','button');
     li.append(button);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
