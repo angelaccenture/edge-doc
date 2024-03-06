@@ -79,7 +79,7 @@ $(document).ready(function() {
      $('#form-makefeel').val($(this).html());    
     });
     /*Show next buttons when user enters in form */
-    $("#form-believed").on("change paste keyup select", function() {
+    $("#form-believed").on("input", "keyup", "keydown", "keypress", function() {
       alert($(this).val());
  });
     $("#form-believed").on("input propertychange", function() {
