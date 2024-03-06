@@ -45,8 +45,20 @@ $(document).ready(function() {
       /*Show all buttons*/
       $(".form .first, .formnextfirst").hide();
       /*Hide Button Set*/
-
-}); 
+    }); 
+    $('.red-three').on("click", ".formnextsecond", function() {
+      $(".form .third, .formnextthird").show();
+      /*Show all buttons*/
+      $(".form .second, .formnextthird").hide();
+      /*Hide Button Set*/
+    }); 
+    $('.red-three').on("click", ".formnextthird", function() {
+      console.log("form third");
+      $(".form .second, .formnextsecond").show();
+      /*Show all buttons*/
+      $(".form .first, .formnextfirst").hide();
+      /*Hide Button Set*/
+    }); 
 
 /*Post
       $(".red-four").click(function(){
