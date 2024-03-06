@@ -52,7 +52,7 @@
 .greentwobutton {
     background-color:  var(--green-color);
 }
-.redonebutton {
+.redonebutton, .example {
     color: var(--red-color);
 }
 .redtwobutton, .recordstory {

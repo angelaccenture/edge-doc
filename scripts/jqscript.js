@@ -64,9 +64,10 @@ $(document).ready(function() {
     $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
       $(".button .stoprecording").addClass("fullshow");
-      $(".button .example, .button .recordstory").hide();
+      $(".button .example").removeClass("textshow");
+      $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
-    }); 
+    });
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
