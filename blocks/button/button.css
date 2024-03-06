@@ -1,12 +1,10 @@
-.button {
+.fullbutton {
     margin-bottom: 0;
     text-align: center;
     width: 100%;
     vertical-align: middle;
     position: absolute;
     bottom: 5%;
-}
-.fullbutton {
     margin-bottom: 2%;
     width: 343px;
     display: inline-block;
@@ -21,6 +19,12 @@
     border: none;
 }
 .textbutton {
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 5%;
     display: block;
     margin: 0 auto;
     border: none;
