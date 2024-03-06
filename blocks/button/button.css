@@ -1,6 +1,14 @@
-.fullbutton {
+.button {
+    display: block;
+    border: 1px solid red;
     position: absolute;
     bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+.fullbutton {
     width: 343px;
     padding: 12px 0px;
     text-align: center;
@@ -11,9 +19,6 @@
     line-height: 22.4px;
     letter-spacing: 0.32px;
     border: none;
-    left: 0;
-    right: 0;
-    margin: auto;
 }
 .textbutton {
     margin-bottom: 0;
