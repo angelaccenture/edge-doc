@@ -140,6 +140,12 @@
 .form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .formnextsecond, .thirdformv, .formnextthird, .recordexample-wrapper, .recordstory, .example, .record-wrapper, .redo {
     display: none;
 }
+.show {
+  display: inline-grid;
+}
+.hide {
+  display: none;
+}
 /*Buttons*/
 .firstformv {
   position: relative;

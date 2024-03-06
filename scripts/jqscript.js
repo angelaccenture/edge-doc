@@ -1,7 +1,6 @@
 $(document).ready(function() {
   console.log("test 2");
   $('.button').on("click", ".blueonebutton", function() {
-      console.log("Blue One and Two");
       $(".blue-two").show();
       $(".blue-one").hide();
   });
@@ -42,9 +41,9 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
      $('.red-three').on("click", ".formnextfirst", function() {
-      $(".form .second, .formnextsecond").show();
+      $(".form .second, .formnextsecond").addClass("show");
       /*Show all buttons*/
-      $(".form .first, .formnextfirst").hide();
+      $(".form .first, .formnextfirst").addClass("hide");
       /*Hide Button Set*/
     }); 
     $('.red-three').on("click", ".formnextsecond", function() {
