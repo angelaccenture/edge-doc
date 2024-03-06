@@ -136,5 +136,11 @@
 .form .toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
 }
-
+/*Hide/Show Stuff*/
+.form .second, .form .third, .form .recording, .recording {
+    display: none;
+}
 /*Buttons*/
+.firstformv {
+  position: relative;
+}

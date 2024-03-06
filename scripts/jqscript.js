@@ -65,4 +65,7 @@ $(document).ready(function() {
       });
 
       $('.blue-one p:last-child').addClass("headphones");
+
+      /*Form Section*/
+      
     });
