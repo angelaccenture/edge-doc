@@ -53,7 +53,7 @@ $(document).ready(function() {
       $(".secondformv").hide();
     }); 
     $('.red-three-new').on("click", ".formnextthird", function() {
-      $(".button .example, .button .recordstory").show();
+      $(".button .example").show();
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
