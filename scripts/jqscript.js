@@ -40,26 +40,26 @@ $(document).ready(function() {
 
   });  
      /*Red Three -- Form Section*/
-    $('.red-three-new').on("click", ".formnextfirst", function() {
+    $('.red-three').on("click", ".formnextfirst", function() {
       $(".form .second, .formnextsecond").addClass("show");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
     }); 
-    $('.red-three-new').on("click", ".formnextsecond", function() {
+    $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("show");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
     }); 
-    $('.red-three-new').on("click", ".formnextthird", function() {
+    $('.red-three').on("click", ".formnextthird", function() {
       $(".button .example").show();
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
       $("h3").hide();
     });
-    $('.red-three-new').on("click", ".recordstory", function() {
+    $('.red-three').on("click", ".recordstory", function() {
       $(".record-wrapper").show();
       $(".button .stoprecording").show();
       $(".button .example, .button .recordstory").hide();
