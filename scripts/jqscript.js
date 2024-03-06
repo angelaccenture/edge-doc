@@ -80,6 +80,7 @@ $(document).ready(function() {
     });
     /*Show next buttons */
     $("#form-believed").on("input", function() {
+      console.log("value yes");
       console.log($(this).val()); 
    });
 /*Post
