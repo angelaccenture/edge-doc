@@ -58,6 +58,12 @@ $(document).ready(function() {
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
       $("h3").hide();
+    });
+    $('.red-three-new').on("click", ".recordstory", function() {
+      $(".record").show();
+      $(".button .stoprecording").show();
+      $(".button .example, .button .recordstory").hide();
+      $(".recordexample-wrapper").hide();
     }); 
 
 /*Post
