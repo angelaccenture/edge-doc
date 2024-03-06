@@ -140,7 +140,9 @@
 .form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper {
     display: none;
 }
-
+.recordstory, .example {
+  display: none;
+}
 .show {
   display: inline-grid;
 }
