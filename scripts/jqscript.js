@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   });  
      /*Red Three -- Form Section*/
-     $('.red-three').on("click", ".formnextfirst", function() {
+     $('.red-three-new').on("click", ".formnextfirst", function() {
       $(".form .second, .formnextsecond").addClass("show");
       /*Show all buttons*/
       $(".form .first, .formnextfirst").addClass("hide");
