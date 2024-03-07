@@ -73,21 +73,17 @@ $(document).ready(function() {
         $(this).addClass("fullshow");
         next();
       });
-      $(".button").on("click", ".stoprecording", function() {
-          $(this).removeClass("fullshow");
-          $('.continue').addClass("fullshow");
-      });
       $(".button .continue").delay(10000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
       });
-
     });
-  /*  $('.button').on("click", ".recordstory", function() {
-      $('.button .stoprecording').removeClass("fullshow");
-      $('.button .continue').addClass("fullshow");
-    });*/
+    $(".button").on("click", ".stoprecording", function() {
+      $(this).removeClass("fullshow");
+      $('.continue').addClass("fullshow");
+    });
+
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
