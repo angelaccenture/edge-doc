@@ -1,10 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
   const ol = document.createElement('ol');
-  const parent = ol.parentElement;
-  console.log(parent);
   //parent.className("carousel");
   ol.className = 'carousel-slide-indicators';
   [...block.children].forEach((row) => {
@@ -15,7 +12,7 @@ export default function decorate(block) {
     li.append(button);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-     // removediv.removeChild(div);
+      removeChild(div);
     });
     ol.append(li);
   });
