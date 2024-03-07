@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
- const divclass = getElmentsByClassName("indicators");
+ const divclass = document.getElmentsByClassName("indicators");
  console.log(divclass);
  
   const ol = document.createElement('ol');
