@@ -73,11 +73,11 @@ $(document).ready(function() {
         $(this).addClass("fullshow");
         next();
       });
-     /* $(".button .continue").delay(90000).queue(function(next){
+      $(".button .continue").delay(90000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
         next();
-      });*/
+      });
 
     });
   /*  $('.button').on("click", ".recordstory", function() {
