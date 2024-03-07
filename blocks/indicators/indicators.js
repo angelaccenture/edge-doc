@@ -3,7 +3,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default function decorate(block) {
  const divclass = document.getElementsByClassName("indicators");
  divclass[0].className +="test";
- console.log(divclass);
+ console.log(divclass[0]);
  
   const ol = document.createElement('ol');
    ol.className = 'carousel-slide-indicators';
