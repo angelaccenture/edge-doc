@@ -83,6 +83,14 @@ $(document).ready(function() {
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");
     });
+    $(".button").on("click", ".continue", function() {
+      $(this).removeClass("fullshow");
+      $('.form .submit-wrapper').show();
+      $('.redorec').addClass("textshow");
+      $('.red-three').css("background-color","white");
+      $('.red-three').css("color","#EB1000");
+      
+    });
 
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
