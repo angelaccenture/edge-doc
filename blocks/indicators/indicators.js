@@ -2,7 +2,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
  const divclass = document.getElementsByClassName("indicators");
- divclass.classList.add("carousel");
+ divclass.classList("carousel");
  console.log(divclass);
  
   const ol = document.createElement('ol');
