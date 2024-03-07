@@ -1,15 +1,14 @@
-.button {
-    margin-bottom: 0;
-    text-align: center;
-    width: 100%;
-    vertical-align: middle;
+.button-wrapper, .submit-wrapper {
+    display: block;
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
 }
-.fullbutton {
-    margin-bottom: 2%;
+.fullbutton, .submit-wrapper .button {
     width: 343px;
-    display: inline-block;
     padding: 12px 0px;
     text-align: center;
     background-color: white;
@@ -21,12 +20,24 @@
     border: none;
 }
 .textbutton {
-    display: block;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
     margin: 0 auto;
     border: none;
+    display: block;
     background: none;
+    margin-top: 3%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.4px;
+    letter-spacing: 0.32px;
+    text-decoration-line: underline;
+
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .submit-wrapper .button {
     color: white;
 }
 .blueonebutton, .declinebutton {
@@ -41,10 +52,9 @@
 .greentwobutton {
     background-color:  var(--green-color);
 }
-.redonebutton {
+.redonebutton, .example, .stoprecording, .continue, .redorec {
     color: var(--red-color);
 }
-.redtwobutton {
+.redtwobutton, .recordstory, .submit-wrapper .button {
     background-color:  var(--red-color);
 }
-

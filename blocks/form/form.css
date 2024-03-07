@@ -26,8 +26,11 @@
 }
 
 .form label {
-  font-weight: 700;
-  font-size: var(--body-font-size-xs);
+  font-family: Graphik;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 66.7px;
   margin-bottom: 0.25em;
 }
 
@@ -41,9 +44,8 @@
   padding: 12px 8px;
   border-radius: 4px;
   box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
 }
 
 .form textarea {
@@ -59,7 +61,6 @@
 }
 
 .form input:hover {
-  border: 1px solid var(--text-color);
 }
 
 .form .button {
@@ -133,4 +134,28 @@
 
 .form .toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
+}
+/*Hide/Show Stuff*/
+.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper {
+    display: none;
+}
+.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
+  display: none;
+}
+.showgrid {
+  display: inline-grid !important;
+}
+.fullshow {
+  display: inline-block !important;
+}
+.textshow {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+/*Buttons*/
+.button .formnextfirst, .button .formnextsecond, .button .formnextthird {
+    background-color: var(--red-color);
+    color: white;
 }
