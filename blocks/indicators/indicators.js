@@ -12,7 +12,7 @@ export default function decorate(block) {
     li.append(button);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
-      removeChild(div);
+      //removeChild(div);
     });
     ol.append(li);
   });
