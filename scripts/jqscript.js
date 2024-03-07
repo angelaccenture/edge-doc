@@ -69,11 +69,11 @@ $(document).ready(function() {
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
       
-      $(".button .stoprecording").delay(30000).queue(function(next){
+      $(".button .stoprecording").delay(5000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(90000).queue(function(next){
+      $(".button .continue").delay(10000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
         next();
