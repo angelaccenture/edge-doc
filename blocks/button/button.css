@@ -7,7 +7,7 @@
     margin: auto;
     text-align: center;
 }
-.fullbutton .submit-wrapper .button {
+.fullbutton, .submit-wrapper .button {
     width: 343px;
     padding: 12px 0px;
     text-align: center;
