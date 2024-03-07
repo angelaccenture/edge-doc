@@ -84,6 +84,7 @@ $(document).ready(function() {
       $('.continue').addClass("fullshow");
     });
     $(".button").on("click", ".continue", function() {
+      $(this).stop();
       $(this).removeClass("fullshow");
       $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
