@@ -73,10 +73,14 @@ $(document).ready(function() {
         $(this).addClass("fullshow");
         next();
       });
+      $(".button").on("click", ".stoprecording", function() {
+          $(this).removeClass("fullshow");
+          $('.continue').addClass("fullshow");
+      });
       $(".button .continue").delay(10000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-        next();
+          next();
       });
 
     });
