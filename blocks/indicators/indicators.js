@@ -1,9 +1,11 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
+ const divclass = getElmentsByClassName("indicators");
+ console.log(divclass);
+ 
   const ol = document.createElement('ol');
-  //parent.className("carousel");
-  ol.className = 'carousel-slide-indicators';
+   ol.className = 'carousel-slide-indicators';
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     li.className="carousel-slide-indicator";
