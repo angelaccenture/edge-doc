@@ -40,10 +40,10 @@
 .acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree {
     color: white;
 }
-.blueonebutton, .declinebutton {
+.blueonebutton, .declinebutton, .blueendfour {
     color: var(--blue-color);
 }
-.acceptbutton, .bluethreebutton, .blueendthree, .blueendfour {
+.acceptbutton, .bluethreebutton, .blueendthree {
     background-color: var(--blue-color);
 }
 .greenonebutton {
