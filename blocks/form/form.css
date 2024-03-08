@@ -63,12 +63,6 @@
 .form input:hover {
 }
 
-.form .button {
-  max-width: 225px;
-  font-size: var(--body-font-size-m);
-  padding: 0.2em 0.4em;
-}
-
 .form .field-wrapper.selection-wrapper {
   grid-auto-flow: column;
   justify-content: start;
