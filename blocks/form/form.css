@@ -35,7 +35,6 @@
 .form input,
 .form select,
 .form textarea {
-  font-size: var(--body-font-size-s);
   width: 100%;
   max-width: 50rem;
   display: block;
@@ -44,6 +43,10 @@
   box-sizing: border-box;
   border: 1px solid var(--red-color);
   color: var(--red-color);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43.2px
 }
 .form textarea {
   resize: vertical;
@@ -164,5 +167,11 @@
 }
 .blue-end-four .first {
   display: none;
+}
+.blue-end-four .form input,
+.form select,
+.form textarea {
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
 }
 
