@@ -16,6 +16,7 @@ export default function decorate(block) {
     li.append(button);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
+      console.log(row.firstElementChild);
       //removeChild(div);
     });
     ol.append(li);
