@@ -159,4 +159,7 @@
 .red-three .default-content-wrapper {
   padding: 5% 5% 0 5%;
 }
+.blue-end-three .form-wrapper .form .second {
+  display: grid;
+}
 
