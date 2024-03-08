@@ -185,6 +185,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-three h2 {
   max-width: 70%;
 }
+.form-wrapper {
+  padding: 8% 5% 0% 5%;
+}
 /*Other Stuff*/
 .headphones {
   position: absolute;
