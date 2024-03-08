@@ -3,7 +3,8 @@
     bottom: 3%;
     margin: 0 auto;
     left: 0;
-    right: 0; 
+    right: 0;
+    height: auto !important;
 }
 .green-three .carousel .carousel-slide-indicator button {
     background-color: var(--green-color);
