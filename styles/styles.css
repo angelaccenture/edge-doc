@@ -24,21 +24,6 @@
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Graphik';
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
-  /* nav height */
-  --nav-height: 64px;
 }
 
 @font-face {
@@ -60,58 +45,30 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: 14px;
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: black;
   display: none;
 }
-
 body.appear {
   display: block;
 }
-
-header {
-  height: var(--nav-height);
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-}
-
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
-
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-
 code, pre {
   font-family: var(--fixed-font-family);
   font-size: var(--body-font-size-s);
 }
-
 code {
   padding: .125em;
 }
-
 pre {
   overflow: scroll;
 }
-
 main pre {
   background-color: var(--light-color);
   padding: 1em;
@@ -125,81 +82,84 @@ a:any-link {
   color: var(--link-color);
   text-decoration: none;
 }
-
 a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
 }
-
-/* buttons */
-a.button:any-link, button {
-
-}
-
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
-
 button:disabled, button:disabled:hover {
-  background-color: var(--light-color);
   cursor: unset;
 }
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
-}
-
 main img {
   max-width: 100%;
   width: auto;
   height: auto;
 }
 
-
 /* sections */
 main .section {
-  
 }
-
 @media (width >= 600px) {
-  main .section {
-    
+  main .section   { 
   }
 }
-
 @media (width >= 900px) {
   .section > div {
     
   }
 }
-
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
-}
-
 /*New Styles for Summit*/
+h1 {
+  font-size: 92px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 92px;
+}
+h2 {
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 66.7px;
+}
+h3 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43.2px;
+}
+h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.2px;
+}
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
   display: none;
 }
 .blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.blue-one, green-one, red-one {
+.default-content-wrapper {
+  padding: 8% 5%;
+}
+/*Colors*/
+.blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
     color: white;
 } 
-.blue-one {
+.blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-.blue-two, .blue-three {
+.blue-two, .blue-three, .blue-end-four {
   color: var(--blue-color);  
 }
 .green-one {
@@ -207,4 +167,29 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .green-two, .green-three {
   color: var(--green-color);  
+}
+.red-one, .red-five {
+  background-color: var(--red-color);
+}
+.red-two, .red-three, .red-four {
+  color: var(--red-color);  
+}
+/*Spacing*/
+.blue-one h1 {
+  max-width: 50%;
+  margin-top: 0;
+}
+.blue-one h3 {
+  max-width: 55%;
+}
+.blue-three h2 {
+  max-width: 70%;
+}
+/*Other Stuff*/
+.headphones {
+  position: absolute;
+  bottom: 3%;
+  text-align: center;
+  width: 90%;
+  background: url(/icons/headphones.svg) no-repeat 35% 0px;
 }

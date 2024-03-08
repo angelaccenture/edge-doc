@@ -1,47 +1,133 @@
 $(document).ready(function() {
-    console.log("put delay on show of buttons");
-    $(".blue-one").click(function(){
-        $(".blue-two").show();
-        $(".blue-one").hide();
-      });
-    $(".blue-two").click(function(){
-        $(".blue-three").show();
-        $(".blue-two").hide();
-      });
-      $(".blue-three").click(function(){
-        $(".green-one").show();
-        $(".blue-three").hide();
-      });
-      $(".green-one").click(function(){
-        $(".green-two").show();
-        $(".green-one").hide();
-      });
-      $(".green-two").click(function(){
-        $(".green-three").show();
-        $(".green-two").hide();
-      });
-      
-      $("#carousel-1-slide-5").click(function(){
-        console.log("Clicking Last Slide")
-        $(".red-one").show();
-        $(".green-three").hide();
-      });
-      
-      /*Green Three is a carousel*/
-      
-      $(".red-one").click(function(){
-        $(".red-two").show();
-        $(".red-one").hide();
-      });
-      $(".red-two").click(function(){
-        $(".red-three").show();
+  console.log("test 2");
+  $('.button').on("click", ".blueonebutton", function() {
+      $(".blue-two").show();
+      $(".blue-one").hide();
+  });
+  $('.blue-one p:last-child').addClass("headphones");
+
+  $('.button').on("click", ".acceptbutton", function() {
+    $(".blue-three").show();
+    $(".blue-two").hide();
+  });
+  $('.button').on("click", ".declinebutton", function() {
+    $(".blue-one").show();
+    $(".blue-two").hide();
+  });
+  $('.button').on("click", ".bluethreebutton", function() {
+    $(".green-one").show();
+    $(".blue-three").hide();
+  });
+  $('.button').on("click", ".greenonebutton", function() {
+    $(".green-two").show();
+    $(".green-one").hide();
+
+  });
+  $('.button').on("click", ".greentwobutton", function() {
+    $(".green-three").show().addClass('greencar');
+    $(".green-two").hide();
+
+  });
+   /*Green Three is a carousel*/
+   $('.button').on("click", ".redonebutton", function() {
+    $(".red-two").show();
+    $(".red-one").hide();
+
+  });
+  $('.button').on("click", ".redtwobutton", function() {
+        $(".red-three").show().addClass('redcar');
         $(".red-two").hide();
+
+  });  
+     /*Red Three -- Form Section*/
+    $('.red-three').on("click", ".formnextfirst", function() {
+      $(".form .second, .formnextsecond").addClass("showgrid");
+      $(".secondformv").show();
+      $(".form .first, .formnextfirst").addClass("hide");
+      $(".firstformv").hide();
+    }); 
+    $('.red-three').on("click", ".formnextsecond", function() {
+      $(".form .third, .formnextthird").addClass("showgrid");
+      $(".thirdformv").show();
+      $(".form .second, .formnextsecond").addClass("hide");
+      $(".secondformv").hide();
+    }); 
+    $('.red-three').on("click", ".formnextthird", function() {
+      $(".button .example").addClass("textshow");
+      $(".button .recordstory").addClass("fullshow");
+      $(".recordexample-wrapper").show();
+      $(".form .third, .formnextthird").addClass("hide");
+      $(".thirdformv").hide();
+      $("h3").hide();
+      $(".indicators-wrapper").hide();
+    });
+    $('.red-three').on("click", ".recordstory", function() {
+      $(".record-wrapper").show();
+      $('.red-three').css("background-color","#EB1000");
+      $('.red-three').css("color","white");
+      $(".button .example").removeClass("textshow");
+      $(".button .recordstory").removeClass("fullshow");
+      $(".recordexample-wrapper").hide();
+      
+      $(".button .stoprecording").delay(5000).queue(function(next){
+        $(this).addClass("fullshow");
+        next();
       });
+      $(".button .continue").delay(10000).queue(function(next){
+          $(this).addClass("fullshow");
+          $('.button .stoprecording').removeClass("fullshow");
+          next();
+      });
+    });
+    $(".button").on("click", ".stoprecording", function() {
+      $(this).removeClass("fullshow");
+      $('.continue').addClass("fullshow");
+    });
+    $(".button").on("click", ".continue", function() {
+      $(this).stop();
+      $(this).removeClass("fullshow");
+      $('.form .submit-wrapper').show();
+      $('.redorec').addClass("textshow");
+      $('.red-three').css("background-color","white");
+      $('.red-three').css("color","#EB1000");
+      
+    });
 
-       /*Red Three is a carousel*/
-
+    /*form buttons*/
+    $(".formbutton").on("click", ".firstformv", function() {
+      $('#form-believed').val("");
+      $('#form-believed').val($(this).html());    
+    });
+    $(".formbutton").on("click", ".secondformv", function() {
+      $('#form-describe').val("");
+      $('#form-describe').val($(this).html());    
+    }); 
+    $(".formbutton").on("click", ".thirdformv", function() {
+      $('#form-makefeel').val("");
+      $('#form-makefeel').val($(this).html());    
+    });
+/*Post
       $(".red-four").click(function(){
         $(".red-five").show();
         $(".red-four").hide();
       }); 
+      $(".red-five").click(function(){
+        $(".blue-end-one").show();
+        $(".red-five").hide();
+      }); 
+      $(".blue-end-one").click(function(){
+        $(".blue-end-two").show();
+        $(".blue-end-one").hide();
+      }); 
+      $(".blue-end-two").click(function(){
+        $(".blue-end-three").show();
+        $(".blue-end-two").hide();
+      });
+      $(".blue-end-three").click(function(){
+        $(".blue-end-four").show();
+        $(".blue-end-three").hide();
+      });
+*/
+   
+
     });

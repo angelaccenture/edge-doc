@@ -1,0 +1,13 @@
+.formbutton {
+
+}
+.firstformv {
+    position: relative;
+  }
+.firstformv, .secondformv, .thirdformv {
+    background-color: var(--red-color);
+    color: white;
+    margin-right: 15px;
+    padding: 8px 24px;
+    border: none;
+}
