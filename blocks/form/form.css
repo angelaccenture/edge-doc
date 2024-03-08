@@ -174,4 +174,8 @@
   border: 1px solid var(--blue-color);
   color: var(--blue-color);
 }
+.blue-end-four .form .submit-wrapper .button {
+  background-color: var(--blue-color);
+  color: white;
+}
 
