@@ -37,7 +37,7 @@ $(document).ready(function() {
   $('.button').on("click", ".redtwobutton", function() {
         $(".red-three").show().addClass('redcar');
         $(".red-two").hide();
-        $('.red-three .carousel-slide-indicator:first').attr('id','selected');        
+        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
 
   });  
      /*Red Three -- Form Section*/
