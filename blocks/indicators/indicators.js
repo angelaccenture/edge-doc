@@ -10,14 +10,14 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     li.className="carousel-slide-indicator";
-    console.log(li[0]);
+    const firstli = document.getElementsByClassName('carousel-slide-indicator');
+    console.log(firstli[0]);
     const button = document.createElement('button');
     button.setAttribute('type','button');
     li.append(button);
      while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
          //removeChild(div);
-         console.log(div);
     });
     ol.append(li);
   });
