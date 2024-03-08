@@ -159,3 +159,7 @@
     background-color: var(--red-color);
     color: white;
 }
+
+.red-three .default-content-wrapper {
+  padding: 0;
+}
