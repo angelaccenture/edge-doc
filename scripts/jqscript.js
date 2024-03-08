@@ -46,12 +46,16 @@ $(document).ready(function() {
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
+      $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
+      $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
+      $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
+      $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
       $(".button .example").addClass("textshow");
