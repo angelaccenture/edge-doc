@@ -124,6 +124,10 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
+$(".submit-wrapper").on("click", ".button", function() {
+  $(".blue-end-four").show();
+  $(".blue-end-three").hide();
+});
 $('.button').on("click", ".blueendfour", function() {
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
