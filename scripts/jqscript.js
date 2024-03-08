@@ -112,19 +112,19 @@ $(document).ready(function() {
       $('#form-makefeel').val($(this).html());    
     });
 /*Post*/
-$('.button').on("click", ".blue-end-one", function() {
+$('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
 });  
-$('.button').on("click", ".blue-end-two", function() {
+$('.button').on("click", ".blueendtwo", function() {
   $(".blue-end-three").show();
   $(".blue-end-two").hide();
 }); 
-$('.button').on("click", ".blue-end-three", function() {
+$('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
-$('.button').on("click", ".blue-end-four", function() {
+$('.button').on("click", ".blueendfour", function() {
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
 }); 
