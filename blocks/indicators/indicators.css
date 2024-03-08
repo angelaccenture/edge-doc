@@ -1,1 +1,13 @@
-
+.indicators {
+    position: absolute;
+    bottom: 3%;
+    margin: 0 auto;
+    left: 0;
+    right: 0; 
+}
+.green-three .carousel .carousel-slide-indicator button {
+    background-color: var(--green-color);
+}
+.red-three .carousel .carousel-slide-indicator button {
+    background-color: var(--red-color);
+}
