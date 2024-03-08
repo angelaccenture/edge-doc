@@ -140,6 +140,12 @@
 .hide {
   display: none !important;
 }
+.form h3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.2px;
+}
 /*Buttons*/
 .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
     background-color: var(--red-color);
@@ -152,3 +158,4 @@
 .red-three .default-content-wrapper, .formbutton-wrapper {
   padding: 0 5%;
 }
+

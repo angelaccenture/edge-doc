@@ -5,9 +5,9 @@
     position: relative;
   }
 .firstformv, .secondformv, .thirdformv {
-    background-color: var(--red-color);
-    color: white;
-    margin-right: 15px;
-    padding: 8px 24px;
-    border: none;
+  background-color: var(--red-color);
+  color: white;
+  margin: 5px 10px 5px 0;
+  padding: 8px 24px;
+  border: none;
 }
