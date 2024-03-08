@@ -37,7 +37,7 @@
     text-decoration-line: underline;
 
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree {
     color: white;
 }
 .blueonebutton, .declinebutton {
