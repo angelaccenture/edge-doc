@@ -7,7 +7,12 @@
 }
 .green-three .carousel .carousel-slide-indicator button {
     background-color: var(--green-color);
+    border: none;
 }
 .red-three .carousel .carousel-slide-indicator button {
     background-color: var(--red-color);
+    border: none;
+}
+.carousel .carousel-slide-indicator button:disabled  {
+
 }
