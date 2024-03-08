@@ -14,6 +14,7 @@
     background-color: var(--red-color);
     border: none;
 }
-.carousel .carousel-slide-indicator button:disabled  {
-
+.carousel .carousel-slide-indicator button:disabled > .carousel-slide-indicator {
+    border-bottom: 2px solid var(--green-color);
+    padding-bottom: 5px;
 }
