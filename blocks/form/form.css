@@ -162,11 +162,14 @@
 .red-three .default-content-wrapper {
   padding: 5% 5% 0 5%;
 }
-.blue-end-four .form-wrapper .form .second, .blue-end-four .form-wrapper .form .submit-wrapper {
+.blue-end-four .form-wrapper .form .second {
   display: grid;
 }
 .blue-end-four .first {
   display: none;
+}
+.blue-end-four .form-wrapper .form .submit-wrapper {
+  display: block;
 }
 .blue-end-four .form input,
 .form select,
