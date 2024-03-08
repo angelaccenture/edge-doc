@@ -21,9 +21,9 @@ function updateActiveSlide(slide) {
   const indicators = block.querySelectorAll('.carousel-slide-indicator');
   indicators.forEach((indicator, idx) => {
     if (idx !== slideIndex) {
-      indicator.querySelector('button').removeAttribute('disabled');
+      indicator.querySelector('li').removeAttribute('disabled');
     } else {
-      indicator.querySelector('button').setAttribute('disabled', 'true');
+      indicator.querySelector('li').setAttribute('disabled', 'true');
     }
   });
 }
