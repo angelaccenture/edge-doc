@@ -1,4 +1,4 @@
-.button-wrapper, .submit-wrapper {
+.button-wrapper, .form .submit-wrapper {
     display: block;
     position: absolute;
     bottom: 8%;
@@ -7,7 +7,7 @@
     margin: auto;
     text-align: center;
 }
-.fullbutton, .submit-wrapper .button {
+.fullbutton, .form .submit-wrapper .button {
     width: 343px;
     padding: 12px 0px;
     text-align: center;
