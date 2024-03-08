@@ -2,7 +2,6 @@
   display: grid;
   grid-auto-flow: row;
   align-items: center;
-  padding: 8px;
 }
 
 .form fieldset {
@@ -26,12 +25,11 @@
 }
 
 .form label {
-  font-family: Graphik;
   font-size: 58px;
   font-style: normal;
   font-weight: 600;
   line-height: 66.7px;
-  margin-bottom: 0.25em;
+  margin-bottom: 3%;
 }
 
 .form input,
@@ -155,7 +153,10 @@
 .form-wrapper {
   padding: 8% 5% 0% 5%;
 }
-.red-three .default-content-wrapper, .formbutton-wrapper {
+.formbutton-wrapper {
   padding: 0 5%;
+}
+.red-three .default-content-wrapper {
+  padding: 5% 5% 0 5%;
 }
 
