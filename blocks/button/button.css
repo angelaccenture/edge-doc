@@ -43,7 +43,7 @@
 .blueonebutton, .declinebutton {
     color: var(--blue-color);
 }
-.acceptbutton, .bluethreebutton {
+.acceptbutton, .bluethreebutton, .blueendtwo, .blueendfour {
     background-color: var(--blue-color);
 }
 .greenonebutton {
