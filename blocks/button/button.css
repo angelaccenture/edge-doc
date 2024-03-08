@@ -37,7 +37,7 @@
     text-decoration-line: underline;
 
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .submit-wrapper .button {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button {
     color: white;
 }
 .blueonebutton, .declinebutton {
@@ -55,6 +55,6 @@
 .redonebutton, .example, .stoprecording, .continue, .redorec {
     color: var(--red-color);
 }
-.redtwobutton, .recordstory, .submit-wrapper .button {
+.redtwobutton, .recordstory, .form .submit-wrapper .button {
     background-color:  var(--red-color);
 }
