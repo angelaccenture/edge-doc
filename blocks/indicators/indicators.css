@@ -14,7 +14,13 @@
     background-color: var(--red-color);
     border: none;
 }
-#selected {
+.green-three #selected {
     border-bottom: 2px solid var(--green-color);
     padding-bottom: 5px;
+    margin-top: -5px;
+}
+.red-three #selected {
+    border-bottom: 2px solid var(--red-color);
+    padding-bottom: 5px;
+    margin-top: -5px;
 }
