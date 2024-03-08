@@ -14,7 +14,7 @@
     background-color: var(--red-color);
     border: none;
 }
-.carousel .carousel-slide-indicator button:disabled:has(>.carousel-slide-indicator) {
+.carousel .carousel-slide-indicator #selected {
     border-bottom: 2px solid var(--green-color);
     padding-bottom: 5px;
 }
