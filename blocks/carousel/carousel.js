@@ -22,10 +22,10 @@ function updateActiveSlide(slide) {
   indicators.forEach((indicator, idx) => {
     if (idx !== slideIndex) {
       indicator.querySelector('button').removeAttribute('disabled');
-      indicator.querySelector('li').removeAttribute('id');
+      indicator.querySelector('button').parent().removeAttribute('id');
     } else {
       indicator.querySelector('button').setAttribute('disabled', 'true');
-      indicator.querySelector('li').setAttribute('id', 'selected');
+      indicator.querySelector('button').parent().setAttribute('id', 'selected');
     }
   });
 }
