@@ -130,7 +130,6 @@
 
 .carousel .carousel-navigation-buttons button::after {
   display: block;
-  content: "";
   border: 3px white solid;
   border-bottom: 0;
   border-left: 0;
