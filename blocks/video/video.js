@@ -1,8 +1,6 @@
 export default function decorate(block) {
     const videoData = {
         url: block.getAttribute('data-url'),
-        title: block.getAttribute('data-title'),
-        metaData: block.getAttribute('data-meta')
     };
 
     const videoPlayer = document.createElement('div');
@@ -21,14 +19,6 @@ export default function decorate(block) {
     videoElement.appendChild(sourceElement);
     videoPlayer.appendChild(videoElement);
 
-    const titleElement = document.createElement('h2');
-    titleElement.textContent = videoData.title;
-    videoPlayer.appendChild(titleElement);
-
-    const metaDataElement = document.createElement('p');
-    metaDataElement.textContent = videoData.metaData;
-    videoPlayer.appendChild(metaDataElement);
-
     block.textContent = '';
     block.appendChild(videoPlayer);
 }
@@ -44,12 +34,10 @@ if (!videoWrapper) {
 // Create the video block
 const videoBlock = document.createElement('div');
 videoBlock.id = 'video-block';
-videoBlock.setAttribute('data-url', 'https://example.com/video.mp4');
-videoBlock.setAttribute('data-title', 'Video Title');
-videoBlock.setAttribute('data-meta', 'Video Metadata');
+videoBlock.setAttribute('data-url', 'https://myoffice.accenture.com/personal/j_c_thomas_accenture_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fj%5Fc%5Fthomas%5Faccenture%5Fcom%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2Fseed%2D225721745%5Fscene%2D0%5Fprofile%2Dcolorful%5Fstrength%2D100%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview');
 
 // Append the video block to the video wrapper
 videoWrapper.appendChild(videoBlock);
 
 // Call the decorate function on the newly created video block
-decorate(videoBlock);
+// decorate(videoBlock);
