@@ -1,6 +1,7 @@
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    margin: 0 5%;
     height: 0;
 }
 
