@@ -120,12 +120,12 @@
   width: 2rem;
   height: 2rem;
   position: relative;
-  //background-color: rgba(0 0 0 / 25%);
+  background-color: transparent;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
-  //background-color: rgba(0 0 0 / 80%);
+  background-color: transparent;
 }
 
 .carousel .carousel-navigation-buttons button::after {
