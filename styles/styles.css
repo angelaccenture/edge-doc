@@ -115,11 +115,23 @@ h1 {
   font-weight: 600;
   line-height: 92px;
 }
+@media (width <= 600px) {
+  h1 {
+    font-size: 51px;
+    line-height: 53.55px;
+  }
+}
 h2 {
   font-size: 58px;
   font-style: normal;
   font-weight: 600;
   line-height: 66.7px;
+}
+@media (width <= 600px) {
+  h2 {
+    font-size: 36px;
+    line-height: 37.8px;
+  }
 }
 h3 {
   font-size: 36px;
@@ -127,17 +139,34 @@ h3 {
   font-weight: 600;
   line-height: 43.2px;
 }
+@media (width <= 600px) {
+  h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
 h4 {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
 }
+@media (width <= 600px) {
+  h4 {
+   
+  }
+}
 p {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18.2px;
+}
+@media (width <= 600px) {
+  p {
+    font-size: 12px;
+    line-height: 15.6px;
+  }
 }
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
