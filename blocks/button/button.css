@@ -37,13 +37,13 @@
     text-decoration-line: underline;
 
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive {
     color: white;
 }
-.blueonebutton, .declinebutton, .blueendfour {
+.blueonebutton, .declinebutton, .blueendfour, .startover {
     color: var(--blue-color);
 }
-.acceptbutton, .bluethreebutton, .blueendthree {
+.acceptbutton, .bluethreebutton, .blueendthree, .blueendfive {
     background-color: var(--blue-color);
 }
 .greenonebutton {
