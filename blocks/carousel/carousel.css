@@ -181,7 +181,7 @@
 }
 
 /*Overwrites*/
-.carousel {
+.carousel .carousel-slide-content {
   ul {
     list-style-type: none;
     margin-left: 0;
