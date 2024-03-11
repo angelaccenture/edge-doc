@@ -151,11 +151,12 @@
   .carousel .carousel-navigation-buttons {
     left: 0;
     right: 0;
-    height: 86%;
+    height: 100%;
   }
 
   .carousel .carousel-navigation-buttons button {
     width: 25%;
+    height: 100%;
   }
 
   .carousel .carousel-navigation-buttons button::after {
