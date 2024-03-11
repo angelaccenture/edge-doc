@@ -139,17 +139,17 @@ p {
   font-weight: 400;
   line-height: 18.2px;
 }
-header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
+header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
 }
-.blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four {
+.blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
     top: 0%;
     left: 0%;
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.default-content-wrapper {
+.default-content-wrapper, .video-wrapper {
   padding: 8% 5%;
 }
 /*Colors*/
@@ -159,7 +159,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-.blue-two, .blue-three, .blue-end-four {
+.blue-two, .blue-three, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   color: var(--blue-color);  
 }
 .green-one {
@@ -185,6 +185,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-three h2 {
   max-width: 70%;
 }
+
 /*Other Stuff*/
 .headphones {
   position: absolute;

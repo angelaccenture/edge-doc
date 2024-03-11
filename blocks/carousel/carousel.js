@@ -22,8 +22,10 @@ function updateActiveSlide(slide) {
   indicators.forEach((indicator, idx) => {
     if (idx !== slideIndex) {
       indicator.querySelector('button').removeAttribute('disabled');
+      indicator.querySelector('button').parentNode.removeAttribute('id');
     } else {
       indicator.querySelector('button').setAttribute('disabled', 'true');
+      indicator.querySelector('button').parentNode.setAttribute('id', 'selected');
     }
   });
 }
@@ -58,12 +60,13 @@ function bindEvents(block) {
   const slideIndicators = block.querySelector('.carousel-slide-indicators');
   if (!slideIndicators) return;
 
-  slideIndicators.querySelectorAll('button').forEach((button) => {
+ /* slideIndicators.querySelectorAll('button').forEach((button) => {
     button.addEventListener('click', (e) => {
       const slideIndicator = e.currentTarget.parentElement;
       showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
     });
   });
+  */
 
   block.querySelector('.slide-prev').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);

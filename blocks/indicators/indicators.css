@@ -1,1 +1,26 @@
-
+.indicators {
+    position: absolute;
+    bottom: 3%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: auto !important;
+}
+.green-three .carousel .carousel-slide-indicator button {
+    background-color: var(--green-color);
+    border: none;
+}
+.red-three .carousel .carousel-slide-indicator button {
+    background-color: var(--red-color);
+    border: none;
+}
+.green-three #selected {
+    border-bottom: 2px solid var(--green-color);
+    padding-bottom: 5px;
+    margin-top: -5px;
+}
+.red-three #selected {
+    border-bottom: 2px solid var(--red-color);
+    padding-bottom: 5px;
+    margin-top: -5px;
+}

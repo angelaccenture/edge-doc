@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("test 2");
   $('.button').on("click", ".blueonebutton", function() {
       $(".blue-two").show();
       $(".blue-one").hide();
@@ -37,6 +36,7 @@ $(document).ready(function() {
   $('.button').on("click", ".redtwobutton", function() {
         $(".red-three").show().addClass('redcar');
         $(".red-two").hide();
+        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
 
   });  
      /*Red Three -- Form Section*/
@@ -45,12 +45,16 @@ $(document).ready(function() {
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
+      $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
+      $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
+      $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
+      $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
       $(".button .example").addClass("textshow");
@@ -58,7 +62,7 @@ $(document).ready(function() {
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
-      $("h3").hide();
+      $(".default-content-wrapper").hide();
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
@@ -106,28 +110,28 @@ $(document).ready(function() {
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());    
     });
-/*Post
-      $(".red-four").click(function(){
-        $(".red-five").show();
-        $(".red-four").hide();
-      }); 
-      $(".red-five").click(function(){
-        $(".blue-end-one").show();
-        $(".red-five").hide();
-      }); 
-      $(".blue-end-one").click(function(){
-        $(".blue-end-two").show();
-        $(".blue-end-one").hide();
-      }); 
-      $(".blue-end-two").click(function(){
-        $(".blue-end-three").show();
-        $(".blue-end-two").hide();
-      });
-      $(".blue-end-three").click(function(){
-        $(".blue-end-four").show();
-        $(".blue-end-three").hide();
-      });
-*/
-   
+/*Post*/
+$('.button').on("click", ".blueendone", function() {
+  $(".blue-end-two").show();
+  $(".blue-end-one").hide();     
+});  
+$('.button').on("click", ".blueendtwo", function() {
+  $(".blue-end-three").show();
+  $(".blue-end-two").hide();
+}); 
+$('.button').on("click", ".blueendthree", function() {
+  $(".blue-end-four").show();
+  $(".blue-end-three").hide();
+}); 
+$(".blue-end-four").on("click", ".button", function() {
+  console.log("test");
+  $(".blue-end-five").show();
+  $(".blue-end-four").hide();
+});
+$('.button').on("click", ".blueendfive", function() {
+  $(".blue-end-six").show();
+  $(".blue-end-five").hide();
+}); 
+     
 
     });
