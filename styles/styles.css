@@ -159,7 +159,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-one, .blue-end-one, .blue-end-two {
   background-color: var(--blue-color);
 }
-.blue-two, .blue-three, .blue-end-three, .blue-end-four, .blue-end-five {
+.blue-two, .blue-three, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   color: var(--blue-color);  
 }
 .green-one {
