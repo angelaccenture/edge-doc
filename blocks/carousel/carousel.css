@@ -156,6 +156,7 @@
   .carousel .carousel-navigation-buttons button {
     width: 25%;
     height: 100%;
+    border: none;
   }
 
   .carousel .carousel-navigation-buttons button::after {
