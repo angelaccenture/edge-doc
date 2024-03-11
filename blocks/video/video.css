@@ -1,8 +1,9 @@
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
-    margin: 0 5%;
     height: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .video-player iframe {
@@ -11,4 +12,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* For screens smaller than 480px (phone size) */
+@media (max-width: 480px) {
+    .video-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
