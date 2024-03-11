@@ -129,7 +129,7 @@ $(".blue-end-four").on("click", ".button", function() {
   $(".blue-end-four").hide();
 });
 $('.button').on("click", ".blueendfive", function() {
-  $(".blue-end-size").show();
+  $(".blue-end-six").show();
   $(".blue-end-five").hide();
 }); 
      
