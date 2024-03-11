@@ -66,6 +66,10 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  left: 0;
 }
 
 .carousel .carousel-slide-indicator button {
@@ -174,7 +178,7 @@
   position: relative;
 }
 .carousel {
-  height: 95%;
+  height: 100%;
 }
 
 /*Overwrites*/
