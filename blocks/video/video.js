@@ -1,13 +1,17 @@
-export default function decorate(block, videoData) {
-    const main = document.createElement('div');
-    
+export default function decorate(block) {
+    const videoData = {
+        url: block.getAttribute('data-url'),
+        title: block.getAttribute('data-title'),
+        metaData: block.getAttribute('data-meta')
+    };
+
     const videoPlayer = document.createElement('div');
     videoPlayer.className = 'video-player';
 
     const videoElement = document.createElement('video');
     videoElement.setAttribute('controls', '');
     videoElement.setAttribute('autoplay', '');
-    videoElement.setAttribute('muted', ''); // Muted attribute is necessary for autoplay to work in most browsers
+    videoElement.setAttribute('muted', '');
     videoElement.setAttribute('aria-label', 'Video Player');
 
     const sourceElement = document.createElement('source');
@@ -25,21 +29,27 @@ export default function decorate(block, videoData) {
     metaDataElement.textContent = videoData.metaData;
     videoPlayer.appendChild(metaDataElement);
 
-    main.appendChild(videoPlayer);
-    
     block.textContent = '';
-    block.appendChild(main);
+    block.appendChild(videoPlayer);
 }
 
-// Example usage
-window.onload = () => {
-    const videoBlock = document.createElement('div');
-    videoBlock.id = 'video-block';
-    document.body.appendChild(videoBlock);
+// Create or find the video wrapper
+let videoWrapper = document.querySelector('.video-wrapper');
+if (!videoWrapper) {
+    videoWrapper = document.createElement('div');
+    videoWrapper.className = 'video-wrapper';
+    document.body.appendChild(videoWrapper);
+}
 
-    decorate(videoBlock, {
-        url: 'https://example.com/video.mp4',
-        title: 'Video Title',
-        metaData: 'Video Metadata'
-    });
-};
+// Create the video block
+const videoBlock = document.createElement('div');
+videoBlock.id = 'video-block';
+videoBlock.setAttribute('data-url', 'https://example.com/video.mp4');
+videoBlock.setAttribute('data-title', 'Video Title');
+videoBlock.setAttribute('data-meta', 'Video Metadata');
+
+// Append the video block to the video wrapper
+videoWrapper.appendChild(videoBlock);
+
+// Call the decorate function on the newly created video block
+decorate(videoBlock);
