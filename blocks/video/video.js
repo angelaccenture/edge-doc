@@ -1,6 +1,6 @@
 export default function decorate(block) {
     const videoData = {
-        url: block.getAttribute('data-url'),
+        url: block.getAttribute('data-url')
     };
 
     const videoPlayer = document.createElement('div');
@@ -31,7 +31,8 @@ const videoBlock = document.createElement('div');
 videoBlock.id = 'video-block';
 videoBlock.setAttribute('data-url', 'https://www.youtube.com/embed/NPJNPrshhTo?si=nk67foSYY02f4ISg&amp'); // Example YouTube embed URL
 
-// Append the video block to the video wrapper
+// Ensure only one video block is appended to the video wrapper
+videoWrapper.innerHTML = '';
 videoWrapper.appendChild(videoBlock);
 
 // Call the decorate function on the newly created video block
