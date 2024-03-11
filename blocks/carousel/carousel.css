@@ -182,6 +182,6 @@
 }
 
 /*Overwrites*/
-#carousel-1-slide-0 {
+#carousel-1-slide-0 .carousel-slide-image  {
   height: 75%;
 }
