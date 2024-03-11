@@ -1,3 +1,12 @@
+.logo-wrapper {
+    padding: 8% 5% 0 5%;;
+}
+
 .logo {
-    background: url(/icons/logo.svg) no-repeat 35% 0px;
+    background: url(/icons/logo.svg) no-repeat 0px 0px;
+    height: 37px;
+    width: 40px;
+}
+.blue-one .default-content-wrapper {
+    padding: 0;
 }
