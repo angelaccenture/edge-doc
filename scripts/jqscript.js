@@ -124,15 +124,11 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
-$(".blue-end-four").on("click", ".button", function() {
+$(".submit-wrapper").on("click", ".button", function() {
   console.log("test");
-  $(".blue-end-four").show();
-  $(".blue-end-three").hide();
-});
-$('.button').on("click", ".blueendfour", function() {
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
-}); 
+});
 $('.button').on("click", ".blueendfive", function() {
   $(".blue-end-size").show();
   $(".blue-end-five").hide();
