@@ -48,13 +48,13 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $("#form-believed").on("input", function(e){
+    $("#form-believed").on("input", function() {
       console.log("Yes, user entered");
     });
-    $("#form-believed").on("change", function(e){
+    $("#form-believed").on("change", function() {
       console.log("Yes, user entered");
     });
-    $("#form-believed").on("keyup", function(e){
+    $("#form-believed").on("keyup", function() {
       console.log("Yes, user entered");
     });
     $('.red-three').on("click", ".formnextsecond", function() {
