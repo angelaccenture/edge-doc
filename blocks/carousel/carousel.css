@@ -212,11 +212,9 @@
 #carouse-1-slide-0 p:first-of-type {
   margin-right: 5%;
 }
-
 #carousel-1-slide-0 .carousel-slide-image {
   margin: 0 5%;
 }
-
 #carousel-1-slide-0 h3 {
     width: 62%;
 }
@@ -298,28 +296,4 @@
   width: 62%;
   padding-left: 0;
 }
-/*
-
-#carousel-1-slide-1 .carousel-slide-content {
-  position: absolute;
-  bottom: -9%;
-}
-#carousel-1-slide-4  {
-  height: 70%;
-}
-#carousel-1-slide-4  .carousel-slide-content {
-  position: absolute;
-  bottom: -22%;
-}
-#carousel-1-slide-5  {
-  height: 56%;
-}
-#carousel-1-slide-5 .carousel-slide-image picture {
-  inset: 9% 4%;
-}
-#carousel-1-slide-5  .carousel-slide-content {
-  position: absolute;
-  top: -3%;
-}
-*/
 
