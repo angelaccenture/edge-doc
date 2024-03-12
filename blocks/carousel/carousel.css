@@ -253,16 +253,21 @@
 #carousel-1-slide-4 p {
     margin-top: 0;
     margin-bottom: 0;
+    vertical-align: text-top;
 }
+#carousel-1-slide-4 p:first-of-type {
+  margin-bottom: 2%;
+ }
 #carousel-1-slide-4 p:last-of-type {
  margin-left: 5%;
+ margin-top: -30px;
 }
 #carousel-1-slide-4 .carousel-slide-image picture {
   inset: 5%;
 }
 #carousel-1-slide-4 .carousel-slide-content {
   position: absolute;
-  bottom: -54%;
+  bottom: -36%;
   padding: 0;
 }
 #carousel-1-slide-5 {
