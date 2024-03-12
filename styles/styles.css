@@ -243,5 +243,5 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   width: 90%;
 }
 .headphones::before {
-  background: url(/icons/headphones.svg) no-repeat 0px 0px;
+ // background: url(/icons/headphones.svg) no-repeat 0px 0px;
 }
