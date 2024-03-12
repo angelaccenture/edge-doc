@@ -129,6 +129,9 @@
 .button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
   display: none;
 }
+.formnextfirst, .formnextsecond, .formnextthird {
+  display: none;
+}
 .showgrid {
   display: inline-grid !important;
 }
