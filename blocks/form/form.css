@@ -2,7 +2,6 @@
   display: grid;
   grid-auto-flow: row;
   align-items: center;
-  padding: 8px;
 }
 
 .form fieldset {
@@ -26,18 +25,16 @@
 }
 
 .form label {
-  font-family: Graphik;
   font-size: 58px;
   font-style: normal;
   font-weight: 600;
   line-height: 66.7px;
-  margin-bottom: 0.25em;
+  margin-bottom: 3%;
 }
 
 .form input,
 .form select,
 .form textarea {
-  font-size: var(--body-font-size-s);
   width: 100%;
   max-width: 50rem;
   display: block;
@@ -46,8 +43,11 @@
   box-sizing: border-box;
   border: 1px solid var(--red-color);
   color: var(--red-color);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43.2px
 }
-
 .form textarea {
   resize: vertical;
 }
@@ -55,18 +55,11 @@
 .form .selection-wrapper input {
   width: 16px;
 }
-
 .form .selection-wrapper label {
   margin-bottom: 0;
 }
 
 .form input:hover {
-}
-
-.form .button {
-  max-width: 225px;
-  font-size: var(--body-font-size-m);
-  padding: 0.2em 0.4em;
 }
 
 .form .field-wrapper.selection-wrapper {
@@ -81,12 +74,6 @@
 
 .form .field-wrapper.selection-wrapper > label {
   order: 1;
-}
-
-.form input[required] + label::after {
-  content: "*";
-  color: firebrick;
-  margin-inline-start: 1ch;
 }
 
 .form .toggle-wrapper .switch {
@@ -154,8 +141,44 @@
 .hide {
   display: none !important;
 }
+.form h3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18.2px;
+}
 /*Buttons*/
 .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
     background-color: var(--red-color);
     color: white;
 }
+/*Spacing*/
+.form-wrapper {
+  padding: 8% 5% 0% 5%;
+}
+.formbutton-wrapper {
+  padding: 0 5%;
+}
+.red-three .default-content-wrapper {
+  padding: 5% 5% 0 5%;
+}
+.blue-end-four .form-wrapper .form .second {
+  display: grid;
+}
+.blue-end-four .first {
+  display: none;
+}
+.blue-end-four .form-wrapper .form .submit-wrapper {
+  display: block;
+}
+.blue-end-four .form input,
+.form select,
+.form textarea {
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
+}
+.blue-end-four .form .submit-wrapper .button {
+  background-color: var(--blue-color);
+  color: white;
+}
+
