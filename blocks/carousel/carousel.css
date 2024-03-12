@@ -204,6 +204,8 @@
 .carousel .carousel-slide-content li:first-of-type  {
     float: right;
 }
+
+/*
 #carousel-1-slide-0  {
   height: 70%;
 }
@@ -212,7 +214,7 @@
 }
 #carousel-1-slide-0 .carousel-slide-content {
   position: absolute;
-  bottom: -24%;
+  bottom: -28%;
   margin: 0;
   padding: 0 5%;
   width: 90%;
@@ -244,5 +246,5 @@
   position: absolute;
   top: -3%;
 }
-
+*/
 
