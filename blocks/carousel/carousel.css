@@ -203,21 +203,17 @@
 .carousel .carousel-slide-content li:first-of-type  {
     float: right;
 }
-
-/*
-#carousel-1-slide-0  {
-  height: 70%;
+#carousel-1-slide-0 .carousel-slide-image {
+  margin: 0 5%;
 }
 #carousel-1-slide-0 h3 {
-  width: 58%;
+    width: 62%;
 }
 #carousel-1-slide-0 .carousel-slide-content {
-  position: absolute;
-  bottom: -28%;
-  margin: 0;
-  padding: 0 5%;
-  width: 90%;
+    padding: 0;
+    margin: 5%;
 }
+/*
 #carousel-1-slide-1  {
   height: 78%;
 }
