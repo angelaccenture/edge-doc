@@ -204,12 +204,12 @@
 .carousel .carousel-slide-content li:first-of-type  {
     float: right;
 }
-#carouse-1-slide-0 .carousel-slide-image p {
+#carousel-1-slide-0 .carousel-slide-image p {
   display: inline-block; 
   width: 40%;
   text-align: justify;
 }
-#carouse-1-slide-0 .carousel-slide-image p:first-of-type {
+#carousel-1-slide-0 .carousel-slide-image p:first-of-type {
   margin-right: 5%;
 }
 #carousel-1-slide-0 .carousel-slide-image {
@@ -217,6 +217,7 @@
 }
 #carousel-1-slide-0 h3 {
     width: 62%;
+    margin: -5% 0 20% 0;
 }
 #carousel-1-slide-0 .carousel-slide-content {
     padding: 0;
