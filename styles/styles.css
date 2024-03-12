@@ -236,6 +236,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   text-align: center;
   width: 90%;
 }
-p.headphones::after {
+p.headphones:after {
   background: url(/icons/headphones.svg) no-repeat 0px 0px;
 }
