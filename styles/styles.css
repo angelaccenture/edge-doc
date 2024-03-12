@@ -226,7 +226,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two h1 {
   max-width: 93%;
 }
-
+.red-two p {
+  margin-top: 15%;
+}
 /*Other Stuff*/
 .headphones {
   position: absolute;
