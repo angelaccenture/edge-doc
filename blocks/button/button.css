@@ -53,7 +53,7 @@
 
 }
 
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive {
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive, .greenonebutton {
     color: white;
 }
 .blueonebutton, .declinebutton, .blueendfour, .startover {
@@ -61,9 +61,6 @@
 }
 .acceptbutton, .bluethreebutton, .blueendthree, .blueendfive {
     background-color: var(--blue-color);
-}
-.greenonebutton {
-    color: var(--green-color);
 }
 .greentwobutton {
     background-color:  var(--green-color);
