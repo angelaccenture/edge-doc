@@ -123,7 +123,7 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .default-content-wrapper h2 {
+.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2 {
     display: none;
 }
 .button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
