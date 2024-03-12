@@ -242,6 +242,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   text-align: center;
   width: 90%;
 }
-.headphones::before {
+.default-content-wrapper .headphones::before {
   background: url(/icons/headphones.svg) no-repeat 0px 0px;
 }
