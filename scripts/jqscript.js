@@ -48,7 +48,13 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $(".form .first").on("keydown",function(){
+    $(".first").on("input", function(e){
+      console.log("Yes, user entered");
+    });
+    $(".first").on("change", function(e){
+      console.log("Yes, user entered");
+    });
+    $(".first").on("keyup", function(e){
       console.log("Yes, user entered");
     });
     $('.red-three').on("click", ".formnextsecond", function() {
