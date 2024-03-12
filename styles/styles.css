@@ -218,13 +218,13 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   max-width: 55%;
 }
 .blue-three h2 {
-  max-width: 70%;
+  max-width: 82%;
 }
 .green-one h1 {
-  max-width: 72%;
+  max-width: 89%;
 }
 .green-two h1 {
-  max-width: 75%;
+  max-width: 93%;
 }
 
 /*Other Stuff*/
