@@ -121,6 +121,7 @@
   height: 2rem;
   position: relative;
   background-color: transparent;
+  border: none;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
@@ -130,7 +131,7 @@
 
 .carousel .carousel-navigation-buttons button::after {
   display: block;
-  content: "→";
+  content: "";
   border: 3px var(--green-color) solid;
   border-bottom: 0;
   border-left: 0;
