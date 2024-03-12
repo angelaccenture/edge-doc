@@ -182,7 +182,7 @@
 .carousel {
   height: 100%;
 }
-.carousel p {
+.carousel p, .carousel li {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -194,10 +194,6 @@
     padding-left: 0;
 }
 .carousel .carousel-slide-content li {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20.8px;
     display: inline-block;
 }
 .carousel .carousel-slide-content li:first-of-type  {
