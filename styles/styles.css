@@ -220,6 +220,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-three h2 {
   max-width: 70%;
 }
+.green-one h1 {
+  max-width: 72%;
+}
 
 /*Other Stuff*/
 .headphones {
