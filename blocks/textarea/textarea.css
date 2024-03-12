@@ -6,3 +6,9 @@
 	position: fixed;
     	height: 72%; 
 }
+@media (width >= 1025px) {
+	.textarea {
+		height: 59%;
+	}
+
+}
