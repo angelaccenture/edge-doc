@@ -237,7 +237,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 /*Other Stuff*/
 .headphones {
-  //position: absolute;
+  position: absolute;
   bottom: 3%;
   text-align: center;
   width: 90%;
