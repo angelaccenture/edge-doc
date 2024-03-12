@@ -168,6 +168,12 @@ p {
     line-height: 15.6px;
   }
 }
+h6 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.8px;
+}
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
 }
