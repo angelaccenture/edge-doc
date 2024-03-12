@@ -183,21 +183,26 @@
   height: 100%;
 }
 .carousel .carousel-slide-content {
-  ul {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.8px;
+}
+
+.carousel .carousel-slide-content  ul {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
-  }
-  li {
+}
+.carousel .carousel-slide-content li {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20.8px;
     display: inline-block;
-  }
-  li:first-of-type  {
+}
+.carousel .carousel-slide-content li:first-of-type  {
     float: right;
-  }
 }
 #carousel-1-slide-0  {
   height: 70%;
@@ -221,10 +226,6 @@
 #carousel-1-slide-1 .carousel-slide-content {
   position: absolute;
   bottom: -9%;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20.8px;
 }
 #carousel-1-slide-4  {
   height: 70%;
