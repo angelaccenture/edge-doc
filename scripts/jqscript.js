@@ -47,7 +47,10 @@ $(document).ready(function() {
       $(".firstformv").hide();
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
-    }); 
+    });
+    $(".form .first input").change(function(){
+      alert("The text has been changed.");
+    });
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
