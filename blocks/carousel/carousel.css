@@ -195,8 +195,8 @@
     line-height: 20.8px;
     display: inline-block;
   }
-  li:first {
-    margin-right: 60%;
+  li:first-of-type  {
+    float: right;
   }
 }
 #carousel-1-slide-0  {
@@ -239,4 +239,5 @@
   position: absolute;
   top: -3%;
 }
+
 
