@@ -48,8 +48,8 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $(".form .first").on("input", function(){
-      alert("The text has been changed.");
+    $(".form .first").keypress(function(){
+      console.log("Yes, user entered");
     });
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
