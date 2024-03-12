@@ -230,9 +230,13 @@
   bottom: -22%;
 }
 #carousel-1-slide-5  {
-  height: 78%;
+  height: 56%;
 }
 #carousel-1-slide-5 .carousel-slide-image picture {
-  inset: 5% 8%;
+  inset: 9% 4%;
+}
+#carousel-1-slide-5  .carousel-slide-content {
+  position: absolute;
+  top: -3%;
 }
 
