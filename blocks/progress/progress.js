@@ -16,6 +16,7 @@ export default function decorate(block) {
   <div id="myBar"></div>
 </div>*/
 
+var elements = document.getElementsByClassName("blueendone");
 var i = 0;
 function move() {
   if (i == 0) {
@@ -35,5 +36,7 @@ function move() {
     }
   }
 }
-move();
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener('click', move, false);
+}
 
