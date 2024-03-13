@@ -70,7 +70,6 @@ $(document).ready(function() {
       $(".form-container .default-content-wrapper h2").first().show();
       
       $(".countdown-wrapper").show();
-      //$(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");

@@ -1,11 +1,13 @@
 var elements = document.getElementsByClassName("recordstory");
+var recorder = document.getElementsByClassName("record-wrapper");
 
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Recorder";
+    recorder.className("show");
+    //document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
