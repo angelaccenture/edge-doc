@@ -62,7 +62,7 @@ $(document).ready(function() {
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
-      $(".default-content-wrapper").hide();
+      $(".default-content-wrapper p").hide();
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
