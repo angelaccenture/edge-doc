@@ -1,3 +1,9 @@
+
+
+
+
+
+/*
 var elements = document.getElementsByClassName("blueendone");
 
 var myFunction = function() {
@@ -14,7 +20,7 @@ var myFunction = function() {
 
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
-}
+}*/
 
 export default function decorate(block) {
     const main = document.createElement('div');
@@ -28,3 +34,4 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(main);
   }
+/*<progress value="0" max="10" id="progressBar"></progress>*/
