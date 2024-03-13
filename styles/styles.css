@@ -235,6 +235,11 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   line-height: 20.8px;
   width: 87%;
 }
+@media (width >= 1180px) {
+  .red-two p {
+    margin-top: 6%;
+  }
+}
 /*Other Stuff*/
 .headphones {
   position: absolute;
