@@ -84,6 +84,7 @@ $(document).ready(function() {
           $('.button .stoprecording').removeClass("fullshow");
           $(".dyncontent").hide();
           $('.form-container .default-content-wrapper h2').show();
+          console.log("continue");
           next();
       });
     });
@@ -100,7 +101,8 @@ $(document).ready(function() {
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
-      
+      $(".dyncontent").hide();
+      $('.form-container .default-content-wrapper h2').show(); 
     });
 
     /*form buttons*/
