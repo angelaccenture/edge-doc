@@ -142,7 +142,7 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
-$(".form").on("input", "#form-video", function() {
+$(".form").on("input", "#form-email", function() {
   $(".blue-end-four .submit-wrapper").show();
 });
 $(".blue-end-four").on("click", ".button", function() {
