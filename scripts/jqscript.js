@@ -48,16 +48,11 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $("#form-believed").on("input", function() {
-      console.log("Yes, user entered");
-    });
     $(".form").on("input", "#form-believed", function() {
-      console.log("Yes, user entered");
+      $(".formnextfirst").show();
     });
-    $("#form-believed").on("keyup", function() {
-      console.log("Yes, user entered");
-    });
-    $('.red-three').on("click", ".formnextsecond", function() {
+
+     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
