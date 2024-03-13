@@ -25,11 +25,13 @@ var i = 0;
 function move() {
   console.log("move");
   if (i == 0) {
+    console.log("if");
     i = 1;
     var elem = document.getElementById("myBar");
     var width = 10;
     var id = setInterval(frame, 10);
     function frame() {
+      console.log("frame");
       if (width >= 100) {
         clearInterval(id);
         i = 0;
