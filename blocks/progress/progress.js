@@ -8,7 +8,7 @@ var myFunction = function() {
       }
       document.getElementById("progressBar").value = 10 - timeleft;
       timeleft -= 1;
-    }, 100000);
+    }, 1000);
 };
 
 for (var i = 0; i < elements.length; i++) {
