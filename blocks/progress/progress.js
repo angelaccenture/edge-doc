@@ -1,5 +1,5 @@
 var elements = document.getElementsByClassName("blueendone");
-var myFunction = function() {
+//var myFunction = function() {
   console.log("start progress bar");
     var i = 0;
 function move() {
@@ -19,7 +19,7 @@ function move() {
     }
   }
 }
-};
+//};
 
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
