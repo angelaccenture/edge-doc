@@ -131,7 +131,6 @@ $(document).ready(function() {
   });
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
-
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
 });  
@@ -143,6 +142,9 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
+$(".form").on("input", "#form-video", function() {
+  $(".blue-end-four .submit-wrapper").show();
+});
 $(".blue-end-four").on("click", ".button", function() {
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
