@@ -4,10 +4,10 @@ var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
     var recorder = document.getElementsByClassName("record-wrapper");
-    console.log(recorder);
+   
  if(timeleft <= 0){
     clearInterval(downloadTimer);
-    recorder.setAttribute('style','display:block');
+    console.log(recorder);
     //document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
