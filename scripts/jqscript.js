@@ -69,7 +69,7 @@ $(document).ready(function() {
       //$(".form-container .default-content-wrapper h2").hide();
 
       //Replace this with dynamic content from backend
-      //$(".form-container .default-content-wrapper h2").first().show();
+      $(".form-container .default-content-wrapper h2").first().show();
       
       $(".countdown-wrapper").show();
       //$(".record-wrapper").show();
