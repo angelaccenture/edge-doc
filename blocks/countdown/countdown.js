@@ -1,3 +1,17 @@
+var elements = document.getElementsByClassName("recordstory");
+
+var myFunction = function() {
+    var attribute = this.getAttribute("data-myattribute");
+    alert(attribute);
+    console.log("TEST Button Click");
+};
+
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', myFunction, false);
+}
+
+
+
 
 var timeleft = 10;
 var downloadTimer = setInterval(function(){
