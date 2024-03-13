@@ -1,6 +1,7 @@
 var elements = document.getElementsByClassName("blueendone");
 
 var myFunction = function() {
+  console.log("start progress bar");
     var timeleft = 100;
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
