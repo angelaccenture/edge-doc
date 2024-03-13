@@ -3,14 +3,12 @@ var elements = document.getElementsByClassName("recordstory");
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-    const recorder = document.getElementsByClassName("record-wrapper");
+    const recorder = document.getElementsByClassName("record-wrapper").setAttribute('id','startrec');
    
  if(timeleft <= 0){
     clearInterval(downloadTimer);
-    console.log(recorder);
-    recorder.setAttribute('id','countdown');
     //document.getElementById("countdown").innerHTML = "Recorder";
-
+    console.log(recorder);
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
