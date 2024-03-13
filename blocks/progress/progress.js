@@ -1,7 +1,7 @@
 var elements = document.getElementsByClassName("blueendone");
 console.log(elements);
 
-var timeleft = 10;
+/*var timeleft = 10;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
@@ -9,12 +9,11 @@ var downloadTimer = setInterval(function(){
   document.getElementById("progressBar").value = 10 - timeleft;
   timeleft -= 1;
 }, 1000);
+*/
 
 
 
-/*
 var elements = document.getElementsByClassName("blueendone");
-
 var myFunction = function() {
   console.log("start progress bar");
     var timeleft = 100;
@@ -29,7 +28,7 @@ var myFunction = function() {
 
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
-}*/
+}
 
 export default function decorate(block) {
     const main = document.createElement('div');
