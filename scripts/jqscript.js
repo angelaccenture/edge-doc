@@ -41,7 +41,7 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
-      $(".form .second, .formnextsecond").addClass("showgrid");
+      //$(".form .second, .formnextsecond").addClass("showgrid");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
@@ -49,7 +49,7 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
     $('.red-three').on("click", ".formnextsecond", function() {
-      $(".form .third, .formnextthird").addClass("showgrid");
+      //$(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
