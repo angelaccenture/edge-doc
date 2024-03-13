@@ -94,7 +94,7 @@ $(document).ready(function() {
       $(this).removeClass("fullshow");
       $(".form-container .default-content-wrapper h2").show();
       $(".form-container .default-content-wrapper h2").first().hide();
-      $('.form .submit-wrapper').show();
+     // $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
