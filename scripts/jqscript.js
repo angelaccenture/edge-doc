@@ -84,7 +84,7 @@ $(document).ready(function() {
           $('.button .stoprecording').removeClass("fullshow");
           $(".dyncontent").hide();
           $('.form-container .default-content-wrapper h2').show();
-          console.log("continue");
+          $('.create').show();
           next();
       });
     });
@@ -95,14 +95,12 @@ $(document).ready(function() {
     $(".button").on("click", ".continue", function() {
       $(this).stop();
       $(this).removeClass("fullshow");
-      $(".form-container .default-content-wrapper h2").show();
-      $(".form-container .default-content-wrapper h2").first().hide();
-     // $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
       $(".dyncontent").hide();
       $('.form-container .default-content-wrapper h2').show(); 
+      $('.create').show();
     });
 
     /*form buttons*/
