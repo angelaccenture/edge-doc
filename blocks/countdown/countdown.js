@@ -1,10 +1,10 @@
 var elements = document.getElementsByClassName("recordstory");
-var recorder = document.getElementsByClassName("record-wrapper");
 
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
+    var recorder = document.getElementsByClassName("record-wrapper");
+ if(timeleft <= 0){
     clearInterval(downloadTimer);
     recorder.style.display = "block";
     //document.getElementById("countdown").innerHTML = "Recorder";
