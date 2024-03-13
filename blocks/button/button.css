@@ -53,7 +53,7 @@
 .acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive, .greenonebutton, .redonebutton {
     color: white;
 }
-.blueonebutton, .declinebutton, .blueendfour, .startover {
+.blueonebutton, .declinebutton, .blueendfour, .startover, .blueendone {
     color: var(--blue-color);
 }
 .acceptbutton, .bluethreebutton, .blueendthree, .blueendfive {

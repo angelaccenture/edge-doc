@@ -62,6 +62,7 @@ $(document).ready(function() {
     $('.red-three').on("click", ".formnextthird", function() {
       $(".button .example").addClass("textshow");
       $(".button .recordstory").addClass("fullshow");
+      $(".dyncontent").show();
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
@@ -69,9 +70,8 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      $(".form-container .default-content-wrapper h2").show();
+
       $(".countdown-wrapper").show();
-      //$(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
@@ -95,7 +95,9 @@ $(document).ready(function() {
     $(".button").on("click", ".continue", function() {
       $(this).stop();
       $(this).removeClass("fullshow");
-      $('.form .submit-wrapper').show();
+      $(".form-container .default-content-wrapper h2").show();
+      $(".form-container .default-content-wrapper h2").first().hide();
+     // $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
