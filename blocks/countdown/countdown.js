@@ -1,6 +1,5 @@
 var elements = document.getElementsByClassName("recordstory");
 
-
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
