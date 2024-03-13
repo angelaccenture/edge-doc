@@ -1,6 +1,6 @@
 
-const timeleft = 10;
-const downloadTimer = setInterval(function(){
+var timeleft = 10;
+var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "Finished";
@@ -9,7 +9,7 @@ const downloadTimer = setInterval(function(){
   }
   timeleft -= 1;
 }, 1000);
-downloadTimer();
+
 
 export default function decorate(block) {
     const main = document.createElement('div');
