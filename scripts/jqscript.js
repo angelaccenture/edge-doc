@@ -153,6 +153,9 @@ $('.button').on("click", ".blueendfive", function() {
   $(".blue-end-six").show();
   $(".blue-end-five").hide();
 }); 
+$('.button').on("click", ".startover", function() {
+  location.href = "/";
+});
      
 
     });
