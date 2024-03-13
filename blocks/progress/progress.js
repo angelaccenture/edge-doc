@@ -1,4 +1,4 @@
-var elements = document.getElementsByClassName("blueendone");
+/*var elements = document.getElementsByClassName("blueendone");
 var myFunction = function() {
   console.log("start progress bar");
     var timeleft = 10;
@@ -13,18 +13,22 @@ var myFunction = function() {
 
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
-}
+}*/
 
 export default function decorate(block) {
-    const main = document.createElement('div');
-    [...block.children].forEach((row) => {
-      const button = document.createElement('progress');
-      button.setAttribute('value','0');
-      button.setAttribute('max','10');
-      button.setAttribute('id','progressBar');
-      main.append(button);
+  const ul = document.createElement('div');
+  ul.setAttribute("id","myProgress");
+  [...block.children].forEach((row) => {
+    const li = document.createElement('div');
+    while (row.firstElementChild) li.append(row.firstElementChild);
+    [...li.children].forEach((div) => {
+      li.setAttribute("id","myBar");
     });
-    block.textContent = '';
-    block.append(main);
-  }
-/*<progress value="0" max="10" id="progressBar"></progress>*/
+    ul.append(li);
+  });
+  block.textContent = '';
+  block.append(ul);
+}
+/*<div id="myProgress">
+  <div id="myBar"></div>
+</div>*/
