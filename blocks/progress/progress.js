@@ -1,3 +1,5 @@
+var elements = document.getElementsByClassName("blueendone");
+console.log(elements);
 
 var timeleft = 10;
 var downloadTimer = setInterval(function(){
