@@ -59,6 +59,7 @@ $(document).ready(function() {
     $('.red-three').on("click", ".formnextthird", function() {
       $(".button .example").addClass("textshow");
       $(".button .recordstory").addClass("fullshow");
+      $(".dyncontent").show();
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
@@ -66,8 +67,7 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      $(".dyncontent").show();
-      
+
       $(".countdown-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
