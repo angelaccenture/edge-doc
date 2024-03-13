@@ -1,19 +1,14 @@
 var elements = document.getElementsByClassName("recordstory");
 
 
-var newFunction = function() {
-  var recorder = document.getElementsByClassName("record-wrapper");
-  recorder.setAttribute("id","startrec");
-}
-
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-    
-   
+     
  if(timeleft <= 0){
     clearInterval(downloadTimer);
-    newFunction();
+    var recorder = document.getElementsByClassName("record-wrapper");
+    recorder[0].setAttribute("id","startrec");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
