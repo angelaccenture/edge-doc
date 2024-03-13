@@ -17,7 +17,7 @@ export default function decorate(block) {
 </div>*/
 
 var elements = document.getElementsByClassName("blueendone");
-console.log("elements");
+console.log(elements);
 var i = 0;
 function move() {
   console.log("move");
