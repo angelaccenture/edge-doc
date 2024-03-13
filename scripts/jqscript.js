@@ -48,12 +48,7 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $(".form").on("keyup", "#form-believed", function() {
-      console.log("form entered");
-      $(".formnextfirst").show();
-    });
-
-     $('.red-three').on("click", ".formnextsecond", function() {
+    $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
@@ -105,7 +100,8 @@ $(document).ready(function() {
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
-      $('#form-believed').val($(this).html());    
+      $('#form-believed').val($(this).html());
+      $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
@@ -115,6 +111,10 @@ $(document).ready(function() {
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());    
     });
+    $(".form").on("input", "#form-believed", function() {
+      $(".formnextfirst").show();
+    });
+
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
