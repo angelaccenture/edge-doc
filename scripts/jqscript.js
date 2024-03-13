@@ -49,6 +49,7 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
     $(".form").on("input", "#form-believed", function() {
+      console.log("form entered");
       $(".formnextfirst").show();
     });
 
