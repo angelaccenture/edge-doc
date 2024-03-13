@@ -5,7 +5,7 @@ var myFunction = function() {
     var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Recording Starts Now";
+    document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
