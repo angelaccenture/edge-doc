@@ -1,9 +1,6 @@
 var elements = document.getElementsByClassName("recordstory");
 
 var myFunction = function() {
-    var attribute = this.getAttribute("data-myattribute");
-    alert(attribute);
-    console.log("TEST Button Click");
     var timeleft = 10;
     var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
@@ -19,12 +16,6 @@ var myFunction = function() {
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
 }
-
-
-
-
-
-
 
 export default function decorate(block) {
     const main = document.createElement('div');
