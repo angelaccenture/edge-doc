@@ -1,5 +1,10 @@
 var elements = document.getElementsByClassName("recordstory");
-var recorder = document.getElementsByClassName("record-wrapper").setAttribute('id','startrec');
+
+
+var newFunction = function() {
+  var recorder = document.getElementsByClassName("record-wrapper");
+  recorder.setAttribute("id","startrec");
+}
 
 var myFunction = function() {
     var timeleft = 3;
@@ -8,8 +13,7 @@ var myFunction = function() {
    
  if(timeleft <= 0){
     clearInterval(downloadTimer);
-    //document.getElementById("countdown").innerHTML = "Recorder";
-    console.log(recorder);
+    newFunction();
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
