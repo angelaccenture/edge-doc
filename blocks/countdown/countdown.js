@@ -6,7 +6,7 @@ var myFunction = function() {
     var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
-    recorder.className("show");
+    recorder.style.display = "block";
     //document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
