@@ -1,7 +1,7 @@
-var elements = document.getElementsByClassName("recordstory");
+var elements = document.getElementsByClassName("blueendone");
 
 var myFunction = function() {
-    var timeleft = 10;
+    var timeleft = 100;
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
         clearInterval(downloadTimer);

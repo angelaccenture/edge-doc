@@ -131,6 +131,7 @@ $(document).ready(function() {
   });
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
+
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
 });  
@@ -143,7 +144,6 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-three").hide();
 }); 
 $(".blue-end-four").on("click", ".button", function() {
-  console.log("test");
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
 });
