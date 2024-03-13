@@ -52,6 +52,10 @@ $(document).ready(function() {
       console.log("form entered");
       $(".formnextfirst").show();
     });
+    $(".form").on("change", "#form-believed", function() {
+      console.log("form changed");
+      $(".formnextfirst").show();
+    });
 
      $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third, .formnextthird").addClass("showgrid");
