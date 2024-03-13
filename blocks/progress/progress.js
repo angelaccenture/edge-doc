@@ -6,6 +6,10 @@ export default function decorate(block) {
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
       li.setAttribute("id","myBar");
+      const removediv = div.parentNode;
+      console.log(div.parentNode);
+      removediv.insertBefore(div.firstChild, div);
+      removediv.removeChild(div);
     });
     ul.append(li);
   });
@@ -17,8 +21,6 @@ export default function decorate(block) {
 </div>*/
 
 var elements = document.getElementsByClassName("blueendone");
-console.log("test");
-console.log(elements);
 var i = 0;
 function move() {
   console.log("move");
