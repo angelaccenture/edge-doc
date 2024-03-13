@@ -105,14 +105,22 @@ $(document).ready(function() {
     });
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
-      $('#form-describe').val($(this).html());    
+      $('#form-describe').val($(this).html());
+      $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
-      $('#form-makefeel').val($(this).html());    
+      $('#form-makefeel').val($(this).html());
+      $(".formnextthird").show();    
     });
     $(".form").on("input", "#form-believed", function() {
       $(".formnextfirst").show();
+    });
+    $(".form").on("input", "#form-describe", function() {
+      $(".formnextsecond").show();
+    });
+    $(".form").on("input", "#form-makefeel", function() {
+      $(".formnextthird").show();
     });
 
 /*Post*/
