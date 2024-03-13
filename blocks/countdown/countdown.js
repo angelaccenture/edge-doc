@@ -8,6 +8,7 @@ var myFunction = function() {
     clearInterval(downloadTimer);
     var recorder = document.getElementsByClassName("record-wrapper");
     recorder[0].setAttribute("id","startrec");
+    document.getElementsByClassName("countdown-wrapper")[0].className("hide");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
