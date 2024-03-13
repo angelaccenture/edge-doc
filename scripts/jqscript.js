@@ -4,7 +4,6 @@ $(document).ready(function() {
       $(".blue-one").hide();
       initAudio();
       playMusic("audioClips/MUS_Slides.mp3");
-      log("ciao");
   });
   $('.blue-one p:last-child').addClass("headphones");
 
