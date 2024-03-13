@@ -48,12 +48,8 @@ $(document).ready(function() {
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $(".form").on("input", "#form-believed", function() {
+    $(".form").on("keyup", "#form-believed", function() {
       console.log("form entered");
-      $(".formnextfirst").show();
-    });
-    $(".form").on("change", "#form-believed", function() {
-      console.log("form changed");
       $(".formnextfirst").show();
     });
 
