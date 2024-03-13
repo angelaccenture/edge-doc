@@ -168,9 +168,6 @@
 .blue-end-four .first {
   display: none;
 }
-.blue-end-four .form-wrapper .form .submit-wrapper {
-  display: block;
-}
 .blue-end-four .form input,
 .form select,
 .form textarea {
@@ -180,8 +177,6 @@
 .blue-end-four .form .submit-wrapper .button {
   background-color: var(--blue-color);
   color: white;
-}
-.blue-end-four .submit-wrapper {
   display: none;
 }
 
