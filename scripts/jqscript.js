@@ -82,9 +82,6 @@ $(document).ready(function() {
       $(".button .continue").delay(30000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-          $(".dyncontent").hide();
-          $('.form-container .default-content-wrapper h2').show();
-          $('.create').show();
           next();
       });
     });
