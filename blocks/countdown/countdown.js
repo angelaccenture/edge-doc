@@ -1,9 +1,10 @@
 var elements = document.getElementsByClassName("recordstory");
+var recorder = document.getElementsByClassName("record-wrapper").setAttribute('id','startrec');
 
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-    const recorder = document.getElementsByClassName("record-wrapper").setAttribute('id','startrec');
+    
    
  if(timeleft <= 0){
     clearInterval(downloadTimer);
