@@ -1,7 +1,4 @@
-var elements = document.getElementsByClassName("blueendone");
-//var myFunction = function() {
-  console.log("start progress bar");
-    var i = 0;
+var i = 0;
 function move() {
   if (i == 0) {
     i = 1;
@@ -18,11 +15,6 @@ function move() {
       }
     }
   }
-}
-//};
-
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', myFunction, false);
 }
 
 export default function decorate(block) {
