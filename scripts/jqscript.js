@@ -83,7 +83,7 @@ $(document).ready(function() {
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           $(".dyncontent").hide();
-          $('.red-three h2').show();
+          $('.form-container .default-content-wrapper h2').show();
           next();
       });
     });
