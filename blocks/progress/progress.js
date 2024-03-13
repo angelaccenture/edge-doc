@@ -7,7 +7,6 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
       li.setAttribute("id","myBar");
       const removediv = div.parentNode;
-      console.log(div.parentNode);
       removediv.insertBefore(div.firstChild, div);
       removediv.removeChild(div);
     });
@@ -21,16 +20,13 @@ export default function decorate(block) {
 </div>*/
 
 var elements = document.getElementsByClassName("blueendone");
-var i = 0;
 function move() {
   var i = 0;
-  console.log("move");
   if (i == 0) {
-    console.log("if");
     i = 1;
     var elem = document.getElementById("myBar");
-    var width = 10;
-    var id = setInterval(frame, 10);
+    var width = 0;
+    var id = setInterval(frame, 1000);
     function frame() {
       console.log("frame");
       if (width >= 100) {
