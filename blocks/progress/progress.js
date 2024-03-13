@@ -23,6 +23,7 @@ export default function decorate(block) {
 var elements = document.getElementsByClassName("blueendone");
 var i = 0;
 function move() {
+  var i = 0;
   console.log("move");
   if (i == 0) {
     console.log("if");
