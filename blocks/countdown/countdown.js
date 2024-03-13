@@ -3,7 +3,7 @@ var elements = document.getElementsByClassName("recordstory");
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-    var recorder = document.getElementsByClassName("record-wrapper");
+    const recorder = document.getElementsByClassName("record-wrapper");
    
  if(timeleft <= 0){
     clearInterval(downloadTimer);
