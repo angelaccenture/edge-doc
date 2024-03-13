@@ -1,4 +1,14 @@
-progress {
-    font-size: 50px;
-    margin-left: 17%;
-}
+#myProgress {
+    width: 80%;
+    background-color: grey;
+    margin: 0 auto;
+  }
+  
+  #myBar {
+    width: 10%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  }

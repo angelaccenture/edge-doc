@@ -1,30 +1,46 @@
-var elements = document.getElementsByClassName("blueendone");
-var myFunction = function() {
-  console.log("start progress bar");
-    var timeleft = 10;
-    var downloadTimer = setInterval(function(){
-      if(timeleft <= 0){
-        clearInterval(downloadTimer);
-      }
-      document.getElementById("progressBar").value = 10 - timeleft;
-      timeleft -= 1;
-    }, 1000);
-};
+export default function decorate(block) {
+  const ul = document.createElement('div');
+  ul.setAttribute("id","myProgress");
+  [...block.children].forEach((row) => {
+    const li = document.createElement('div');
+    while (row.firstElementChild) li.append(row.firstElementChild);
+    [...li.children].forEach((div) => {
+      li.setAttribute("id","myBar");
+      const removediv = div.parentNode;
+      removediv.insertBefore(div.firstChild, div);
+      removediv.removeChild(div);
+    });
+    ul.append(li);
+  });
+  block.textContent = '';
+  block.append(ul);
+}
+/*<div id="myProgress">
+  <div id="myBar"></div>
+</div>*/
 
+var elements = document.getElementsByClassName("blueendone");
+function move() {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 0;
+    var id = setInterval(frame, 1000);
+    function frame() {
+      console.log("frame");
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
 for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', myFunction, false);
+  elements[i].addEventListener('click', move, false);
 }
 
-export default function decorate(block) {
-    const main = document.createElement('div');
-    [...block.children].forEach((row) => {
-      const button = document.createElement('progress');
-      button.setAttribute('value','0');
-      button.setAttribute('max','10');
-      button.setAttribute('id','progressBar');
-      main.append(button);
-    });
-    block.textContent = '';
-    block.append(main);
-  }
-/*<progress value="0" max="10" id="progressBar"></progress>*/
