@@ -1,4 +1,10 @@
-progress {
-    font-size: 50px;
-    margin-left: 17%;
-}
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
