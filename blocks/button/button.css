@@ -37,7 +37,20 @@
     text-decoration-line: underline;
 
 }
-.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive {
+@media (width <= 600px) {
+    .fullbutton, .form .submit-wrapper .button {
+        font-size: 14px;
+        line-height: 19.6px;
+        letter-spacing: 0.28px;
+    }
+    .textbutton {
+        font-size: 14px;
+        line-height: 19.6px;
+        letter-spacing: 0.28px;
+    }
+}
+
+.acceptbutton, .bluethreebutton, .greentwobutton, .redtwobutton, .recordstory, .form .submit-wrapper .button, .blueendthree, .blueendfive, .greenonebutton, .redonebutton {
     color: white;
 }
 .blueonebutton, .declinebutton, .blueendfour, .startover {
@@ -46,13 +59,10 @@
 .acceptbutton, .bluethreebutton, .blueendthree, .blueendfive {
     background-color: var(--blue-color);
 }
-.greenonebutton {
-    color: var(--green-color);
-}
 .greentwobutton {
     background-color:  var(--green-color);
 }
-.redonebutton, .example, .stoprecording, .continue, .redorec {
+.example, .stoprecording, .continue, .redorec {
     color: var(--red-color);
 }
 .redtwobutton, .recordstory, .form .submit-wrapper .button {
