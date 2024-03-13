@@ -66,8 +66,6 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      //$(".form-container .default-content-wrapper h2").hide();
-
       //Replace this with dynamic content from backend
       $(".form-container .default-content-wrapper h2").first().show();
       
@@ -96,6 +94,8 @@ $(document).ready(function() {
     $(".button").on("click", ".continue", function() {
       $(this).stop();
       $(this).removeClass("fullshow");
+      $(".form-container .default-content-wrapper h2").show();
+      $(".form-container .default-content-wrapper h2").first().hide();
       $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
