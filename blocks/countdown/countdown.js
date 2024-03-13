@@ -1,14 +1,14 @@
 var elements = document.getElementsByClassName("recordstory");
-var recorder = document.getElementsByClassName("record-wrapper");
 
 var myFunction = function() {
     var timeleft = 3;
     var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
+     
+ if(timeleft <= 0){
     clearInterval(downloadTimer);
-    recorder.className("show");
-    //document.getElementById("countdown").innerHTML = "Recorder";
-
+    var recorder = document.getElementsByClassName("record-wrapper");
+    recorder[0].setAttribute("id","startrec");
+    document.getElementsByClassName("countdown-wrapper")[0].setAttribute("style","display:none");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }

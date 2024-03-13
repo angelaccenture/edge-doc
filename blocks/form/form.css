@@ -120,7 +120,7 @@
 .form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2, .countdown-wrapper {
     display: none;
 }
-.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue, .dyncontent {
+.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue, .dyncontent, .create {
   display: none;
 }
 .formnextfirst, .formnextsecond, .formnextthird {
@@ -168,9 +168,6 @@
 .blue-end-four .first {
   display: none;
 }
-.blue-end-four .form-wrapper .form .submit-wrapper {
-  display: block;
-}
 .blue-end-four .form input,
 .form select,
 .form textarea {
@@ -181,8 +178,7 @@
   background-color: var(--blue-color);
   color: white;
 }
-.form-container .default-content-wrapper h2 {
-  text-align: center;
-  padding-top: 5%;
+.blue-end-four .form .submit-wrapper {
+  display: none;
 }
 

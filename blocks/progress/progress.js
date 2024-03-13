@@ -1,7 +1,7 @@
-var elements = document.getElementsByClassName("recordstory");
-
+var elements = document.getElementsByClassName("blueendone");
 var myFunction = function() {
-    var timeleft = 10;
+  console.log("start progress bar");
+    var timeleft = 100;
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
         clearInterval(downloadTimer);
@@ -27,3 +27,4 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(main);
   }
+/*<progress value="0" max="10" id="progressBar"></progress>*/

@@ -70,19 +70,19 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-
       $(".countdown-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
-      
-      $(".button .stoprecording").delay(5000).queue(function(next){
+
+      /*UPDATE TIMING HERE*/
+      $(".button .stoprecording").delay(10000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(10000).queue(function(next){
+      $(".button .continue").delay(30000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
@@ -95,13 +95,12 @@ $(document).ready(function() {
     $(".button").on("click", ".continue", function() {
       $(this).stop();
       $(this).removeClass("fullshow");
-      $(".form-container .default-content-wrapper h2").show();
-      $(".form-container .default-content-wrapper h2").first().hide();
-     // $('.form .submit-wrapper').show();
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
-      
+      $(".dyncontent").hide();
+      $('.form-container .default-content-wrapper h2').show(); 
+      $('.create').show();
     });
 
     /*form buttons*/
@@ -129,7 +128,10 @@ $(document).ready(function() {
     $(".form").on("input", "#form-makefeel", function() {
       $(".formnextthird").show();
     });
-
+  $('.red-three').on("click", ".create", function() {
+      //go to thankyou page
+      location.href = "/thankyou";
+  });
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
@@ -143,8 +145,10 @@ $('.button').on("click", ".blueendthree", function() {
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
+$(".form").on("input", "#form-email", function() {
+  $(".blue-end-four .submit-wrapper").show();
+});
 $(".blue-end-four").on("click", ".button", function() {
-  console.log("test");
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
 });
@@ -152,6 +156,9 @@ $('.button').on("click", ".blueendfive", function() {
   $(".blue-end-six").show();
   $(".blue-end-five").hide();
 }); 
+$('.button').on("click", ".startover", function() {
+  location.href = "/";
+});
      
 
     });
