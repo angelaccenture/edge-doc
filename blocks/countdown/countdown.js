@@ -8,6 +8,7 @@ var myFunction = function() {
  if(timeleft <= 0){
     clearInterval(downloadTimer);
     console.log(recorder);
+    recorder.setAttribute('id','countdown');
     //document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
