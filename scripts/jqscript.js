@@ -125,7 +125,10 @@ $(document).ready(function() {
     $(".form").on("input", "#form-makefeel", function() {
       $(".formnextthird").show();
     });
-
+  $('.red-three').on("click", ".create", function() {
+      //go to thankyou page
+      location.href = "/thankyou";
+  });
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
