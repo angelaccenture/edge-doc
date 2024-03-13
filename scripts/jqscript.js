@@ -67,7 +67,7 @@ $(document).ready(function() {
     });
     $('.red-three').on("click", ".recordstory", function() {
       $(".form-container .default-content-wrapper").show();
-      $(".countdown-wrapper").show();
+      $(".countdown-wrapper").show().downloadTimer();
       //$(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
