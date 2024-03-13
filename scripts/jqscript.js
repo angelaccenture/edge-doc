@@ -51,7 +51,7 @@ $(document).ready(function() {
     $("#form-believed").on("input", function() {
       console.log("Yes, user entered");
     });
-    $("#form-believed").on("change", function() {
+    $(".form").on("change", "#form-believed", function() {
       console.log("Yes, user entered");
     });
     $("#form-believed").on("keyup", function() {
