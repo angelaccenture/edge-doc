@@ -67,21 +67,23 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-
       $(".countdown-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
       $(".recordexample-wrapper").hide();
-      
-      $(".button .stoprecording").delay(5000).queue(function(next){
+
+      /*UPDATE TIMING HERE*/
+      $(".button .stoprecording").delay(10000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(10000).queue(function(next){
+      $(".button .continue").delay(30000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
+          $(".dyncontent").hide();
+          $('.red-three h2').show();
           next();
       });
     });
