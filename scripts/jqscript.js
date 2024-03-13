@@ -66,7 +66,7 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      $(".form-container .default-content-wrapper h3").show();
+      $(".form-container .default-content-wrapper h2").show();
       $(".countdown-wrapper").show();
       //$(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
