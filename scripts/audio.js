@@ -1,4 +1,4 @@
-const AUDIO_FOLDER = "audioClips/";
+const AUDIO_FOLDER = "/audioClips/";
 const ConfirmSound = "SFX_UI_Confirm.mp3";
 const TapSounds = [("SFX_UI_Tap1.mp3"),("SFX_UI_Tap2.mp3"),("SFX_UI_Tap3.mp3"),("SFX_UI_Tap4.mp3"),("SFX_UI_Tap5.mp3"),("SFX_UI_Tap6.mp3")];
 let lastRandom;

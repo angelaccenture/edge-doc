@@ -2,7 +2,10 @@ $(document).ready(function() {
   $('.button').on("click", ".blueonebutton", function() {
       $(".blue-two").show();
       $(".blue-one").hide();
-  });
+      initAudio();
+      playMusic("MUS_Main.mp3");
+      playAudioRandom(TapSounds);
+    });
   $('.blue-one p:last-child').addClass("headphones");
 
   $('.button').on("click", ".acceptbutton", function() {
