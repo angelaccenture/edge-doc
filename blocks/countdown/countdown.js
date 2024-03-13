@@ -1,7 +1,7 @@
 var elements = document.getElementsByClassName("recordstory");
 
 var myFunction = function() {
-    var timeleft = 10;
+    var timeleft = 3;
     var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
