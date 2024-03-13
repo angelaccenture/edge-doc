@@ -7,7 +7,7 @@ var myFunction = function() {
     console.log(recorder);
  if(timeleft <= 0){
     clearInterval(downloadTimer);
-    //recorder.style.display = "block";
+    recorder.setAttribute('style','display:block');
     //document.getElementById("countdown").innerHTML = "Recorder";
 
   } else {
