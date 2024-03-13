@@ -1,6 +1,7 @@
 #myProgress {
-    width: 100%;
+    width: 80%;
     background-color: grey;
+    margin: 0 auto;
   }
   
   #myBar {
