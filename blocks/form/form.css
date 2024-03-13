@@ -59,9 +59,6 @@
   margin-bottom: 0;
 }
 
-.form input:hover {
-}
-
 .form .field-wrapper.selection-wrapper {
   grid-auto-flow: column;
   justify-content: start;
@@ -120,7 +117,7 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2 {
+.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2, .countdown-wrapper {
     display: none;
 }
 .button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
@@ -180,5 +177,9 @@
 .blue-end-four .form .submit-wrapper .button {
   background-color: var(--blue-color);
   color: white;
+}
+.form-container .default-content-wrapper h2 {
+  text-align: center;
+  padding-top: 5%;
 }
 
