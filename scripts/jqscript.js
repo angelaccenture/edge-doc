@@ -41,24 +41,15 @@ $(document).ready(function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
-      $(".form .second, .formnextsecond").addClass("showgrid");
+      $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
-    $("#form-believed").on("input", function() {
-      console.log("Yes, user entered");
-    });
-    $("#form-believed").on("change", function() {
-      console.log("Yes, user entered");
-    });
-    $("#form-believed").on("keyup", function() {
-      console.log("Yes, user entered");
-    });
     $('.red-three').on("click", ".formnextsecond", function() {
-      $(".form .third, .formnextthird").addClass("showgrid");
+      $(".form .third").addClass("showgrid");
       $(".thirdformv").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
@@ -71,11 +62,13 @@ $(document).ready(function() {
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
-      $(".default-content-wrapper").hide();
+      $(".default-content-wrapper p").hide();
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      $(".record-wrapper").show();
+      $(".form-container .default-content-wrapper h2").show();
+      $(".countdown-wrapper").show();
+      //$(".record-wrapper").show();
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
@@ -109,16 +102,29 @@ $(document).ready(function() {
     /*form buttons*/
     $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
-      $('#form-believed').val($(this).html());    
+      $('#form-believed').val($(this).html());
+      $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
-      $('#form-describe').val($(this).html());    
+      $('#form-describe').val($(this).html());
+      $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
-      $('#form-makefeel').val($(this).html());    
+      $('#form-makefeel').val($(this).html());
+      $(".formnextthird").show();    
     });
+    $(".form").on("input", "#form-believed", function() {
+      $(".formnextfirst").show();
+    });
+    $(".form").on("input", "#form-describe", function() {
+      $(".formnextsecond").show();
+    });
+    $(".form").on("input", "#form-makefeel", function() {
+      $(".formnextthird").show();
+    });
+
 /*Post*/
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
