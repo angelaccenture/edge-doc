@@ -66,8 +66,7 @@ $(document).ready(function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      //Replace this with dynamic content from backend
-      $(".form-container .default-content-wrapper h2").first().show();
+      $(".dyncontent").show();
       
       $(".countdown-wrapper").show();
       $('.red-three').css("background-color","#EB1000");

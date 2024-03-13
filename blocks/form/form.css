@@ -120,7 +120,7 @@
 .form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2, .countdown-wrapper {
     display: none;
 }
-.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue {
+.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue, .dyncontent {
   display: none;
 }
 .formnextfirst, .formnextsecond, .formnextthird {
