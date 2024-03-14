@@ -22,7 +22,6 @@ export default function decorate(block) {
   }
 
     var video = document.getElementById("video-player");
-    console.log(video);
 /*New HTML*
 
 <video controls autoplay>
