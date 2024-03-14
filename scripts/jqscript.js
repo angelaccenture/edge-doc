@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $(".blue-one").delay(400).show("slide", { direction: "right" }, 1200);
+
   $('.button').on("click", ".blueonebutton", function() {
     $(".blue-one").hide();
     $(".blue-two").delay(400).fadeIn('slow','','');
