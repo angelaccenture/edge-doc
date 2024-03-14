@@ -14,8 +14,8 @@ $(document).ready(function() {
     $(".blue-two").hide();
   });
   $('.button').on("click", ".bluethreebutton", function() {
-    $(".green-one").show();
     $(".blue-three").hide();
+    $(".green-one").delay(400).fadeIn('slow','','');
   });
   $('.button').on("click", ".greenonebutton", function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
