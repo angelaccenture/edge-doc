@@ -152,6 +152,9 @@
     background-color: var(--red-color);
     color: white;
 }
+.formbutton-wrapper .button {
+  top: 0;
+}
 /*Spacing*/
 .form-wrapper {
   padding: 8% 5% 0% 5%;
