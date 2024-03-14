@@ -61,10 +61,9 @@ $(document).ready (function() {
 
   });
   $('.button').on("click", ".redtwobutton", function() {
-        $(".red-three").show().addClass('redcar');
-        $(".red-two").hide();
-        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
-
+        $(".red-two").fadeOut();
+        $(".red-three").delay(400).fadeIn().addClass('redcar');
+            $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
@@ -94,12 +93,12 @@ $(document).ready (function() {
       $(".indicators-wrapper").hide();
     });
     $('.red-three').on("click", ".recordstory", function() {
-      $(".countdown-wrapper").show();
+      $(".recordexample-wrapper").hide();
+      $(".countdown-wrapper").delay(400).fadeIn('slow','','');
       $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
-      $(".recordexample-wrapper").hide();
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
