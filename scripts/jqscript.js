@@ -6,8 +6,8 @@ $(document).ready(function() {
   $('.blue-one p:last-child').addClass("headphones");
 
   $('.button').on("click", ".acceptbutton", function() {
-    $(".blue-two").fadeOut('slow','','');
-    $(".blue-three").delay(400).fadeIn('slow','','');
+    $(".blue-two").fadeOut();
+    $(".blue-three").delay(400).fadeIn();
    });
   $('.button').on("click", ".declinebutton", function() {
     $(".blue-one").show();
