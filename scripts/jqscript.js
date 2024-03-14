@@ -112,7 +112,6 @@ $(document).ready (function() {
       $(".formnextthird").show();
     });
 
-
     $('.red-four').on("click", ".recordstory", function() {
         $(".red-five").show();
         $('.red-four').hide();
@@ -139,17 +138,15 @@ $(document).ready (function() {
       $('.red-five').css("background-color","white");
       $('.red-five').css("color","#EB1000");
       $(".dyncontent").hide();
-      $('.form-container .default-content-wrapper h2').show(); 
+      $('.red-five .default-content-wrapper h2').show(); 
       $('.create').show();    
-    });
-    
-
-   
-  $('.red-three').on("click", ".create", function() {
+    }); 
+  $('.red-five').on("click", ".create", function() {
       //go to thankyou page
       location.href = "/thankyou";
   });
-/*Post*/
+
+/*Thank You Page*/
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
