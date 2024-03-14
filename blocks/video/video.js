@@ -19,6 +19,7 @@ export default function decorate(block) {
   }
 
   const video = document.getElementById("video-player"); 
+  console.log(video);
   /*  
    // Play the video 
    video.play(); 
@@ -28,12 +29,12 @@ export default function decorate(block) {
     
    // Set the current time of the video 
    video.currentTime = 10; 
-   */ 
+   
    // Add an event listener for when the video ends 
    video.addEventListener("ended", function() { 
       console.log("Video ended"); 
    }); 
-
+*/ 
   /*<video width="320" height="240" controls>
   <source src="movie.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
