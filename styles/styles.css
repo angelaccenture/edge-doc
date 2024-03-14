@@ -51,6 +51,7 @@ body {
   line-height: 1.6;
   color: black;
   display: none;
+  overflow: hidden /*Needed for animation*/
 }
 body.appear {
   display: block;
@@ -257,7 +258,4 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   .headphones {
     background-position-x: 37%;
   }
-}
-.green-two {
-  overflow: hidden;
 }
