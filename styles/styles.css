@@ -51,6 +51,7 @@ body {
   line-height: 1.6;
   color: black;
   display: none;
+  overflow: hidden /*Needed for animation*/
 }
 body.appear {
   display: block;
@@ -246,7 +247,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   bottom: 3%;
   text-align: center;
   width: 90%;
-  background: url(/icons/headphones.svg) no-repeat 30% 0px;
+  background: url(/icons/headphones.svg) no-repeat 29% 0px;
 }
 @media (width >= 1000px) {
   .headphones {
@@ -257,4 +258,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   .headphones {
     background-position-x: 37%;
   }
+}
+
+.green-two strong {
+  display: none;
 }

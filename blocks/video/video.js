@@ -7,10 +7,10 @@ export default function decorate(block) {
     video.setAttribute("autoplay","");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
-    //  li.setAttribute("src","/blocks/video/seed-225721745_scene-0_profile-colorful_strength-100.mp4");
-     // li.setAttribute("type","video/mp4");
-       li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
-      li.setAttribute("type","video/x-mpegURL");
+      li.setAttribute("src","/blocks/video/seed-225721745_scene-0_profile-colorful_strength-100.mp4");
+      li.setAttribute("type","video/mp4");
+    //   li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
+    //  li.setAttribute("type","video/x-mpegURL");
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
         //removediv.removeChild(div);
@@ -22,7 +22,6 @@ export default function decorate(block) {
   }
 
     var video = document.getElementById("video-player");
-    console.log(video);
 /*New HTML*
 
 <video controls autoplay>

@@ -1,34 +1,42 @@
 $(document).ready(function() {
   $('.button').on("click", ".blueonebutton", function() {
-      $(".blue-two").show();
-      $(".blue-one").hide();
-      initAudio();
-      playMusic("MUS_Main.mp3");
-      playAudioRandom(TapSounds);
-    });
+    $(".blue-one").hide();
+    $(".blue-two").delay(400).fadeIn('slow','','');
+    initAudio();
+    playMusic("MUS_Main.mp3");
+    playAudioRandom(TapSounds);
+  });
   $('.blue-one p:last-child').addClass("headphones");
 
   $('.button').on("click", ".acceptbutton", function() {
-    $(".blue-three").show();
-    $(".blue-two").hide();
-  });
+    $(".blue-two").fadeOut();
+    $(".blue-three").delay(400).fadeIn();
+   });
   $('.button').on("click", ".declinebutton", function() {
     $(".blue-one").show();
     $(".blue-two").hide();
   });
   $('.button').on("click", ".bluethreebutton", function() {
-    $(".green-one").show();
     $(".blue-three").hide();
+    $(".green-one").delay(400).fadeIn('slow','','');
+
+    /*Add auto trans here
+    $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
+    $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
+
   });
   $('.button').on("click", ".greenonebutton", function() {
-    $(".green-two").show();
-    $(".green-one").hide();
-
+    $(".green-one").hide("slide", { direction: "left" }, 1200);
+    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
   $('.button').on("click", ".greentwobutton", function() {
     $(".green-three").show().addClass('greencar');
     $(".green-two").hide();
-
+  });
+  /*Animation on words*/
+  $( ".green-three strong" ).each(function( index ) {
+    console.log("animation")
+      console.log( index + ": " + $( this ).text() );
   });
    /*Green Three is a carousel*/
    $('.button').on("click", ".redonebutton", function() {
