@@ -3,7 +3,7 @@ export default function decorate(block) {
     const video = document.createElement('video');
     video.setAttribute("width","320");
     video.setAttribute("height","240");
-    video.setAttribute("controls");
+    video.setAttribute("controls","");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
       li.setAttribute("src","movie.mp4");
