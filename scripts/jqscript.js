@@ -37,21 +37,27 @@ $(document).ready (function() {
     playAudioRandom(TapSounds);
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
+
+    /*Animation on words - green two
+    $( ".green-three strong" ).each(function( index ) {
+      console.log("animation")
+        console.log( index + ": " + $( this ).text() );
+    });*/
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
-    $(".green-three").show().addClass('greencar');
-    $(".green-two").hide();
-  });
-  /*Animation on words*/
-  $( ".green-three strong" ).each(function( index ) {
-    console.log("animation")
-      console.log( index + ": " + $( this ).text() );
+    $(".green-two").fadeOut();
+    $(".green-three").delay(400).fadeIn().addClass('greencar');
   });
    /*Green Three is a carousel*/
+
    $('.button').on("click", ".redonebutton", function() {
-    $(".red-two").show();
-    $(".red-one").hide();
+    playAudioRandom(TapSounds);
+    $(".red-one").hide("slide", { direction: "left" }, 1200);
+    $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
+     /*Add auto trans here
+    $(".red-one").delay(6000).hide("slide", { direction: "left" }, 1200);
+    $(".red-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
 
   });
   $('.button').on("click", ".redtwobutton", function() {
