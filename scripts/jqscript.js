@@ -19,7 +19,7 @@ $(document).ready(function() {
   });
   $('.button').on("click", ".greenonebutton", function() {
    // $(".green-two").show();
-    $(".green-two").show("slide", { direction: "left" }, 1000);
+    $(".green-two").animate({"margin-right": '+=200'});
     $(".green-one").hide();
 
   });
