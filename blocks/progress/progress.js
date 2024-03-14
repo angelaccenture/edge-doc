@@ -28,7 +28,6 @@ function move() {
     var width = 0;
     var id = setInterval(frame, 1000);
     function frame() {
-      console.log("frame");
       if (width >= 100) {
         clearInterval(id);
         i = 0;
