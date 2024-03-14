@@ -6,7 +6,7 @@ export default function decorate(block) {
     video.setAttribute("controls","");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
-      li.setAttribute("src","movie.mp4");
+      li.setAttribute("src","seed-225721745_scene-0_profile-colorful_strength-100.mp4");
       li.setAttribute("type","video/mp4");
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
