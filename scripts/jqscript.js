@@ -111,14 +111,17 @@ $(document).ready (function() {
       $(".formnextthird").show();    
     });
     $(".form").on("input", "#form-believed", function() {
+      $(".red-three .default-content-wrapper").hide();
       $(".firstformv").hide();
       $(".formnextfirst").show();
     });
     $(".form").on("input", "#form-describe", function() {
+      $(".red-three .default-content-wrapper").hide();
       $(".secondformv").hide();
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
+      $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
     });
