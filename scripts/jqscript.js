@@ -91,7 +91,8 @@ $(document).ready (function() {
       $(".thirdformv").hide();
       $(".default-content-wrapper p").hide();
       $(".indicators-wrapper").hide();*/
-      console.log("show new screen");
+      $(".red-four").show();
+      $('.red-three').hide();
     });
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
