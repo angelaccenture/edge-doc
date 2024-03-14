@@ -26,13 +26,13 @@ $(document).ready(function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
-  
-
-
   $('.button').on("click", ".greentwobutton", function() {
     $(".green-three").show().addClass('greencar');
     $(".green-two").hide();
-
+  });
+  /*Animation on words*/
+  $( ".green-three strong" ).each(function( index ) {
+      console.log( index + ": " + $( this ).text() );
   });
    /*Green Three is a carousel*/
    $('.button').on("click", ".redonebutton", function() {
