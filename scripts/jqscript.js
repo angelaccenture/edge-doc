@@ -1,7 +1,10 @@
-$(document).ready(function() {
+$(document).on("ready", function() {
+  /*onload animation*/
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").delay(800).show("slide", { direction: "up" }, 1200);
+  $(".blue-one h1").delay(800).slideDown( "slow", function() {
+  });
 
+  /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
     playMusic("MUS_Main.mp3");
