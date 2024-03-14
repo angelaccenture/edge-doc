@@ -124,8 +124,9 @@ $(document).ready (function() {
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
-        $(".red-five").show();
-        $('.red-four').hide();
+      $('.red-four').hide(); 
+      $(".red-five").delay(400).fadeIn('slow','','');
+
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
