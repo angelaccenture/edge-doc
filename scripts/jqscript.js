@@ -22,7 +22,8 @@ $(document).ready(function() {
     $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);
 
   });
-  $('.button').on("click", ".greenonebutton", function() {
+  $('.button').on("click", ".greenonebutton", function(e) {
+    e.preventDefault();
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
