@@ -111,15 +111,18 @@ $(document).ready (function() {
       $(".formnextthird").show();    
     });
     $(".form").on("input", "#form-believed", function() {
+      $(".firstformv").hide();
       $(".formnextfirst").show();
     });
     $(".form").on("input", "#form-describe", function() {
+      $(".secondformv").hide();
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
+      $(".thirdformv").hide();
       $(".formnextthird").show();
     });
-
+    /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
         $(".red-five").show();
         $('.red-four').hide();
