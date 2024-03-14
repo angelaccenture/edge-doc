@@ -261,7 +261,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 /*Animation*/
 .blue-one h1 {
-  display: none;
+  visibility: hidden;
+  display: block;
 }
 .green-two strong {
   display: none;
