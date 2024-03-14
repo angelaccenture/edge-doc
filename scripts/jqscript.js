@@ -90,6 +90,7 @@ $(document).ready (function() {
      $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
       $('#form-believed').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
       $(".firstformv").hide();
       $(".formnextfirst").show();    
     });
