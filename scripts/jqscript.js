@@ -1,8 +1,7 @@
 $(document).on("ready", function() {
   /*onload animation*/
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").slideDown( "slow", function() {
-  });
+  $(".blue-one h1").show("slide", { direction: "down" }, 1200);
 
   /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
