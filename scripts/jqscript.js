@@ -69,6 +69,7 @@ $(document).ready (function() {
     $('.red-three').on("click", ".formnextfirst", function() {
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
+      $(".red-three .default-content-wrapper").hide();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
@@ -77,6 +78,7 @@ $(document).ready (function() {
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third").addClass("showgrid");
       $(".thirdformv").show();
+      $(".red-three .default-content-wrapper").hide();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 

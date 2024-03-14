@@ -152,8 +152,10 @@
     background-color: var(--red-color);
     color: white;
 }
-.red-three .button {
-  top: 0;
+.red-three .button-wrapper {
+  top: 27%;
+  margin-left: 5%;
+  text-align: left;
 }
 /*Spacing*/
 .form-wrapper {
