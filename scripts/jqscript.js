@@ -95,7 +95,7 @@ $(document).ready (function() {
     $('.red-three').on("click", ".recordstory", function() {
       $(".recordexample-wrapper").hide();
       $(".countdown-wrapper").delay(400).fadeIn('slow','','');
-      $('.red-three').css("background-color","#EB1000");
+      $('.red-three').delay(400).fadeIn('slow','','').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
