@@ -69,6 +69,7 @@ $(document).ready (function() {
     $('.red-three').on("click", ".formnextfirst", function() {
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
+      $(".red-three .default-content-wrapper").show();
       $(".form .first, .formnextfirst").addClass("hide");
       $(".firstformv").hide();
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
@@ -77,6 +78,7 @@ $(document).ready (function() {
     $('.red-three').on("click", ".formnextsecond", function() {
       $(".form .third").addClass("showgrid");
       $(".thirdformv").show();
+      $(".red-three .default-content-wrapper").show();
       $(".form .second, .formnextsecond").addClass("hide");
       $(".secondformv").hide();
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
@@ -90,31 +92,44 @@ $(document).ready (function() {
      $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
       $('#form-believed').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
+      $(".firstformv").hide();
       $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
       $('#form-describe').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
+      $(".secondformv").hide();
       $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
+      $(".thirdformv").hide();
       $(".formnextthird").show();    
     });
     $(".form").on("input", "#form-believed", function() {
+      $(".red-three .default-content-wrapper").hide();
+      $(".firstformv").hide();
       $(".formnextfirst").show();
     });
     $(".form").on("input", "#form-describe", function() {
+      $(".red-three .default-content-wrapper").hide();
+      $(".secondformv").hide();
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
+      $(".red-three .default-content-wrapper").hide();
+      $(".thirdformv").hide();
       $(".formnextthird").show();
     });
-
+    /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
-        $(".red-five").show();
-        $('.red-four').hide();
+      $('.red-four').hide(); 
+      $(".red-five").delay(400).fadeIn('slow','','');
+
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
@@ -147,6 +162,8 @@ $(document).ready (function() {
   });
 
 /*Thank You Page*/
+$(".blue-end-one").delay(400).fadeIn('slow','','');
+
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
