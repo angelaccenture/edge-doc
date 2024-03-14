@@ -17,9 +17,9 @@ $(document).ready(function() {
     $(".blue-three").hide();
     $(".green-one").delay(400).fadeIn('slow','','');
 
-    /*Add auto trans here*/
+    /*Add auto trans here
     $(".green-one").delay( 300000 ).hide("slide", { direction: "left" }, 1200);
-    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
+    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);*/
 
   });
   $('.button').on("click", ".greenonebutton", function() {
