@@ -18,8 +18,8 @@ $(document).ready(function() {
     $(".green-one").delay(400).fadeIn('slow','','');
 
     /*Add auto trans here*/
-    $(".green-one").delay(8000).hide("slide", { direction: "left" }, 1200);
-    $(".green-two").delay(8400).show("slide", { direction: "right" }, 1200);
+    $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
+    $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);
 
   });
   $('.button').on("click", ".greenonebutton", function() {
