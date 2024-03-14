@@ -32,6 +32,7 @@ $(document).ready(function() {
   });
   /*Animation on words*/
   $( ".green-three strong" ).each(function( index ) {
+    console.log("animation")
       console.log( index + ": " + $( this ).text() );
   });
    /*Green Three is a carousel*/
