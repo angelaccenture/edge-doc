@@ -90,16 +90,19 @@ $(document).ready (function() {
      $(".formbutton").on("click", ".firstformv", function() {
       $('#form-believed').val("");
       $('#form-believed').val($(this).html());
+      $(".firstformv").hide();
       $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
       $('#form-describe').val($(this).html());
+      $(".secondformv").hide();
       $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
+      $(".thirdformv").hide();
       $(".formnextthird").show();    
     });
     $(".form").on("input", "#form-believed", function() {
