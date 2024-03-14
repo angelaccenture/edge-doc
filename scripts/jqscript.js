@@ -83,19 +83,47 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
-      $(".button .example").addClass("textshow");
+   /*   $(".button .example").addClass("textshow");
       $(".button .recordstory").addClass("fullshow");
       $(".dyncontent").show();
       $(".recordexample-wrapper").show();
       $(".form .third, .formnextthird").addClass("hide");
       $(".thirdformv").hide();
       $(".default-content-wrapper p").hide();
-      $(".indicators-wrapper").hide();
+      $(".indicators-wrapper").hide();*/
+      console.log("show new screen");
     });
+     /*form buttons*/
+     $(".formbutton").on("click", ".firstformv", function() {
+      $('#form-believed').val("");
+      $('#form-believed').val($(this).html());
+      $(".formnextfirst").show();    
+    });
+    $(".formbutton").on("click", ".secondformv", function() {
+      $('#form-describe').val("");
+      $('#form-describe').val($(this).html());
+      $(".formnextsecond").show();  
+    }); 
+    $(".formbutton").on("click", ".thirdformv", function() {
+      $('#form-makefeel').val("");
+      $('#form-makefeel').val($(this).html());
+      $(".formnextthird").show();    
+    });
+    $(".form").on("input", "#form-believed", function() {
+      $(".formnextfirst").show();
+    });
+    $(".form").on("input", "#form-describe", function() {
+      $(".formnextsecond").show();
+    });
+    $(".form").on("input", "#form-makefeel", function() {
+      $(".formnextthird").show();
+    });
+
+
     $('.red-three').on("click", ".recordstory", function() {
       $(".recordexample-wrapper").hide();
       $(".countdown-wrapper").delay(400).fadeIn('slow','','');
-      $('.red-three').delay(400).fadeIn('slow','','').css("background-color","#EB1000");
+      $('.red-three').css("background-color","#EB1000");
       $('.red-three').css("color","white");
       $(".button .example").removeClass("textshow");
       $(".button .recordstory").removeClass("fullshow");
@@ -125,32 +153,9 @@ $(document).ready (function() {
       $('.form-container .default-content-wrapper h2').show(); 
       $('.create').show();
     });
+    
 
-    /*form buttons*/
-    $(".formbutton").on("click", ".firstformv", function() {
-      $('#form-believed').val("");
-      $('#form-believed').val($(this).html());
-      $(".formnextfirst").show();    
-    });
-    $(".formbutton").on("click", ".secondformv", function() {
-      $('#form-describe').val("");
-      $('#form-describe').val($(this).html());
-      $(".formnextsecond").show();  
-    }); 
-    $(".formbutton").on("click", ".thirdformv", function() {
-      $('#form-makefeel').val("");
-      $('#form-makefeel').val($(this).html());
-      $(".formnextthird").show();    
-    });
-    $(".form").on("input", "#form-believed", function() {
-      $(".formnextfirst").show();
-    });
-    $(".form").on("input", "#form-describe", function() {
-      $(".formnextsecond").show();
-    });
-    $(".form").on("input", "#form-makefeel", function() {
-      $(".formnextthird").show();
-    });
+   
   $('.red-three').on("click", ".create", function() {
       //go to thankyou page
       location.href = "/thankyou";
