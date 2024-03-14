@@ -20,6 +20,7 @@ $(document).ready(function() {
   $('.button').on("click", ".greenonebutton", function() {
    // $(".green-two").show();
     $('.green-one').animate({width: 0 });
+    $('.green-two').animate({width: 0 });
     //$(".green-two").animate({"margin-right": '+=200'});
     //$(".green-one").hide();
 
