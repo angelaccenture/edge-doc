@@ -117,10 +117,10 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv, .recordexample-wrapper, .record-wrapper, .form-container .default-content-wrapper h2, .countdown-wrapper {
+.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv {
     display: none;
 }
-.button .recordstory, .button .example, .button .formnextsecond, .button .formnextthird, .button .stoprecording, .button .redorec, .button .continue, .dyncontent, .create {
+.button .formnextsecond, .button .formnextthird, {
   display: none;
 }
 .formnextfirst, .formnextsecond, .formnextthird {
