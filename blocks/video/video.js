@@ -1,6 +1,7 @@
 export default function decorate(block) {
     console.log("Video Player");
     const video = document.createElement('video');
+    video.setAttribute("id","video-player");
     video.setAttribute("width","640");
     video.setAttribute("height","480");
     video.setAttribute("controls","");
@@ -17,6 +18,22 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(video);
   }
+
+  const video = document.getElementById("video-player"); 
+    
+   // Play the video 
+   video.play(); 
+    
+   // Pause the video 
+   video.pause(); 
+    
+   // Set the current time of the video 
+   video.currentTime = 10; 
+    
+   // Add an event listener for when the video ends 
+   video.addEventListener("ended", function() { 
+      console.log("Video ended"); 
+   }); 
   /*<video width="320" height="240" controls>
   <source src="movie.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
