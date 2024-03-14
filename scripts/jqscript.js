@@ -16,14 +16,17 @@ $(document).ready(function() {
   $('.button').on("click", ".bluethreebutton", function() {
     $(".blue-three").hide();
     $(".green-one").delay(400).fadeIn('slow','','');
+
+    /*Add auto trans here*/
+    $(".green-one").delay( 2000 ).hide("slide", { direction: "left" }, 1200);
+    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
+
   });
   $('.button').on("click", ".greenonebutton", function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
-  /*Add auto trans here*/
-  $(".green-one").delay( 2000 ).hide("slide", { direction: "left" }, 1200);
-  $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
+  
 
 
   $('.button').on("click", ".greentwobutton", function() {
