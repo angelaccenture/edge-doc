@@ -99,12 +99,14 @@ $(document).ready (function() {
     $(".formbutton").on("click", ".secondformv", function() {
       $('#form-describe').val("");
       $('#form-describe').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
       $(".secondformv").hide();
       $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
+      $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();    
     });
