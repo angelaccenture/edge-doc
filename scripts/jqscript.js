@@ -14,14 +14,17 @@ $(document).ready (function() {
   $('.blue-one p:last-child').addClass("headphones");
 
   $('.button').on("click", ".acceptbutton", function() {
+    playAudioRandom(TapSounds);
     $(".blue-two").fadeOut();
     $(".blue-three").delay(400).fadeIn();
    });
   $('.button').on("click", ".declinebutton", function() {
+    playAudioRandom(TapSounds);
     $(".blue-one").show();
     $(".blue-two").hide();
   });
   $('.button').on("click", ".bluethreebutton", function() {
+    playAudioRandom(TapSounds);
     $(".blue-three").hide();
     $(".green-one").delay(400).fadeIn('slow','','');
 
@@ -31,10 +34,12 @@ $(document).ready (function() {
 
   });
   $('.button').on("click", ".greenonebutton", function() {
+    playAudioRandom(TapSounds);
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
   $('.button').on("click", ".greentwobutton", function() {
+    playAudioRandom(TapSounds);
     $(".green-three").show().addClass('greencar');
     $(".green-two").hide();
   });
