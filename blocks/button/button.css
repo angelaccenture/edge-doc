@@ -62,7 +62,10 @@
 .greentwobutton {
     background-color:  var(--green-color);
 }
-.example, .stoprecording, .continue, .redorec {
+.hideexample, .stoprecording, .redo-rec, .continue, .create  {
+    display: none;
+}
+.example, .hideexample, .stoprecording, .continue, .redorec {
     color: var(--red-color);
 }
 .redtwobutton, .recordstory, .form .submit-wrapper .button, .create {
