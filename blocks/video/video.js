@@ -18,10 +18,9 @@ export default function decorate(block) {
     block.append(video);
   }
 
-  window.onload = function() {
     var video = document.getElementById("video-player");
     console.log(video);
-};
+
   //const video = document.getElementById("video-player"); 
 
   /*  
