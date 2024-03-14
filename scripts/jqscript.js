@@ -19,9 +19,8 @@ $(document).ready(function() {
   });
   $('.button').on("click", ".greenonebutton", function() 
    // $('.green-one').animate({width: 0 });
-    $('.green-one').hide("slide", { direction: "right" }, 1200);
+    $(".green-one").hide("slide", { direction: "right" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
-
   });
   $('.button').on("click", ".greentwobutton", function() {
     $(".green-three").show().addClass('greencar');
