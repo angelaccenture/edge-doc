@@ -1,4 +1,5 @@
 export default function decorate(block) {
+    console.log("Video Player");
     const video = document.createElement('video');
     video.setAttribute("width","320");
     video.setAttribute("height","240");
