@@ -162,30 +162,30 @@ $(document).ready (function() {
   });
 
 /*Thank You Page*/
-$(".blue-end-one").delay(400).fadeIn('slow','','');
+$(".blue-end-one").delay(600).fadeIn('slow','','');
 
 $('.button').on("click", ".blueendone", function() {
-  $(".blue-end-two").show();
-  $(".blue-end-one").hide();     
+  $(".blue-end-one").fadeOut();     
+  $(".blue-end-two").delay(400).fadeIn();
 });  
 $('.button').on("click", ".blueendtwo", function() {
-  $(".blue-end-three").show();
-  $(".blue-end-two").hide();
+  $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
+  $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
 }); 
 $('.button').on("click", ".blueendthree", function() {
-  $(".blue-end-four").show();
-  $(".blue-end-three").hide();
+  $(".blue-end-three").fadeOut();
+  $(".blue-end-four").delay(400).fadeIn();
 }); 
 $(".form").on("input", "#form-email", function() {
-  $(".blue-end-four .submit-wrapper").show();
+  $(".blue-end-four .submit-wrapper").delay(400).fadeIn();
 });
 $(".blue-end-four").on("click", ".button", function() {
-  $(".blue-end-five").show();
-  $(".blue-end-four").hide();
+  $(".blue-end-four")fadeOut();
+  $(".blue-end-five").delay(400).fadeIn();
 });
 $('.button').on("click", ".blueendfive", function() {
-  $(".blue-end-six").show();
-  $(".blue-end-five").hide();
+  $(".blue-end-five")fadeOut();
+  $(".blue-end-six").delay(400).fadeIn();
 }); 
 $('.button').on("click", ".startover", function() {
   location.href = "/";
