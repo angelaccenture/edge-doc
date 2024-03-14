@@ -83,14 +83,6 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
-   /*   $(".button .example").addClass("textshow");
-      $(".button .recordstory").addClass("fullshow");
-      $(".dyncontent").show();
-      $(".recordexample-wrapper").show();
-      $(".form .third, .formnextthird").addClass("hide");
-      $(".thirdformv").hide();
-      $(".default-content-wrapper p").hide();
-      $(".indicators-wrapper").hide();*/
       $(".red-four").show();
       $('.red-three').hide();
     });
@@ -121,13 +113,9 @@ $(document).ready (function() {
     });
 
 
-    $('.red-three').on("click", ".recordstory", function() {
-      $(".recordexample-wrapper").hide();
-      $(".countdown-wrapper").delay(400).fadeIn('slow','','');
-      $('.red-three').css("background-color","#EB1000");
-      $('.red-three').css("color","white");
-      $(".button .example").removeClass("textshow");
-      $(".button .recordstory").removeClass("fullshow");
+    $('.red-four').on("click", ".recordstory", function() {
+        $(".red-five").show();
+        $('.red-four').hide();
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
@@ -140,6 +128,8 @@ $(document).ready (function() {
           next();
       });
     });
+
+    
     $(".button").on("click", ".stoprecording", function() {
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");
