@@ -127,9 +127,10 @@ $(document).ready (function() {
           $('.button .stoprecording').removeClass("fullshow");
           next();
       });
+
     });
 
-    
+
     $(".button").on("click", ".stoprecording", function() {
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");

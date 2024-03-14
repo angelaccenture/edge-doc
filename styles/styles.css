@@ -178,6 +178,9 @@ h6 {
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
 }
+.red-five .stoprecording, .red-five .redo-rec, .red-five .continue {
+  display: none;
+}
 .blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
     top: 0%;
     left: 0%;
