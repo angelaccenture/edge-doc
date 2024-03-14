@@ -247,7 +247,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   bottom: 3%;
   text-align: center;
   width: 90%;
-  background: url(/icons/headphones.svg) no-repeat 29% 0px;
+  background: url(/icons/headphones.svg) no-repeat 28% 0px;
 }
 @media (width >= 1000px) {
   .headphones {
