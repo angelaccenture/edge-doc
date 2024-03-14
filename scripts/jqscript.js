@@ -19,8 +19,9 @@ $(document).ready(function() {
   });
   $('.button').on("click", ".greenonebutton", function() {
    // $(".green-two").show();
-    $(".green-two").animate({"margin-right": '+=200'});
-    $(".green-one").hide();
+    $('.green-one').animate({width: 0 });
+    //$(".green-two").animate({"margin-right": '+=200'});
+    //$(".green-one").hide();
 
   });
   $('.button').on("click", ".greentwobutton", function() {
