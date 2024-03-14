@@ -6,9 +6,9 @@ $(document).ready(function() {
   $('.blue-one p:last-child').addClass("headphones");
 
   $('.button').on("click", ".acceptbutton", function() {
+    $(".blue-two").fadeOut();
     $(".blue-three").show();
-    $(".blue-two").hide();
-  });
+   });
   $('.button').on("click", ".declinebutton", function() {
     $(".blue-one").show();
     $(".blue-two").hide();
