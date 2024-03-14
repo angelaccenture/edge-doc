@@ -19,7 +19,7 @@ $(document).ready(function() {
   });
   $('.button').on("click", ".greenonebutton", function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
-    $(".green-two").delay(400).show("slide", { direction: "right" }, 200);
+    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
   $('.button').on("click", ".greentwobutton", function() {
     $(".green-three").show().addClass('greencar');
