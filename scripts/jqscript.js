@@ -18,7 +18,8 @@ $(document).ready(function() {
     $(".blue-three").hide();
   });
   $('.button').on("click", ".greenonebutton", function() {
-    $(".green-one").hide("slide", { direction: "left" }, 200);
+    $(".green-one").hide("slide", { direction: "left" }, 1200);
+    $(".green-two").addClass('overflow');
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
   });
   $('.button').on("click", ".greentwobutton", function() {
