@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('.button').on("click", ".blueonebutton", function() {
     $(".blue-one").hide();
-    $(".blue-two").delay(600).fadeIn('slow','','');
+    $(".blue-two").delay(400).fadeIn('slow','','');
   });
   $('.blue-one p:last-child').addClass("headphones");
 
