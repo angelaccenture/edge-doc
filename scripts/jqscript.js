@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     /*Add auto trans here*/
     $(".green-one").delay(200).hide("slide", { direction: "left" }, 1200);
-    $(".green-two").delay(600).show("slide", { direction: "right" }, 1200);
+   // $(".green-two").delay(600).show("slide", { direction: "right" }, 1200);
 
   });
   $('.button').on("click", ".greenonebutton", function() {
