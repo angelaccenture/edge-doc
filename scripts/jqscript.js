@@ -1,13 +1,13 @@
 $(document).ready(function() {
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").delay(600).show("slide", { direction: "up" }, 1200);
+  $(".blue-one h1").delay(800).show("slide", { direction: "up" }, 1200);
 
   $('.button').on("click", ".blueonebutton", function() {
-    $(".blue-one").hide();
-    $(".blue-two").delay(400).fadeIn('slow','','');
     initAudio();
     playMusic("MUS_Main.mp3");
     playAudioRandom(TapSounds);
+    $(".blue-one").hide();
+    $(".blue-two").delay(400).fadeIn('slow','','');
   });
   $('.blue-one p:last-child').addClass("headphones");
 
