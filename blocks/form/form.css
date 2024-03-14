@@ -153,9 +153,9 @@
     color: white;
 }
 .red-three .button-wrapper {
- /* top: 27%;
-  margin-left: 5%;
-  text-align: left;*/
+  display: inline-block;
+  top: 2%;
+  left: 5%;
   position: relative;
 }
 /*Spacing*/
