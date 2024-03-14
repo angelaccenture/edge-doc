@@ -259,7 +259,11 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     background-position-x: 37%;
   }
 }
-
+/*Animation*/
+.blue-one h2 {
+  height: 184px;
+  display: none;
+}
 .green-two strong {
   display: none;
 }

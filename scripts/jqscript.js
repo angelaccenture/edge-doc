@@ -1,10 +1,15 @@
-$(document).ready(function() {
+$(document).ready (function() {
+  /*onload animation*/
+  $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
+ // $(".blue-one h1").delay(400).show("slide", { direction: "down" }, 1200);
+
+ /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
-    $(".blue-one").hide();
-    $(".blue-two").delay(400).fadeIn('slow','','');
     initAudio();
     playMusic("MUS_Main.mp3");
     playAudioRandom(TapSounds);
+    $(".blue-one").hide();
+    $(".blue-two").delay(400).fadeIn('slow','','');
   });
   $('.blue-one p:last-child').addClass("headphones");
 
