@@ -10,7 +10,7 @@ export default function decorate(block) {
       li.setAttribute("type","video/mp4");
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
-        removediv.removeChild(div);
+        //removediv.removeChild(div);
       });
       video.append(li);
     });
