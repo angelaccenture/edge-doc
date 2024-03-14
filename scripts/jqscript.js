@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $('.button').on("click", ".acceptbutton", function() {
     $(".blue-two").fadeOut('slow');
-    $(".blue-three").delay(400).fadeIn('slow');
+    $(".blue-three").fadeIn('slow');
    });
   $('.button').on("click", ".declinebutton", function() {
     $(".blue-one").show();
