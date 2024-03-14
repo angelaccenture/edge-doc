@@ -127,23 +127,21 @@ $(document).ready (function() {
           $('.button .stoprecording').removeClass("fullshow");
           next();
       });
-
     });
-
-
     $(".button").on("click", ".stoprecording", function() {
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");
     });
     $(".button").on("click", ".continue", function() {
       $(this).stop();
-      $(this).removeClass("fullshow");
+    /*  $(this).removeClass("fullshow");
       $('.redorec').addClass("textshow");
       $('.red-three').css("background-color","white");
       $('.red-three').css("color","#EB1000");
       $(".dyncontent").hide();
       $('.form-container .default-content-wrapper h2').show(); 
-      $('.create').show();
+      $('.create').show();*/
+      
     });
     
 
