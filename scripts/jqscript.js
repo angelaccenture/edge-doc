@@ -134,14 +134,13 @@ $(document).ready (function() {
     });
     $(".button").on("click", ".continue", function() {
       $(this).stop();
-    /*  $(this).removeClass("fullshow");
+      $(this).removeClass("fullshow");
       $('.redorec').addClass("textshow");
-      $('.red-three').css("background-color","white");
-      $('.red-three').css("color","#EB1000");
+      $('.red-five').css("background-color","white");
+      $('.red-five').css("color","#EB1000");
       $(".dyncontent").hide();
       $('.form-container .default-content-wrapper h2').show(); 
-      $('.create').show();*/
-      
+      $('.create').show();    
     });
     
 
