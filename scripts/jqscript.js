@@ -1,4 +1,4 @@
-$(document).on("load", function() {
+$(document).ready (function() {
   /*onload animation*/
  // $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
  // $(".blue-one h1").delay(400).show("slide", { direction: "down" }, 1200);
