@@ -162,7 +162,7 @@ $(document).ready (function() {
   });
 
 /*Thank You Page*/
-$(".blue-one").delay(400).fadeIn('slow','','');
+$(".blue-end-one").delay(400).fadeIn('slow','','');
 
 $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").show();
