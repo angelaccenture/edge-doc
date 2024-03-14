@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").delay(600).show("slide", { direction: "down" }, 1200);
+  $(".blue-one h1").delay(600).show("slide", { direction: "up" }, 1200);
 
   $('.button').on("click", ".blueonebutton", function() {
     $(".blue-one").hide();
