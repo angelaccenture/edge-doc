@@ -23,7 +23,7 @@ export default function decorate(block) {
       removediv.insertBefore(div.firstChild, div);
       removediv.removeChild(div);
    });
-    button.appeand("<test></test>")
+    //button.appeand("<test></test>")
    main.append(button);
   });
   block.textContent = '';
