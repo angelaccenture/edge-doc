@@ -273,7 +273,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   height: 184px;
   display: none;
 }
-.green-two ul li {
+.green-two strong {
   display: none;
 }
 .blue-end-two h4 {
