@@ -125,13 +125,11 @@ $(document).ready (function() {
       $(".formnextfirst").show();
     });
     $(".form").on("input", "#form-describe", function() {
-      playAudioRandom(TapSounds);
       $(".red-three .default-content-wrapper").hide();
       $(".secondformv").hide();
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
-      playAudioRandom(TapSounds);
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
