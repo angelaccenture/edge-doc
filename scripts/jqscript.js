@@ -128,6 +128,7 @@ $(document).ready (function() {
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
+      stopCurrentMusic();
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
 
@@ -166,6 +167,8 @@ $(document).ready (function() {
 $(".blue-end-one").delay(400).fadeIn('slow','','');
 
 $('.button').on("click", ".blueendone", function() {
+  initAudio();
+  playMusic("MUS_Staccato.mp3");
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
 });  
