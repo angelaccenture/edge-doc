@@ -194,7 +194,7 @@ function repeatAnim() {
     });
   });
 }
-setInterval(repeatAnim, 500);​
+//setInterval(repeatAnim, 500);​
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
