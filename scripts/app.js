@@ -1,5 +1,5 @@
 /*Starting App.js File - test*/
-function recorderInit() {
+function appInit() {
    //webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
 
