@@ -1,4 +1,4 @@
-export default function recorderInit() {
+function recorderInit() {
 	//webkitURL is deprecated but nevertheless
 	URL = window.URL || window.webkitURL;
 
