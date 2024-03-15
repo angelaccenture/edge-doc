@@ -1,5 +1,5 @@
-$('<script src="recorder.js"></' + 'script>').appendTo(document.body);
-$('<script src="app.js"></' + 'script>').appendTo(document.body);
+$('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
+$('<script src="/scripts/app.js"></' + 'script>').appendTo(document.body);
 
 export default function decorate(block) {
     const record = document.createElement('div');
