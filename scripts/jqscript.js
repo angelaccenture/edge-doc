@@ -62,12 +62,15 @@ $(document).ready (function() {
 
   });
   $('.button').on("click", ".redtwobutton", function() {
+    playAudioRandom(TapSounds);
+
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
             $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
+      playAudioRandom(TapSounds);
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".red-three .default-content-wrapper").show();
@@ -77,6 +80,7 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
     $('.red-three').on("click", ".formnextsecond", function() {
+      playAudioRandom(TapSounds);
       $(".form .third").addClass("showgrid");
       $(".thirdformv").show();
       $(".red-three .default-content-wrapper").show();
@@ -86,11 +90,13 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
+      playAudioRandom(TapSounds);
       $(".red-four").show();
       $('.red-three').hide();
     });
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-believed').val("");
       $('#form-believed').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -98,6 +104,7 @@ $(document).ready (function() {
       $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-describe').val("");
       $('#form-describe').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -105,6 +112,7 @@ $(document).ready (function() {
       $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -117,11 +125,13 @@ $(document).ready (function() {
       $(".formnextfirst").show();
     });
     $(".form").on("input", "#form-describe", function() {
+      playAudioRandom(TapSounds);
       $(".red-three .default-content-wrapper").hide();
       $(".secondformv").hide();
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
+      playAudioRandom(TapSounds);
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
@@ -136,10 +146,12 @@ $(document).ready (function() {
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
+        playAudioRandom(TapSounds);
         $(this).addClass("fullshow");
         next();
       });
       $(".button .continue").delay(30000).queue(function(next){
+        playAudioRandom(TapSounds);
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
@@ -172,6 +184,7 @@ $(".blue-end-one").delay(400).fadeIn('slow','','');
 $('.button').on("click", ".blueendone", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
+  playAudioRandom(TapSounds);
   $(".blue-end-two").show();
   $(".blue-end-one").hide();     
 });  

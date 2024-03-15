@@ -93,7 +93,6 @@ export default async function decorate(block) {
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
-    playAudioRandom(TapSounds);
     e.preventDefault();
     const valid = form.checkValidity();
     if (valid) {
