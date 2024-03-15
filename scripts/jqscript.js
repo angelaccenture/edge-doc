@@ -19,7 +19,7 @@ $(document).ready (function() {
     $(".blue-three").delay(400).fadeIn();
    });
   $('.button').on("click", ".declinebutton", function() {
-    playAudioRandom(TapSounds);
+    playAudio("SFX_UI_Decline.mp3");
     $(".blue-one").show();
     $(".blue-two").hide();
   });
@@ -46,13 +46,13 @@ $(document).ready (function() {
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
-    musicTransition("MUS_Orchestral.mp3");
     $(".green-two").fadeOut();
     $(".green-three").delay(400).fadeIn().addClass('greencar');
   });
    /*Green Three is a carousel*/
 
    $('.button').on("click", ".redonebutton", function() {
+    musicTransition("MUS_Orchestral.mp3");
     playAudioRandom(TapSounds);
     $(".red-one").hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
