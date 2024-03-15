@@ -9,7 +9,7 @@ export default function decorate(block) {
     button.setAttribute('id', row.firstElementChild.innerHTML);
     row.firstElementChild.remove();
     //button.firstElementChild.setAttribute('disabled','false');
-    console.log(document.getElementbyId('recordButton'));
+    console.log(document.getElementById('recordButton'));
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       const removediv = div.parentNode;
