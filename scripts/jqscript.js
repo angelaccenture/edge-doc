@@ -183,7 +183,7 @@ $('.button').on("click", ".blueendone", function() {
   playAudioRandom(TapSounds); 
   $(".blue-end-one").fadeOut();     
   $(".blue-end-two").delay(400).fadeIn();
-  repeatAnim();
+  //repeatAnim();
 });
 /*Animation on words - green two*/
 function repeatAnim() {
@@ -193,7 +193,7 @@ function repeatAnim() {
          
     });
   });
-  repeatAnim();
+ // repeatAnim();
 }
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
