@@ -144,12 +144,10 @@ $(document).ready (function() {
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(10000).queue(function(next){
-        playAudioRandom(TapSounds);
         $(this).addClass("fullshow");
         next();
       });
       $(".button .continue").delay(30000).queue(function(next){
-        playAudioRandom(TapSounds);
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
