@@ -122,13 +122,14 @@ $(document).ready (function() {
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
-      stopCurrentMusic();
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
+      stopCurrentMusic();
+      playAudioRandom(TapSounds);
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
 
