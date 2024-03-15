@@ -7,11 +7,14 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
     button.setAttribute('id', row.firstElementChild.innerHTML);
-    button.setAttribute('disabled',"");
     row.firstElementChild.remove();
-    const recordB = document.getElementById('recordButton');
-    if (recordB != null) {
-      recordB.setAttribute("disabled","false");
+    const pauseB = document.getElementById('pauseButton');
+    if (pauseB != null) {
+      pauseB.setAttribute("disabled","");
+    }
+    const stopB = document.getElementById('stopButton');
+    if (stopB != null) {
+      stopB.setAttribute("disabled","");
     }
   
     while (row.firstElementChild) button.append(row.firstElementChild);
