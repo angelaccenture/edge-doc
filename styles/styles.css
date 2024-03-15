@@ -278,4 +278,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .blue-end-two h4 {
   display: none;
+  padding-top: 50%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
 }
