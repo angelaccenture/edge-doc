@@ -5,7 +5,6 @@ export default function decorate(block) {
   main.setAttribute("id","controls");
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
-    button.setAttribute('disabled','');
     button.setAttribute('id', row.firstElementChild.innerHTML);
     row.firstElementChild.remove();
     console.log(button);
