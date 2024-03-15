@@ -10,13 +10,10 @@ export default function decorate(block) {
     button.setAttribute('disabled',"");
     row.firstElementChild.remove();
     const recordB = document.getElementById('recordButton');
-    console.log(recordB);
     if (recordB != null) {
-      console.log("test");
       recordB.setAttribute("disabled","false");
     }
-    //recordB.setAttribute("disabled","false");
-
+  
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
       const removediv = div.parentNode;
