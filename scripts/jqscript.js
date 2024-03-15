@@ -33,6 +33,15 @@ $(document).ready (function() {
     $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
 
   });
+  /*Animation on words - green two*/
+function repeatAnimBlue() {
+  $( ".blue-end-two h4" ).each(function(index) {   
+    $(this).delay(7000*index).fadeIn (4000, function() {
+          $(this).delay(3000).fadeOut();
+         
+    });
+  });
+}
   $('.button').on("click", ".greenonebutton", function() {
     playAudioRandom(TapSounds);
     $(".green-one").hide("slide", { direction: "left" }, 1200);
@@ -56,7 +65,6 @@ $(document).ready (function() {
   });
   $('.button').on("click", ".redtwobutton", function() {
     playAudioRandom(TapSounds);
-
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
             $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
