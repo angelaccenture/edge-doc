@@ -39,7 +39,7 @@ $(document).ready (function() {
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
 
     // Animation on words - green two
-    $( ".green-two ul li" ).each(function( index ) {
+    $( ".default-content-wrapper ul li" ).each(function( index ) {
       console.log("animation")
         console.log( index + ": " + $( this ).text() );
     });
