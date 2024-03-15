@@ -2,7 +2,7 @@ export default function decorate(block) {
     const main = document.createElement('div');
     const text = document.createTextNode('Hello World');
     main.appendChild(text);
-    document.body.appendChild(main);
+    // document.body.appendChild(main);
 
     const recordButton = document.createElement('button');
     const startText = document.createTextNode('record');
