@@ -1,5 +1,5 @@
 function audio() {
-    const main = document.createElement('div');
+    const main = document.getElementById('startrec');
     const text = document.createTextNode('Hello World');
     main.appendChild(text);
     document.body.appendChild(main);
