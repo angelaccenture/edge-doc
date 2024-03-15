@@ -4,10 +4,12 @@ export default function decorate(block) {
     main.appendChild(text);
     // document.body.appendChild(main);
 
-    const recordButton = document.createElement('button');
+    const button = document.createElement('button');
     const startText = document.createTextNode('record');
-    recordButton.className = 'start-recording-button';
-    recordButton.appendChild(startText);
+    const recordButton = document.getElementById('startrec');
+    // recordButton.className = 'start-recording-button';
+    button.appendChild(startText);
+    recordButton.appendChild(button);
     // document.body.appendChild(recordButton);
 
     const cancelButton = document.createElement('button');
