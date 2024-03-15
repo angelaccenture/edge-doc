@@ -1,11 +1,13 @@
 const AUDIO_FOLDER = "/audioClips/";
 const ConfirmSound = "SFX_UI_Confirm.mp3";
-const TapSounds = [("SFX_UI_Tap1.mp3"),("SFX_UI_Tap2.mp3"),("SFX_UI_Tap3.mp3"),("SFX_UI_Tap4.mp3"),("SFX_UI_Tap5.mp3"),("SFX_UI_Tap6.mp3")];
+const TapSounds = [("SFX_UI_Tap-001.mp3"),("SFX_UI_Tap-002.mp3"),("SFX_UI_Tap-003.mp3"),("SFX_UI_Tap-004.mp3"),("SFX_UI_Tap-005.mp3"),("SFX_UI_Tap-006.mp3"),("SFX_UI_Tap-007.mp3"),("SFX_UI_Tap-008.mp3")];
+const PageTurnSounds = [("SFX_UI_PageTurn-001.mp3"),("SFX_UI_PageTurn-002.mp3"),("SFX_UI_PageTurn-003.mp3")];
+
 let lastRandom;
 
 //HTML AUDIO
 function playAudio(clipName){
-    console.log("Playing: "+clipName);
+    //console.log("Playing: "+clipName);
     const audio = new Audio(AUDIO_FOLDER+clipName);
     audio.play();
 }
@@ -31,10 +33,8 @@ function initAudio () {
 
 }
 
-function playMusic(clipName){
+function playMusic(clipName, fadeTime = 2){
     GetFile(clipName).then((audioBuffer)=>{
-        //console.log(clipName + " loaded ok");
-
         let bufferSource = audioContext.createBufferSource();
         bufferSource.buffer = audioBuffer;
         bufferSource.loop= true;
@@ -46,16 +46,17 @@ function playMusic(clipName){
         bufferSource.start();
         activeBufferSource = bufferSource;
         activeGainNode = gainNode;
-        fadeIn(gainNode, 2);
+        fadeIn(gainNode, fadeTime);
     });
 }
 
-function musicTransition(clipName){
+function musicTransitionTo(clipName){
     fadeOutAndStop(activeBufferSource,activeGainNode,4);
-    playMusic(clipName);
+    playMusic(clipName, 2);
 }
 
 function stopCurrentMusic(){
+    console.log("Stopping");
     fadeOutAndStop(activeBufferSource,activeGainNode,4);
 }
 

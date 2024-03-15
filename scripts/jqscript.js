@@ -6,8 +6,7 @@ $(document).ready (function() {
  /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
-    playMusic("MUS_Main.mp3");
-    playAudioRandom(TapSounds);
+    playMusic("MUS_Staccato.mp3");
     $(".blue-one").hide();
     $(".blue-two").delay(400).fadeIn('slow','','');
   });
@@ -19,7 +18,8 @@ $(document).ready (function() {
     $(".blue-three").delay(400).fadeIn();
    });
   $('.button').on("click", ".declinebutton", function() {
-    playAudioRandom(TapSounds);
+    playAudio("SFX_UI_Decline.mp3");
+    stopCurrentMusic();
     $(".blue-one").show();
     $(".blue-two").hide();
   });
@@ -52,6 +52,7 @@ $(document).ready (function() {
    /*Green Three is a carousel*/
 
    $('.button').on("click", ".redonebutton", function() {
+    musicTransitionTo("MUS_Orchestral.mp3");
     playAudioRandom(TapSounds);
     $(".red-one").hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
@@ -61,12 +62,15 @@ $(document).ready (function() {
 
   });
   $('.button').on("click", ".redtwobutton", function() {
+    playAudioRandom(TapSounds);
+
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
             $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
+      playAudioRandom(TapSounds);
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".red-three .default-content-wrapper").show();
@@ -76,6 +80,7 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
     $('.red-three').on("click", ".formnextsecond", function() {
+      playAudioRandom(TapSounds);
       $(".form .third").addClass("showgrid");
       $(".thirdformv").show();
       $(".red-three .default-content-wrapper").show();
@@ -85,11 +90,13 @@ $(document).ready (function() {
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
+      playAudioRandom(TapSounds);
       $(".red-four").show();
       $('.red-three').hide();
     });
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-believed').val("");
       $('#form-believed').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -97,6 +104,7 @@ $(document).ready (function() {
       $(".formnextfirst").show();    
     });
     $(".formbutton").on("click", ".secondformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-describe').val("");
       $('#form-describe').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -104,6 +112,7 @@ $(document).ready (function() {
       $(".formnextsecond").show();  
     }); 
     $(".formbutton").on("click", ".thirdformv", function() {
+      playAudioRandom(TapSounds);
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
@@ -127,6 +136,8 @@ $(document).ready (function() {
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
+      stopCurrentMusic();
+      playAudioRandom(TapSounds);
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
 
@@ -143,10 +154,12 @@ $(document).ready (function() {
       });
     });
     $(".button").on("click", ".stoprecording", function() {
+      playAudioRandom(TapSounds);
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");
     });
     $(".button").on("click", ".continue", function() {
+      playAudioRandom(TapSounds);
       $(this).stop();
       $(this).removeClass("fullshow");
       $('.redorec').addClass("textshow");
@@ -165,29 +178,41 @@ $(document).ready (function() {
 $(".blue-end-one").delay(600).fadeIn('slow','','');
 
 $('.button').on("click", ".blueendone", function() {
+  initAudio();
+  playMusic("MUS_Staccato.mp3");
+  playAudioRandom(TapSounds); 
   $(".blue-end-one").fadeOut();     
   $(".blue-end-two").delay(400).fadeIn();
 });  
 $('.button').on("click", ".blueendtwo", function() {
+  playAudioRandom(TapSounds);
+  stopCurrentMusic();
   $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
   $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
 }); 
 $('.button').on("click", ".blueendthree", function() {
+  playAudioRandom(TapSounds);
+  playMusic("MUS_Staccato.mp3");
   $(".blue-end-three").fadeOut();
   $(".blue-end-four").delay(400).fadeIn();
 }); 
 $(".form").on("input", "#form-email", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-four .submit-wrapper").delay(400).fadeIn();
 });
 $(".blue-end-four").on("click", ".button", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-four")fadeOut();
   $(".blue-end-five").delay(400).fadeIn();
 });
 $('.button').on("click", ".blueendfive", function() {
+  stopCurrentMusic();
+  playAudioRandom(TapSounds);
   $(".blue-end-five")fadeOut();
   $(".blue-end-six").delay(400).fadeIn();
 }); 
 $('.button').on("click", ".startover", function() {
+  playAudioRandom(TapSounds);
   location.href = "/";
 });
      
