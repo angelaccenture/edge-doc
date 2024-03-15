@@ -276,6 +276,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two strong {
   display: none;
 }
+.green-two strong:first-child {
+  display: block;
+}
 .blue-end-two h4 {
   display: none;
   padding-top: 50%;
