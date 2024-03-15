@@ -187,16 +187,9 @@ $('.button').on("click", ".blueendone", function() {
  /*Animation on words - green two*/
     $( ".blue-end-two h4" ).each(function( index ) {
        // $(this).delay(400).fadeIn();
+        $(this + each);
         console.log( index + ": " + $( this ).text() );
     });
-
-    var $elem = $('.blue-end-two h4'), l = $elem.length, i = 0;
-    function comeOn() {
-      $elem.eq(i % l).fadeIn(700, function() {
-        $elem.eq(i % l).fadeOut(700, comeOn);
-        i++;
-    });
-    comeOn();
 }
 
 });
