@@ -41,7 +41,7 @@ $(document).ready (function() {
     // Animation on words - green two
     $( ".default-content-wrapper ul li" ).each(function( index ) {
       // ($("li").hide(), 3000, 1000 * 60 * 60);
-      ($("li").hide(),3000, 1000 * 60 * 60).next().show();
+      ($("ul").hide(),3000, 1000 * 60 * 60).next().show();
       console.log("animation")
         console.log( index + ": " + $( this ).text() );
     });
