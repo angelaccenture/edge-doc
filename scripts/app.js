@@ -168,3 +168,6 @@ function recorderInit() {
 }
 
 }
+export {
+	recorderInit
+};
