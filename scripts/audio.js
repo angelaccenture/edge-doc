@@ -56,6 +56,7 @@ function musicTransition(clipName){
 }
 
 function stopCurrentMusic(){
+    console.log("Stopping");
     fadeOutAndStop(activeBufferSource,activeGainNode,4);
 }
 

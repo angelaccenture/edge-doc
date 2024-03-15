@@ -125,10 +125,10 @@ $(document).ready (function() {
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
+      stopCurrentMusic();
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
-      stopCurrentMusic();
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
 
