@@ -38,11 +38,11 @@ $(document).ready (function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
 
-    /*Animation on words - green two
-    // $( ".green-three strong" ).each(function( index ) {
-    //   console.log("animation")
-    //     console.log( index + ": " + $( this ).text() );
-    // });*/
+    // Animation on words - green two
+    $( ".green-three ul li" ).each(function( index ) {
+      console.log("animation")
+        console.log( index + ": " + $( this ).text() );
+    });
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
