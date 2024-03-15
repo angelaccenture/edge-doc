@@ -38,11 +38,12 @@ $(document).ready (function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
 
-    /*Animation on words - green two
-    $( ".green-three strong" ).each(function( index ) {
-      console.log("animation")
-        console.log( index + ": " + $( this ).text() );
-    });*/
+    /*Animation on words - green two*/
+    $( ".green-three ul li" ).each(function( index ) {
+       $(this).delay(7000*index).fadeIn (4000, function() {
+          $(this).delay(3000).fadeOut();
+         
+    });
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
@@ -194,8 +195,6 @@ function repeatAnim() {
     });
   });
 }
-delay(8000).repeatAnim();
-
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
