@@ -186,11 +186,13 @@ $('.button').on("click", ".blueendone", function() {
  /*Animation on words - green two*/
  function repeatAnim() {
     $( ".blue-end-two h4" ).each(function(index) {   
-     //$(this).hide(); 
-     //$(this).delay(7000 * index).show(300);
-     $(this).delay(7000*index).fadeIn (300, function() {
+
+  /*   $(this).delay(7000*index).fadeIn (300, function() {
             $(this).delay(7000).fadeOut();
-      });
+      }); */
+      $(this).delay(7000*index).fadeOut(300, function() {
+        $(this).delay(7000).fadeIn();
+  });
     });
   }
   repeatAnim();
