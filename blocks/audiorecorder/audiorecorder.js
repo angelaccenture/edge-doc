@@ -1,31 +1,56 @@
 function setup() {
-  const player = document.getElementById('player');
+  document.getElementById("startRecording").addEventListener("click", initFunction);
 
-  const handleSuccess = function (stream) {
-    if (window.URL) {
-      player.srcObject = stream;
-    } else {
-      player.src = stream;
+  let isRecording = document.getElementById("isRecording");
+  function initFunction() {
+    async function getUserMedia(constraints) {
+      if (window.navigator.mediaDevices) {
+        return window.navigator.mediaDevices.getUserMedia(constraints);
+      }
+      let legacyApi =
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia;
+      if (legacyApi) {
+        return new Promise(function (resolve, reject) {
+          legacyApi.bind(window.navigator)(constraints, resolve, reject);
+        });
+      } else {
+        alert("user api not supported");
+      }
     }
-  };
 
-  const handleAudioSuccess = async function(stream) {
-    const context = new AudioContext();
-    const source = context.createMediaStreamSource(stream);
+    isRecording.textContent = "Recording...";
 
-    await context.audioWorklet.addModule("processor.js");
-    const worklet = new AudioWorkletNode(context, "worklet-processor");
+    let audioChunks = [];
+    let rec;
+    function handlerFunction(stream) {
+      rec = new MediaRecorder(stream);
+      rec.start();
+      rec.ondataavailable = (e) => {
+        audioChunks.push(e.data);
+        if (rec.state == "inactive") {
+          let blob = new Blob(audioChunks, { type: "audio/mp3" });
+          console.log(blob);
+          document.getElementById("audioElement").src = URL.createObjectURL(blob);
+        }
+      };
+    }
 
-    source.connect(worklet);
-    worklet.connect(context.destination);
-  };
+    function startusingBrowserMicrophone(boolean) {
+      getUserMedia({ audio: boolean }).then((stream) => {
+        handlerFunction(stream);
+      });
+    }
 
-  navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-    .then(handleSuccess);
+    startusingBrowserMicrophone(true);
 
-  navigator.mediaDevices
-    .getUserMedia({audio: true, video: false})
-    .then(handleAudioSuccess);
+    document.getElementById("stopRecording").addEventListener("click", (e) => {
+      rec.stop();
+      isRecording.textContent = "Click play button to start listening";
+    });
+  }
 }
 
 /**
@@ -33,18 +58,24 @@ function setup() {
  * Record audio from the end user
  */
 export default async function decorate(block) {
+  const startBtn = document.createElement('button');
+  startBtn.setAttribute('id', 'startRecording');
+
+  const stopBtn = document.createElement('button');
+  stopBtn.setAttribute('id', 'stopRecording');
+
   const audio = document.createElement('audio');
   audio.setAttribute('controls', '');
-  audio.setAttribute('id', 'player');
+  audio.setAttribute('id', 'audioElement');
 
-  const input = document.createElement('input');
-  input.setAttribute('type', 'file');
-  input.setAttribute('accept', 'audio/*');
-  input.setAttribute('capture', '');
-  input.setAttribute('id', 'recorder');
+  const isRecording = document.createElement('p');
+  isRecording.setAttribute('id', 'isRecording');
+  isRecording.innertText = 'Click start button to record';
 
+  block.appendChild(startBtn);
+  block.appendChild(stopBtn);
+  block.appendChild(isRecording);
   block.appendChild(audio);
-  block.appendChild(input);
 
   setup();
 }
