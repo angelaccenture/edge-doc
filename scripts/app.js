@@ -7,7 +7,7 @@ var input; 							//MediaStreamAudioSourceNode we'll be recording
 
 // shim for AudioContext when it's not avb. 
 var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioContext //audio context to help us record
+var audioContextr //audio context to help us record
 
 var recordButton = document.getElementById("recordButton");
 var stopButton = document.getElementById("stopButton");
@@ -50,16 +50,16 @@ function startRecording() {
 			the sampleRate defaults to the one set in your OS for your playback device
 
 		*/
-		//audioContext = new AudioContext();
+		audioContextr = new AudioContextr();
 
 		//update the format 
-		document.getElementById("formats").innerHTML="Format: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz"
+		document.getElementById("formats").innerHTML="Format: 1 channel pcm @ "+audioContextr.sampleRate/1000+"kHz"
 
 		/*  assign to gumStream for later use  */
 		gumStream = stream;
 		
 		/* use the stream */
-		input = audioContext.createMediaStreamSource(stream);
+		input = audioContextr.createMediaStreamSource(stream);
 
 		/* 
 			Create the Recorder object and configure to record mono sound (1 channel)
