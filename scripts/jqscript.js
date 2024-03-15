@@ -53,6 +53,7 @@ $(document).ready (function() {
 
    $('.button').on("click", ".redonebutton", function() {
     playAudioRandom(TapSounds);
+    musicTransition("MUS_Orchestral.wav");
     $(".red-one").hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
      /*Add auto trans here
@@ -67,7 +68,6 @@ $(document).ready (function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
-      musicTransition("MUS_Orchestral.wav");
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".red-three .default-content-wrapper").show();

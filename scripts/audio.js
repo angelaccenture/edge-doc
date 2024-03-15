@@ -5,7 +5,7 @@ let lastRandom;
 
 //HTML AUDIO
 function playAudio(clipName){
-    console.log("Playing: "+clipName);
+    //console.log("Playing: "+clipName);
     const audio = new Audio(AUDIO_FOLDER+clipName);
     audio.play();
 }
@@ -31,7 +31,7 @@ function initAudio () {
 
 }
 
-function playMusic(clipName){
+function playMusic(clipName, fadeTime = 2){
     GetFile(clipName).then((audioBuffer)=>{
         //console.log(clipName + " loaded ok");
 
@@ -46,13 +46,13 @@ function playMusic(clipName){
         bufferSource.start();
         activeBufferSource = bufferSource;
         activeGainNode = gainNode;
-        fadeIn(gainNode, 2);
+        fadeIn(gainNode, fadeTime);
     });
 }
 
 function musicTransition(clipName){
-    fadeOutAndStop(activeBufferSource,activeGainNode,4);
-    playMusic(clipName);
+    fadeOutAndStop(activeBufferSource,activeGainNode,2);
+    playMusic(clipName, 4);
 }
 
 function stopCurrentMusic(){
