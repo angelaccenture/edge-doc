@@ -51,7 +51,7 @@ function playMusic(clipName, fadeTime = 2){
 }
 
 function musicTransition(clipName){
-    fadeOutAndStop(activeBufferSource,activeGainNode,2);
+    fadeOutAndStop(activeBufferSource,activeGainNode,4);
     playMusic(clipName, 4);
 }
 

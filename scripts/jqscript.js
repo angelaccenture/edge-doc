@@ -6,8 +6,8 @@ $(document).ready (function() {
  /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
-    playMusic("MUS_Main.mp3");
-    playAudioRandom(TapSounds);
+    playMusic("MUS_Staccato.mp3");
+    playAudio("SFX_UI_Confirm.mp3");
     $(".blue-one").hide();
     $(".blue-two").delay(400).fadeIn('slow','','');
   });
@@ -46,6 +46,7 @@ $(document).ready (function() {
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
+    musicTransition("MUS_Orchestral.mp3");
     $(".green-two").fadeOut();
     $(".green-three").delay(400).fadeIn().addClass('greencar');
   });
@@ -53,7 +54,6 @@ $(document).ready (function() {
 
    $('.button').on("click", ".redonebutton", function() {
     playAudioRandom(TapSounds);
-    musicTransition("MUS_Orchestral.wav");
     $(".red-one").hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
      /*Add auto trans here
