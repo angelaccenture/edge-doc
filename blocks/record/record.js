@@ -1,6 +1,8 @@
 $('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
 $('<script src="/scripts/app.js"></' + 'script>').appendTo(document.body);
 
+import { recorderInit } from '../../scripts/app.js';
+
 export default function decorate(block) {
     const record = document.createElement('div');
     record.setAttribute("id","controls");
@@ -15,6 +17,7 @@ export default function decorate(block) {
      });
      block.textContent = '';
      block.append(record);
+     recorderInit();
    }
  /*HTML*
  
