@@ -31,10 +31,10 @@ $(document).ready (function() {
     /*Add auto trans here
     $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-
+    repeatAnimGreen();
   });
   /*Animation on words - green two*/
-function repeatAnimBlue() {
+function repeatAnimGreen() {
   $( ".green-two ul li" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
           $(this).delay(3000).fadeOut();
