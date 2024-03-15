@@ -7,7 +7,6 @@ $(document).ready (function() {
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
     playMusic("MUS_Staccato.mp3");
-    playAudio("SFX_UI_Confirm.mp3");
     $(".blue-one").hide();
     $(".blue-two").delay(400).fadeIn('slow','','');
   });
@@ -20,6 +19,7 @@ $(document).ready (function() {
    });
   $('.button').on("click", ".declinebutton", function() {
     playAudio("SFX_UI_Decline.mp3");
+    stopCurrentMusic();
     $(".blue-one").show();
     $(".blue-two").hide();
   });
