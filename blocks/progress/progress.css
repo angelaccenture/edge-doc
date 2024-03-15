@@ -1,15 +1,17 @@
 #myProgress {
-    width: 90%;
-    border: 2px solid white;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 8%;
-    left: 5%;
+  width: 60%;
+  border: 2px solid white;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  height: 12px;
+  right: 0;
   }
   
   #myBar {
     width: 10%;
-  height: 30px;
+  height: 12px;
   background-color: white;
   text-align: center;
   line-height: 30px;
