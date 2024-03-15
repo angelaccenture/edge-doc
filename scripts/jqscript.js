@@ -37,13 +37,6 @@ $(document).ready (function() {
     playAudioRandom(TapSounds);
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
-
-    /*Animation on words - green two*/
-    $( ".green-three ul li" ).each(function( index ) {
-       $(this).delay(7000*index).fadeIn (4000, function() {
-          $(this).delay(3000).fadeOut();
-         
-    });
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
@@ -51,7 +44,6 @@ $(document).ready (function() {
     $(".green-three").delay(400).fadeIn().addClass('greencar');
   });
    /*Green Three is a carousel*/
-
    $('.button').on("click", ".redonebutton", function() {
     musicTransitionTo("MUS_Orchestral.mp3");
     playAudioRandom(TapSounds);
@@ -177,7 +169,6 @@ $(document).ready (function() {
 
 /*Thank You Page*/
 $(".blue-end-one").delay(600).fadeIn('slow','','');
-
 $('.button').on("click", ".blueendone", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
@@ -226,6 +217,4 @@ $('.button').on("click", ".startover", function() {
   playAudioRandom(TapSounds);
   location.href = "/";
 });
-     
-
-    });
+});
