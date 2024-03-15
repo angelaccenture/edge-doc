@@ -1,5 +1,5 @@
-function audio() {
-    const main = document.getElementById('startrec');
+export default function decorate(block) {
+    const main = document.createElement('div');
     const text = document.createTextNode('Hello World');
     main.appendChild(text);
     document.body.appendChild(main);
@@ -298,6 +298,7 @@ function audio() {
                 return totalHours + ":" + minutes + ":" + seconds;
             }
         }
+        block.append(main);
     // });
 }
 
