@@ -467,9 +467,9 @@ export default function decorate(block) {
     
         }).catch(function(err) {
           //enable the record button if getUserMedia() fails
-          recordButton.disabled = false;
+       /*   recordButton.disabled = false;
           stopButton.disabled = true;
-          pauseButton.disabled = true
+          pauseButton.disabled = true*/
         });
       }
     
@@ -491,9 +491,9 @@ export default function decorate(block) {
         console.log("stopButton clicked");
     
         //disable the stop button, enable the record too allow for new recordings
-        stopButton.disabled = true;
+       /* stopButton.disabled = true;
         recordButton.disabled = false;
-        pauseButton.disabled = true;
+        pauseButton.disabled = true;*/
     
         //reset button just in case the recording is stopped while paused
         pauseButton.innerHTML="Pause";
