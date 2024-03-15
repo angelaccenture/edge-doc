@@ -188,13 +188,14 @@ $('.button').on("click", ".blueendone", function() {
 /*Animation on words - green two*/
 function repeatAnim() {
   $( ".blue-end-two h4" ).each(function(index) {   
-  $(this).delay(7000*index).fadeIn (4000, function() {
-          $(this).delay(3000).fadeOut(800,repeatAnim);
+    $(this).delay(7000*index).fadeIn (4000, function() {
+          $(this).delay(3000).fadeOut();
          
     });
   });
 }
-//setInterval(repeatAnim, 500);​
+delay(8000).repeatAnim();
+
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
