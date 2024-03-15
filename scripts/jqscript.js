@@ -187,12 +187,9 @@ $('.button').on("click", ".blueendone", function() {
  function repeatAnim() {
     $( ".blue-end-two h4" ).each(function(index) {   
 
-  /*   $(this).delay(7000*index).fadeIn (300, function() {
-            $(this).delay(7000).fadeOut();
-      }); */
-      $(this).delay(7000*index).fadeOut(300, function() {
-        $(this).delay(7000).fadeIn();
-  });
+    $(this).delay(7000*index).fadeIn (3000, function() {
+            $(this).delay(1000).fadeOut();
+      });
     });
   }
   repeatAnim();
