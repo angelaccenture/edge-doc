@@ -33,11 +33,11 @@ function startRecording() {
  	/*
     	Disable the record button until we get a success or fail from getUserMedia() 
 	*/
-
+/*
 	recordButton.disabled = true;
 	stopButton.disabled = false;
 	pauseButton.disabled = false
-
+*/
 	/*
     	We're using the standard promise based getUserMedia() 
     	https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
@@ -75,10 +75,10 @@ function startRecording() {
 		console.log("Recording started");
 
 	}).catch(function(err) {
-	  	//enable the record button if getUserMedia() fails
+	/*  	//enable the record button if getUserMedia() fails
     	recordButton.disabled = false;
     	stopButton.disabled = true;
-    	pauseButton.disabled = true
+    	pauseButton.disabled = true */
 	});
 }
 
@@ -100,9 +100,10 @@ function stopRecording() {
 	console.log("stopButton clicked");
 
 	//disable the stop button, enable the record too allow for new recordings
+	/*
 	stopButton.disabled = true;
 	recordButton.disabled = false;
-	pauseButton.disabled = true;
+	pauseButton.disabled = true;*/
 
 	//reset button just in case the recording is stopped while paused
 	pauseButton.innerHTML="Pause";

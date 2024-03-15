@@ -9,13 +9,13 @@ export default function decorate(block) {
     button.setAttribute('id', row.firstElementChild.innerHTML);
     row.firstElementChild.remove();
     const pauseB = document.getElementById('pauseButton');
-    if (pauseB != null) {
+  /*  if (pauseB != null) {
       pauseB.setAttribute("disabled","");
     }
     const stopB = document.getElementById('stopButton');
     if (stopB != null) {
       stopB.setAttribute("disabled","");
-    }
+    }*/
   
     while (row.firstElementChild) button.append(row.firstElementChild);
     [...button.children].forEach((div) => {
