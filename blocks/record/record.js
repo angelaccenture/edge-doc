@@ -1,4 +1,4 @@
-
+$('<script>alert("hi");</' + 'script>').appendTo(document.body);
 export default function decorate(block) {
     const record = document.createElement('div');
     record.setAttribute("id","controls");
