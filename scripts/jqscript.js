@@ -202,13 +202,13 @@ $(".form").on("input", "#form-email", function() {
 });
 $(".blue-end-four").on("click", ".button", function() {
   playAudioRandom(TapSounds);
-  $(".blue-end-four")fadeOut();
+  $(".blue-end-four").fadeOut();
   $(".blue-end-five").delay(400).fadeIn();
 });
 $('.button').on("click", ".blueendfive", function() {
   stopCurrentMusic();
   playAudioRandom(TapSounds);
-  $(".blue-end-five")fadeOut();
+  $(".blue-end-five").fadeOut();
   $(".blue-end-six").delay(400).fadeIn();
 }); 
 $('.button').on("click", ".startover", function() {
