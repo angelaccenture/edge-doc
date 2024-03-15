@@ -169,5 +169,5 @@ export default function recorderInit() {
 
 }
 export {
-	recorderInit
+	recorderInit,
 };
