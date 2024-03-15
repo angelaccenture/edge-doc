@@ -1,8 +1,6 @@
 export default function decorate(block) {
    const video = document.createElement('video');
     video.setAttribute("id","video-player");
-    video.setAttribute("width","640");
-    video.setAttribute("height","480");
     video.setAttribute("controls","");
     video.setAttribute("autoplay","");
     [...block.children].forEach((row) => {

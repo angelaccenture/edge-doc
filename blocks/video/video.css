@@ -2,3 +2,7 @@
     padding-top: 0;
     text-align: center;
 }
+video {
+    width: 100%;
+    height: auto;
+}
