@@ -30,7 +30,7 @@ function setup() {
       rec.start();
       rec.ondataavailable = (e) => {
         audioChunks.push(e.data);
-        if (rec.state == "inactive") {
+        if (rec.state === "inactive") {
           let blob = new Blob(audioChunks, { type: "audio/mp3" });
           console.log(blob);
           document.getElementById("audioElement").src = URL.createObjectURL(blob);
