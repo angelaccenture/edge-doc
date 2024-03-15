@@ -2,6 +2,11 @@ $('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
 
 export default function decorate(block) {
     const record = document.createElement('div');
+  
+    const innerButtonContainer=`<ul><li>Item 1</li><li>Item 2</li></ul>`;
+    innerButtonContainer.className = "item-list";
+    document.getElementById("root").append(innerButtonContainer);
+    
     record.setAttribute("id","controls");
      [...block.children].forEach((row) => {
        const li = document.createElement('button');
@@ -47,8 +52,8 @@ export default function decorate(block) {
     
       //add events to those 2 buttons
       recordButton.addEventListener("click", startRecording);
-      //stopButton.addEventListener("click", stopRecording);
-      //pauseButton.addEventListener("click", pauseRecording);
+      stopButton.addEventListener("click", stopRecording);
+      pauseButton.addEventListener("click", pauseRecording);
     
       function startRecording() {
         console.log("recordButton clicked");
