@@ -1,6 +1,8 @@
 const AUDIO_FOLDER = "/audioClips/";
 const ConfirmSound = "SFX_UI_Confirm.mp3";
 const TapSounds = [("SFX_UI_Tap-001.mp3"),("SFX_UI_Tap-002.mp3"),("SFX_UI_Tap-003.mp3")];
+const PageTurnSounds = [("SFX_UI_PageTurn-001.mp3"),("SFX_UI_PageTurn-002.mp3"),("SFX_UI_PageTurn-003.mp3")];
+
 let lastRandom;
 
 //HTML AUDIO
