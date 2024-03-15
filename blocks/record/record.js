@@ -2,18 +2,14 @@ $('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
 
 export default function decorate(block) {
     const record = document.createElement('div');
-  
-    const innerButtonContainer=`<ul><li>Item 1</li><li>Item 2</li></ul>`;
-    //innerButtonContainer.className = "item-list";
-    document.getElementById("root").append(innerButtonContainer);
-    
     record.setAttribute("id","controls");
      [...block.children].forEach((row) => {
-       const li = document.createElement('button');
-       li.setAttribute("id","recordButton");
+      // const li = document.createElement('button');
+      // li.setAttribute("id","recordButton");
        while (row.firstElementChild) li.append(row.firstElementChild);
        [...li.children].forEach((div) => {
-         //removediv.removeChild(div);
+        const li = document.createElement('button');
+        li.setAttribute("id","recordButton");
        });
        record.append(li);
      });
