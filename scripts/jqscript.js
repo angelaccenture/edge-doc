@@ -190,11 +190,13 @@ $('.button').on("click", ".blueendone", function() {
 });  
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
+  stopCurrentMusic();
   $(".blue-end-three").show();
   $(".blue-end-two").hide();
 }); 
 $('.button').on("click", ".blueendthree", function() {
   playAudioRandom(TapSounds);
+  playMusic("MUS_Staccato.mp3");
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
