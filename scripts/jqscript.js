@@ -67,6 +67,7 @@ $(document).ready (function() {
   });  
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
+      musicTransition("MUS_Orchestral.wav");
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".red-three .default-content-wrapper").show();
