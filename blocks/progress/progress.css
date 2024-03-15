@@ -1,14 +1,17 @@
 #myProgress {
     width: 80%;
-    border-color: white;
+    border: 2px solid white;
     margin: 0 auto;
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
   }
   
   #myBar {
     width: 10%;
   height: 30px;
-  background-color: #04AA6D;
+  background-color: white;
   text-align: center;
   line-height: 30px;
-  color: white;
+  color: var(--blue-color);;
   }
