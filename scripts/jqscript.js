@@ -183,17 +183,15 @@ $('.button').on("click", ".blueendone", function() {
   playAudioRandom(TapSounds); 
   $(".blue-end-one").fadeOut();     
   $(".blue-end-two").delay(400).fadeIn();
-  repeatAnim();
+  ​setInterval();
 });
 /*Animation on words - green two*/
-function repeatAnim() {
-  $( ".blue-end-two h4" ).each(function(index) {   
-  $(this).delay(7000*index).fadeIn (4000, function() {
+​setInterval(function(){
+  $( ".blue-end-two h4" ).each(function(index) { 
+      $(this).delay(7000*index).fadeIn (4000, function() {
           $(this).delay(3000).fadeOut();
-         
-    });
-  });
-}
+        });
+      },1000);​
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
