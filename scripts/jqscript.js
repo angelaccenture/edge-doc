@@ -146,10 +146,12 @@ $(document).ready (function() {
       });
     });
     $(".button").on("click", ".stoprecording", function() {
+      playAudioRandom(TapSounds);
       $(this).removeClass("fullshow");
       $('.continue').addClass("fullshow");
     });
     $(".button").on("click", ".continue", function() {
+      playAudioRandom(TapSounds);
       $(this).stop();
       $(this).removeClass("fullshow");
       $('.redorec').addClass("textshow");
