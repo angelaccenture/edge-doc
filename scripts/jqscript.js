@@ -189,7 +189,7 @@ $('.button').on("click", ".blueendone", function() {
      //$(this).hide(); 
      //$(this).delay(7000 * index).show(300);
      $(this).delay(7000*index).fadeIn (300, function() {
-            $(this).fadeOut();
+            $(this).delay(7000).fadeOut();
       });
     });
   }
