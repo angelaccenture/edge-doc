@@ -8,19 +8,19 @@ export default function decorate(block) {
     const startText = document.createTextNode('record');
     recordButton.className = 'start-recording-button';
     recordButton.appendChild(startText);
-    document.body.appendChild(recordButton);
+    // document.body.appendChild(recordButton);
 
     const cancelButton = document.createElement('button');
     const canceltext = document.createTextNode('cancel');
     cancelButton.className = 'cancel-recording-button';
     cancelButton.appendChild(canceltext);
-    document.body.appendChild(cancelButton);
+    // document.body.appendChild(cancelButton);
 
     const stopButton = document.createElement('button');
     const stopText = document.createTextNode('stop');
     stopButton.className = 'stop-recording-button';
     stopButton.appendChild(stopText);
-    document.body.appendChild(stopButton);
+    // document.body.appendChild(stopButton);
 
     // document.addEventListener('DOMContentLoaded', function () {
         var startRecordingButton = document.querySelector('.start-recording-button');
@@ -298,7 +298,9 @@ export default function decorate(block) {
                 return totalHours + ":" + minutes + ":" + seconds;
             }
         }
-        block.append(main);
+        block.append(recordButton);
+        block.append(cancelButton);
+        block.append(stopButton);
     // });
 }
 
