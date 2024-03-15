@@ -1,5 +1,7 @@
 $(document).ready (function() {
   /*onload animation*/
+  initAudio();
+  playMusic("MUS_Staccato.mp3");
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
  // $(".blue-one h1").delay(400).show("slide", { direction: "down" }, 1200);
 
