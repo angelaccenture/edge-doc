@@ -175,41 +175,41 @@ $(document).ready (function() {
   });
 
 /*Thank You Page*/
-$(".blue-end-one").delay(400).fadeIn('slow','','');
+$(".blue-end-one").delay(600).fadeIn('slow','','');
 
 $('.button').on("click", ".blueendone", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
-  playAudioRandom(TapSounds);
-  $(".blue-end-two").show();
-  $(".blue-end-one").hide();     
+  playAudioRandom(TapSounds); 
+  $(".blue-end-one").fadeOut();     
+  $(".blue-end-two").delay(400).fadeIn();
 });  
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
-  $(".blue-end-three").show();
-  $(".blue-end-two").hide();
+  $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
+  $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
 }); 
 $('.button').on("click", ".blueendthree", function() {
   playAudioRandom(TapSounds);
   playMusic("MUS_Staccato.mp3");
-  $(".blue-end-four").show();
-  $(".blue-end-three").hide();
+  $(".blue-end-three").fadeOut();
+  $(".blue-end-four").delay(400).fadeIn();
 }); 
 $(".form").on("input", "#form-email", function() {
   playAudioRandom(TapSounds);
-  $(".blue-end-four .submit-wrapper").show();
+  $(".blue-end-four .submit-wrapper").delay(400).fadeIn();
 });
 $(".blue-end-four").on("click", ".button", function() {
   playAudioRandom(TapSounds);
-  $(".blue-end-five").show();
-  $(".blue-end-four").hide();
+  $(".blue-end-four")fadeOut();
+  $(".blue-end-five").delay(400).fadeIn();
 });
 $('.button').on("click", ".blueendfive", function() {
   stopCurrentMusic();
   playAudioRandom(TapSounds);
-  $(".blue-end-six").show();
-  $(".blue-end-five").hide();
+  $(".blue-end-five")fadeOut();
+  $(".blue-end-six").delay(400).fadeIn();
 }); 
 $('.button').on("click", ".startover", function() {
   playAudioRandom(TapSounds);
