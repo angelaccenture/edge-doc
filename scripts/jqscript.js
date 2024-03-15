@@ -192,7 +192,10 @@ $('.button').on("click", ".blueendone", function() {
       });
     });
   }
-  repeatAnim();
+  while(true) {
+    repeatAnim();
+}
+
 });
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
