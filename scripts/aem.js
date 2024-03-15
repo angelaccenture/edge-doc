@@ -708,6 +708,7 @@ export {
   loadBlocks,
   loadCSS,
   loadFooter,
+  loadFooterScript,
   loadHeader,
   loadScript,
   readBlockConfig,
