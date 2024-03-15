@@ -4,8 +4,8 @@ export default function decorate(block) {
   const main = document.createElement('div');
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
-    button.setAttribute('type','button');
-    button.className=row.firstElementChild.innerHTML;
+    button.setAttribute('disabled','');
+    button.setAttribute('id', row.firstElementChild.innerHTML);
     row.firstElementChild.remove();
    
     while (row.firstElementChild) button.append(row.firstElementChild);
