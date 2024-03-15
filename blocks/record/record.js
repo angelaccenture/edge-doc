@@ -21,6 +21,7 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(main);
+  console.log("recorderInit");
   recorderInit();
 }
  /*HTML*
