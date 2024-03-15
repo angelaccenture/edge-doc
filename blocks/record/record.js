@@ -1,22 +1,25 @@
 $('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
 
 export default function decorate(block) {
-    const record = document.createElement('div');
-    record.setAttribute("id","controls");
-     [...block.children].forEach((row) => {
-      // const li = document.createElement('button');
-      // li.setAttribute("id","recordButton");
-       while (row.firstElementChild) li.append(row.firstElementChild);
-       [...li.children].forEach((div) => {
-        const li = document.createElement('button');
-        li.setAttribute("id","recordButton");
+      const main = document.createElement('div');
+      record.setAttribute("id","controls");
+      [...block.children].forEach((row) => {
+        const button = document.createElement('button');
+        button.setAttribute('type','button');
+        button.className=row.firstElementChild.innerHTML;
+        row.firstElementChild.remove();
+       
+        while (row.firstElementChild) button.append(row.firstElementChild);
+        [...button.children].forEach((div) => {
+          const removediv = div.parentNode;
+          removediv.insertBefore(div.firstChild, div);
+          removediv.removeChild(div);
        });
-       record.append(li);
-     });
-     block.textContent = '';
-     block.append(record);
-     recorderInit();
-   }
+        main.append(button);
+      });
+      block.textContent = '';
+      block.append(main);
+    }
  /*HTML*
  
  <div id="controls">
