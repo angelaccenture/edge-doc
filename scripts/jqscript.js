@@ -186,7 +186,7 @@ $('.button').on("click", ".blueendone", function() {
  /*Animation on words - green two*/
     $( ".blue-end-two h4" ).each(function( index ) {
       // $(this).delay(400).fadeIn();
-      $( this ).text();
+      $( this ).text().show();
       console.log( index + ": " + $( this ).text() );
     });
 });
