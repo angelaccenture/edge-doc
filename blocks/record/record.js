@@ -24,6 +24,7 @@ export default function decorate(block) {
       removediv.removeChild(div);
    });
     //button.appeand("<test></test>")
+   // const newcode
    main.append(button);
   });
   block.textContent = '';
