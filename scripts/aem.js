@@ -656,6 +656,17 @@ async function loadFooter(footer) {
   decorateBlock(footerBlock);
   return loadBlock(footerBlock);
 }
+/**
+ * Loads a script after footer maybe
+ * @param footer footer element
+ * @returns {Promise}
+ */
+async function loadFooterScript (script) {
+  const footerScriptBlock = buildBlock('script', '');
+  footer.append(footerScriptBlock);
+  decorateBlock(footerScriptBlock);
+  return loadBlock(footerScriptBlock);
+}
 
 /**
  * Load LCP block and/or wait for LCP in default content.
