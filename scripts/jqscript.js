@@ -191,12 +191,12 @@ $('.button').on("click", ".blueendone", function() {
     });
 
     var $elem = $('.blue-end-two h4'), l = $elem.length, i = 0;
-
     function comeOn() {
       $elem.eq(i % l).fadeIn(700, function() {
         $elem.eq(i % l).fadeOut(700, comeOn);
         i++;
     });
+    comeOn();
 }
 
 });
