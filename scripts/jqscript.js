@@ -52,7 +52,7 @@ $(document).ready (function() {
    /*Green Three is a carousel*/
 
    $('.button').on("click", ".redonebutton", function() {
-    musicTransition("MUS_Orchestral.mp3");
+    musicTransitionTo("MUS_Orchestral.mp3");
     playAudioRandom(TapSounds);
     $(".red-one").hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(400).show("slide", { direction: "right" }, 1200);
@@ -122,10 +122,10 @@ $(document).ready (function() {
       $(".formnextsecond").show();
     });
     $(".form").on("input", "#form-makefeel", function() {
+      stopCurrentMusic();
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
       $(".formnextthird").show();
-      stopCurrentMusic();
     });
     /*End of Form Buttons*/
     $('.red-four').on("click", ".recordstory", function() {
@@ -173,25 +173,32 @@ $('.button').on("click", ".blueendone", function() {
   $(".blue-end-one").hide();     
 });  
 $('.button').on("click", ".blueendtwo", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-three").show();
   $(".blue-end-two").hide();
 }); 
 $('.button').on("click", ".blueendthree", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-four").show();
   $(".blue-end-three").hide();
 }); 
 $(".form").on("input", "#form-email", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-four .submit-wrapper").show();
 });
 $(".blue-end-four").on("click", ".button", function() {
+  playAudioRandom(TapSounds);
   $(".blue-end-five").show();
   $(".blue-end-four").hide();
 });
 $('.button').on("click", ".blueendfive", function() {
+  stopCurrentMusic();
+  playAudioRandom(TapSounds);
   $(".blue-end-six").show();
   $(".blue-end-five").hide();
 }); 
 $('.button').on("click", ".startover", function() {
+  playAudioRandom(TapSounds);
   location.href = "/";
 });
      
