@@ -183,7 +183,14 @@ $('.button').on("click", ".blueendone", function() {
   playAudioRandom(TapSounds); 
   $(".blue-end-one").fadeOut();     
   $(".blue-end-two").delay(400).fadeIn();
-});  
+
+ /*Animation on words - green two*/
+    $( ".blue-end-two h4" ).each(function( index ) {
+      console.log("animation");
+        console.log( index + ": " + $( this ).text() );
+    });
+
+});
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
