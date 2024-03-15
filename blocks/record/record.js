@@ -14,7 +14,8 @@ export default function decorate(block) {
      block.textContent = '';
      block.append(record);
    }
- 
+   import {  } from 'app.js';
+   import {  } from 'recorder.js';
     /*HTML*
  
  <div id="controls">
