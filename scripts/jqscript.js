@@ -187,7 +187,7 @@ $('.button').on("click", ".blueendone", function() {
  function repeatAnim() {
     $( ".blue-end-two h4" ).each(function(index) {   
 
-    $(this).delay(1000*index).fadeIn (6000, function() {
+    $(this).delay(7000*index).fadeIn (4000, function() {
             $(this).delay(200).fadeOut();
       });
     });
