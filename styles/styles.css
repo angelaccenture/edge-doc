@@ -270,3 +270,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two strong {
   display: none;
 }
+.blue-end-two h4 {
+  display: none;
+}
