@@ -193,7 +193,7 @@ function repeatAnim() {
          
     });
   });
- // repeatAnim();
+  repeatAnim();
 }
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
