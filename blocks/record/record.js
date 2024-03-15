@@ -2,6 +2,7 @@ $('<script src="/scripts/recorder.js"></' + 'script>').appendTo(document.body);
 
 export default function decorate(block) {
   const main = document.createElement('div');
+  main.setAttribute("id","controls");
   [...block.children].forEach((row) => {
     const button = document.createElement('button');
     button.setAttribute('disabled','');
