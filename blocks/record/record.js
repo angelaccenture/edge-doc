@@ -2,27 +2,25 @@ export default function decorate(block) {
     const main = document.createElement('div');
     const text = document.createTextNode('Hello World');
     main.appendChild(text);
-    // document.body.appendChild(main);
+    document.body.appendChild(main);
 
-    const button = document.createElement('button');
+    const recordButton = document.createElement('button');
     const startText = document.createTextNode('record');
-    const recordButton = document.getElementById('startrec');
-    // recordButton.className = 'start-recording-button';
-    button.appendChild(startText);
-    recordButton.appendChild(button);
-    // document.body.appendChild(recordButton);
+    recordButton.className = 'start-recording-button';
+    recordButton.appendChild(startText);
+    document.body.appendChild(recordButton);
 
     const cancelButton = document.createElement('button');
     const canceltext = document.createTextNode('cancel');
     cancelButton.className = 'cancel-recording-button';
     cancelButton.appendChild(canceltext);
-    // document.body.appendChild(cancelButton);
+    document.body.appendChild(cancelButton);
 
     const stopButton = document.createElement('button');
     const stopText = document.createTextNode('stop');
     stopButton.className = 'stop-recording-button';
     stopButton.appendChild(stopText);
-    // document.body.appendChild(stopButton);
+    document.body.appendChild(stopButton);
 
     // document.addEventListener('DOMContentLoaded', function () {
         var startRecordingButton = document.querySelector('.start-recording-button');
