@@ -35,8 +35,6 @@ function initAudio () {
 
 function playMusic(clipName, fadeTime = 2){
     GetFile(clipName).then((audioBuffer)=>{
-        //console.log(clipName + " loaded ok");
-
         let bufferSource = audioContext.createBufferSource();
         bufferSource.buffer = audioBuffer;
         bufferSource.loop= true;
@@ -53,8 +51,8 @@ function playMusic(clipName, fadeTime = 2){
 }
 
 function musicTransition(clipName){
-    fadeOutAndStop(activeBufferSource,activeGainNode,8);
-    playMusic(clipName, 3);
+    fadeOutAndStop(activeBufferSource,activeGainNode,4);
+    playMusic(clipName, 2);
 }
 
 function stopCurrentMusic(){
