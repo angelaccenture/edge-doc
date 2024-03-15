@@ -186,14 +186,15 @@ $('.button').on("click", ".blueendone", function() {
  /*Animation on words - green two*/
  function repeatAnim() {
     $( ".blue-end-two h4" ).each(function(index) {
-      console.log("Test Item" + index);
-     $(this).hide().delay(7000 * index).show(300);
+      //console.log("Test Item" + index);
+      console.log($(this));
+     $(this).delay(7000 * index).show(300);
      /*$(item).delay(7000*index).show(300, function() {
             $(this).delay(7000).hide(300);
       });*/
     });
   }
-  i=0; repeatAnim();
+  repeatAnim();
 });
 $('.button').on("click", ".blueendtwo", function() {
   playAudioRandom(TapSounds);
