@@ -187,6 +187,9 @@ $('.button').on("click", ".blueendone", function() {
     $( ".blue-end-two h4" ).each(function( index ) {
       // $(this).delay(400).fadeIn();
      // $( this ).text().show();
+     if (index == 0) {
+        $(this).show();
+     }
       console.log( index + ": " + $( this ).text() );
     });
 });
