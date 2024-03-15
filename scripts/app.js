@@ -1,5 +1,5 @@
 /*Starting App.js File - test*/
-//function recorderInit() {
+function recorderInit() {
    //webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
 
@@ -166,4 +166,5 @@ function createDownloadLink(blob) {
 
 	//add the li element to the ol
 	recordingsList.appendChild(li);
+}
 }
