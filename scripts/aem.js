@@ -280,6 +280,31 @@ async function loadScript(src, attrs) {
 }
 
 /**
+ * Loads a non module JS file.
+ * @param {string} src URL to the JS file
+ * @param {Object} attrs additional optional attributes
+ */
+async function loadBodyScript(src, attrs) {
+  return new Promise((resolve, reject) => {
+    if (!document.querySelector(`head > script[src="${src}"]`)) {
+      const script = document.createElement('script');
+      script.src = src;
+      if (attrs) {
+        // eslint-disable-next-line no-restricted-syntax, guard-for-in
+        for (const attr in attrs) {
+          script.setAttribute(attr, attrs[attr]);
+        }
+      }
+      script.onload = resolve;
+      script.onerror = reject;
+      document.body.append(script);
+    } else {
+      resolve();
+    }
+  });
+}
+
+/**
  * Retrieves the content of metadata tags.
  * @param {string} name The metadata name (or property)
  * @param {Document} doc Document object to query for metadata. Defaults to the window's document
@@ -657,18 +682,6 @@ async function loadFooter(footer) {
   return loadBlock(footerBlock);
 }
 /**
- * Loads a script after footer maybe
- * @param footer footer element
- * @returns {Promise}
- */
-async function loadFooterScript (script) {
-  const footerScriptBlock = buildBlock('script', '');
-  footer.append(footerScriptBlock);
-  decorateBlock(footerScriptBlock);
-  return loadBlock(footerScriptBlock);
-}
-
-/**
  * Load LCP block and/or wait for LCP in default content.
  * @param {Array} lcpBlocks Array of blocks
  */
@@ -708,9 +721,9 @@ export {
   loadBlocks,
   loadCSS,
   loadFooter,
-  loadFooterScript,
   loadHeader,
   loadScript,
+  loadBodyScript,
   readBlockConfig,
   sampleRUM,
   setup,
