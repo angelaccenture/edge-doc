@@ -8,7 +8,6 @@ export default function decorate(block) {
     const button = document.createElement('button');
     button.setAttribute('id', row.firstElementChild.innerHTML);
     row.firstElementChild.remove();
-    console.log(button);
     //button.firstElementChild.setAttribute('disabled','false');
    
     while (row.firstElementChild) button.append(row.firstElementChild);
@@ -21,7 +20,6 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(main);
-  console.log("recorderInit");
   recorderInit();
 }
  /*HTML*
