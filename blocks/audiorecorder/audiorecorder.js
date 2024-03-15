@@ -60,9 +60,11 @@ function setup() {
 export default async function decorate(block) {
   const startBtn = document.createElement('button');
   startBtn.setAttribute('id', 'startRecording');
+  startBtn.innerText = 'Start Recording';
 
   const stopBtn = document.createElement('button');
   stopBtn.setAttribute('id', 'stopRecording');
+  stopBtn.innerText = 'Stop Recording';
 
   const audio = document.createElement('audio');
   audio.setAttribute('controls', '');
