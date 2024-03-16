@@ -71,10 +71,10 @@ function repeatAnimGreen() {
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
-      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 200);
-      $(".firstformv").hide("slide", { direction: "left" }, 200);
+      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 400);
+      $(".firstformv").hide("slide", { direction: "left" }, 400);
 
-      $(".form .second").show("slide", { direction: "right" }, 3000).addClass("showgrid");
+      $(".form .second").delay(2000).show("slide", { direction: "right" }, 400).addClass("showgrid");
       //$(".secondformv").show("slide", { direction: "right" }, 1200);
       //$(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
 
