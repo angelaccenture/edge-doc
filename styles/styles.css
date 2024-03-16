@@ -276,6 +276,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two h1, .blue-two h1 {
   margin: 0;
 }
+.green-two #them-when-no-one-else-would {
+  position: absolute;
+  top: 248px;
+}
 .green-two h4, .blue-two h4 {
   display: none;
   font-size: 92px;
