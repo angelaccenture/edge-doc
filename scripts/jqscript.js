@@ -73,7 +73,7 @@ function repeatAnimGreen() {
       playAudioRandom(TapSounds);
       $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 600);
       $(".firstformv").hide("slide", { direction: "left" }, 600);
-      setTimeout(showForm, 1000)
+      setTimeout(showForm, 600)
       function showForm() {
         $(".form .second").show("slide", { direction: "right" }, 400).addClass("showgrid");
       }
