@@ -11,3 +11,6 @@
 .formbutton:has(.secondformv) {
   display: none;
 }
+.formbutton:has(.thirdformv) {
+  display: none;
+}

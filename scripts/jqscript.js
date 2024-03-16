@@ -77,7 +77,7 @@ function repeatAnimGreen() {
       function showForm() {
         $(".form .second").show("slide", { direction: "right" }, 200).addClass("showgrid");
         $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
-       // $(".secondformv").show("slide", { direction: "right" }, 1200);
+        $(".secondformv").parent('.formbutton').show("slide", { direction: "right" }, 1200);
       }
 
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
