@@ -1,10 +1,10 @@
 $(document).ready (function() {
   /*onload animation*/
-  $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
+  $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
   $(".blue-one h1").hide();
   setTimeout(intro, 1260)
   function intro() {
-     $(".blue-one h1").slideDown(400);
+     $(".blue-one h1").slideDown(600);
   }
  /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
