@@ -208,9 +208,10 @@ $(document)
         };
 
         fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?responses=' + JSON.stringify(responses))
-          .then(success => {
-            console.log('HEY JOSH: ' + success);
+          .then(data => {
+            console.log('HEY JOSH: ' + data);
           });
+
     /*form buttons*/
     $('.formbutton')
       .on('click', '.firstformv', function () {
