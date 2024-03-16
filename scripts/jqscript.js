@@ -207,12 +207,10 @@ $(document)
           'thirdResponse': 'calm'
         };
 
-        fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?responses=' + JSON.stringify(responses), function(success) {
-          console.log('HEY JOSH: ' + success);
-        }, function(failure) {
-          console.log('HEY JOSH: ' + failure);
-        });
-
+        fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?responses=' + JSON.stringify(responses))
+          .then(success => {
+            console.log('HEY JOSH: ' + success);
+          });
     /*form buttons*/
     $('.formbutton')
       .on('click', '.firstformv', function () {
