@@ -73,8 +73,8 @@ function repeatAnimGreen() {
       playAudioRandom(TapSounds);
       $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 400);
       $(".firstformv").hide("slide", { direction: "left" }, 400);
-      $(".form .second").delay(2000).show();
-      
+      $(".form .second").delay(10000).show();
+
       //$(".form .second").delay(2000).show("slide", { direction: "right" }, 400).addClass("showgrid");
       //$(".secondformv").show("slide", { direction: "right" }, 1200);
       //$(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
