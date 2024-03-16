@@ -44,6 +44,7 @@ function repeatAnimGreen() {
    $(this).delay(3000*index).slideDown (1000, function() {
         $(this).delay(2000).fadeOut();
     });
+    $(this).last().addClass("show");
   });
 }
   $('.button').on("click", ".greentwobutton", function() {
