@@ -128,10 +128,8 @@ function repeatAnimGreen() {
           'thirdResponse': 'calm'
         };
 
-        $.get(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`, function(success) {
+        fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`).then(success => {
           console.log('JOSH HERE IS THE RESPONSE: ' + success);
-        }, function(error) {
-          console.log('THINGS ARE BROKEN JOSH: ' + error);
         });
       });
 
