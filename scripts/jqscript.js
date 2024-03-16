@@ -48,7 +48,7 @@ function repeatAnimGreen() {
     if (index == 4) {
       console.log("if 4");
       console.log(($this));
-      //$('.green-two h4').show();
+      $(this).show();
     }
   });
 }
