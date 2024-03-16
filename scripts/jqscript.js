@@ -75,7 +75,7 @@ function repeatAnimGreen() {
       $(".firstformv").hide("slide", { direction: "left" }, 600);
       setTimeout(showForm, 1000)
       function showForm() {
-      $(".form .second").show();
+        $(".form .second").show("slide", { direction: "right" }, 400).addClass("showgrid");
       }
       //$(".form .second").delay(2000).show("slide", { direction: "right" }, 400).addClass("showgrid");
       //$(".secondformv").show("slide", { direction: "right" }, 1200);
