@@ -71,12 +71,12 @@ function repeatAnimGreen() {
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
-      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 1200);
-      $(".firstformv").hide("slide", { direction: "left" }, 1200);
+      $(".form .first, .formnextfirst").hide("slide", { direction: "right" }, 1000);
+      $(".firstformv").hide("slide", { direction: "right" }, 1000);
 
       $(".form .second").addClass("showgrid");
-      $(".secondformv").show("slide", { direction: "left" }, 1200);
-      $(".red-three .default-content-wrapper").show("slide", { direction: "left" }, 1200);
+      $(".secondformv").show("slide", { direction: "right" }, 1200);
+      $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
 
 
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
