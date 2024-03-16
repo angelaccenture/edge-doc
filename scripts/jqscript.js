@@ -41,14 +41,11 @@ $(document).ready (function() {
     /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) { 
-    console.log(index);
    $(this).delay(3000*index).slideDown (1000, function() {
         $(this).delay(2000).fadeOut();
     });
   });
-  console.log("after each");
   $( ".green-two h4" ).last().show();
-  console.log($( ".green-two h4" ).last());
 }
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
