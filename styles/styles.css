@@ -282,6 +282,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   font-style: normal;
   font-weight: 600;
   line-height: 92px;
+  margin: 0;
 }
 .green-two strong:first-child {
 //  display: block;
