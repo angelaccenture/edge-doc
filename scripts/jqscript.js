@@ -1,8 +1,11 @@
 $(document).ready (function() {
   /*onload animation*/
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
- // $(".blue-one h1").delay(400).show("slide", { direction: "down" }, 1200);
-
+  $(".blue-one").hide();
+  setTimeout(intro, 660)
+  function intro() {
+     $(".blue-one h1").slideDown(400);
+  }
  /*buttons*/
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
