@@ -44,9 +44,6 @@ function repeatAnimGreen() {
    $(this).delay(6000*index).slideDown (1000, function() {
         $(this).delay(5000).fadeOut();
     });
-   /* $(this).delay(7000*index).fadeIn (4000, function() {
-        $(this).delay(3000).fadeOut();
-    });*/
   });
 }
   $('.button').on("click", ".greentwobutton", function() {
@@ -198,10 +195,9 @@ $('.button').on("click", ".blueendonebutton", function() {
 /*Animation on words -blue two*/
 function repeatAnim() {
   $( ".blue-end-two h4" ).each(function(index) {   
-    $(this).delay(7000*index).fadeIn (4000, function() {
-          $(this).delay(3000).fadeOut();
-         
-    });
+    $(this).delay(6000*index).slideDown (1000, function() {
+      $(this).delay(5000).fadeOut();
+  });
   });
 }
 $('.button').on("click", ".blueendtwobutton", function() {
