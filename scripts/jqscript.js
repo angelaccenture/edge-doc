@@ -41,8 +41,8 @@ $(document).ready (function() {
     /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) { 
-   $(this).delay(5000*index).slideDown (1000, function() {
-        $(this).delay(4000).fadeOut();
+   $(this).delay(4000*index).slideDown (1000, function() {
+        $(this).delay(3000).fadeOut();
     });
   });
 }
@@ -65,8 +65,8 @@ function repeatAnimGreen() {
     /*Animation on words -red two*/
   function repeatAnimRed() {
     $( ".red-two h4" ).each(function(index) {   
-      $(this).delay(5000*index).slideDown (1000, function() {
-        $(this).delay(4000).fadeOut();
+      $(this).delay(4000*index).slideDown (1000, function() {
+        $(this).delay(3000).fadeOut();
     });
   });
 }
