@@ -71,11 +71,14 @@ function repeatAnimGreen() {
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
+      $(".form .first, .formnextfirst").addClass("hide");
+      $(".firstformv").hide();
+
       $(".form .second").addClass("showgrid");
       $(".secondformv").show();
       $(".red-three .default-content-wrapper").show();
-      $(".form .first, .formnextfirst").addClass("hide");
-      $(".firstformv").hide();
+
+
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
@@ -184,7 +187,7 @@ $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").delay(400).fadeIn();
   repeatAnim();
 });
-/*Animation on words - green two*/
+/*Animation on words -blue two*/
 function repeatAnim() {
   $( ".blue-end-two h4" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
