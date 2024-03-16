@@ -44,8 +44,8 @@ function repeatAnimGreen() {
    $(this).delay(3000*index).slideDown (1000, function() {
         $(this).delay(2000).fadeOut();
     });
-    $(this).last().addClass("show");
   });
+  console.log("after each");
 }
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
