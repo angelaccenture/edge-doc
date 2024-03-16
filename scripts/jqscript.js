@@ -207,18 +207,11 @@ $(document)
           'thirdResponse': 'calm'
         };
 
-        fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction', {
-          method: 'POST',
-          body: JSON.stringify(responses),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          }
-        })
-          .then(function (response) {
-            console.log('JOSH HERE IS THE RESPONSE: ' + response);
-          })
-          .catch(error => console.error('Error:', error));
-      });
+        fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?responses=' + JSON.stringify(responses), function(success) {
+          console.log('HEY JOSH: ' + success);
+        }, function(failure) {
+          console.log('HEY JOSH: ' + failure);
+        });
 
     /*form buttons*/
     $('.formbutton')
