@@ -85,11 +85,14 @@ function repeatAnimGreen() {
     });
     $('.red-three').on("click", ".formnextsecond", function() {
       playAudioRandom(TapSounds);
-      $(".form .third").addClass("showgrid");
-      $(".thirdformv").show();
-      $(".red-three .default-content-wrapper").show();
-      $(".form .second, .formnextsecond").addClass("hide");
-      $(".secondformv").hide();
+      $(".form .second, .formnextsecond").hide("slide", { direction: "left" }, 600);
+      $(".secondformv").hide("slide", { direction: "left" }, 600);
+      setTimeout(showSecForm, 660)
+        function showSecForm() {
+          $(".form .third").show("slide", { direction: "right" }, 200).addClass("showgrid");
+          $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
+          //$(".thirdformv").show();
+        }  
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
