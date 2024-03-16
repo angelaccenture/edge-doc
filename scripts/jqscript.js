@@ -47,6 +47,7 @@ function repeatAnimGreen() {
     });
   });
   console.log("after each");
+  $( ".green-two h4" ).last().show();
   console.log($( ".green-two h4" ).last());
 }
   $('.button').on("click", ".greentwobutton", function() {
