@@ -234,7 +234,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   max-width: 89%;
 }
 .green-two h1 {
-  max-width: 93%;
+ // max-width: 93%;
 }
 .red-two h1 {
   width: 80%;

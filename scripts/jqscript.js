@@ -40,6 +40,7 @@ function repeatAnimGreen() {
       $(this).delay(3000).fadeOut();
     });
   });
+  $('.green-two h4').last.show();
 }
   $('.button').on("click", ".greenonebutton", function() {
     playAudioRandom(TapSounds);
