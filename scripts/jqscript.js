@@ -68,7 +68,7 @@ function repeatAnimGreen() {
         $(".red-three").delay(400).fadeIn().addClass('redcar');
         $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
   });  
-    $('.secondformv').parent('.formbutton').hide();
+    $('.secondformv').closest('.formbutton').hide();
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
