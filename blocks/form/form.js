@@ -92,20 +92,6 @@ export default async function decorate(block) {
   const form = await createForm(formLink.href);
   block.replaceChildren(form);
 
-  $('.formnextthird').on('click', function() {
-    const responses = {
-      'firstResponse': 'best friend',
-      'secondResponse': 'inspiring, mentor, honest',
-      'thirdResponse': 'calm'
-    };
-
-    $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction', responses, function(response) {
-      console.log('JOSH HERE IS THE RESPONSE: ' + response);
-    }, function(error) {
-      console.log('THINGS ARE BROKEN JOSH: ' + error);
-    });
-  });
-
   form.addEventListener('submit', (e) => {
     //e.preventDefault();
     const valid = form.checkValidity();

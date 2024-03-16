@@ -40,8 +40,8 @@ $(document).ready (function() {
   });
     /*Animation on words - green two*/
 function repeatAnimGreen() {
-  $( ".green-two h4" ).each(function(index) { 
-   $(this).delay(3000*index).slideDown (1000, function() { 
+  $( ".green-two h4" ).each(function(index) {
+   $(this).delay(3000*index).slideDown (1000, function() {
         if (index == 4) {
           //console.log("Last One");
         }
@@ -49,7 +49,7 @@ function repeatAnimGreen() {
           $(this).delay(2000).fadeOut();
         }
     });
-  
+
   });
 }
   $('.button').on("click", ".greentwobutton", function() {
@@ -70,7 +70,7 @@ function repeatAnimGreen() {
   });
     /*Animation on words -red two*/
   function repeatAnimRed() {
-    $( ".red-two h4" ).each(function(index) {   
+    $( ".red-two h4" ).each(function(index) {
       $(this).delay(3000*index).slideDown (1000, function() {
         if (index == 2) {
           //console.log("Last One");
@@ -85,7 +85,7 @@ function repeatAnimGreen() {
     playAudioRandom(TapSounds);
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
-        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
+        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');
   });
 
      /*Red Three -- Form Section*/
@@ -100,8 +100,8 @@ function repeatAnimGreen() {
         $(".secondformv").parent().parent().show("slide", { direction: "right" }, 200);
       }
 
-      $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
-      $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
+      $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id');
+      $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected');
     });
     $('.red-three').on("click", ".formnextsecond", function() {
       playAudioRandom(TapSounds);
@@ -113,15 +113,28 @@ function repeatAnimGreen() {
           $(".form .third").show("slide", { direction: "right" }, 200).addClass("showgrid");
           $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
           $(".thirdformv").parent().parent().show("slide", { direction: "right" }, 200);
-        }  
-      $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
-      $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
-    }); 
+        }
+      $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id');
+      $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected');
+    });
     $('.red-three').on("click", ".formnextthird", function() {
       playAudioRandom(TapSounds);
       $('.red-three').hide();
+
       $(".red-four").show();
-    });
+        const responses = {
+          'firstResponse': 'best friend',
+          'secondResponse': 'inspiring, mentor, honest',
+          'thirdResponse': 'calm'
+        };
+
+        $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction', responses, function(response) {
+          console.log('JOSH HERE IS THE RESPONSE: ' + response);
+        }, function(error) {
+          console.log('THINGS ARE BROKEN JOSH: ' + error);
+        });
+      });
+
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
       playAudioRandom(TapSounds);
@@ -129,7 +142,7 @@ function repeatAnimGreen() {
       $('#form-believed').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
       $(".firstformv").hide();
-      $(".formnextfirst").show();    
+      $(".formnextfirst").show();
     });
     $(".formbutton").on("click", ".secondformv", function() {
       playAudioRandom(TapSounds);
@@ -137,15 +150,15 @@ function repeatAnimGreen() {
       $('#form-describe').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
       $(".secondformv").hide();
-      $(".formnextsecond").show();  
-    }); 
+      $(".formnextsecond").show();
+    });
     $(".formbutton").on("click", ".thirdformv", function() {
       playAudioRandom(TapSounds);
       $('#form-makefeel').val("");
       $('#form-makefeel').val($(this).html());
       $(".red-three .default-content-wrapper").hide();
       $(".thirdformv").hide();
-      $(".formnextthird").show();    
+      $(".formnextthird").show();
     });
     $(".form").on("input", "#form-believed", function() {
       $(".red-three .default-content-wrapper").hide();
@@ -166,7 +179,7 @@ function repeatAnimGreen() {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      $('.red-four').hide(); 
+      $('.red-four').hide();
       $(".red-five").delay(400).fadeIn('slow','','');
 
 
@@ -194,9 +207,9 @@ function repeatAnimGreen() {
       $('.red-five').css("background-color","white");
       $('.red-five').css("color","#EB1000");
       $(".dyncontent").hide();
-      $('.red-five .default-content-wrapper h2').show(); 
-      $('.create').show();    
-    }); 
+      $('.red-five .default-content-wrapper h2').show();
+      $('.create').show();
+    });
   $('.red-five').on("click", ".create", function() {
       //go to thankyou page
       location.href = "/thankyou";
@@ -207,13 +220,13 @@ $(".blue-end-one").delay(600).fadeIn('slow','','');
 $('.button').on("click", ".blueendonebutton", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
-  playAudioRandom(TapSounds); 
-  $(".blue-end-one").fadeOut();     
+  playAudioRandom(TapSounds);
+  $(".blue-end-one").fadeOut();
   $(".blue-end-two").delay(400).fadeIn();
   repeatAnim();
 });
 function repeatAnim() {
-  $( ".blue-end-two h4" ).each(function(index) {           
+  $( ".blue-end-two h4" ).each(function(index) {
     $(this).delay(7000*index).fadeIn (4000, function() {
       $(this).delay(3000).fadeOut();
     });
@@ -224,13 +237,13 @@ $('.button').on("click", ".blueendtwobutton", function() {
   stopCurrentMusic();
   $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
   $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
-}); 
+});
 $('.button').on("click", ".blueendthreebutton", function() {
   playAudioRandom(TapSounds);
   playMusic("MUS_Staccato.mp3");
   $(".blue-end-three").fadeOut();
   $(".blue-end-four").delay(400).fadeIn();
-}); 
+});
 $(".form").on("input", "#form-email", function() {
   playAudioRandom(TapSounds);
   $(".blue-end-four .submit-wrapper").delay(400).fadeIn();
@@ -245,7 +258,7 @@ $('.button').on("click", ".blueendfivebutton", function() {
   playAudioRandom(TapSounds);
   $(".blue-end-five").fadeOut();
   $(".blue-end-six").delay(400).fadeIn();
-}); 
+});
 $('.button').on("click", ".startover", function() {
   playAudioRandom(TapSounds);
   location.href = "/";
