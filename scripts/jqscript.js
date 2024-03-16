@@ -36,9 +36,8 @@ $(document).ready (function() {
   /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two strong" ).each(function(index) {   
-    $(this).delay(7000*index).slideUp (1000, function() {
-          $(this).delay(2000).hide();
-         
+    $(this).delay(7000*index).fadeIn (4000, function() {
+      $(this).delay(3000).fadeOut();
     });
   });
 }
