@@ -41,10 +41,9 @@ $(document).ready (function() {
     /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) {  
-    $(this).slideToggle("slow");
-    /*$(this).delay(7000*index).slideDown (400, function() {
+     $(this).delay(7000*index).hide (400, function() {
       $(this).delay(3000).slideDown ();
-  });*/
+    });
    /* $(this).delay(7000*index).fadeIn (4000, function() {
         $(this).delay(3000).fadeOut();
     });*/
