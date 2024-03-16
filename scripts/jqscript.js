@@ -41,15 +41,16 @@ $(document).ready (function() {
     /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) { 
-   $(this).delay(3000*index).slideDown (1000, function() {
-        $(this).delay(2000).fadeOut();
+   $(this).delay(3000*index).slideDown (1000, function() { 
         if (index == 4) {
           console.log("Index is 4");
+        }
+        else {
+          $(this).delay(2000).fadeOut();
         }
     });
   
   });
-  //$( ".green-two h4" ).last().show();
 }
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
