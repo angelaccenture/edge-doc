@@ -60,14 +60,23 @@ function repeatAnimGreen() {
      /*Add auto trans here
     $(".red-one").delay(6000).hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-
+    repeatAnimRed();
   });
+    /*Animation on words -red two*/
+  function repeatAnimRed() {
+    $( ".red-two h4" ).each(function(index) {   
+      $(this).delay(6000*index).slideDown (1000, function() {
+        $(this).delay(5000).fadeOut();
+    });
+  });
+}
   $('.button').on("click", ".redtwobutton", function() {
     playAudioRandom(TapSounds);
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
         $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
-  });  
+  });
+
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
@@ -192,14 +201,6 @@ $('.button').on("click", ".blueendonebutton", function() {
   $(".blue-end-two").delay(400).fadeIn();
   repeatAnim();
 });
-/*Animation on words -blue two*/
-function repeatAnim() {
-  $( ".blue-end-two h4" ).each(function(index) {   
-    $(this).delay(6000*index).slideDown (1000, function() {
-      $(this).delay(5000).fadeOut();
-  });
-  });
-}
 $('.button').on("click", ".blueendtwobutton", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
