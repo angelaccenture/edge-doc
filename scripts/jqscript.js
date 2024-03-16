@@ -47,6 +47,7 @@ function repeatAnimGreen() {
     });
   });
   console.log("after each");
+  console.log($(this));
 }
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
