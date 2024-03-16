@@ -76,7 +76,7 @@ function repeatAnimGreen() {
       setTimeout(showForm, 800)
       function showForm() {
         $(".form .second").show("slide", { direction: "right" }, 200).addClass("showgrid");
-        $(".secondformv").show("slide", { direction: "right" }, 1200);
+       // $(".secondformv").show("slide", { direction: "right" }, 1200);
         $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
 
       }
