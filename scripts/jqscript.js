@@ -37,8 +37,9 @@ $(document).ready (function() {
 function repeatAnimGreen() {
   $( ".green-two strong" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
-      $(this).delay(3000).fadeOut();
+      $(this).delay(400).fadeOut();
     });
+    console.log(index);
     if (index == 4) {
       $('.green-two h4').show();
     }
