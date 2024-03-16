@@ -1,7 +1,7 @@
 $(document).ready (function() {
   /*onload animation*/
   $(".blue-one").delay(400).show("slide", { direction: "left" }, 1200);
-  $(".blue-one").hide();
+  $(".blue-one h1").hide();
   setTimeout(intro, 660)
   function intro() {
      $(".blue-one h1").slideDown(400);
