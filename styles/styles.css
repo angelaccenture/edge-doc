@@ -273,10 +273,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   height: 184px;
   display: none;
 }
-.green-two h1 {
+.green-two h1, .blue-two h1 {
   margin: 0;
 }
-.green-two h4 {
+.green-two h4, blue-two h4 {
   display: none;
   font-size: 92px;
   font-style: normal;
