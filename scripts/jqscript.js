@@ -42,11 +42,10 @@ $(document).ready (function() {
 function repeatAnimGreen() {
   $( ".green-two strong" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
-      $(this).delay(3000).fadeOut();
+      if (index !=4) {
+        $(this).delay(3000).fadeOut();
+      }
     });
-    if (index == 4) {
-      $(this).show();
-    }
   });
 }
   $('.button').on("click", ".greentwobutton", function() {
