@@ -31,9 +31,14 @@ $(document).ready (function() {
     /*Add auto trans here
     $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
+  });
+  $('.button').on("click", ".greenonebutton", function() {
+    playAudioRandom(TapSounds);
+    $(".green-one").hide("slide", { direction: "left" }, 1200);
+    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
     repeatAnimGreen();
   });
-  /*Animation on words - green two*/
+    /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two strong" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
@@ -45,11 +50,6 @@ function repeatAnimGreen() {
     }
   });
 }
-  $('.button').on("click", ".greenonebutton", function() {
-    playAudioRandom(TapSounds);
-    $(".green-one").hide("slide", { direction: "left" }, 1200);
-    $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
-  });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
     $(".green-two").fadeOut();
