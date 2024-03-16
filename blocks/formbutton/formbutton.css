@@ -1,6 +1,3 @@
-.formbutton {
-
-}
 .firstformv {
     position: relative;
   }
@@ -10,4 +7,7 @@
   margin: 5px 10px 5px 0;
   padding: 8px 24px;
   border: none;
+}
+.secondformv:parent {
+    display: none;
 }
