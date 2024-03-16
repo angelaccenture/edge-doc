@@ -41,7 +41,7 @@ $(document).ready (function() {
     /*Animation on words - green two*/
 function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) { 
-   $(this).delay(7000*index).slideDown (2000, function() {
+   $(this).delay(6000*index).slideDown (2000, function() {
         $(this).delay(5000).fadeOut();
     });
    /* $(this).delay(7000*index).fadeIn (4000, function() {
