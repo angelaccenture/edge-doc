@@ -284,9 +284,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   line-height: 92px;
   margin: 0;
 }
-.green-two strong:first-child {
-//  display: block;
-}
 .blue-end-two h4 {
   display: none;
   padding-top: 50%;
