@@ -128,7 +128,7 @@ function repeatAnimGreen() {
           'thirdResponse': 'calm'
         };
 
-        $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction', responses, function(response) {
+        $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction', JSON.stringify(responses), function(response) {
           console.log('JOSH HERE IS THE RESPONSE: ' + response);
         }, function(error) {
           console.log('THINGS ARE BROKEN JOSH: ' + error);
