@@ -43,7 +43,7 @@ function repeatAnimGreen() {
   $( ".green-two h4" ).each(function(index) { 
    $(this).delay(3000*index).slideDown (1000, function() { 
         if (index == 4) {
-          console.log("Index is 4");
+          //console.log("Last One");
         }
         else {
           $(this).delay(2000).fadeOut();
@@ -72,7 +72,12 @@ function repeatAnimGreen() {
   function repeatAnimRed() {
     $( ".red-two h4" ).each(function(index) {   
       $(this).delay(3000*index).slideDown (1000, function() {
-        $(this).delay(2000).fadeOut();
+        if (index == 2) {
+          //console.log("Last One");
+        }
+        else {
+          $(this).delay(2000).fadeOut();
+        }
     });
   });
 }
