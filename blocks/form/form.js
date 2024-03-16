@@ -92,20 +92,6 @@ export default async function decorate(block) {
   const form = await createForm(formLink.href);
   block.replaceChildren(form);
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const valid = form.checkValidity();
-    if (valid) {
-      handleSubmit(form);
-    } else {
-      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-      if (firstInvalidEl) {
-        firstInvalidEl.focus();
-        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-
   $('.formnextthird').on('click', function() {
     const responses = {
       'firstResponse': 'best friend',
@@ -118,5 +104,19 @@ export default async function decorate(block) {
     }, function(error) {
       console.log('THINGS ARE BROKEN JOSH: ' + error);
     });
+  });
+
+  form.addEventListener('submit', (e) => {
+    //e.preventDefault();
+    const valid = form.checkValidity();
+    if (valid) {
+      handleSubmit(form);
+    } else {
+      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
+      if (firstInvalidEl) {
+        firstInvalidEl.focus();
+        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
 }
