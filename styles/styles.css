@@ -276,6 +276,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 
 .green-two h4 {
   display: none;
+  font-size: 92px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 92px;
 }
 .green-two strong:first-child {
 //  display: block;
