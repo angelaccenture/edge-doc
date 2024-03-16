@@ -89,16 +89,16 @@ function repeatAnimGreen() {
       $(".secondformv").hide("slide", { direction: "left" }, 600);
       setTimeout(showSecForm, 660)
         function showSecForm() {
-          $(".form .third").show("slide", { direction: "right" }, 200).addClass("showgrid");
-          $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
-          $(".thirdformv").parent().parent().show("slide", { direction: "right" }, 200);
+        //  $(".form .third").show("slide", { direction: "right" }, 200).addClass("showgrid");
+        //  $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
+         // $(".thirdformv").parent().parent().show("slide", { direction: "right" }, 200);
         }  
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
       playAudioRandom(TapSounds);
-      $('.red-three').hide("slide", { direction: "left" }, 600);
+      $('.red-three').hide();
       $(".red-four").show();
     });
      /*form buttons*/
