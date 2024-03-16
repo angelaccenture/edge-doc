@@ -74,9 +74,9 @@ function repeatAnimGreen() {
       $(".form .first, .formnextfirst").hide("slide", { direction: "right" }, 1000);
       $(".firstformv").hide("slide", { direction: "right" }, 1000);
 
-      $(".form .second").addClass("showgrid");
-      $(".secondformv").show("slide", { direction: "right" }, 1200);
-      $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
+      //$(".form .second").addClass("showgrid");
+      //$(".secondformv").show("slide", { direction: "right" }, 1200);
+      //$(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 1200);
 
 
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
