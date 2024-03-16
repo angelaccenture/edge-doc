@@ -274,7 +274,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   display: none;
 }
 
-.green-two strong {
+.green-two h4 {
   display: none;
 }
 .green-two strong:first-child {
