@@ -239,17 +239,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .red-two h1 {
   width: 80%;
 }
-.red-two p {
-  margin-top: 15%;
-  font-size: 16px;
-  line-height: 20.8px;
-  width: 87%;
-}
-@media (width >= 1180px) {
-  .red-two p {
-    margin-top: 6%;
-  }
-}
+
+
 /*Other Stuff*/
 .headphones {
   position: absolute;
@@ -279,6 +270,13 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two #them-when-no-one-else-would {
   position: absolute;
   top: 248px;
+}
+.red-two p {
+  position: absolute;
+  top: 600px;
+  font-size: 16px;
+  line-height: 20.8px;
+  width: 87%;
 }
 .green-two h4, .red-two h4 {
   display: none;
