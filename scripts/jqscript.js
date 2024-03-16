@@ -179,7 +179,7 @@ function repeatAnimGreen() {
 
 /*Thank You Page*/
 $(".blue-end-one").delay(600).fadeIn('slow','','');
-$('.button').on("click", ".blueendone", function() {
+$('.button').on("click", ".blueendonebutton", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
   playAudioRandom(TapSounds); 
@@ -196,13 +196,13 @@ function repeatAnim() {
     });
   });
 }
-$('.button').on("click", ".blueendtwo", function() {
+$('.button').on("click", ".blueendtwobutton", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
   $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
   $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
 }); 
-$('.button').on("click", ".blueendthree", function() {
+$('.button').on("click", ".blueendthreebutton", function() {
   playAudioRandom(TapSounds);
   playMusic("MUS_Staccato.mp3");
   $(".blue-end-three").fadeOut();
@@ -217,7 +217,7 @@ $(".blue-end-four").on("click", ".button", function() {
   $(".blue-end-four").fadeOut();
   $(".blue-end-five").delay(400).fadeIn();
 });
-$('.button').on("click", ".blueendfive", function() {
+$('.button').on("click", ".blueendfivebutton", function() {
   stopCurrentMusic();
   playAudioRandom(TapSounds);
   $(".blue-end-five").fadeOut();
