@@ -71,8 +71,8 @@ function repeatAnimGreen() {
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
-      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 1000);
-      $(".firstformv").hide("slide", { direction: "left" }, 1000);
+      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 600);
+      $(".firstformv").hide("slide", { direction: "left" }, 600);
 
       $(".form .second").show("slide", { direction: "right" }, 1400).addClass("showgrid");
       //$(".secondformv").show("slide", { direction: "right" }, 1200);
