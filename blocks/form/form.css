@@ -152,12 +152,6 @@
     background-color: var(--red-color);
     color: white;
 }
-.red-three .button-wrapper {
-  display: inline-block;
-  top: 2%;
-  left: 5%;
-  position: relative;
-}
 /*Spacing*/
 .form-wrapper {
   padding: 8% 5% 0% 5%;
