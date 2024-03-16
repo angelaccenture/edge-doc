@@ -42,7 +42,7 @@ $(document).ready (function() {
 function repeatAnimGreen() {
   $( ".green-two strong" ).each(function(index) {   
     $(this).delay(7000*index).fadeIn (4000, function() {
-      $(this).delay(5000).fadeOut();
+      $(this).delay(4000).fadeOut();
     });
     console.log(index);
     if (index == 4) {
