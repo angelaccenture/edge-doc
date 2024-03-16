@@ -85,6 +85,7 @@ function repeatAnimGreen() {
     });
     $('.red-three').on("click", ".formnextsecond", function() {
       playAudioRandom(TapSounds);
+      $(".form .second").removeClass("showgrid");
       $(".form .second, .formnextsecond").hide("slide", { direction: "left" }, 600);
       $(".secondformv").hide("slide", { direction: "left" }, 600);
       setTimeout(showSecForm, 660)
