@@ -212,6 +212,13 @@ $('.button').on("click", ".blueendonebutton", function() {
   $(".blue-end-two").delay(400).fadeIn();
   repeatAnim();
 });
+function repeatAnim() {
+  $( ".blue-two h4" ).each(function(index) {           
+    $(this).delay(7000*index).fadeIn (4000, function() {
+      $(this).delay(3000).fadeOut();
+    });
+  });
+}
 $('.button').on("click", ".blueendtwobutton", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
