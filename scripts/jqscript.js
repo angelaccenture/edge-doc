@@ -31,26 +31,33 @@ $(document).ready (function() {
     /*Add auto trans here
     $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-
   });
   $('.button').on("click", ".greenonebutton", function() {
     playAudioRandom(TapSounds);
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
-
-    /*Animation on words - green two
-    $( ".green-three strong" ).each(function( index ) {
-      console.log("animation")
-        console.log( index + ": " + $( this ).text() );
-    });*/
+    repeatAnimGreen();
   });
+    /*Animation on words - green two*/
+function repeatAnimGreen() {
+  $( ".green-two h4" ).each(function(index) { 
+   $(this).delay(3000*index).slideDown (1000, function() { 
+        if (index == 4) {
+          //console.log("Last One");
+        }
+        else {
+          $(this).delay(2000).fadeOut();
+        }
+    });
+  
+  });
+}
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
     $(".green-two").fadeOut();
     $(".green-three").delay(400).fadeIn().addClass('greencar');
   });
    /*Green Three is a carousel*/
-
    $('.button').on("click", ".redonebutton", function() {
     musicTransitionTo("MUS_Orchestral.mp3");
     playAudioRandom(TapSounds);
@@ -59,40 +66,61 @@ $(document).ready (function() {
      /*Add auto trans here
     $(".red-one").delay(6000).hide("slide", { direction: "left" }, 1200);
     $(".red-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-
+    repeatAnimRed();
   });
+    /*Animation on words -red two*/
+  function repeatAnimRed() {
+    $( ".red-two h4" ).each(function(index) {   
+      $(this).delay(3000*index).slideDown (1000, function() {
+        if (index == 2) {
+          //console.log("Last One");
+        }
+        else {
+          $(this).delay(2000).fadeOut();
+        }
+    });
+  });
+}
   $('.button').on("click", ".redtwobutton", function() {
     playAudioRandom(TapSounds);
-
         $(".red-two").fadeOut();
         $(".red-three").delay(400).fadeIn().addClass('redcar');
-            $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
-  });  
+        $('.red-three .carousel-slide-indicator:eq(0)').attr('id','selected');        
+  });
+
      /*Red Three -- Form Section*/
     $('.red-three').on("click", ".formnextfirst", function() {
       playAudioRandom(TapSounds);
-      $(".form .second").addClass("showgrid");
-      $(".secondformv").show();
-      $(".red-three .default-content-wrapper").show();
-      $(".form .first, .formnextfirst").addClass("hide");
-      $(".firstformv").hide();
+      $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 600);
+      $(".firstformv").hide("slide", { direction: "left" }, 600);
+      setTimeout(showForm, 660)
+      function showForm() {
+        $(".form .second").show("slide", { direction: "right" }, 200).addClass("showgrid");
+        $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
+        $(".secondformv").parent().parent().show("slide", { direction: "right" }, 200);
+      }
+
       $('.red-three .carousel-slide-indicator:eq(0)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(1)').attr('id','selected'); 
     });
     $('.red-three').on("click", ".formnextsecond", function() {
       playAudioRandom(TapSounds);
-      $(".form .third").addClass("showgrid");
-      $(".thirdformv").show();
-      $(".red-three .default-content-wrapper").show();
-      $(".form .second, .formnextsecond").addClass("hide");
-      $(".secondformv").hide();
+      $(".form .second").removeClass("showgrid");
+      $(".form .second, .formnextsecond").hide("slide", { direction: "left" }, 600);
+      $(".secondformv").hide("slide", { direction: "left" }, 600);
+      setTimeout(showSecForm, 660)
+        function showSecForm() {
+          $(".form .third").show("slide", { direction: "right" }, 200).addClass("showgrid");
+          $(".red-three .default-content-wrapper").show("slide", { direction: "right" }, 200);
+          $(".thirdformv").parent().parent().show("slide", { direction: "right" }, 200);
+        }  
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id'); 
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected'); 
     }); 
     $('.red-three').on("click", ".formnextthird", function() {
       playAudioRandom(TapSounds);
-      $(".red-four").show();
       $('.red-three').hide();
+      $(".red-four").show();
     });
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
@@ -176,8 +204,7 @@ $(document).ready (function() {
 
 /*Thank You Page*/
 $(".blue-end-one").delay(600).fadeIn('slow','','');
-
-$('.button').on("click", ".blueendone", function() {
+$('.button').on("click", ".blueendonebutton", function() {
   initAudio();
   playMusic("MUS_Staccato.mp3");
   playAudioRandom(TapSounds); 
@@ -185,24 +212,20 @@ $('.button').on("click", ".blueendone", function() {
   $(".blue-end-two").delay(400).fadeIn();
   repeatAnim();
 });
-/*Animation on words - green two*/
 function repeatAnim() {
-  $( ".blue-end-two h4" ).each(function(index) {   
+  $( ".blue-end-two h4" ).each(function(index) {           
     $(this).delay(7000*index).fadeIn (4000, function() {
-          $(this).delay(3000).fadeOut();
-         
+      $(this).delay(3000).fadeOut();
     });
   });
 }
-delay(8000).repeatAnim();
-
-$('.button').on("click", ".blueendtwo", function() {
+$('.button').on("click", ".blueendtwobutton", function() {
   playAudioRandom(TapSounds);
   stopCurrentMusic();
   $(".blue-end-two").hide("slide", { direction: "left" }, 1200);
   $(".blue-end-three").delay(400).show("slide", { direction: "right" }, 1200);
 }); 
-$('.button').on("click", ".blueendthree", function() {
+$('.button').on("click", ".blueendthreebutton", function() {
   playAudioRandom(TapSounds);
   playMusic("MUS_Staccato.mp3");
   $(".blue-end-three").fadeOut();
@@ -217,7 +240,7 @@ $(".blue-end-four").on("click", ".button", function() {
   $(".blue-end-four").fadeOut();
   $(".blue-end-five").delay(400).fadeIn();
 });
-$('.button').on("click", ".blueendfive", function() {
+$('.button').on("click", ".blueendfivebutton", function() {
   stopCurrentMusic();
   playAudioRandom(TapSounds);
   $(".blue-end-five").fadeOut();
@@ -227,6 +250,4 @@ $('.button').on("click", ".startover", function() {
   playAudioRandom(TapSounds);
   location.href = "/";
 });
-     
-
-    });
+});

@@ -1,6 +1,3 @@
-.formbutton {
-
-}
 .firstformv {
     position: relative;
   }
@@ -10,4 +7,10 @@
   margin: 5px 10px 5px 0;
   padding: 8px 24px;
   border: none;
+}
+.formbutton:has(.secondformv) {
+  display: none;
+}
+.formbutton:has(.thirdformv) {
+  display: none;
 }

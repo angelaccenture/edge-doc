@@ -117,7 +117,7 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper, .secondformv, .thirdformv {
+.form .second, .form .third, .form .recording, .form .submit-wrapper {
     display: none;
 }
 .button .formnextsecond, .button .formnextthird, {
@@ -151,12 +151,6 @@
 .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
     background-color: var(--red-color);
     color: white;
-}
-.red-three .button-wrapper {
-  display: inline-block;
-  top: 2%;
-  left: 5%;
-  position: relative;
 }
 /*Spacing*/
 .form-wrapper {

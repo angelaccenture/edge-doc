@@ -157,14 +157,14 @@ h4 {
    
   }
 }
-p {
+p, li {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 18.2px;
 }
 @media (width <= 600px) {
-  p {
+  p, li {
     font-size: 14px;
     line-height: 15.6px;
   }
@@ -234,22 +234,13 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   max-width: 89%;
 }
 .green-two h1 {
-  max-width: 93%;
+ // max-width: 93%;
 }
 .red-two h1 {
   width: 80%;
 }
-.red-two p {
-  margin-top: 15%;
-  font-size: 16px;
-  line-height: 20.8px;
-  width: 87%;
-}
-@media (width >= 1180px) {
-  .red-two p {
-    margin-top: 6%;
-  }
-}
+
+
 /*Other Stuff*/
 .headphones {
   position: absolute;
@@ -273,8 +264,27 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   height: 184px;
   display: none;
 }
-.green-two strong {
+.green-two h1, .red-two h1 {
+  margin: 0;
+}
+.green-two #them-when-no-one-else-would {
+  position: absolute;
+  top: 248px;
+}
+.red-two p {
+  position: absolute;
+  top: 600px;
+  font-size: 16px;
+  line-height: 20.8px;
+  width: 87%;
+}
+.green-two h4, .red-two h4 {
   display: none;
+  font-size: 92px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 92px;
+  margin: 0;
 }
 .blue-end-two h4 {
   display: none;
