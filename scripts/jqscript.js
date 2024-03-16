@@ -44,8 +44,11 @@ function repeatAnimGreen() {
    $(this).delay(3000*index).slideDown (1000, function() {
         $(this).delay(2000).fadeOut();
     });
+    if (index == 4) {
+      console.log("Index is 4");
+    }
   });
-  $( ".green-two h4" ).last().show();
+  //$( ".green-two h4" ).last().show();
 }
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
