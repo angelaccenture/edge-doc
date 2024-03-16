@@ -73,9 +73,9 @@ function repeatAnimGreen() {
       playAudioRandom(TapSounds);
       $(".form .first, .formnextfirst").hide("slide", { direction: "left" }, 600);
       $(".firstformv").hide("slide", { direction: "left" }, 600);
-      setTimeout(showForm, 600)
+      setTimeout(showForm, 800)
       function showForm() {
-        $(".form .second").show("slide", { direction: "right" }, 400).addClass("showgrid");
+        $(".form .second").show("slide", { direction: "right" }, 200).addClass("showgrid");
       }
       //$(".form .second").delay(2000).show("slide", { direction: "right" }, 400).addClass("showgrid");
       //$(".secondformv").show("slide", { direction: "right" }, 1200);
