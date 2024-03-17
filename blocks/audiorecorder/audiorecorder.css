@@ -5,7 +5,7 @@ audio {
     position: absolute;
     top: 0;
     margin-left: 0;
-    max-width: 75px;
+    max-width: 100px;
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
