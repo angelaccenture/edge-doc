@@ -270,15 +270,15 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
-      $('.coundown-wrapper').show();
-      $('.aduiotimer-wrapper').show();
+      $('.countdown-wrapper').show();
+      $('.audiotimer-wrapper').show();
       $('.audiorecorder-wrapper').show();
   
-      $(".button .stoprecording").delay(3300).queue(function(next){
+      $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(9300).queue(function(next){
+      $(".button .continue").delay(93000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           $('.audio-timer label, .audio-timer span').hide();
