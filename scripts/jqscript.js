@@ -267,7 +267,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       playAudioRandom(TapSounds);
       $('.red-four').css('background-color', '#EB1000');
       $('.red-four').css('color', 'white');
-      $('.recordstory').show();
+      $('.recordstory').hide();
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
