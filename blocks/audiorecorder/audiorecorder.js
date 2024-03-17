@@ -5,7 +5,7 @@ function setup() {
   elements[i].addEventListener('click', initFunction, false);
 }
  // document.getElementById("startRecording").addEventListener("click", initFunction);
-
+ setTimeout(function() {
   let isRecording = document.getElementById("isRecording");
   function initFunction() {
     async function getUserMedia(constraints) {
@@ -56,6 +56,7 @@ function setup() {
       isRecording.textContent = "Click play button to start listening";
     });
   }
+}, 3000)
 }
 
 /**
