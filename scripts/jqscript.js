@@ -300,6 +300,7 @@ $(document).ready (function() {
         playAudioRandom(TapSounds);
         $(this).removeClass('fullshow');
         $('.continue').addClass('fullshow');
+        $('.audio-timer-wrapper').hide();
       });
     $('.button').on('click', '.continue', function () {
         playAudioRandom(TapSounds);
