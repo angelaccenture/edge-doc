@@ -64,17 +64,16 @@ var elementsstop = document.getElementsByClassName("stoprecording");
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
   });
-  newTimeout();
-  }, 3000)
 
-  /*End Recording After Time*/ 
-    newTimeout(function() {
+   /*End Recording After Time*/ 
+    setInterval(function(){
       rec.stop();
       isRecording.textContent = "Recording hit end of timer";
-      }, 93000);
+      }, 90000);
+   
+  }, 4000)
 }
 }
-
 /**
  * Audio Recorder Block
  * Record audio from the end user
@@ -90,6 +89,7 @@ export default async function decorate(block) {
 
   const audio = document.createElement('audio');
   audio.setAttribute('controls', '');
+  audio.setAttribute('controlslist',"nodownload noplaybackrate");
   audio.setAttribute('id', 'audioElement');
 
   const isRecording = document.createElement('p');

@@ -1,7 +1,7 @@
 .audiotimer {
-    display: inline-block;
+    text-align: center;
 }
-audio::-webkit-media-controls-play-button {
-    color: red;
-    background-color: red;
+
+.audiotimer div {
+    display: inline-block;
 }

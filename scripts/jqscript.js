@@ -265,19 +265,27 @@ $('.button').on('click', '.bluethreebutton', function () {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      $('.red-four').hide(); 
-      $(".red-five").delay(400).fadeIn('slow','','');
+      $('.red-four').css('background-color', '#EB1000');
+      $('.red-four').css('color', 'white');
+      $('.recordstory').hide();
+      $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
-  
-      $(".button .stoprecording").delay(3300).queue(function(next){
+      $('.countdown-wrapper').show();
+      $('.audiorecorder-wrapper').hide();
+      setTimeout(function() {
+        $('.audiotimer-wrapper').show();
+      }, 4000);
+     
+
+      $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(9300).queue(function(next){
+      $(".button .continue").delay(93000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-          $('.audio-timer label, .audio-timer span').hide();
+          $('.audiotimer label, .audiotimer span').hide();
           next();
           });
       });
@@ -285,21 +293,25 @@ $('.button').on('click', '.bluethreebutton', function () {
         playAudioRandom(TapSounds);
         $(this).removeClass('fullshow');
         $('.continue').addClass('fullshow');
-        $('.audio-timer label, .audio-timer span').hide();
+        $('.audiotimer label, .audiotimer span').hide();
       });
     $('.button').on('click', '.continue', function () {
         playAudioRandom(TapSounds);
         $(this).stop();
         $(this).removeClass('fullshow');
         $('.redorec').addClass('textshow');
-        $('.red-five').css('background-color', 'white');
-        $('.red-five').css('color', '#EB1000');
+        $('.red-four').css('background-color', 'white');
+        $('.red-four').css('color', '#EB1000');
         $('.dyncontent').hide();
-        $('.red-five .default-content-wrapper p').hide();
-        $('.red-five .default-content-wrapper h2').show();
+        $('.red-four .default-content-wrapper p').hide();
+        $('.red-four .default-content-wrapper h2').show();
+        $('.audiorecorder-wrapper').show();
+        $('.audiotimer-wrapper').hide();
+        $('.example').hide();
+        $('.hideexample').hide();
         $('.create').show();
       });
-    $('.red-five').on('click', '.create', function () {
+    $('.red-four').on('click', '.create', function () {
         //go to thankyou page
         location.href = '/thankyou';
       });

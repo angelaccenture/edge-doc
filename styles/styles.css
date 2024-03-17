@@ -175,13 +175,13 @@ h6 {
   font-weight: 600;
   line-height: 20.8px;
 }
-header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
+header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
 }
-.red-five .default-content-wrapper h2, .record-wrapper{
+.red-four .default-content-wrapper h2, .red-four .default-content-wrapper p, .countdown-wrapper, .audiotimer-wrapper, .audiorecorder-wrapper, .record-wrapper{
   display: none;
 }
-.blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .red-five, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
+.blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
     top: 0%;
     left: 0%;
     position: absolute;
@@ -198,7 +198,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin: 0 5%;
 }
 /*Colors*/
-.blue-one, .green-one, .red-one, .red-five, .blue-end-one, .blue-end-two {
+.blue-one, .green-one, .red-one, .blue-end-one, .blue-end-two {
     color: white;
 } 
 .blue-one, .blue-end-one, .blue-end-two {
@@ -213,7 +213,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two, .green-three {
   color: var(--green-color);  
 }
-.red-one, .red-five {
+.red-one {
   background-color: var(--red-color);
 }
 .red-two, .red-three, .red-four {
@@ -238,11 +238,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .red-two h1 {
   width: 80%;
 }
-.red-five .default-content-wrapper {
-  text-align: center;
-  margin-top: 28%;
-}
-
 /*Other Stuff*/
 .headphones {
   position: absolute;

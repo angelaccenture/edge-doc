@@ -14,3 +14,15 @@
 .formbutton:has(.thirdformv) {
   display: none;
 }
+.button-wrapper:has(.arrow) {
+  position: relative;
+}
+.arrow {
+    background-color: transparent !important;
+    color: red !important;
+    font-size: 66px;
+    right: 34px;
+    position: absolute;
+    top: 9px;
+    border: none;
+}
