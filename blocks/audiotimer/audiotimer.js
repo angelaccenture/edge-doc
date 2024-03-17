@@ -18,6 +18,7 @@ export default async function decorate(block) {
 var elements = document.getElementsByClassName("recordstory");
 
 function audioTimer() {
+  setTimeout(function() {
   /*Audio Timer*/
   var minutesLabel = document.getElementById("minutes");
   var secondsLabel = document.getElementById("seconds");
@@ -38,12 +39,10 @@ function audioTimer() {
         return valString;
       }
     }
-  
+  }, 3000)
   }
     for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', audioTimer, false, function() {
-          console.log("addtimerhere")
-    }};
+      elements[i].addEventListener('click', audioTimer, false);
     }
 
 
