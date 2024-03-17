@@ -238,7 +238,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .red-two h1 {
   width: 80%;
 }
-
+.red-five .default-content-wrapper {
+  display: inline-flex;
+  margin-left: 16%;
+}
 
 /*Other Stuff*/
 .headphones {
