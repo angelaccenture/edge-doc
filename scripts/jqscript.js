@@ -130,7 +130,7 @@ function repeatAnimGreen() {
         'thirdResponse': 'calm'
       };
 
-      const prompt = $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction", responses, function(response) {
+      const prompt = $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json", responses, function(response) {
         console.log('HEY JOSH: ' + response)
       }).done(function(response) {
           console.log('HEY JOSH: ' + response);
