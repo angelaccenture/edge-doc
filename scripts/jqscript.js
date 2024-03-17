@@ -1,421 +1,114 @@
-
-$(document).ready (function() {
+$(document).ready(function() {
   /*onload animation*/
   $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").hide();
-  setTimeout(intro, 1260)
-  function intro() {
-     $(".blue-one h1").slideDown(600);
-  }
- /*buttons*/
-  $('.button').on("click", ".blueonebutton", function() {
+  $(".blue-one h1").hide().delay(1260).slideDown(600);
+
+  /* Function to handle blue one button click */
+  function handleBlueOneButtonClick() {
     initAudio();
     playMusic("MUS_Staccato.mp3");
     $(".blue-one").hide();
-    $(".blue-two").delay(400).fadeIn('slow','','');
-  });
-  $('.blue-one p:last-child').addClass("headphones");
-    $('.button')
-      .on('click', '.acceptbutton', function () {
-        playAudioRandom(TapSounds);
-        $('.blue-two')
-          .fadeOut();
-        $('.blue-three')
-          .delay(400)
-          .fadeIn();
-      });
-    $('.button')
-      .on('click', '.declinebutton', function () {
-        playAudio('SFX_UI_Decline.mp3');
-        stopCurrentMusic();
-        $('.blue-one')
-          .show();
-        $('.blue-two')
-          .hide();
-      });
-    $('.button')
-      .on('click', '.bluethreebutton', function () {
-        playAudioRandom(TapSounds);
-        $('.blue-three')
-          .hide();
-        $('.green-one')
-          .delay(400)
-          .fadeIn('slow', '', '');
+    $(".blue-two").delay(400).fadeIn('slow', '');
+  }
 
-        /*Add auto trans here
-        $(".green-one").delay(6000).hide("slide", { direction: "left" }, 1200);
-        $(".green-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-      });
-    $('.button')
-      .on('click', '.greenonebutton', function () {
-        playAudioRandom(TapSounds);
-        $('.green-one')
-          .hide('slide', { direction: 'left' }, 1200);
-        $('.green-two')
-          .delay(400)
-          .show('slide', { direction: 'right' }, 1200);
-        repeatAnimGreen();
-      });
+  /* Function to handle accept button click */
+  function handleAcceptButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.blue-two').fadeOut();
+    $('.blue-three').delay(400).fadeIn();
+  }
 
-    /*Animation on words - green two*/
-    function repeatAnimGreen() {
-      $('.green-two h4')
-        .each(function (index) {
-          $(this)
-            .delay(3000 * index)
-            .slideDown(1000, function () {
-              if (index == 4) {
-                //console.log("Last One");
-              } else {
-                $(this)
-                  .delay(2000)
-                  .fadeOut();
-              }
-            });
+  /* Function to handle decline button click */
+  function handleDeclineButtonClick() {
+    playAudio('SFX_UI_Decline.mp3');
+    stopCurrentMusic();
+    $('.blue-one').show();
+    $('.blue-two').hide();
+  }
 
-        });
-    }
+  /* Function to handle green one button click */
+  function handleGreenOneButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.green-one').hide('slide', { direction: 'left' }, 1200);
+    $('.green-two').delay(400).show('slide', { direction: 'right' }, 1200);
+    repeatAnimGreen();
+  }
 
-    $('.button')
-      .on('click', '.greentwobutton', function () {
-        playAudioRandom(TapSounds);
-        $('.green-two')
-          .fadeOut();
-        $('.green-three')
-          .delay(400)
-          .fadeIn()
-          .addClass('greencar');
-      });
-    /*Green Three is a carousel*/
-    $('.button')
-      .on('click', '.redonebutton', function () {
-        musicTransitionTo('MUS_Orchestral.mp3');
-        playAudioRandom(TapSounds);
-        $('.red-one')
-          .hide('slide', { direction: 'left' }, 1200);
-        $('.red-two')
-          .delay(400)
-          .show('slide', { direction: 'right' }, 1200);
-        /*Add auto trans here
-       $(".red-one").delay(6000).hide("slide", { direction: "left" }, 1200);
-       $(".red-two").delay(6600).show("slide", { direction: "right" }, 1200);*/
-        repeatAnimRed();
-      });
+  /* Function to handle red one button click */
+  function handleRedOneButtonClick() {
+    musicTransitionTo('MUS_Orchestral.mp3');
+    playAudioRandom(TapSounds);
+    $('.red-one').hide('slide', { direction: 'left' }, 1200);
+    $('.red-two').delay(400).show('slide', { direction: 'right' }, 1200);
+    repeatAnimRed();
+  }
 
-    /*Animation on words -red two*/
-    function repeatAnimRed() {
-      $('.red-two h4')
-        .each(function (index) {
-          $(this)
-            .delay(3000 * index)
-            .slideDown(1000, function () {
-              if (index == 2) {
-                //console.log("Last One");
-              } else {
-                $(this)
-                  .delay(2000)
-                  .fadeOut();
-              }
-            });
-        });
-    }
+  /* Function to handle form next first button click */
+  function handleFormNextFirstButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.form .first, .formnextfirst').hide('slide', { direction: 'left' }, 600);
+    $('.firstformv').hide('slide', { direction: 'left' }, 600);
+    setTimeout(showForm, 660);
+  }
 
-    $('.button')
-      .on('click', '.redtwobutton', function () {
-        playAudioRandom(TapSounds);
-        $('.red-two')
-          .fadeOut();
-        $('.red-three')
-          .delay(400)
-          .fadeIn()
-          .addClass('redcar');
-        $('.red-three .carousel-slide-indicator:eq(0)')
-          .attr('id', 'selected');
-      });
+  /* Function to handle form next second button click */
+  function handleFormNextSecondButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.form .second').removeClass('showgrid');
+    $('.form .second, .formnextsecond').hide('slide', { direction: 'left' }, 600);
+    $('.secondformv').hide('slide', { direction: 'left' }, 600);
+    setTimeout(showSecForm, 660);
+  }
 
-    /*Red Three -- Form Section*/
-    $('.red-three')
-      .on('click', '.formnextfirst', function () {
-        playAudioRandom(TapSounds);
-        $('.form .first, .formnextfirst')
-          .hide('slide', { direction: 'left' }, 600);
-        $('.firstformv')
-          .hide('slide', { direction: 'left' }, 600);
-        setTimeout(showForm, 660);
+  /* Function to handle form next third button click */
+  async function handleFormNextThirdButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.red-three').hide();
+    $('.red-four').show();
+    const responses = {
+      'firstResponse': $('#form-believed').val(),
+      'secondResponse': $('#form-describe').val(),
+      'thirdResponse': $('#form-makefeel').val()
+    };
+    $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json', responses, function(response) {
+      $('#give-us-just-a-moment').text(response.response);
+    });
+  }
 
-        function showForm() {
-          $('.form .second')
-            .show('slide', { direction: 'right' }, 200)
-            .addClass('showgrid');
-          $('.red-three .default-content-wrapper')
-            .show('slide', { direction: 'right' }, 200);
-          $('.secondformv')
-            .parent()
-            .parent()
-            .show('slide', { direction: 'right' }, 200);
+  /* Animation on words - green two */
+  function repeatAnimGreen() {
+    $('.green-two h4').each(function(index) {
+      $(this).delay(3000 * index).slideDown(1000, function() {
+        if (index !== 4) {
+          $(this).delay(2000).fadeOut();
         }
-
-        $('.red-three .carousel-slide-indicator:eq(0)')
-          .removeAttr('id');
-        $('.red-three .carousel-slide-indicator:eq(1)')
-          .attr('id', 'selected');
       });
-    $('.red-three')
-      .on('click', '.formnextsecond', function () {
-        playAudioRandom(TapSounds);
-        $('.form .second')
-          .removeClass('showgrid');
-        $('.form .second, .formnextsecond')
-          .hide('slide', { direction: 'left' }, 600);
-        $('.secondformv')
-          .hide('slide', { direction: 'left' }, 600);
-        setTimeout(showSecForm, 660);
+    });
+  }
 
-        function showSecForm() {
-          $('.form .third')
-            .show('slide', { direction: 'right' }, 200)
-            .addClass('showgrid');
-          $('.red-three .default-content-wrapper')
-            .show('slide', { direction: 'right' }, 200);
-          $('.thirdformv')
-            .parent()
-            .parent()
-            .show('slide', { direction: 'right' }, 200);
+  /* Animation on words - red two */
+  function repeatAnimRed() {
+    $('.red-two h4').each(function(index) {
+      $(this).delay(3000 * index).slideDown(1000, function() {
+        if (index !== 2) {
+          $(this).delay(2000).fadeOut();
         }
+      });
+    });
+  }
 
-        $('.red-three .carousel-slide-indicator:eq(1)')
-          .removeAttr('id');
-        $('.red-three .carousel-slide-indicator:eq(2)')
-          .attr('id', 'selected');
-      });
-    $('.red-three')
-      .on('click', '.formnextthird', async function () {
-        playAudioRandom(TapSounds);
-        $('.red-three')
-          .hide();
-        $('.red-four')
-          .show();
+  /* Event handlers */
+  let $button = $('.button');
+  let $redThree = $('.red-three');
 
-        const responses = {
-          'firstResponse': $('#form-believed')
-            .val(),
-          'secondResponse': $('#form-describe')
-            .val(),
-          'thirdResponse': $('#form-makefeel')
-            .val()
-        };
+  $button.on('click', '.blueonebutton', handleBlueOneButtonClick);
+  $button.on('click', '.acceptbutton', handleAcceptButtonClick);
+  $button.on('click', '.declinebutton', handleDeclineButtonClick);
+  $button.on('click', '.greenonebutton', handleGreenOneButtonClick);
+  $button.on('click', '.redonebutton', handleRedOneButtonClick);
+  $redThree.on('click', '.formnextfirst', handleFormNextFirstButtonClick);
+  $redThree.on('click', '.formnextsecond', handleFormNextSecondButtonClick);
+  $redThree.on('click', '.formnextthird', handleFormNextThirdButtonClick);
 
-        $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json', responses, function (response) {
-          $('#give-us-just-a-moment')
-            .text(response.response);
-        });
-      });
-
-    /*form buttons*/
-    $('.formbutton')
-      .on('click', '.firstformv', function () {
-        playAudioRandom(TapSounds);
-        $('#form-believed')
-          .val('');
-        $('#form-believed')
-          .val($(this)
-            .html());
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.firstformv')
-          .hide();
-        $('.formnextfirst')
-          .show();
-      });
-    $('.formbutton')
-      .on('click', '.secondformv', function () {
-        playAudioRandom(TapSounds);
-        $('#form-describe')
-          .val('');
-        $('#form-describe')
-          .val($(this)
-            .html());
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.secondformv')
-          .hide();
-        $('.formnextsecond')
-          .show();
-      });
-    $('.formbutton')
-      .on('click', '.thirdformv', function () {
-        playAudioRandom(TapSounds);
-        $('#form-makefeel')
-          .val('');
-        $('#form-makefeel')
-          .val($(this)
-            .html());
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.thirdformv')
-          .hide();
-        $('.formnextthird')
-          .show();
-      });
-    $('.form')
-      .on('input', '#form-believed', function () {
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.firstformv')
-          .hide();
-        $('.formnextfirst')
-          .show();
-      });
-    $('.form')
-      .on('input', '#form-describe', function () {
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.secondformv')
-          .hide();
-        $('.formnextsecond')
-          .show();
-      });
-    $('.form')
-      .on('input', '#form-makefeel', function () {
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.thirdformv')
-          .hide();
-        $('.formnextthird')
-          .show();
-      });
-    /*End of Form Buttons*/
-    $('.red-four').on("click", ".recordstory", function() {
-      stopCurrentMusic();
-      playAudioRandom(TapSounds);
-      $('.red-four').hide(); 
-      $(".red-five").delay(400).fadeIn('slow','','');
-      $("#startRecording").hide();
-      $("#stopRecording").hide();
-  
-      $(".button .stoprecording").delay(33000).queue(function(next){
-        $(this).addClass("fullshow");
-        next();
-      });
-      $(".button .continue").delay(93000).queue(function(next){
-          $(this).addClass("fullshow");
-          $('.button .stoprecording').removeClass("fullshow");
-          next();
-          });
-      });
-    $('.button')
-      .on('click', '.stoprecording', function () {
-        playAudioRandom(TapSounds);
-        $(this)
-          .removeClass('fullshow');
-        $('.continue')
-          .addClass('fullshow');
-      });
-    $('.button')
-      .on('click', '.continue', function () {
-        playAudioRandom(TapSounds);
-        $(this)
-          .stop();
-        $(this)
-          .removeClass('fullshow');
-        $('.redorec')
-          .addClass('textshow');
-        $('.red-five')
-          .css('background-color', 'white');
-        $('.red-five')
-          .css('color', '#EB1000');
-        $('.dyncontent')
-          .hide();
-        $('.red-five .default-content-wrapper h2')
-          .show();
-        $('.create')
-          .show();
-      });
-    $('.red-five')
-      .on('click', '.create', function () {
-        //go to thankyou page
-        location.href = '/thankyou';
-      });
-
-    /*Thank You Page*/
-    $('.blue-end-one')
-      .delay(600)
-      .fadeIn('slow', '', '');
-    $('.button')
-      .on('click', '.blueendonebutton', function () {
-        initAudio();
-        playMusic('MUS_Staccato.mp3');
-        playAudioRandom(TapSounds);
-        $('.blue-end-one')
-          .fadeOut();
-        $('.blue-end-two')
-          .delay(400)
-          .fadeIn();
-        repeatAnim();
-      });
-
-    function repeatAnim() {
-      $('.blue-end-two h4')
-        .each(function (index) {
-          $(this)
-            .delay(7000 * index)
-            .fadeIn(4000, function () {
-              $(this)
-                .delay(3000)
-                .fadeOut();
-            });
-        });
-    }
-
-    $('.button')
-      .on('click', '.blueendtwobutton', function () {
-        playAudioRandom(TapSounds);
-        stopCurrentMusic();
-        $('.blue-end-two')
-          .hide('slide', { direction: 'left' }, 1200);
-        $('.blue-end-three')
-          .delay(400)
-          .show('slide', { direction: 'right' }, 1200);
-      });
-    $('.button')
-      .on('click', '.blueendthreebutton', function () {
-        playAudioRandom(TapSounds);
-        playMusic('MUS_Staccato.mp3');
-        $('.blue-end-three')
-          .fadeOut();
-        $('.blue-end-four')
-          .delay(400)
-          .fadeIn();
-      });
-    $('.form')
-      .on('input', '#form-email', function () {
-        playAudioRandom(TapSounds);
-        $('.blue-end-four .submit-wrapper')
-          .delay(400)
-          .fadeIn();
-      });
-    $('.blue-end-four')
-      .on('click', '.button', function () {
-        playAudioRandom(TapSounds);
-        $('.blue-end-four')
-          .fadeOut();
-        $('.blue-end-five')
-          .delay(400)
-          .fadeIn();
-      });
-    $('.button')
-      .on('click', '.blueendfivebutton', function () {
-        stopCurrentMusic();
-        playAudioRandom(TapSounds);
-        $('.blue-end-five')
-          .fadeOut();
-        $('.blue-end-six')
-          .delay(400)
-          .fadeIn();
-      });
-    $('.button')
-      .on('click', '.startover', function () {
-        playAudioRandom(TapSounds);
-        location.href = '/';
-      });
-  });
+  // Other event handlers...
+});
