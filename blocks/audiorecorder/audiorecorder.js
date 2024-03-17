@@ -1,11 +1,10 @@
 function setup() {
  var elements = document.getElementsByClassName("recordstory");
 
- for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', initFunction, false);
-}
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', initFunction, false);
+  }
  // document.getElementById("startRecording").addEventListener("click", initFunction);
-
   let isRecording = document.getElementById("isRecording");
   function initFunction() {
     setTimeout(function() {
@@ -56,8 +55,9 @@ function setup() {
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
     });
-  }
-}, 3000)
+  }, 3000)
+
+}
 }
 
 /**
