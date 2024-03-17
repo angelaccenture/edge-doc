@@ -13,7 +13,7 @@ export default async function decorate(block) {
  // block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
 
-  audioTimer();
+ // audioTimer();
 }
 
 

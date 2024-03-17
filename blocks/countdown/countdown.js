@@ -27,6 +27,9 @@ var myFunction = function() {
   }
   timeleft -= 1;
 }, 1000);
+  console.log("Start Recording");
+  audioTimer();
+  recorder.hide();
 };
 
 for (var i = 0; i < elements.length; i++) {
