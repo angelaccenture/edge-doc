@@ -74,10 +74,8 @@ var elementsstop = document.getElementsByClassName("stoprecording");
     }
    
   }, 4000)
-  newTimeout();
 }
 }
-
 /**
  * Audio Recorder Block
  * Record audio from the end user
