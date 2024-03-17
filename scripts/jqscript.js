@@ -132,12 +132,12 @@ function repeatAnimGreen() {
 
       const prompt = $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction", responses, function(response) {
         console.log('HEY JOSH: ' + response)
-      }).done(function() {
-          alert( "second success" );
+      }).done(function(response) {
+          console.log('HEY JOSH: ' + response);
         }).fail(function() {
           alert( "error" );
-        }).always(function() {
-          alert( "finished" );
+        }).always(function(response) {
+        console.log('HEY JOSH: ' + response);
         });
     });
 
