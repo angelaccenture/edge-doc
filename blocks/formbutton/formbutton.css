@@ -21,6 +21,10 @@
   content: "➔"
 }
 .arrow {
-  background-color: transparent;
-  color: red !important;
+    background-color: transparent !important;
+    color: red !important;
+    font-size: 66px;
+    right: 34px;
+    position: absolute;
+    top: 9px;
 }
