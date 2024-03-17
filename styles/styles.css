@@ -178,7 +178,7 @@ h6 {
 header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
   display: none;
 }
-.red-four .default-content-wrapper h2, .record-wrapper{
+.red-four .default-content-wrapper h2, .red-four .default-content-wrapper p, .countdown-wrapper, .audiotimer-wrapper, .audiorecorder-wrapper, .record-wrapper{
   display: none;
 }
 .blue-one,.blue-two, .blue-three, .green-one, .green-two, .green-three, .red-one, .red-two, .red-three, .red-four, .blue-end-one, .blue-end-two, .blue-end-three, .blue-end-four, .blue-end-five, .blue-end-six {
