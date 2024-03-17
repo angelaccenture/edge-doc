@@ -40,9 +40,12 @@ function audioTimer() {
     }
   
   }
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', audioTimer, false);
-}
+  setTimeout(() => {
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', audioTimer, false);
+    }
+  }, "3000");
+
 
 /*HTML
 <label id="minutes">00</label>:<label id="seconds">00</label>*/

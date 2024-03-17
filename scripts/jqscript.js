@@ -171,11 +171,7 @@ function repeatAnimGreen() {
       playAudioRandom(TapSounds);
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
-      console.log("start recording");
-      console.log("start timer");
-      //audiotimer();
-      setTimeout(audioTimer, 3000);
-
+  
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(30000).queue(function(next){
         $(this).addClass("fullshow");
