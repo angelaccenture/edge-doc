@@ -93,7 +93,7 @@ export default async function decorate(block) {
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     const valid = form.checkValidity();
     if (valid) {
       handleSubmit(form);
