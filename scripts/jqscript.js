@@ -131,28 +131,18 @@ function repeatAnimGreen() {
       fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
         .then((response) => {
           const reader = response.body.getReader();
-          return new ReadableStream({
-            start(controller) {
-              return pump();
-              function pump() {
-                return reader.read().then(({ done, value }) => {
-                  if (done) {
-                    controller.close();
-                    return;
-                  }
+          reader.on('data', chunk => {
+            console.log(chunk.toString());
+          });
 
-                  controller.enqueue(value);
-                  return pump();
-                });
-              }
-            },
+          reader.on('end', () => {
+            console.log('Retrieved text:', text);
+          });
+
+          reader.on('error', err => {
+            console.error('Error reading stream:', err);
           });
         })
-        .then((stream) => new Response(stream))
-        .then((response) => response.blob())
-        .then((blob) => URL.createObjectURL(blob))
-        .then((data) => console.log('HEY JOSH: ' + data))
-        .catch((err) => console.error(err));
       });
 
      /*form buttons*/
