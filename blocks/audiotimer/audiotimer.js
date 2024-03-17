@@ -3,14 +3,15 @@ export default async function decorate(block) {
   audioTimerm.setAttribute('id', 'minutes');
   audioTimerm.innerText = '00';
 
-  const audioTimerd = ':';
+  const audioTimerd = document.createElement('span');
+  audioTimerd.innerText = ':';
 
   const audioTimers = document.createElement('label');
   audioTimers.setAttribute('id', 'seconds');
   audioTimers.innerText = '00';
 
   block.appendChild(audioTimerm);
-  block.appendChild(audioTimerd);
+  //block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
 
   audioTimer();
