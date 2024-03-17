@@ -130,7 +130,7 @@ function repeatAnimGreen() {
 
       fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
         .then((response) => {
-          let reader = response.body.getReader();
+          let reader = response.body;
           reader.on('data', chunk => {
             console.log(chunk.toString());
           });
