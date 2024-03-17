@@ -19,7 +19,7 @@ export default function decorate(block) {
   <div id="myBar"></div>
 </div>*/
 
-var elements = document.getElementsByClassName("blueendone");
+var elements = document.getElementsByClassName("blueendonebutton");
 function move() {
   var i = 0;
   if (i == 0) {
