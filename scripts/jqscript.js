@@ -292,34 +292,26 @@ $(document).ready (function() {
       $(".button .continue").delay(9300).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
+
           next();
           });
       });
-    $('.button')
-      .on('click', '.stoprecording', function () {
+    $('.button').on('click', '.stoprecording', function () {
         playAudioRandom(TapSounds);
         $(this).removeClass('fullshow');
         $('.continue').addClass('fullshow');
       });
-    $('.button')
-      .on('click', '.continue', function () {
+    $('.button').on('click', '.continue', function () {
         playAudioRandom(TapSounds);
-        $(this)
-          .stop();
-        $(this)
-          .removeClass('fullshow');
-        $('.redorec')
-          .addClass('textshow');
-        $('.red-five')
-          .css('background-color', 'white');
-        $('.red-five')
-          .css('color', '#EB1000');
-        $('.dyncontent')
-          .hide();
-        $('.red-five .default-content-wrapper h2')
-          .show();
-        $('.create')
-          .show();
+        $(this).stop();
+        $(this).removeClass('fullshow');
+        $('.redorec').addClass('textshow');
+        $('.red-five').css('background-color', 'white');
+        $('.red-five').css('color', '#EB1000');
+        $('.dyncontent').hide();
+        $('.red-five .default-content-wrapper p').hide();
+        $('.red-five .default-content-wrapper h2').show();
+        $('.create').show();
       });
     $('.red-five')
       .on('click', '.create', function () {
