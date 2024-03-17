@@ -11,7 +11,7 @@ export default async function decorate(block) {
   audioTimers.innerText = '00';
 
   block.appendChild(audioTimerm);
-  //block.appendChild(audioTimerd);
+  block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
 
   audioTimer();
