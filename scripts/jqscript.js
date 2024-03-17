@@ -292,7 +292,7 @@ $(document).ready (function() {
       $(".button .continue").delay(9300).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-
+          $('.audio-timer label, .audio-timer span').hide();
           next();
           });
       });
@@ -300,7 +300,7 @@ $(document).ready (function() {
         playAudioRandom(TapSounds);
         $(this).removeClass('fullshow');
         $('.continue').addClass('fullshow');
-        $('.audio-timer-wrapper').hide();
+        $('.audio-timer label, .audio-timer span').hide();
       });
     $('.button').on('click', '.continue', function () {
         playAudioRandom(TapSounds);
