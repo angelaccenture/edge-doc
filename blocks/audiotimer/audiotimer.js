@@ -49,7 +49,9 @@ function audioTimer() {
 var elementsstop = document.getElementsByClassName("stoprecording");
 console.log(elementsstop);
 elementsstop.addEventListener('click', myFunction, false);
-
+function myFunction() {
+  console.log("stop timer");
+}
 
 /*HTML
 <label id="minutes">00</label>:<label id="seconds">00</label>*/
