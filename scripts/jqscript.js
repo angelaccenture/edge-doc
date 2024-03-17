@@ -265,8 +265,7 @@ $('.button').on('click', '.bluethreebutton', function () {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      $('.red-four').hide(); 
-      $(".red-five").delay(400).fadeIn('slow','','');
+      
       $("#startRecording").hide();
       $("#stopRecording").hide();
   
