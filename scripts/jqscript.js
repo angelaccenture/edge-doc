@@ -129,7 +129,8 @@ function repeatAnimGreen() {
         };
 
         fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`).then(success => {
-          console.log('JOSH HERE IS THE RESPONSE: ' + success);
+          console.log('JOSH HERE IS THE RESPONSE: ' + success.json());
+          $('#give-us-just-a-moment').text(success.json().prompt);
         });
       });
 
