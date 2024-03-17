@@ -64,9 +64,9 @@ var elementsstop = document.getElementsByClassName("stoprecording");
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
   });
-  newTimeout();
-  }, 3000)
 
+  }, 3000)
+  newTimeout();
   /*End Recording After Time*/ 
     newTimeout(function() {
       rec.stop();
