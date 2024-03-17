@@ -128,9 +128,31 @@ function repeatAnimGreen() {
           'thirdResponse': 'calm'
         };
 
-        fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`).then((success) => {
-          console.log('JOSH HERE IS THE RESPONSE: ' + success.body.prompt);
-        });
+      fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
+        .then((response) => {
+          const reader = response.body.getReader();
+          return new ReadableStream({
+            start(controller) {
+              return pump();
+              function pump() {
+                return reader.read().then(({ done, value }) => {
+                  if (done) {
+                    controller.close();
+                    return;
+                  }
+
+                  controller.enqueue(value);
+                  return pump();
+                });
+              }
+            },
+          });
+        })
+        .then((stream) => new Response(stream))
+        .then((response) => response.blob())
+        .then((blob) => URL.createObjectURL(blob))
+        .then((data) => console.log('HEY JOSH: ' + data))
+        .catch((err) => console.error(err));
       });
 
      /*form buttons*/
