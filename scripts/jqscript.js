@@ -191,10 +191,8 @@ $(document).ready (function() {
     $('.red-three')
       .on('click', '.formnextthird', async function () {
         playAudioRandom(TapSounds);
-        $('.red-three')
-          .hide();
-        $('.red-four')
-          .show();
+        $('.red-three').hide();
+        $('.red-four').show();
 
         const responses = {
           'firstResponse': $('#form-believed')
@@ -245,17 +243,11 @@ $(document).ready (function() {
     $('.formbutton')
       .on('click', '.thirdformv', function () {
         playAudioRandom(TapSounds);
-        $('#form-makefeel')
-          .val('');
-        $('#form-makefeel')
-          .val($(this)
-            .html());
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.thirdformv')
-          .hide();
-        $('.formnextthird')
-          .show();
+        $('#form-makefeel').val('');
+        $('#form-makefeel').val($(this).html());
+        $('.red-three .default-content-wrapper').hide();
+        $('.thirdformv').hide();
+        $('.formnextthird').show();
       });
     $('.form')
       .on('input', '#form-believed', function () {
@@ -306,10 +298,8 @@ $(document).ready (function() {
     $('.button')
       .on('click', '.stoprecording', function () {
         playAudioRandom(TapSounds);
-        $(this)
-          .removeClass('fullshow');
-        $('.continue')
-          .addClass('fullshow');
+        $(this).removeClass('fullshow');
+        $('.continue').addClass('fullshow');
       });
     $('.button')
       .on('click', '.continue', function () {
