@@ -40,6 +40,13 @@ $(document).ready(function() {
     repeatAnimGreen();
   }
 
+  /* Function to handle green one button click */
+  function handleGreenTwoButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.green-two').fadeOut();
+    $('.green-three').delay(400).fadeIn().addClass('greencar');
+  }
+
   /* Function to handle red one button click */
   function handleRedOneButtonClick() {
     musicTransitionTo('MUS_Orchestral.mp3');
@@ -112,6 +119,7 @@ $(document).ready(function() {
   $button.on('click', '.acceptbutton', handleAcceptButtonClick);
   $button.on('click', '.declinebutton', handleDeclineButtonClick);
   $button.on('click', '.greenonebutton', handleGreenOneButtonClick);
+  $button.on('click', '.greentwobutton', handleGreenTwoButtonClick);
   $button.on('click', '.redonebutton', handleRedOneButtonClick);
   $redThree.on('click', '.formnextfirst', handleFormNextFirstButtonClick);
   $redThree.on('click', '.formnextsecond', handleFormNextSecondButtonClick);
