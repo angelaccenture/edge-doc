@@ -45,12 +45,9 @@ function audioTimer() {
       elements[i].addEventListener('click', audioTimer, false);
     }
 
-/*Stop Timing*/
-var elementsstop = document.getElementsByClassName("stoprecording");
-console.log(elementsstop);
-elementsstop.addEventListener('click', myFunction, false);
-function myFunction() {
-  console.log("stop timer");
+  function stopTimer() {
+      // To cancel an interval, pass the timer to clearInterval()
+      clearInterval(audioTimer);
 }
 
 /*HTML
