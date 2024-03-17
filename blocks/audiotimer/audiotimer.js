@@ -45,15 +45,14 @@ function audioTimer() {
       elements[i].addEventListener('click', audioTimer, false);
     }
 
-/*Stop Timer*/
-var elementsstop = document.getElementsByClassName("stoprecording");
+/*Stop Timing*/
+var elements = document.getElementsByClassName("stoprecording");
 
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', myFunction, false);
-}
-function myFunction {
-  console.log("stop timer");
-}
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("click", (e) => {
+      console.log("Stop Timer");
+    });
+  }
 
 
 /*HTML

@@ -55,7 +55,7 @@ function setup() {
 /*Stop Recording*/
 var elementsstop = document.getElementsByClassName("stoprecording");
 
-  for (var i = 0; i < elements.length; i++) {
+  for (var i = 0; i < elementsstop.length; i++) {
     elementsstop[i].addEventListener("click", (e) => {
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
