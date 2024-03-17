@@ -69,7 +69,7 @@ var elementsstop = document.getElementsByClassName("stoprecording");
     setInterval(function(){
       rec.stop();
       isRecording.textContent = "Recording hit end of timer";
-      }, 93000);
+      }, 90000);
    
   }, 4000)
 }
