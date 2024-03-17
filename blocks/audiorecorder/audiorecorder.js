@@ -5,9 +5,10 @@ function setup() {
   elements[i].addEventListener('click', initFunction, false);
 }
  // document.getElementById("startRecording").addEventListener("click", initFunction);
- setTimeout(function() {
+
   let isRecording = document.getElementById("isRecording");
   function initFunction() {
+    setTimeout(function() {
     async function getUserMedia(constraints) {
       if (window.navigator.mediaDevices) {
         return window.navigator.mediaDevices.getUserMedia(constraints);
