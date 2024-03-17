@@ -17,9 +17,6 @@
 .button-wrapper:has(.arrow) {
   position: relative;
 }
-.arrow::after {
-  content: "➔"
-}
 .arrow {
     background-color: transparent !important;
     color: red !important;
@@ -27,4 +24,5 @@
     right: 34px;
     position: absolute;
     top: 9px;
+    border: none;
 }
