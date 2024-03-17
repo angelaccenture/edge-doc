@@ -1,8 +1,15 @@
 export default function decorate(block) {
-  const audiotimer = document.createElement('label');
-  audiotimer.setAttribute("id","minutes");
-  });
-    block.append(audiotimer);
+  const video = document.createElement('label');
+   video.setAttribute("id","video-player");
+   [...block.children].forEach((row) => {
+     while (row.firstElementChild) li.append(row.firstElementChild);
+     [...li.children].forEach((div) => {
+       //removediv.removeChild(div);
+     });
+     video.append(li);
+   });
+   block.textContent = '';
+   block.append(video);
  }
 /*Audio Timer*/
 var minutesLabel = document.getElementById("minutes");
