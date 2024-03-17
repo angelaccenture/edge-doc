@@ -44,11 +44,10 @@ function audioTimer() {
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener('click', audioTimer, false);
     }
-
+    clearInterval(audioTimer);
   function stopTimer() {
-      // To cancel an interval, pass the timer to clearInterval()
-      clearInterval(audioTimer);
-}
+    
+  }
 
 /*HTML
 <label id="minutes">00</label>:<label id="seconds">00</label>*/
