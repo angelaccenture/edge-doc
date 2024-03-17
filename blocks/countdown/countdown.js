@@ -22,7 +22,7 @@ export default function decorate(block) {
   // block.appendChild(audioTimerd);
    block.appendChild(audioTimers);
  
-   audioTimer();
+  // audioTimer();
 }
 
 var elements = document.getElementsByClassName("recordstory");
@@ -34,8 +34,7 @@ var myFunction = function() {
  if(timeleft <= 0){
     clearInterval(downloadTimer);
     var recorder = document.getElementsByClassName("record-wrapper");
-    recorder[0].setAttribute("id","startrec");
-    document.getElementsByClassName("countdown-wrapper")[0].setAttribute("style","display:none");
+     document.getElementsByClassName("countdown-wrapper")[0].setAttribute("style","display:none");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
@@ -55,20 +54,20 @@ function audioTimer() {
   var totalSeconds = 0;
   setInterval(setTime, 1000);
   
-  function setTime() {
-    ++totalSeconds;
-    secondsLabel.innerHTML = pad(totalSeconds % 60);
-    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-  }
-  
-  function pad(val) {
-    var valString = val + "";
-    if (valString.length < 2) {
-      return "0" + valString;
-    } else {
-      return valString;
+    function setTime() {
+      ++totalSeconds;
+      secondsLabel.innerHTML = pad(totalSeconds % 60);
+      minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
     }
-  }
+  
+    function pad(val) {
+      var valString = val + "";
+      if (valString.length < 2) {
+        return "0" + valString;
+      } else {
+        return valString;
+      }
+    }
   
   }
   
