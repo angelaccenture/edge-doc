@@ -307,6 +307,8 @@ $('.button').on('click', '.bluethreebutton', function () {
         $('.red-four .default-content-wrapper h2').show();
         $('.audiorecorder-wrapper').show();
         $('.audiotimer-wrapper').hide();
+        $('.example').hide();
+        $('.hideexample').hide();
         $('.create').show();
       });
     $('.red-four').on('click', '.create', function () {
