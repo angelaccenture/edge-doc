@@ -173,7 +173,8 @@ function repeatAnimGreen() {
       $(".red-five").delay(400).fadeIn('slow','','');
       console.log("start recording");
       console.log("start timer");
-      setTimeout(audioTimer, 3000);
+      audiotimer();
+      //setTimeout(audioTimer, 3000);
 
       /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(30000).queue(function(next){
