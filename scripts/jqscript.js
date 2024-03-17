@@ -130,9 +130,15 @@ function repeatAnimGreen() {
         'thirdResponse': 'calm'
       };
 
-      const response = await fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
-      const data = await response.json();
-      console.log('HEY JOSH HERE IT IS: ' + data);
+      const prompt = $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction", responses, function(response) {
+        console.log('HEY JOSH: ' + response)
+      }).done(function() {
+          alert( "second success" );
+        }).fail(function() {
+          alert( "error" );
+        }).always(function() {
+          alert( "finished" );
+        });
     });
 
      /*form buttons*/
