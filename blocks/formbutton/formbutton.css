@@ -18,5 +18,9 @@
   position: relative;
 }
 .arrow:after {
-  content: "→"
+  content: "➔"
+}
+.arrow {
+  background-color: transparent;
+  color: red !important;
 }
