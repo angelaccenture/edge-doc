@@ -173,11 +173,11 @@ function repeatAnimGreen() {
       $(".red-five").delay(400).fadeIn('slow','','');
   
       /*UPDATE TIMING HERE*/
-      $(".button .stoprecording").delay(30000).queue(function(next){
+      $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(90000).queue(function(next){
+      $(".button .continue").delay(93000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
