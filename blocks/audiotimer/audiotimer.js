@@ -14,12 +14,8 @@ export default async function decorate(block) {
   block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
 
-  audioTimer();
-}
-
-/*HTML
-<label id="minutes">00</label>:<label id="seconds">00</label>*/
-
+  //audioTimer();
+  
 function audioTimer() {
   /*Audio Timer*/
   var minutesLabel = document.getElementById("minutes");
@@ -43,5 +39,10 @@ function audioTimer() {
     }
   
   }
+}
+
+/*HTML
+<label id="minutes">00</label>:<label id="seconds">00</label>*/
+
   
   
