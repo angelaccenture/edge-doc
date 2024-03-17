@@ -1,8 +1,15 @@
 function setup() {
-  document.getElementById("startRecording").addEventListener("click", initFunction);
+ var elements = document.getElementsByClassName("recordstory");
 
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', initFunction, false);
+  }
+  
+
+ // document.getElementById("startRecording").addEventListener("click", initFunction);
   let isRecording = document.getElementById("isRecording");
   function initFunction() {
+    setTimeout(function() {
     async function getUserMedia(constraints) {
       if (window.navigator.mediaDevices) {
         return window.navigator.mediaDevices.getUserMedia(constraints);
@@ -45,12 +52,23 @@ function setup() {
     }
 
     startusingBrowserMicrophone(true);
+/*Stop Recording*/
+var elementsstop = document.getElementsByClassName("stoprecording");
+
+  for (var i = 0; i < elementsstop.length; i++) {
+    elementsstop[i].addEventListener("click", (e) => {
+      rec.stop();
+      isRecording.textContent = "Click play button to start listening";
+    });
+  }
 
     document.getElementById("stopRecording").addEventListener("click", (e) => {
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
     });
-  }
+  }, 3000)
+
+}
 }
 
 /**

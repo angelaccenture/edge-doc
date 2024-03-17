@@ -1,25 +1,20 @@
-$(document)
-  .ready(function () {
-    /*onload animation*/
-    $('.blue-one')
-      .delay(400)
-      .show('slide', { direction: 'left' }, 1200);
-    // $(".blue-one h1").delay(400).show("slide", { direction: "down" }, 1200);
 
-    /*buttons*/
-    $('.button')
-      .on('click', '.blueonebutton', function () {
-        initAudio();
-        playMusic('MUS_Staccato.mp3');
-        $('.blue-one')
-          .hide();
-        $('.blue-two')
-          .delay(400)
-          .fadeIn('slow', '', '');
-      });
-    $('.blue-one p:last-child')
-      .addClass('headphones');
-
+$(document).ready (function() {
+  /*onload animation*/
+  $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
+  $(".blue-one h1").hide();
+  setTimeout(intro, 1260)
+  function intro() {
+     $(".blue-one h1").slideDown(600);
+  }
+ /*buttons*/
+  $('.button').on("click", ".blueonebutton", function() {
+    initAudio();
+    playMusic("MUS_Staccato.mp3");
+    $(".blue-one").hide();
+    $(".blue-two").delay(400).fadeIn('slow','','');
+  });
+  $('.blue-one p:last-child').addClass("headphones");
     $('.button')
       .on('click', '.acceptbutton', function () {
         playAudioRandom(TapSounds);
@@ -290,32 +285,22 @@ $(document)
           .show();
       });
     /*End of Form Buttons*/
-    $('.red-four')
-      .on('click', '.recordstory', function () {
-        stopCurrentMusic();
-        playAudioRandom(TapSounds);
-        $('.red-four')
-          .hide();
-        $('.red-five')
-          .delay(400)
-          .fadeIn('slow', '', '');
-
-        /*UPDATE TIMING HERE*/
-        $('.button .stoprecording')
-          .delay(10000)
-          .queue(function (next) {
-            $(this)
-              .addClass('fullshow');
-            next();
-          });
-        $('.button .continue')
-          .delay(30000)
-          .queue(function (next) {
-            $(this)
-              .addClass('fullshow');
-            $('.button .stoprecording')
-              .removeClass('fullshow');
-            next();
+    $('.red-four').on("click", ".recordstory", function() {
+      stopCurrentMusic();
+      playAudioRandom(TapSounds);
+      $('.red-four').hide(); 
+      $(".red-five").delay(400).fadeIn('slow','','');
+      $("#startRecording").hide();
+      $("#stopRecording").hide();
+  
+      $(".button .stoprecording").delay(33000).queue(function(next){
+        $(this).addClass("fullshow");
+        next();
+      });
+      $(".button .continue").delay(93000).queue(function(next){
+          $(this).addClass("fullshow");
+          $('.button .stoprecording').removeClass("fullshow");
+          next();
           });
       });
     $('.button')

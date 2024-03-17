@@ -9,8 +9,6 @@ export default function decorate(block) {
   block.append(main);
 }
 
-
-
 var elements = document.getElementsByClassName("recordstory");
 
 var myFunction = function() {
@@ -20,8 +18,7 @@ var myFunction = function() {
  if(timeleft <= 0){
     clearInterval(downloadTimer);
     var recorder = document.getElementsByClassName("record-wrapper");
-    recorder[0].setAttribute("id","startrec");
-    document.getElementsByClassName("countdown-wrapper")[0].setAttribute("style","display:none");
+     document.getElementsByClassName("countdown-wrapper")[0].setAttribute("style","display:none");
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
   }
@@ -32,5 +29,7 @@ var myFunction = function() {
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
 }
+
+
 
 
