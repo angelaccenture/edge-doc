@@ -267,6 +267,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       playAudioRandom(TapSounds);
       $('.red-four').css('background-color', '#EB1000');
       $('.red-four').css('color', 'white');
+      $('.recordstory').show();
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
@@ -289,7 +290,7 @@ $('.button').on('click', '.bluethreebutton', function () {
         playAudioRandom(TapSounds);
         $(this).removeClass('fullshow');
         $('.continue').addClass('fullshow');
-        $('.audio-timer label, .audio-timer span').hide();
+        $('.audiotimer label, .audiotimer span').hide();
       });
     $('.button').on('click', '.continue', function () {
         playAudioRandom(TapSounds);
