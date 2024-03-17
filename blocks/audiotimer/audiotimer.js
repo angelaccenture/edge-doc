@@ -40,12 +40,13 @@ function audioTimer() {
     }
   
   }
-  setTimeout(() => {
-    console.log("starttimer");
     for (var i = 0; i < elements.length; i++) {
+      setTimeout(() => {
+        console.log("starttimer");
       elements[i].addEventListener('click', audioTimer, false);
+    }, "3000");
     }
-  }, "3000");
+
 
 
 /*HTML
