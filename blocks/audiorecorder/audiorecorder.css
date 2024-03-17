@@ -7,16 +7,12 @@ audio {
     margin-left: 15%;
 }
 audio::-webkit-media-controls-play-button {
-    color: red;
-    background-color: red;
-    border-radius: 5px;
     position: absolute;
     right: 0;
 }
 audio::-webkit-media-controls-panel {
-    background-color: white;
+    background-color: red;
 }
-
 .audiorecorder picture {
     margin-left: 50%;
 }
