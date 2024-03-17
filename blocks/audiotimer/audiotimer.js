@@ -13,7 +13,7 @@ export default async function decorate(block) {
   block.appendChild(audioTimerm);
   block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
-
+}
 
 var elements = document.getElementsByClassName("recordstory");
 
@@ -40,7 +40,6 @@ function audioTimer() {
     }
   
   }
-}
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener('click', audioTimer, false);
 }
