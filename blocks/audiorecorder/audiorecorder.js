@@ -71,7 +71,7 @@ var elementsstop = document.getElementsByClassName("stoprecording");
     isRecording.textContent = "Recording hit end of timer";
     }, 93000);
 
-  }, 5000)
+  }, 4000)
   newTimeout();
 }
 }
