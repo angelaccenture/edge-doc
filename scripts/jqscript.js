@@ -11,6 +11,12 @@ $(document).ready(function() {
     $(".blue-two").delay(400).fadeIn('slow', '');
   }
 
+  function handleBlueThreeButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.blue-three').hide();
+    $('.green-one').delay(400).fadeIn('slow', '', '');
+  }
+
   /* Function to handle accept button click */
   function handleAcceptButtonClick() {
     playAudioRandom(TapSounds);
@@ -102,6 +108,7 @@ $(document).ready(function() {
   let $redThree = $('.red-three');
 
   $button.on('click', '.blueonebutton', handleBlueOneButtonClick);
+  $button.on('click', '.bluethreebutton', handleBlueThreeButtonClick);
   $button.on('click', '.acceptbutton', handleAcceptButtonClick);
   $button.on('click', '.declinebutton', handleDeclineButtonClick);
   $button.on('click', '.greenonebutton', handleGreenOneButtonClick);
