@@ -7,8 +7,7 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(main);
-}
-export default async function decorate(block) {
+
   const audioTimerm = document.createElement('label');
   audioTimerm.setAttribute('id', 'minutes');
   audioTimerm.innerText = '00';
@@ -20,13 +19,11 @@ export default async function decorate(block) {
   audioTimers.innerText = '00';
 
   block.appendChild(audioTimerm);
- // block.appendChild(audioTimerd);
-  block.appendChild(audioTimers);
-
-  audioTimer();
+  // block.appendChild(audioTimerd);
+   block.appendChild(audioTimers);
+ 
+   audioTimer();
 }
-
-
 
 var elements = document.getElementsByClassName("recordstory");
 
