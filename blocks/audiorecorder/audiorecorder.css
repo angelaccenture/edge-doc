@@ -8,10 +8,11 @@ audio {
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
+    background-color: red;
     right: 0;
 }
 audio::-webkit-media-controls-panel {
-    background-color: red;
+   // background-color: red;
 }
 .audiorecorder picture {
     margin-left: 50%;
