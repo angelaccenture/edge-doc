@@ -267,8 +267,13 @@ $('.button').on('click', '.bluethreebutton', function () {
       playAudioRandom(TapSounds);
       $('.red-four').css('background-color', '#EB1000');
       $('.red-four').css('color', 'white');
+      $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
+      $('coundown-wrapper').show();
+      $('aduiotimer-wrapper').show();
+      $('audiorecorder-wrapper').show();
+
   
       $(".button .stoprecording").delay(3300).queue(function(next){
         $(this).addClass("fullshow");
