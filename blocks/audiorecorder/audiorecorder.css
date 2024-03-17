@@ -13,7 +13,7 @@ audio::-webkit-media-controls-play-button {
     right: 0;
 }
 audio::-webkit-media-controls-panel {
-   background-color: white;
+   background-color: none;
    transition: none;
 }
 .audiorecorder picture {
