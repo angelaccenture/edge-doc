@@ -4,8 +4,8 @@
 audio {
     position: absolute;
     top: 0;
-    margin-left: 5%;
-    max-width: 101px;
+    margin-left: 0;
+    max-width: 75px;
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
