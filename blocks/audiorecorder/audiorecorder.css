@@ -9,11 +9,12 @@ audio {
 audio::-webkit-media-controls-play-button {
     color: red;
     background-color: red;
+    border-radius: 5px;
     position: absolute;
     right: 0;
 }
 audio::-webkit-media-controls-panel {
-    background-color: none !important;
+    background-color: white;
 }
 
 .audiorecorder picture {
