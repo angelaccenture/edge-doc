@@ -56,6 +56,14 @@ $(document).ready(function() {
     repeatAnimRed();
   }
 
+  /* Function to handle red two button click */
+  function handleRedTwoButtonClick() {
+    playAudioRandom(TapSounds);
+    $('.red-two').fadeOut();
+    $('.red-three').delay(400).fadeIn().addClass('redcar');
+    $('.red-three .carousel-slide-indicator:eq(0)').attr('id', 'selected');
+  }
+
   /* Function to handle form next first button click */
   function handleFormNextFirstButtonClick() {
     playAudioRandom(TapSounds);
@@ -121,6 +129,7 @@ $(document).ready(function() {
   $button.on('click', '.greenonebutton', handleGreenOneButtonClick);
   $button.on('click', '.greentwobutton', handleGreenTwoButtonClick);
   $button.on('click', '.redonebutton', handleRedOneButtonClick);
+  $button.on('click', '.redtwobutton', handleRedTwoButtonClick),
   $redThree.on('click', '.formnextfirst', handleFormNextFirstButtonClick);
   $redThree.on('click', '.formnextsecond', handleFormNextSecondButtonClick);
   $redThree.on('click', '.formnextthird', handleFormNextThirdButtonClick);
