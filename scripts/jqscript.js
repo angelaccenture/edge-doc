@@ -275,7 +275,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.audiorecorder-wrapper').show();
       setTimeout(function() {
         $('.audiotimer-wrapper').show();
-      }, 4000);
+      }, 5000);
      
 
       $(".button .stoprecording").delay(33000).queue(function(next){
