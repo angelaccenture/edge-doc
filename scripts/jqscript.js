@@ -272,7 +272,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       $("#startRecording").hide();
       $("#stopRecording").hide();
       $('.countdown-wrapper').show();
-      $('.audiorecorder-wrapper').show();
+      $('.audiorecorder-wrapper').hide();
       setTimeout(function() {
         $('.audiotimer-wrapper').show();
       }, 4000);
@@ -305,6 +305,7 @@ $('.button').on('click', '.bluethreebutton', function () {
         $('.dyncontent').hide();
         $('.red-four .default-content-wrapper p').hide();
         $('.red-four .default-content-wrapper h2').show();
+        $('.audiorecorder-wrapper').show();
         $('.create').show();
       });
     $('.red-four').on('click', '.create', function () {
