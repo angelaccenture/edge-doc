@@ -13,7 +13,7 @@ audio::-webkit-media-controls-play-button {
 .audiorecorder picture {
     margin-left: 50%;
 }
-audio::-webkit-media-controls-panel,
+/*audio::-webkit-media-controls-panel,*/
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-timeline-container,
 audio::-webkit-media-controls-current-time-display,
