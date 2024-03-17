@@ -3,20 +3,22 @@ export default async function decorate(block) {
   audioTimerm.setAttribute('id', 'minutes');
   audioTimerm.innerText = '00';
 
-  const audioTimerd = document.createElement(':');
+  //const audioTimerd = document.createElement(':');
 
   const audioTimers = document.createElement('label');
   audioTimers.setAttribute('id', 'seconds');
   audioTimers.innerText = '00';
 
   block.appendChild(audioTimerm);
-  block.appendChild(audioTimerd);
+ // block.appendChild(audioTimerd);
   block.appendChild(audioTimers);
+
+  audioTimer();
 }
 
 
 
-
+function audioTimer() {
 /*Audio Timer*/
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
@@ -36,5 +38,7 @@ function pad(val) {
   } else {
     return valString;
   }
+}
+
 }
 
