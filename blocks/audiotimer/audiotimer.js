@@ -48,9 +48,7 @@ function audioTimer() {
 /*Stop Timing*/
 var elementsstop = document.getElementsByClassName("stoprecording");
 console.log(elementsstop);
-    elementsstop.addEventListener("click", (e) => {
-      console.log("Stop Timer");
-    });
+elementsstop.addEventListener('click', myFunction, false);
 
 
 /*HTML
