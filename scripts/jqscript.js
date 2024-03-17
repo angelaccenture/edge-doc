@@ -130,20 +130,7 @@ function repeatAnimGreen() {
 
       fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
         .then(response => {
-          // Check if the request was successful (status code 200)
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          // Read the response body as text
-          return response.text();
-        })
-        .then(data => {
-          // Log the retrieved text data to the console
-          console.log('Retrieved data:', data);
-        })
-        .catch(error => {
-          // Handle any errors that occur during the fetch request
-          console.error('Error fetching data:', error);
+          console.log('HEY JOSH: ' + response);
         });
       });
 
