@@ -14,7 +14,7 @@
 .formbutton:has(.thirdformv) {
   display: none;
 }
-.button-wrapper:has (.arrow) {
+.button-wrapper:has(.arrow) {
   position: relative;
 }
 .arrow {
