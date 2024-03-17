@@ -17,6 +17,6 @@
 .button-wrapper:has(.arrow) {
   position: relative;
 }
-.arrow {
+.arrow:after {
   content: "→"
 }
