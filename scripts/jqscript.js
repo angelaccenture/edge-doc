@@ -117,22 +117,23 @@ function repeatAnimGreen() {
       $('.red-three .carousel-slide-indicator:eq(1)').removeAttr('id');
       $('.red-three .carousel-slide-indicator:eq(2)').attr('id','selected');
     });
-    $('.red-three').on("click", ".formnextthird", function() {
+    $('.red-three').on("click", ".formnextthird", async function () {
       playAudioRandom(TapSounds);
-      $('.red-three').hide();
+      $('.red-three')
+        .hide();
 
-      $(".red-four").show();
-        const responses = {
-          'firstResponse': 'best friend',
-          'secondResponse': 'inspiring, mentor, honest',
-          'thirdResponse': 'calm'
-        };
+      $(".red-four")
+        .show();
+      const responses = {
+        'firstResponse': 'best friend',
+        'secondResponse': 'inspiring, mentor, honest',
+        'thirdResponse': 'calm'
+      };
 
-      fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
-        .then(response => {
-          console.log('HEY JOSH: ' + response);
-        });
-      });
+      const response = await fetch(`https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction?firstResponse=${responses.firstResponse}&secondResponse=${responses.secondResponse}&thirdResponse=${responses.thirdResponse}`)
+      const data = await response.json();
+      console.log('HEY JOSH HERE IT IS: ' + data);
+    });
 
      /*form buttons*/
      $(".formbutton").on("click", ".firstformv", function() {
