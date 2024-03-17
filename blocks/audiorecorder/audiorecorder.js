@@ -66,11 +66,13 @@ var elementsstop = document.getElementsByClassName("stoprecording");
   });
 
    /*End Recording After Time*/ 
-   newTimeout(function() {
-    rec.stop();
-    isRecording.textContent = "Recording hit end of timer";
-    }, 93000);
-
+   function newTimeout() {
+    endingTimeout(function(){
+      rec.stop();
+      isRecording.textContent = "Recording hit end of timer";
+      }, 93000);
+    }
+   
   }, 4000)
   newTimeout();
 }
