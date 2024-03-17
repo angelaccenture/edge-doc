@@ -285,11 +285,11 @@ $(document).ready (function() {
       $("#startRecording").hide();
       $("#stopRecording").hide();
   
-      $(".button .stoprecording").delay(33000).queue(function(next){
+      $(".button .stoprecording").delay(3300).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
-      $(".button .continue").delay(93000).queue(function(next){
+      $(".button .continue").delay(9300).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
           next();
