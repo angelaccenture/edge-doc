@@ -66,7 +66,7 @@ var elementsstop = document.getElementsByClassName("stoprecording");
   });
 
    /*End Recording After Time*/ 
-    var timer = setInterval(function(){
+    setInterval(function(){
       rec.stop();
       isRecording.textContent = "Recording hit end of timer";
       }, 93000);
