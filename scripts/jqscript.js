@@ -125,20 +125,14 @@ function repeatAnimGreen() {
       $(".red-four")
         .show();
       const responses = {
-        'firstResponse': 'best friend',
-        'secondResponse': 'inspiring, mentor, honest',
-        'thirdResponse': 'calm'
+        'firstResponse': $('#form-believed').val(),
+        'secondResponse': $('#form-describe').val(),
+        'thirdResponse': $('#form-makefeel').val()
       };
 
-      const prompt = $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json", responses, function(response) {
-        console.log('HEY JOSH: ' + response)
-      }).done(function(response) {
-          console.log('HEY JOSH: ' + response);
-        }).fail(function() {
-          alert( "error" );
-        }).always(function(response) {
-        console.log('HEY JOSH: ' + response);
-        });
+      $.get( "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json", responses, function(response) {
+        $('#give-us-just-a-moment').text(response.response);
+      });
     });
 
      /*form buttons*/
