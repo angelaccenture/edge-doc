@@ -16,6 +16,7 @@ export default async function decorate(block) {
 }
 
 var elements = document.getElementsByClassName("recordstory");
+var stopRec = document.getElementsByClassName("stoprecording");
 
 function audioTimer() {
   setTimeout(function() {
@@ -24,8 +25,7 @@ function audioTimer() {
   var secondsLabel = document.getElementById("seconds");
   var totalSeconds = 0;
   setInterval(setTime, 1000);
-  
-    function setTime() {
+     function setTime() {
       ++totalSeconds;
       secondsLabel.innerHTML = pad(totalSeconds % 60);
       minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
@@ -44,16 +44,6 @@ function audioTimer() {
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener('click', audioTimer, false);
     }
-
-/*Stop Timing*/
-var elements = document.getElementsByClassName("stoprecording");
-
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("click", (e) => {
-      console.log("Stop Timer");
-    });
-  }
-
 
 /*HTML
 <label id="minutes">00</label>:<label id="seconds">00</label>*/

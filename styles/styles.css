@@ -239,8 +239,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   width: 80%;
 }
 .red-five .default-content-wrapper {
-  display: inline-flex;
-  margin-left: 16%;
+  text-align: center;
+  margin-top: 28%;
 }
 
 /*Other Stuff*/
