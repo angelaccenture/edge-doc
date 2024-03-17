@@ -282,7 +282,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       $(".button .continue").delay(93000).queue(function(next){
           $(this).addClass("fullshow");
           $('.button .stoprecording').removeClass("fullshow");
-          $('.audio-timer label, .audio-timer span').hide();
+          $('.audiotimer label, .audiotimer span').hide();
           next();
           });
       });
