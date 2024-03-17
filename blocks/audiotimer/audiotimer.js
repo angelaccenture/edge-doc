@@ -41,6 +41,7 @@ function audioTimer() {
   
   }
   setTimeout(() => {
+    console.log("starttimer");
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener('click', audioTimer, false);
     }
