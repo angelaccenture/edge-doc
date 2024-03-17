@@ -46,10 +46,10 @@ function audioTimer() {
     }
 
 /*Stop Timing*/
-var elements = document.getElementsByClassName("stoprecording");
-
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("click", (e) => {
+var elementsstop = document.getElementsByClassName("stoprecording");
+console.log(elementsstop);
+  for (var i = 0; i < elementsstop.length; i++) {
+    elementsstop[i].addEventListener("click", (e) => {
       console.log("Stop Timer");
     });
   }
