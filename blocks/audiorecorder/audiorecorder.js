@@ -52,22 +52,26 @@ function setup() {
     }
 
     startusingBrowserMicrophone(true);
-/*Stop Recording*/
+/*Stop Recording Button*/
 var elementsstop = document.getElementsByClassName("stoprecording");
-
   for (var i = 0; i < elementsstop.length; i++) {
     elementsstop[i].addEventListener("click", (e) => {
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
     });
   }
-
-    document.getElementById("stopRecording").addEventListener("click", (e) => {
+  document.getElementById("stopRecording").addEventListener("click", (e) => {
       rec.stop();
       isRecording.textContent = "Click play button to start listening";
-    });
-  }, 3000)
+  });
 
+  }, 3000)
+  newTimeout();
+  /*End Recording After Time*/ 
+    newTimeout(function() {
+      rec.stop();
+      isRecording.textContent = "Recording hit end of timer";
+      }, 93000)
 }
 }
 
