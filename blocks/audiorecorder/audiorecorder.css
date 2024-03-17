@@ -11,7 +11,7 @@ audio::-webkit-media-controls-play-button {
     position: absolute;
     background-color: red;
     right: -10px;
-    opacity: 100%;
+    opacity: 1;
 }
 audio::-webkit-media-controls-panel {
    
