@@ -10,7 +10,7 @@ audio {
 audio::-webkit-media-controls-play-button {
     position: absolute;
     background-color: red;
-    right: 0;
+    right: -2px;
 }
 audio::-webkit-media-controls-panel {
    
