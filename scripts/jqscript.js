@@ -270,10 +270,9 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
-      $('coundown-wrapper').show();
-      $('aduiotimer-wrapper').show();
-      $('audiorecorder-wrapper').show();
-
+      $('.coundown-wrapper').show();
+      $('.aduiotimer-wrapper').show();
+      $('.audiorecorder-wrapper').show();
   
       $(".button .stoprecording").delay(3300).queue(function(next){
         $(this).addClass("fullshow");
