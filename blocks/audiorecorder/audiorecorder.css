@@ -14,9 +14,7 @@ audio::-webkit-media-controls-play-button {
 }
 audio::-webkit-media-controls-panel {
    background-color: white;
-}
-audio::-webkit-media-controls-enclosure {
-    display: none;
+   transition: opacity none;
 }
 .audiorecorder picture {
     margin-left: 50%;
