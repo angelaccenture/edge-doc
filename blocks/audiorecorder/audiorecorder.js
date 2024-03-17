@@ -1,6 +1,10 @@
 function setup() {
- // var elements = document.getElementsByClassName("recordstory");
-  document.getElementsByClassName("recordstory").addEventListener("click", initFunction);
+ var elements = document.getElementsByClassName("recordstory");
+
+ for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener('click', initFunction, false);
+}
+ // document.getElementById("startRecording").addEventListener("click", initFunction);
 
   let isRecording = document.getElementById("isRecording");
   function initFunction() {
