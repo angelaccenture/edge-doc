@@ -272,9 +272,12 @@ $('.button').on('click', '.bluethreebutton', function () {
       $("#startRecording").hide();
       $("#stopRecording").hide();
       $('.countdown-wrapper').show();
-      $('.audiotimer-wrapper').show();
       $('.audiorecorder-wrapper').show();
-  
+      setTimeout(function() {
+        $('.audiotimer-wrapper').show();
+      }, 3000);
+     
+
       $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
         next();
