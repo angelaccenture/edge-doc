@@ -265,7 +265,8 @@ $('.button').on('click', '.bluethreebutton', function () {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      
+      $('.red-four').css('background-color', '#EB1000');
+      $('.red-four').css('color', 'white');
       $("#startRecording").hide();
       $("#stopRecording").hide();
   
@@ -291,14 +292,14 @@ $('.button').on('click', '.bluethreebutton', function () {
         $(this).stop();
         $(this).removeClass('fullshow');
         $('.redorec').addClass('textshow');
-        $('.red-five').css('background-color', 'white');
-        $('.red-five').css('color', '#EB1000');
+        $('.red-four').css('background-color', 'white');
+        $('.red-four').css('color', '#EB1000');
         $('.dyncontent').hide();
-        $('.red-five .default-content-wrapper p').hide();
-        $('.red-five .default-content-wrapper h2').show();
+        $('.red-four .default-content-wrapper p').hide();
+        $('.red-four .default-content-wrapper h2').show();
         $('.create').show();
       });
-    $('.red-five').on('click', '.create', function () {
+    $('.red-four').on('click', '.create', function () {
         //go to thankyou page
         location.href = '/thankyou';
       });
