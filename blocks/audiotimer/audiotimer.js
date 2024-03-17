@@ -1,9 +1,9 @@
 export default async function decorate(block) {
   const audioTimer = document.createElement('label');
-  startBtn.setAttribute('id', 'startRecording');
-  startBtn.innerText = 'Start Recording';
+  audioTimer.setAttribute('id', 'startRecording');
+  audioTimer.innerText = 'Start Recording';
 
-  block.appendChild(startBtn);
+  block.appendChild(audioTimer);
 }
 
 
