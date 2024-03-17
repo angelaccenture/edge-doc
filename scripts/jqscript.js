@@ -171,8 +171,9 @@ function repeatAnimGreen() {
       playAudioRandom(TapSounds);
       $('.red-four').hide(); 
       $(".red-five").delay(400).fadeIn('slow','','');
+      $("#startRecording").hide();
+      $("#stopRecording").hide();
   
-      /*UPDATE TIMING HERE*/
       $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
         next();
