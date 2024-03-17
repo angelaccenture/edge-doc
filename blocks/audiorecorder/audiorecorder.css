@@ -13,8 +13,7 @@ audio::-webkit-media-controls-play-button {
     right: 0;
 }
 audio::-webkit-media-controls-panel {
-   //background-color: white;
-   transition: none;
+   
 }
 .audiorecorder picture {
     margin-left: 50%;
@@ -34,6 +33,7 @@ audio::-webkit-media-controls-rewind-button,
 audio::-webkit-media-controls-return-to-realtime-button,
 audio::-webkit-media-controls-toggle-closed-captions-button{
     display: none;
+    visibility: hidden;
 }
 
 /*Reference
