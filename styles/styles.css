@@ -294,9 +294,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .blue-end-six {
   overflow-y: auto;
 }
-.blue-end-six p, h5 {
-  color: black;
-}
 .blue-end-six .default-content-wrapper {
   padding-top: 0;
 }
@@ -314,7 +311,18 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   line-height: 20.8px;
   margin: 0;
 }
-.blue-end-six strong {
+.blue-end-six p {
+  color: black;
+}
+.blue-end-six h5 {
+  color: black;
+  margin-left: 5%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+.blue-end-six h5 strong {
   font-weight: 600;
   color: var(--blue-color);
 }
