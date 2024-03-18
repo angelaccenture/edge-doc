@@ -84,7 +84,7 @@ function setup() {
         cache: 'no-cache',
         body: formData
       }).then((response) => {
-        console.log('JOSH AUDIO: ' + response):
+        console.log('JOSH AUDIO: ' + response);
       });
 
       //location.href = '/thankyou';
