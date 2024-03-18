@@ -1,0 +1,16 @@
+.toparea {
+    background-color: var(--blue-color);
+    color: white;
+    padding: 8% 5%;
+}
+.toparea p {
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+}
+.toparea h2 {
+    max-width: 50%;
+}
