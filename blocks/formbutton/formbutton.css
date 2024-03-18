@@ -6,6 +6,10 @@
   margin: 5px 10px 5px 0;
   padding: 8px 24px;
   border: none;
+  font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 20.8px 
 }
 .formbutton:has(.secondformv) {
   display: none;
