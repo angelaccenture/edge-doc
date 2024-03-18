@@ -1,4 +1,6 @@
 function setup() {
+  let blob;
+
   const recordButtons = document.getElementsByClassName("recordstory");
 
   for (let i = 0; i < recordButtons.length; i++) {
@@ -22,8 +24,7 @@ function setup() {
         mediaRecorder.ondataavailable = function(e) {
           audioChunks.push(e.data);
           if (mediaRecorder.state === "inactive") {
-            const blob = new Blob(audioChunks, { type: "audio/ogg; codecs=opus" });
-            console.log(blob);
+            blob = new Blob(audioChunks, { type: "audio/ogg; codecs=opus" });
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
           }
         };
@@ -44,6 +45,10 @@ function setup() {
 
     }, 4000);
   }
+
+  $('.red-four .create').click(function() {
+    console.log('Here is the blob, Josh: ' + blob);
+  });
 }
 
 /**
