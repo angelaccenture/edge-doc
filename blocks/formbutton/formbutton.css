@@ -2,8 +2,7 @@
     position: relative;
   }
 .firstformv, .secondformv, .thirdformv {
-  background-color: var(--red-color);
-  color: white;
+  color: black;
   margin: 5px 10px 5px 0;
   padding: 8px 24px;
   border: none;
