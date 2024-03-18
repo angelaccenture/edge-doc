@@ -47,7 +47,7 @@ $('.button').on('click', '.bluethreebutton', function () {
           .delay(400)
           .show('slide', { direction: 'right' }, 1200);
         repeatAnimGreen();
-  });  
+  });
     /*Animation on words for next green two slide*/
     function repeatAnimGreen() {
       $('.green-two h4')
@@ -76,7 +76,7 @@ $('.button').on('click', '.bluethreebutton', function () {
           .fadeIn()
           .addClass('greencar');
   });
-  
+
   /*Green Three - carousel*/
 
   /*Red One - Full Color*/
@@ -159,7 +159,7 @@ $('.button').on('click', '.bluethreebutton', function () {
         $('.secondformv')
           .hide('slide', { direction: 'left' }, 600);
         setTimeout(showSecForm, 660);
-  
+
         function showSecForm() {
           $('.form .third')
             .show('slide', { direction: 'right' }, 200)
@@ -171,20 +171,20 @@ $('.button').on('click', '.bluethreebutton', function () {
             .parent()
             .show('slide', { direction: 'right' }, 200);
         }
-  
+
         $('.red-three .carousel-slide-indicator:eq(1)')
           .removeAttr('id');
         $('.red-three .carousel-slide-indicator:eq(2)')
           .attr('id', 'selected');
       });
-  
+
     $('.red-three').on('click', '.formnextthird', async function () {
         playAudioRandom(TapSounds);
         $('.red-three')
           .hide();
         $('.red-four')
           .show();
-  
+
         const responses = {
           'firstResponse': $('#form-believed')
             .val(),
@@ -193,7 +193,7 @@ $('.button').on('click', '.bluethreebutton', function () {
           'thirdResponse': $('#form-makefeel')
             .val()
         };
-  
+
         $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/fourthPromptAction.json', responses, function (response) {
           $('#give-us-just-a-moment')
             .text(response.response);
@@ -276,7 +276,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       setTimeout(function() {
         $('.audiotimer-wrapper').show();
       }, 4000);
-     
+
 
       $(".button .stoprecording").delay(33000).queue(function(next){
         $(this).addClass("fullshow");
@@ -313,9 +313,9 @@ $('.button').on('click', '.bluethreebutton', function () {
       });
     $('.red-four').on('click', '.create', function () {
         //go to thankyou page
-        location.href = '/thankyou';
+        //location.href = '/thankyou';
       });
-  
+
       //**THANK YOU PAGE STARTS HERE */
 /*Blue End One*/
   $('.blue-end-one').delay(600).fadeIn('slow', '', '');
