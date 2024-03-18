@@ -13,7 +13,7 @@ function playAudio(clipName){
 
 function playAudioRandom(clipNames){
     let randomClip;
-    do{ 
+    do{
         randomClip = clipNames[Math.floor(Math.random()*clipNames.length)];
     } while (randomClip === lastRandom);
     lastRandom = randomClip;
@@ -25,7 +25,7 @@ let audioContext;
 let activeBufferSource;
 let activeGainNode;
 
-function initAudio () { 
+function initAudio () {
     audioContext = new AudioContext();
     audioContext.resume();
     //console.log(audioContext.state);
@@ -55,7 +55,6 @@ function musicTransitionTo(clipName){
 }
 
 function stopCurrentMusic(){
-    console.log("Stopping");
     fadeOutAndStop(activeBufferSource,activeGainNode,4);
 }
 
@@ -68,7 +67,7 @@ function fadeOutAndStop(bufferSource, gainNode, fadeTime){
     gainNode.gain.setValueAtTime(gainNode.gain.value, audioContext.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + fadeTime);
     setTimeout(function () {
-        bufferSource.stop();    
+        bufferSource.stop();
         //console.log("Stop");
     }, fadeTime*1000);
 }

@@ -26,6 +26,10 @@ function setup() {
           if (mediaRecorder.state === "inactive") {
             blob = new Blob(audioChunks, { type: "audio/ogg; codecs=opus" });
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
+            $('.red-four .create').click(function() {
+              console.log('Here is the blob, Josh: ' + blob);
+              location.href = '/thankyou';
+            });
           }
         };
 
@@ -45,11 +49,6 @@ function setup() {
 
     }, 4000);
   }
-
-  $('.red-four .create').click(function() {
-    console.log('Here is the blob, Josh: ' + blob);
-    location.href = '/thankyou';
-  });
 }
 
 /**
