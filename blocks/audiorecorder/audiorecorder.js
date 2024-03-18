@@ -88,8 +88,8 @@ export default async function decorate(block) {
   stopBtn.innerText = 'Stop Recording';
 
   const audio = document.createElement('audio');
-  audio.setAttribute('controls', '');
   audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
+  audio.setAttribute('controls', '');
   audio.setAttribute('disableremoteplayback',"false");
   audio.setAttribute('id', 'audioElement');
 
