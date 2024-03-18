@@ -1,56 +1,80 @@
 function setup() {
-  let blob;
+  var elements = document.getElementsByClassName("recordstory");
 
-  const recordButtons = document.getElementsByClassName("recordstory");
-
-  for (let i = 0; i < recordButtons.length; i++) {
-    recordButtons[i].addEventListener('click', initRecording, false);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', initFunction, false);
   }
 
-  const isRecording = document.getElementById("isRecording");
 
-  function initRecording() {
-    setTimeout(async function() {
+  // document.getElementById("startRecording").addEventListener("click", initFunction);
+  let isRecording = document.getElementById("isRecording");
+  function initFunction() {
+    setTimeout(function() {
+      async function getUserMedia(constraints) {
+        if (window.navigator.mediaDevices) {
+          return window.navigator.mediaDevices.getUserMedia(constraints);
+        }
+        let legacyApi =
+          navigator.getUserMedia ||
+          navigator.webkitGetUserMedia ||
+          navigator.mozGetUserMedia ||
+          navigator.msGetUserMedia;
+        if (legacyApi) {
+          return new Promise(function (resolve, reject) {
+            legacyApi.bind(window.navigator)(constraints, resolve, reject);
+          });
+        } else {
+          alert("user api not supported");
+        }
+      }
+
       isRecording.textContent = "Recording...";
 
       let audioChunks = [];
-      let mediaRecorder;
-
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        mediaRecorder = new MediaRecorder(stream);
-        mediaRecorder.start();
-
-        mediaRecorder.ondataavailable = function(e) {
+      let rec;
+      function handlerFunction(stream) {
+        rec = new MediaRecorder(stream);
+        rec.start();
+        rec.ondataavailable = (e) => {
           audioChunks.push(e.data);
-          if (mediaRecorder.state === "inactive") {
-            blob = new Blob(audioChunks, { type: "audio/ogg; codecs=opus" });
+          if (rec.state === "inactive") {
+            let blob = new Blob(audioChunks, { type: "audio/mp3" });
+            debugger;
+            console.log(blob);
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
-            $('.red-four .create').click(function() {
-              console.log('Here is the blob, Josh: ' + blob);
-              location.href = '/thankyou';
-            });
           }
         };
-
-        mediaRecorder.onstop = function() {
-          isRecording.textContent = "Click play button to start listening";
-        };
-      } catch (error) {
-        console.error("Error accessing microphone: ", error);
-        alert("Failed to access microphone. Please ensure it's enabled and try again.");
       }
 
-      setTimeout(function() {
-        if (mediaRecorder && mediaRecorder.state !== "inactive") {
-          mediaRecorder.stop();
-        }
+      function startusingBrowserMicrophone(boolean) {
+        getUserMedia({ audio: boolean }).then((stream) => {
+          handlerFunction(stream);
+        });
+      }
+
+      startusingBrowserMicrophone(true);
+      /*Stop Recording Button*/
+      var elementsstop = document.getElementsByClassName("stoprecording");
+      for (var i = 0; i < elementsstop.length; i++) {
+        elementsstop[i].addEventListener("click", (e) => {
+          rec.stop();
+          isRecording.textContent = "Click play button to start listening";
+        });
+      }
+      document.getElementById("stopRecording").addEventListener("click", (e) => {
+        rec.stop();
+        isRecording.textContent = "Click play button to start listening";
+      });
+
+      /*End Recording After Time*/
+      setInterval(function(){
+        rec.stop();
+        isRecording.textContent = "Recording hit end of timer";
       }, 90000);
 
-    }, 4000);
+    }, 4000)
   }
 }
-
 /**
  * Audio Recorder Block
  * Record audio from the end user
