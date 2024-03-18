@@ -322,7 +322,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   font-weight: 400;
   line-height: 130%; /* 20.8px */
 }
-.blue-end-six h5 strong {
+.blue-end-six h5 strong, h4 {
   font-weight: 600;
   color: var(--blue-color);
 }
