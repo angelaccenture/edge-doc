@@ -38,13 +38,11 @@ $(document).ready (function() {
     $(".green-one").hide("slide", { direction: "left" }, 1200);
     $(".green-two").delay(400).show("slide", { direction: "right" }, 1200);
 
-    // Animation on words - green two
-    $( ".default-content-wrapper ul li" ).each(function( index ) {
-      // ($("li").hide(), 3000, 1000 * 60 * 60);
-      ($(".default-content-wrapper > ul > li").fadeIn().fadeOut());
+    /*Animation on words - green two
+    $( ".green-three strong" ).each(function( index ) {
       console.log("animation")
         console.log( index + ": " + $( this ).text() );
-    });
+    });*/
   });
   $('.button').on("click", ".greentwobutton", function() {
     playAudioRandom(TapSounds);
