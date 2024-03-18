@@ -56,11 +56,15 @@ $('.button').on('click', '.bluethreebutton', function () {
             .delay(3000 * index)
             .slideDown(1000, function () {
               if (index == 4) {
-                console.log("Last One");
-              } else {
                 $(this)
                   .delay(2000)
                   .fadeOut();
+                console.log("Last One");
+              } else {
+                // $(this)
+                //   .delay(2000)
+                //   .fadeOut();
+                console.log("I")
               }
             });
 
