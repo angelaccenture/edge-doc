@@ -90,6 +90,7 @@ export default async function decorate(block) {
   const audio = document.createElement('audio');
   audio.setAttribute('controls', '');
   audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
+  audio.setAttribute('disableremoteplayback',"true");
   audio.setAttribute('id', 'audioElement');
 
   const isRecording = document.createElement('p');
