@@ -3,12 +3,13 @@
     color: white;
     padding: 8% 5%;
 }
-.toparea p {
+.toparea {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+    max-width: 60%;
 }
-.toparea h1 {
+.toparea h2 {
     max-width: 50%;
 }
