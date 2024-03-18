@@ -290,6 +290,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin: 0 auto;
   text-align: center;
 }
+
 .blue-end-six {
   overflow-y: auto;
 }
@@ -298,4 +299,15 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .blue-end-six .default-content-wrapper {
   margin-top: 0;
+}
+.blue-end-six h6 {
+  color: var(--blue-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.8px
+}
+.blue-end-six strong {
+  font-weight: 600;
+  color: var(--blue-color);
 }
