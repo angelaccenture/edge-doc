@@ -80,8 +80,9 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--body-font-family);
   text-decoration: none;
+  font-family: var(--fixed-font-family);
 }
 a:hover {
 }
@@ -110,6 +111,9 @@ main .section {
   }
 }
 /*New Styles for Summit*/
+button {
+  font-family: var(--body-font-family);
+}
 h1 {
   font-size: 92px;
   font-style: normal;
