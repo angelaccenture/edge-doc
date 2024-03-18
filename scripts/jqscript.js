@@ -311,13 +311,9 @@ $('.button').on('click', '.bluethreebutton', function () {
         $('.hideexample').hide();
         $('.create').show();
       });
-    $('.red-four').on('click', '.create', function () {
-        //go to thankyou page
-        //location.href = '/thankyou';
-      });
 
       //**THANK YOU PAGE STARTS HERE */
-/*Blue End One*/
+  /*Blue End One*/
   $('.blue-end-one').delay(600).fadeIn('slow', '', '');
   $('.button').on('click', '.blueendonebutton', function () {
       initAudio();
