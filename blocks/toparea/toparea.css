@@ -1,3 +1,5 @@
 .toparea {
     background-color: var(--blue-color);
+    color: white;
+    padding: 8% 5%;
 }
