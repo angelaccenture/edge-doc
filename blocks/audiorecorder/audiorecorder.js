@@ -1,7 +1,8 @@
 function setup() {
-  var elements = document.getElementsByClassName("recordstory");
+  let elements = document.getElementsByClassName("recordstory"),
+      blob;
 
-  for (var i = 0; i < elements.length; i++) {
+  for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', initFunction, false);
   }
 
@@ -38,7 +39,7 @@ function setup() {
         rec.ondataavailable = (e) => {
           audioChunks.push(e.data);
           if (rec.state === "inactive") {
-            let blob = new Blob(audioChunks, { type: "audio/mp3" });
+            blob = new Blob(audioChunks, { type: "audio/mp3" });
             debugger;
             console.log(blob);
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
@@ -54,8 +55,8 @@ function setup() {
 
       startusingBrowserMicrophone(true);
       /*Stop Recording Button*/
-      var elementsstop = document.getElementsByClassName("stoprecording");
-      for (var i = 0; i < elementsstop.length; i++) {
+      let elementsstop = document.getElementsByClassName("stoprecording");
+      for (let i = 0; i < elementsstop.length; i++) {
         elementsstop[i].addEventListener("click", (e) => {
           rec.stop();
           isRecording.textContent = "Click play button to start listening";
@@ -72,7 +73,22 @@ function setup() {
         isRecording.textContent = "Recording hit end of timer";
       }, 90000);
 
-    }, 4000)
+    }, 4000);
+
+    $('.red-four').on('click', '.create', function () {
+      const formData = new FormData();
+      formData.append('audioFile', blob, 'recording.mp3');
+
+      fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
+        method: 'POST',
+        cache: 'no-cache',
+        body: formData
+      }).then((response) => {
+        console.log('JOSH AUDIO: ' + response):
+      });
+
+      //location.href = '/thankyou';
+    });
   }
 }
 /**
