@@ -47,6 +47,7 @@ function setup() {
   }
 
   $('.red-four .create').click(function() {
+    alert('JOSH');
     console.log('Here is the blob, Josh: ' + blob);
   });
 }
