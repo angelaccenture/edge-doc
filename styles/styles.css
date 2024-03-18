@@ -326,3 +326,8 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   font-weight: 600;
   color: var(--blue-color);
 }
+.blue-end-six .startover {
+  background-color: var(--blue-color);
+  color: white;
+  margin-top: 9%;
+}
