@@ -290,7 +290,12 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin: 0 auto;
   text-align: center;
 }
-
+.blue-end-six {
+  overflow-y: auto;
+}
 .blue-end-six p {
   color: black;
+}
+.blue-end-six .default-content-wrapper {
+  margin-top: 0;
 }

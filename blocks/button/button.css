@@ -83,3 +83,6 @@
 .redtwobutton, .recordstory, .form .submit-wrapper .button, .create {
     background-color:  var(--red-color);
 }
+.blue-end-six .button-wrapper {
+    position: relative;
+}
