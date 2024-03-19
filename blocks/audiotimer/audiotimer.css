@@ -6,17 +6,7 @@
     display: inline-block;
 }
 
-#minutes {
-    position: relative;
-    bottom: 30px;
-}
-
-#colon {
-    position: relative;
-    bottom: 30px;
-}
-
-#seconds {
+#minutes, #colon, #seconds {
     position: relative;
     bottom: 30px;
 }
