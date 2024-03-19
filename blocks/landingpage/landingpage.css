@@ -86,6 +86,9 @@ em - Colored and Bold Items
     max-width: 660px;
     margin: 0 auto;
   }
+  .heroes .toparea img {
+    max-width: 20%;
+  }
   .heroes .toparea {
     padding: 8% 10%;  
   }
@@ -134,9 +137,6 @@ em - Colored and Bold Items
   }
   .heroes .toparea {
     padding: 8% 10%;  
-  }
-  .heroes .toparea img {
-    max-width: 20%;
   }
   .heroes h1 {
     font-size: 51px;
