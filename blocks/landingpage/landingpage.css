@@ -170,4 +170,10 @@ em - Colored and Bold Items
     font-weight: 600;
     line-height: 19.6px;
   }
+  .heroes .toparea {
+    padding: 8% 5%;
+  }
+  .toparea h2 {
+    max-width: 100%;
+  }
 }
