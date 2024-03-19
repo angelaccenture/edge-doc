@@ -117,18 +117,23 @@
   border-radius: 8px;
   margin: 0;
   padding: 0;
-  width: 2rem;
-  height: 2rem;
+  margin-top: 60px;
   position: relative;
-  background-color: transparent;
+  background: url(/icons/Arrow.png) no-repeat 0 0;
   border: none;
+}
+.carousel .carousel-navigation-buttons .slide-prev {
+  background: url(/icons/Arrow-left.png) no-repeat 0 0;
+}
+.carousel .carousel-navigation-buttons .slide-next {
+  background: url(/icons/Arrow.png) no-repeat 30px 0;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
   background-color: transparent;
 }
-
+/*
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: "\2192";
@@ -139,8 +144,9 @@
   left: calc(50% + 3px);
   transform: translate(-50%, -50%) rotate(-180deg);
   color: var(--green-color);
+  font-size: 35px;
 
-}
+}*/
 
 .carousel .carousel-navigation-buttons button.slide-next::after {
   transform: translate(-50%, -50%)  rotate(0deg);
@@ -154,8 +160,8 @@
   }
 
   .carousel .carousel-navigation-buttons button {
-    width: 3rem;
-    height: 3rem;
+    width: 60px;
+    height: 60px;
   }
 
   .carousel .carousel-navigation-buttons button::after {
