@@ -131,21 +131,20 @@
 
 .carousel .carousel-navigation-buttons button::after {
   display: block;
-  content: "";
-  border: 3px var(--green-color) solid;
-  border-bottom: 0;
-  border-left: 0;
+  content: "\2192";
   height: 0.75rem;
   width: 0.75rem;
   position: absolute;
   top: 50%;
   left: calc(50% + 3px);
-  transform: translate(-50%, -50%) rotate(-135deg);
+  transform: translate(-50%, -50%) rotate(-180deg);
+  color: var(--green-color);
+
 }
 
 .carousel .carousel-navigation-buttons button.slide-next::after {
-  transform: translate(-50%, -50%)  rotate(45deg);
-  left: calc(50% - 3px);
+  transform: translate(-50%, -50%)  rotate(0deg);
+  color: var(--green-color);
 }
 
 @media (width >= 600px) {
@@ -348,6 +347,10 @@
   }
   #carousel-1-slide-7 img {
     max-width: 39%;
+  }
+
+  .slide-next{
+    content: "\2192";
   }
 }
 
