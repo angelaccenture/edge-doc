@@ -117,7 +117,7 @@
   border-radius: 8px;
   margin: 0;
   padding: 0;
-  margin-top: 35px;
+  margin-top: 60px;
   position: relative;
   background: url(/icons/Arrow.png) no-repeat 0 0;
   border: none;
@@ -126,7 +126,7 @@
   background: url(/icons/Arrow-left.png) no-repeat 0 0;
 }
 .carousel .carousel-navigation-buttons .slide-next {
-  background: url(/icons/Arrow.png) no-repeat 0 0;
+  background: url(/icons/Arrow.png) no-repeat 30px 0;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
