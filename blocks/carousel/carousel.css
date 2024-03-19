@@ -123,6 +123,12 @@
   background: url(/icons/Arrow.png) no-repeat 0 0;
   border: none;
 }
+.carousel .carousel-navigation-buttons .slide-prev {
+  background: url(/icons/Arrow-left.png) no-repeat 0 0;
+}
+.carousel .carousel-navigation-buttons .slide-next {
+  background: url(/icons/Arrow.png) no-repeat 0 0;
+}
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
