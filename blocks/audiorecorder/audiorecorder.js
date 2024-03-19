@@ -115,10 +115,15 @@ export default async function decorate(block) {
   isRecording.setAttribute('id', 'isRecording');
   isRecording.innertText = 'Click start button to record';
 
+  const border = document.createElement('div');
+  isRecording.setAttribute('id', 'redborder');
+  isRecording.innertText = '&nbsp;';
+
   block.appendChild(startBtn);
   block.appendChild(stopBtn);
   block.appendChild(isRecording);
   block.appendChild(audio);
+  block.appendChild(border);
 
   setup();
 }
