@@ -133,9 +133,9 @@
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: "\2192";
-  border: 3px var(--green-color) solid;
+  /* border: 3px var(--green-color) solid;
   border-bottom: 0;
-  border-left: 0;
+  border-left: 0; */
   height: 0.75rem;
   width: 0.75rem;
   position: absolute;
