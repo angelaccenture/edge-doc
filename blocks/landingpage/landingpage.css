@@ -47,7 +47,8 @@ em - Colored and Bold Items
     font-style: normal;
     font-weight: 600;
     line-height: 120px;
-    max-width: 50%
+    max-width: 50%;
+    margin: 0;
   }
   .heroes h2 {
     font-size: 25px;
