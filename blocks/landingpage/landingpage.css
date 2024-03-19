@@ -24,12 +24,10 @@
 /*Notes --
 h1 - Generational Heroes
 h2 - text below that
-
 h3 - Sub-titles
 h4 - Second below sub-titles
 h5 - Retail types
-h6 - Colored and Bold Items
-
+em - Colored and Bold Items
 -- Last item at very bottom
 */
 
@@ -71,7 +69,7 @@ h6 - Colored and Bold Items
     font-weight: 600;
     line-height: 24px;
   }
-  .landingpage h6 {
+  .landingpage em {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -116,7 +114,7 @@ h6 - Colored and Bold Items
     font-weight: 600;
     line-height: 24px;
   }
-  .landingpage h6 {
+  .landingpage em {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -161,7 +159,7 @@ h6 - Colored and Bold Items
     font-weight: 600;
     line-height: 20.8px;
   }
-  .landingpage h6 {
+  .landingpage em {
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
