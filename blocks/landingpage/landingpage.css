@@ -182,3 +182,13 @@ em - Colored and Bold Items
     max-width: 100%;
   }
 }
+@media (width <= 320px) {
+  .heroes h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 53.55px;
+    margin: 2% 0;
+  }
+
+}
