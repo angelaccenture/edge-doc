@@ -9,7 +9,7 @@
 .heroes .toparea > div, .heroes .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0;
+  padding: 1% 0;
 }
 @media (width >= 960px) {
   .landingpage {
