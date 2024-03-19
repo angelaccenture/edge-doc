@@ -6,7 +6,7 @@
   padding: 8% 10%;
   
 }
-.heroes .toparea > div {
+.heroes .toparea > div, .heroes .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
