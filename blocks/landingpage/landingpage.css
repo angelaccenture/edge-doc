@@ -134,11 +134,15 @@ em - Colored and Bold Items
   .heroes .toparea {
     padding: 8% 10%;  
   }
+  .heroes img {
+    max-width: 25%;
+  }
   .heroes h1 {
     font-size: 51px;
     font-style: normal;
     font-weight: 600;
-    line-height: 53.55px
+    line-height: 53.55px;
+    margin: 2% 0;
   }
   .heroes h2 {
     font-size: 16px;
