@@ -2,8 +2,9 @@
   overflow-y: auto;
 }
 
-.heros .toparea {
+.heroes .toparea {
   padding: 8% 10%;
+  max-width: 1440px;
 }
 @media (width >= 960px) {
   .landingpage {
