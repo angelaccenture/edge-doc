@@ -76,7 +76,8 @@ function bindEvents(block) {
   });
   block.querySelector('.slide-next').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-    console.log($(this));
+
+    console.log(block.querySelector('.slide-next'));
     $(this).hide();
     setTimeout(function() {
       $(this).show();
