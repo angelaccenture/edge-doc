@@ -117,8 +117,7 @@
   border-radius: 8px;
   margin: 0;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  margin-top: 35px;
   position: relative;
   background: url(/icons/Arrow.png) no-repeat 0 0;
   border: none;
