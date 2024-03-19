@@ -4,16 +4,19 @@
 @media (width >= 960px) {
   .landingpage {
     max-width: 740px;
+    margin: 0 auto;
   }
 }
 @media (width <= 959px) {
   .landingpage {
     max-width: 660px;
+    margin: 0 auto;
   }
 }
 @media (width <= 500px) {
   .landingpage {
     max-width: 343px;
+    margin: 0 auto;
   }
 }
 .landingpage .default-content-wrapper {
