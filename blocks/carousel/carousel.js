@@ -69,19 +69,9 @@ function bindEvents(block) {
 
   block.querySelector('.slide-prev').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
-      //$(this).hide();
-    setTimeout(function() {
-      //$(this).show();
-    }, 1000);
   });
   block.querySelector('.slide-next').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
-    var nextbutton = document.getElementsByClassName('.slide-next');
-    console.log(nextbutton[0]);
-   /* nextbutton.hide();
-    setTimeout(function() {
-      nextbutton.show();
-    }, 1000);*/
   });
 
   const slideObserver = new IntersectionObserver((entries) => {
