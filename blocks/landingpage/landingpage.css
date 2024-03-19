@@ -1,6 +1,21 @@
 .heroes {
   overflow-y: auto;
 }
+@media (width >= 960px) {
+  .landingpage {
+    max-width: 740px;
+  }
+}
+@media (width <= 959px) {
+  .landingpage {
+    max-width: 660px;
+  }
+}
+@media (width <= 500px) {
+  .landingpage {
+    max-width: 343px;
+  }
+}
 .landingpage .default-content-wrapper {
   padding-top: 0;
 }
