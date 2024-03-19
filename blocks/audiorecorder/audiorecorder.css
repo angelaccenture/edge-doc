@@ -2,7 +2,15 @@
     position: relative;
 }
 #isRecording {
-    display: none;
+    text-indent: -999px;
+    width: 50px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: -8px;
+    left: 64px;
+    z-index: 99999;
+    background-color: white;
+    height: 50px;
 }
 audio {
     position: absolute;
@@ -17,7 +25,7 @@ audio:before {
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
-    border: 1px solid red;
+    border: 1px outset red;
     right: 4px;
     opacity: 1;
     border-radius: 100px;
