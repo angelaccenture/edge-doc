@@ -1,7 +1,8 @@
 .heroes {
   overflow-y: auto;
 }
-.heros .toparea > div {
+
+.heros .toparea {
   padding: 8% 10%;
 }
 @media (width >= 960px) {
