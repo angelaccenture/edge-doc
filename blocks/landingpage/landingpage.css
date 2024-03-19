@@ -8,6 +8,7 @@
 }
 .heroes .toparea > div {
   max-width: 1440px;
+  margin: 0 auto;
 }
 @media (width >= 960px) {
   .landingpage {
