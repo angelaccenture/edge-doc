@@ -134,7 +134,7 @@ em - Colored and Bold Items
   .heroes .toparea {
     padding: 8% 10%;  
   }
-  .heroes img {
+  .heroes .toparea img {
     max-width: 20%;
   }
   .heroes h1 {
