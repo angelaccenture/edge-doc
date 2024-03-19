@@ -25,7 +25,7 @@ audio:before {
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
-    border: 1px outset red;
+    border: 1px outset var(--red-color);
     right: 4px;
     opacity: 1;
     border-radius: 100px;
