@@ -1,25 +1,81 @@
 .landing {
   overflow-y: auto;
 }
-
 .heroes .toparea > div, .heroes .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1% 0;
 }
+.landingpage .default-content-wrapper {
+  padding-top: 0;
+}
+.landingpage img {
+  margin: 1% 0;
+}
+.landingpage p {
+  color: black;
+}
+.landingpage h3, .landingpage h4, .landingpage h4, .landingpage h6 {
+  color: var(--blue-color);
+}
+.landingpage h3 {
+  margin-bottom: 1%;
+}
+/*Notes --
+h1 - Generational Heroes
+h2 - text below that
+
+h3 - Sub-titles
+h4 - Second below sub-titles
+h5 - Retail types
+h6 - Colored and Bold Items
+
+-- Last item at very bottom
+*/
+
 @media (width >= 960px) {
   .landingpage {
     max-width: 740px;
     margin: 0 auto;
   }
-  .landingpage h2 {
+  .heroes .toparea {
+    padding: 8% 10%;  
+  }
+  .landingpage h1 {
     font-size: 120px;
     font-style: normal;
     font-weight: 600;
-    line-height: 120px
+    line-height: 120px;
   }
-  .heroes .toparea {
-    padding: 8% 10%;  
+  .landingpage h2 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .landingpage h3 {
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58.65px;
+  }
+  .landingpage h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .landingpage h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .landingpage h6 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
   }
 }
 @media (width <= 959px) {
@@ -27,43 +83,88 @@
     max-width: 660px;
     margin: 0 auto;
   }
+  .heroes .toparea {
+    padding: 8% 10%;  
+  }
+  .landingpage h1 {
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 66.7px;
+  }
+  .landingpage h2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .landingpage h3 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 43.2px;
+  }
+  .landingpage h4 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+  }
+  .landingpage h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .landingpage h6 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+  }
 }
 @media (width <= 500px) {
   .landingpage {
     max-width: 343px;
     margin: 0 auto;
   }
-}
-.landingpage .default-content-wrapper {
-  padding-top: 0;
-}
-.landingpage h3 {
-  margin-bottom: 1%;
-  color: var(--blue-color);
-}
-.landingpage img {
-  margin: 1% 0;
-}
-.landingpage h6 {
-  color: var(--blue-color);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20.8px;
-  margin: 0;
-}
-.landingpage p {
-  color: black;
-}
-.landingpage h5 {
-  color: black;
-  margin-left: 5%;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20.8px;
-}
-.landingpage h5 strong, .landingpage h4 {
-  font-weight: 600;
-  color: var(--blue-color);
+  .heroes .toparea {
+    padding: 8% 10%;  
+  }
+  .landingpage h1 {
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 53.55px
+  }
+  .landingpage h2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+  }
+  .landingpage h3 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .landingpage h4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.6px;
+  }
+  .landingpage h5 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+  }
+  .landingpage h6 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.6px;
+  }
 }
