@@ -5,3 +5,8 @@
 .audiotimer div {
     display: inline-block;
 }
+
+#minutes, #colon, #seconds {
+    position: relative;
+    bottom: 30px;
+}
