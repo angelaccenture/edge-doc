@@ -24,6 +24,10 @@
 .landingpage h4 {
   margin: 2% 0 5% 0;
 }
+
+.default-content-wrapper h1 {
+  margin-block-end: 50%;
+}
 /*Notes --
 h1 - Generational Heroes
 h2 - text below that
