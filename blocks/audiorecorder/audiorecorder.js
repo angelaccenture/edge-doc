@@ -82,7 +82,10 @@ function setup() {
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
         method: 'POST',
         cache: 'no-cache',
-        body: formData
+        body: formData,
+        headers: {
+          'X-OW-EXTRA-LOGGING': 'on'
+        }
       }).then((response) => {
         console.log('JOSH AUDIO: ' + response);
       });
