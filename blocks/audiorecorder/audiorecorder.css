@@ -1,6 +1,9 @@
 .audiorecorder {
     position: relative;
 }
+#isRecording {
+    display: none;
+}
 audio {
     position: absolute;
     top: 0;
