@@ -2,10 +2,6 @@
   overflow-y: auto;
 }
 
-.heroes .toparea {
-  padding: 8% 10%;
-  
-}
 .heroes .toparea > div, .heroes .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -15,6 +11,9 @@
   .landingpage {
     max-width: 740px;
     margin: 0 auto;
+  }
+  .heroes .toparea {
+    padding: 8% 10%;  
   }
 }
 @media (width <= 959px) {
