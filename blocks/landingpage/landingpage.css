@@ -15,7 +15,7 @@
 .landingpage p {
   color: black;
 }
-.landingpage h3, .landingpage h4, .landingpage h5, .landingpage em {
+.landingpage h3, .landingpage h4, .landingpage h5, .landingpage em, .landingpage h2 {
   color: var(--blue-color);
 }
 .landingpage h3 {
