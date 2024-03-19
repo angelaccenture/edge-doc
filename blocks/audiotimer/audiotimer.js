@@ -4,6 +4,7 @@ export default async function decorate(block) {
   audioTimerm.innerText = '00';
 
   const audioTimerd = document.createElement('span');
+  audioTimerd.setAttribute('id', 'colon');
   audioTimerd.innerText = ':';
 
   const audioTimers = document.createElement('label');

@@ -76,18 +76,18 @@ function setup() {
 
     $('.red-four').on('click', '.create', function () {
       const formData = new FormData();
-      debugger;
       formData.append('audioFile', blob, 'recording.mp3');
 
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
         method: 'POST',
         cache: 'no-cache',
-        body: formData,
+        body: JSON.stringify(formData),
         headers: {
-          'X-OW-EXTRA-LOGGING': 'on'
+          'X-OW-EXTRA-LOGGING': 'on',
+          'Content-Type': 'multipart/form-data'
         }
       }).then(() => {
-        //location.href = '/thankyou';
+        location.href = '/thankyou';
       });
     });
   }
@@ -106,8 +106,9 @@ export default async function decorate(block) {
   stopBtn.innerText = 'Stop Recording';
 
   const audio = document.createElement('audio');
+  audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
   audio.setAttribute('controls', '');
-  audio.setAttribute('controlslist',"nodownload noplaybackrate");
+  audio.setAttribute('disableremoteplayback',"false");
   audio.setAttribute('id', 'audioElement');
 
   const isRecording = document.createElement('p');
