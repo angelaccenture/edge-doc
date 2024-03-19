@@ -126,7 +126,7 @@ em - Colored and Bold Items
     line-height: 20.8px;
   }
 }
-@media (width <= 500px) {
+@media (width <= 600px) {
   .landingpage {
     max-width: 343px;
     margin: 0 auto;
