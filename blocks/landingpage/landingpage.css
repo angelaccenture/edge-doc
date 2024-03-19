@@ -42,13 +42,13 @@ em - Colored and Bold Items
   .heroes .toparea {
     padding: 8% 10%;  
   }
-  .landingpage h1 {
+  .heroes h1 {
     font-size: 120px;
     font-style: normal;
     font-weight: 600;
     line-height: 120px;
   }
-  .landingpage h2 {
+  .heroes h2 {
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
@@ -87,13 +87,13 @@ em - Colored and Bold Items
   .heroes .toparea {
     padding: 8% 10%;  
   }
-  .landingpage h1 {
+  .heroes h1 {
     font-size: 58px;
     font-style: normal;
     font-weight: 600;
     line-height: 66.7px;
   }
-  .landingpage h2 {
+  .heroes h2 {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -132,13 +132,13 @@ em - Colored and Bold Items
   .heroes .toparea {
     padding: 8% 10%;  
   }
-  .landingpage h1 {
+  .heroes h1 {
     font-size: 51px;
     font-style: normal;
     font-weight: 600;
     line-height: 53.55px
   }
-  .landingpage h2 {
+  .heroes h2 {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
