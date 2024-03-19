@@ -2,18 +2,50 @@
     position: relative;
 }
 #isRecording {
-    display: none;
+    text-indent: -999px;
+    width: 50px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: -8px;
+    left: 64px;
+    z-index: 99999;
+    background-color: white;
+    height: 50px;
 }
+#redborder {
+    border: 2px solid red;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    top: 14%;
+    position: absolute;
+    left: 15%;
+}
+@media (width >= 1000px) {
+    #redborder {
+        border: 2px solid red;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        top: 14%;
+        position: absolute;
+        left: 13.6%;
+    }
+  }
 audio {
     position: absolute;
-    top: 0;
-    margin-left: 0;
+    top: 6px;
+    margin-left: 8%;
     max-width: 100px;
+}
+audio:before {
+    content: "";
+    height: 50px;
+    width: 50px;
 }
 audio::-webkit-media-controls-play-button {
     position: absolute;
-    background-color: red;
-    /* color: red; */
+    border: 1px outset var(--red-color);
     right: 4px;
     opacity: 1;
     border-radius: 100px;
