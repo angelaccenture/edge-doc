@@ -221,7 +221,7 @@
 }
 #carousel-1-slide-0 .carousel-slide-content {
     padding: 0;
-    margin: 0 5% 5% 5%;
+    margin: 5% auto;
 }
 @media (width >= 1180px) {
   #carousel-1-slide-0 {
@@ -276,7 +276,7 @@
   }
 }
 #carousel-1-slide-4 {
-  height: 50%;
+  height: 55%;
 }
 #carousel-1-slide-4 p {
     margin-top: 0;
@@ -295,7 +295,7 @@
 }
 #carousel-1-slide-4 .carousel-slide-content {
   position: absolute;
-  bottom: -36%;
+  bottom: -30%;
   padding: 0;
 }
 @media (width >= 1180px) {
@@ -331,7 +331,7 @@
   padding-left: 0;
 }
 #carousel-1-slide-6 p {
-  padding-top: 112%;
+  padding-top: 120%;
 }
 @media (width >= 1180px) {
   #carousel-1-slide-6 .carousel-slide-content {
