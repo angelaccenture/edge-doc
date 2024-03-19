@@ -76,11 +76,12 @@ function bindEvents(block) {
   });
   block.querySelector('.slide-next').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
+    var nextbutton = document.getElementsByClassName('.slide-next');
 
-    console.log(block.querySelector('.slide-next'));
-    $(this).hide();
+    console.log(nextbutton);
+    nextbutton.hide();
     setTimeout(function() {
-      $(this).show();
+      nextbutton.show();
     }, 1000);
   });
 
