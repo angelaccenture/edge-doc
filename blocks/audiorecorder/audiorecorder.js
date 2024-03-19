@@ -87,7 +87,7 @@ function setup() {
           'Content-Type': 'multipart/form-data'
         }
       }).then(() => {
-        //location.href = '/thankyou';
+        location.href = '/thankyou';
       });
     });
   }
