@@ -226,7 +226,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 /*Spacing*/
 .blue-one h1 {
   margin-top: 0;
-  margin-block-end: 50%;
+  margin-block-end: 6%;
 }
 .blue-one h3 {
   max-width: 60%;
