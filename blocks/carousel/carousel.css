@@ -117,8 +117,8 @@
   border-radius: 8px;
   margin: 0;
   padding: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 60px;
+  height: 60px;
   position: relative;
   background-color: transparent;
   border: none;
@@ -139,6 +139,7 @@
   left: calc(50% + 3px);
   transform: translate(-50%, -50%) rotate(-180deg);
   color: var(--green-color);
+  font-size: 35px;
 
 }
 
