@@ -40,7 +40,6 @@ function setup() {
           audioChunks.push(e.data);
           if (rec.state === "inactive") {
             blob = new Blob(audioChunks, { type: "audio/mp3" });
-            debugger;
             console.log(blob);
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
           }
@@ -86,11 +85,9 @@ function setup() {
         headers: {
           'X-OW-EXTRA-LOGGING': 'on'
         }
-      }).then((response) => {
-        console.log('JOSH AUDIO: ' + response);
+      }).then(() => {
+        location.href = '/thankyou';
       });
-
-      //location.href = '/thankyou';
     });
   }
 }
