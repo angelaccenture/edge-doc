@@ -12,6 +12,12 @@
     max-width: 740px;
     margin: 0 auto;
   }
+  .landingpage h2 {
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120px
+  }
   .heroes .toparea {
     padding: 8% 10%;  
   }
