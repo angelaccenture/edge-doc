@@ -86,6 +86,8 @@ function setup() {
           'X-OW-EXTRA-LOGGING': 'on',
           'Content-Type': 'multipart/form-data'
         }
+        console.log($(this));
+       // $(this).attr("disabled","disabled");
       }).then(() => {
         location.href = '/thankyou';
       });
