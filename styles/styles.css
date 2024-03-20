@@ -248,7 +248,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   bottom: 3%;
   text-align: center;
   width: 90%;
-//  background: url(/icons/headphones.svg) no-repeat 0px 0px;
+}
+.headphones picture {
+  padding-right: 4px;
 }
 /*Animation*/
 .blue-one h2 {
@@ -257,10 +259,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .green-two h1, .red-two h1 {
   margin: 0;
-}
-.green-two #them-when-no-one-else-would {
-  position: absolute;
-  top: 32%;
 }
 .red-two p {
   position: absolute;
