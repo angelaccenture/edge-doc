@@ -1,6 +1,7 @@
 .audiorecorder {
     position: relative;
     text-align: center;
+    margin: 0 auto;
 }
 #isRecording {
 /*    text-indent: -999px;
