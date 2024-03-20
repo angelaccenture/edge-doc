@@ -1,3 +1,23 @@
+async function uploadFile(file, presignedUrl) {
+  try {
+    const response = await fetch(presignedUrl, {
+      method: 'PUT',
+      body: file,
+      headers: {
+        'Content-Type': 'audio/mp3' // Set the content type based on your file type
+      }
+    });
+
+    if (response.ok) {
+      console.log('File uploaded successfully!');
+    } else {
+      console.error('Failed to upload file:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error uploading file:', error);
+  }
+}
+
 function setup() {
   let elements = document.getElementsByClassName("recordstory"),
       blob;
@@ -76,19 +96,11 @@ function setup() {
     $('.red-four').on('click', '.create', function () {
       debugger;
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
-        $.ajax({
-          url : response.presignedUrl,
-          type : "PUT",
-          data : document.getElementById('audioElement').src,
-          dataType : "text",
-          cache : false,
-          contentType : 'audio/mp3',
-          processData : false
-        }, function() {
+        uploadFile(document.getElementById('audioElement').src, response.presignedUrl).then((result) => {
           $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction.json', { 'presignedUrl': response.presignedUrl }, function (success) {
             // location.href = '/thank-you;
           });
-        });
+        })
       });
     });
   }
