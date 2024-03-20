@@ -62,7 +62,7 @@ $('.button').on('click', '.bluethreebutton', function () {
 
 
        /*   .delay(3000 * index)
-          .slideDown(500, function () {
+          .slideDown(1000, function () {
             if (index == 4) {
               //console.log("Last One");
             } else {
