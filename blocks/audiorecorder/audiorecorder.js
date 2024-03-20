@@ -83,7 +83,7 @@ function setup() {
             'Content-Type': 'audio/mp3'
           }
         }).then((success) => {
-          $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', { 'presignedUrl': response.presignedUrl }, function (success) {
+          $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction.json', { 'presignedUrl': response.presignedUrl }, function (success) {
             // location.href = '/thank-you;
           });
         });
