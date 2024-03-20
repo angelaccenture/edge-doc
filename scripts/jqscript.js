@@ -52,7 +52,7 @@ $('.button').on('click', '.bluethreebutton', function () {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this).delay(1000 * index)
+          $(this).delay(3000 * index)
             .slideDown(500, function () {
               if (index == 4) {
                 //console.log("Last One");
