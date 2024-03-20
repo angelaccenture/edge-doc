@@ -272,7 +272,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     background-position-x: 28%;
   }
 }
-@media (width <= 769px) {
+@media (width <= 768px) {
   .headphones {
     background-position-x: 37%;
     /*phones*/
