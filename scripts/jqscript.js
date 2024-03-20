@@ -60,7 +60,7 @@ $('.button').on('click', '.bluethreebutton', function () {
                 //console.log("Last One");
               } else {
                 $(this)
-                  .delay(1000).slideDown();
+                  .delay(1000).hide();
               }
             });
 
