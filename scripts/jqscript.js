@@ -340,7 +340,9 @@ $('.button').on('click', '.bluethreebutton', function () {
           .fadeIn(4000, function () {
             $(this)
               .delay(3000)
-              .fadeOut();
+              .fadeOut(
+                console.log("test");
+              );
           });
       });
   }
