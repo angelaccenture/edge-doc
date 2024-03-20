@@ -248,11 +248,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   bottom: 3%;
   text-align: center;
   width: 90%;
-  background: url(/icons/headphones.svg) no-repeat 0px 0px;
-}
-.headphones:after {
-  background: url(/icons/headphones.svg) no-repeat 0px 0px;
-  display: block;
+//  background: url(/icons/headphones.svg) no-repeat 0px 0px;
 }
 /*Animation*/
 .blue-one h2 {
