@@ -74,19 +74,22 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      const formData = new FormData();
-      formData.append('audioFile', blob, 'recording.mp3');
-
-      fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
-        method: 'POST',
-        cache: 'no-cache',
-        body: formData,
-        headers: {
-          'X-OW-EXTRA-LOGGING': 'on'
-        }
-      }).then(() => {
-        location.href = '/thankyou';
-      });
+      fetch(document.getElementById('audioElement').src)
+        .then(response => response.blob())
+        .then(blob => {
+          const formData = new FormData();
+          formData.append('audioFile', blob, 'recording.mp3');
+          fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
+            method: 'POST',
+            cache: 'no-cache',
+            body: formData,
+            headers: {
+              'X-OW-EXTRA-LOGGING': 'on'
+            }
+          }).then(() => {
+            location.href = '/thankyou';
+          });
+        });
     });
   }
 }
@@ -102,6 +105,11 @@ export default async function decorate(block) {
   const stopBtn = document.createElement('button');
   stopBtn.setAttribute('id', 'stopRecording');
   stopBtn.innerText = 'Stop Recording';
+
+  const hidden = document.createElement('input');
+  hidden.setAttribute('id', 'audiofileinput');
+  hidden.setAttribute('type', 'file');
+  hidden.innerText = 'Stop Recording';
 
   const audio = document.createElement('audio');
   audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
