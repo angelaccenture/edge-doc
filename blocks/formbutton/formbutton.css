@@ -19,6 +19,7 @@ line-height: 20.8px
 }
 .button-wrapper:has(.arrow) {
   position: relative;
+  bottom: auto;
 }
 .arrow {
     background-color: transparent !important;
