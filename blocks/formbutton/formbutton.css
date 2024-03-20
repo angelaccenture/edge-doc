@@ -28,6 +28,7 @@ line-height: 20.8px
     right: 5%;
     position: absolute;
     border: none;
+    bottom: 5%;
 }
 .arrow code {
   padding: 0;
