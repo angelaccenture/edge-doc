@@ -78,6 +78,11 @@ main pre {
   white-space: pre;
 }
 
+#legal-notice{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 #legal-notice > p {
   margin-top: 3.25%;
 }
