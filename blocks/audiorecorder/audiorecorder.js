@@ -80,7 +80,7 @@ function setup() {
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
         method: 'POST',
         cache: 'no-cache',
-        body: blob,
+        body: formData,
         headers: {
           'X-OW-EXTRA-LOGGING': 'on'
         }
