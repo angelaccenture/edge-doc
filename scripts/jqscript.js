@@ -330,6 +330,9 @@ $('.button').on('click', '.bluethreebutton', function () {
   function repeatAnim() {
     $('.blue-end-two h4')
       .each(function (index) {
+        if (index == 2) {
+          repeatAnim();
+        }
         console.log(index);
         $(this)
           .delay(7000 * index)
