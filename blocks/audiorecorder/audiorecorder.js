@@ -75,7 +75,7 @@ function setup() {
 
     $('.red-four').on('click', '.create', function () {
       debugger;
-      fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction', {
+      fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', {
         method: 'GET',
         cache: 'no-cache',
         headers: {
