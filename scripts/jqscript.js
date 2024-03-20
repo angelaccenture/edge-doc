@@ -54,11 +54,11 @@ $('.button').on('click', '.bluethreebutton', function () {
         .each(function (index) {
           $(this)
             .delay(4000 * index)
-            .slideDown(1000, function () {
+            .slideDown(500, function () {
               if (index == 4) {
                 //console.log("Last One");
               } else {
-                $(this).delay(1000).hide();
+                $(this).delay(3000).hide();
               }
             });
 
