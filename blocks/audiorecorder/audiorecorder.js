@@ -74,22 +74,47 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      fetch(document.getElementById('audioElement').src)
-        .then(response => response.blob())
-        .then(blob => {
-          const formData = new FormData();
-          formData.append('audioFile', blob, 'recording.mp3');
-          fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
-            method: 'POST',
-            cache: 'no-cache',
-            body: formData,
-            headers: {
-              'X-OW-EXTRA-LOGGING': 'on'
-            }
-          }).then(() => {
-            location.href = '/thankyou';
-          });
+      debugger;
+      AWS.config.update({
+        accessKeyId: 'ASIA3FLDZRVKSRIYQIWM',
+        secretAccessKey: 'BL5ruHyAFgffaLunZuU9GepdbgPcwLMYA3EBwo6G'
+      });
+
+      // Create an S3 instance
+      const s3 = new AWS.S3();
+
+      function uploadFile() {
+        const fileInput = document.getElementById('audioElement');
+        const file = fileInput.files[0];
+
+        const uploadParams = {
+          Bucket: '276036-01-pub',
+          Key: 'audio-recordings',
+          Body: file,
+          ACL: 'public-read'
+        };
+
+        // Upload file to S3
+        s3.upload(uploadParams, (err, data) => {
+          if (err) {
+            console.error('Error uploading file:', err);
+          } else {
+            console.log('File uploaded successfully:', data.Location);
+            fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
+              method: 'POST',
+              cache: 'no-cache',
+              body: { 'location': data.location },
+              headers: {
+                'X-OW-EXTRA-LOGGING': 'on'
+              }
+            }).then(() => {
+              //location.href = '/thankyou';
+            });
+          }
         });
+      }
+
+      uploadFile();
     });
   }
 }
