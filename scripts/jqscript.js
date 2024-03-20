@@ -53,15 +53,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.green-two h4')
         .each(function (index) {
           $(this)
-          .delay(3000 * index)
-          .show("slide", { direction: "down" }, 1000, function (){
-              $(this).delay(2000).fadeOut();
-          });
-         
-        
-
-
-       /*   .delay(3000 * index)
+       .delay(3000 * index)
           .slideDown(1000, function () {
             if (index == 4) {
               //console.log("Last One");
@@ -70,7 +62,7 @@ $('.button').on('click', '.bluethreebutton', function () {
               .delay(2000)
               .fadeOut();
           }
-        });*/
+        });
 
     });
 }
