@@ -62,6 +62,7 @@ em - Colored and Bold Items
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
+    margin: 0;
   }
   .landingpage h3 {
     font-size: 51px;
