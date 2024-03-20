@@ -55,7 +55,7 @@ $('.button').on('click', '.bluethreebutton', function () {
           $(this)
           .delay(3000 * index)
           .show("slide", { direction: "up" }, 1000, function (){
-              $(this).delay(3000).fadeOut();
+              $(this).delay(4000).fadeOut();
           });
          
         
