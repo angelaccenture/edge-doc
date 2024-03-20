@@ -318,11 +318,12 @@
   }
 }
 #carousel-1-slide-6 {
-  height: 46%;
-  margin-top: 5%;
+ /* height: 46%;
+  margin-top: 5%;*/
 }
 #carousel-1-slide-6 .carousel-slide-image picture {
   inset: 5%;
+  max-height: 46%;
 }
 #carousel-1-slide-6 .carousel-slide-content {
   position: absolute;
