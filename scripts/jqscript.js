@@ -331,7 +331,7 @@ $('.button').on('click', '.bluethreebutton', function () {
     $('.blue-end-two h4')
       .each(function (index) {
         if (index == 2) {
-          repeatAnim();
+         // repeatAnim();
         }
         console.log(index);
         $(this)
