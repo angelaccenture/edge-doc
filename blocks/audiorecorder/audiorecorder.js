@@ -75,13 +75,25 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      const formData = new FormData();
-      formData.append('audioFile', blob, 'recording.mp3');
+      const convertBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+          const fileReader = new FileReader();
+          fileReader.readAsDataURL(file);
+
+          fileReader.onload = () => {
+            resolve(fileReader.result);
+          };
+
+          fileReader.onerror = (error) => {
+            reject(error);
+          };
+        });
+      };
 
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
         method: 'POST',
         cache: 'no-cache',
-        body: JSON.stringify(formData),
+        body: convertBase64(blob),
         headers: {
           'X-OW-EXTRA-LOGGING': 'on'
         }
