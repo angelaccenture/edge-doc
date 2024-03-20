@@ -52,9 +52,8 @@ $('.button').on('click', '.bluethreebutton', function () {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this).delay(3000 * index)
-          .show("slide", { direction: "down" }, 1000);
-          $(this).delay(2000).hide();
+          $(this).delay(3000 * index).show("slide", { direction: "up" }, 1000);
+          $(this).delay(3000).fadeOut();
         
 
 
