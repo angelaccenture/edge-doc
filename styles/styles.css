@@ -335,3 +335,6 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   color: white;
   margin-top: 9%;
 }
+.blue-end-four .default-content-wrapper{
+    padding-top: 2%;
+}
