@@ -53,11 +53,12 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.green-two h4')
         .each(function (index) {
           $(this).delay(1000 * index).slideDown(500, function () {
-            console.log("test");
+            //  $(this).delay(5000 * index).hide();
               if (index == 4) {
                 //console.log("Last One");
               } else {
-                $(this).delay(6000).hide();
+                //$(this).delay(6000).hide();
+                $(this).delay(5000 * index).hide();
               }
             });
 
