@@ -54,7 +54,7 @@ $('.button').on('click', '.bluethreebutton', function () {
         .each(function (index) {
           $(this)
             .delay(2000 * index)
-            .slideDown(1000, function () {
+            .slideDown(500, function () {
               if (index == 4) {
               } else {
                 $(this)
