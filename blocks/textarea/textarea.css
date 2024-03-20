@@ -8,6 +8,10 @@
 	position: fixed;
     height: 72%; 
 }
+
+.textarea > p {
+	margin-top: 3.25%;
+}
 @media (width >= 1025px) {
 	.textarea {
 		height: 59%;
