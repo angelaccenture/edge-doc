@@ -278,7 +278,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       }, 4000);
 
 
-      $(".button .stoprecording").delay(33000).queue(function(next){
+      $(".button .stoprecording").delay(3000).queue(function(next){
         $(this).addClass("fullshow");
         next();
       });
