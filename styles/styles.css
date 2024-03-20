@@ -250,10 +250,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
  // max-width: 93%;
 }
 .green-two #them-when-no-one-else-would {
-  position: absolute;
+/*  position: absolute;
     width: 60%;
     border: 1px solid blue;
-    top: 32%;
+    top: 32%;*/
 }
 .red-two h1 {
   width: 80%;
