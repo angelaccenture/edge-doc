@@ -253,31 +253,34 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 @media (width >= 1000px) {
   .headphones {
     background-position-x: 33%;
-    color: black;
+    /*ipad pro*/
   }
 }
 @media (width >= 1180px) {
   .headphones {
     background-position-x: 37%;
-    color: red;
+    /*Desktop*/
   }
 }
 @media (width <= 999px) {
   .headphones {
     background-position-x: 37%;
     color: blue;
+    /*ipad Air - 820x1180*/
   }
 }
-@media (width <= 819px) {
+@media (width <= 959px) {
   .headphones {
     background-position-x: 37%;
-    color: orange;
+    color: blue;
+    /*ipad Air - 820x1180*/
   }
 }
-@media (width <= 768px) {
+@media (width <= 769px) {
   .headphones {
     background-position-x: 37%;
     color: green;
+    /*phones*/
   }
 }
 
