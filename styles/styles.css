@@ -253,11 +253,19 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 @media (width >= 1000px) {
   .headphones {
     background-position-x: 33%;
+    color: black;
   }
 }
 @media (width >= 1180px) {
   .headphones {
     background-position-x: 37%;
+    color: red;
+  }
+}
+@media (width <= 800px) {
+  .headphones {
+    background-position-x: 37%;
+    color: orange;
   }
 }
 /*Animation*/
