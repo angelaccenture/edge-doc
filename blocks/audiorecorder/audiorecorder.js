@@ -40,7 +40,6 @@ function setup() {
           audioChunks.push(e.data);
           if (rec.state === "inactive") {
             blob = new Blob(audioChunks, { type: "audio/mp3" });
-            console.log(blob);
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
           }
         };
@@ -61,12 +60,12 @@ function setup() {
           isRecording.textContent = "Click play button to start listening";
         });
       }
+
       document.getElementById("stopRecording").addEventListener("click", (e) => {
         rec.stop();
         isRecording.textContent = "Click play button to start listening";
       });
 
-      /*End Recording After Time*/
       setInterval(function(){
         rec.stop();
         isRecording.textContent = "Recording hit end of timer";
@@ -75,25 +74,13 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      const convertBase64 = (file) => {
-        return new Promise((resolve, reject) => {
-          const fileReader = new FileReader();
-          fileReader.readAsDataURL(file);
-
-          fileReader.onload = () => {
-            resolve(fileReader.result);
-          };
-
-          fileReader.onerror = (error) => {
-            reject(error);
-          };
-        });
-      };
+      const formData = new FormData();
+      formData.append('audioFile', blob, 'recording.mp3');
 
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
         method: 'POST',
         cache: 'no-cache',
-        body: convertBase64(blob),
+        body: blob,
         headers: {
           'X-OW-EXTRA-LOGGING': 'on'
         }
