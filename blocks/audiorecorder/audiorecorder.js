@@ -76,11 +76,19 @@ function setup() {
     $('.red-four').on('click', '.create', function () {
       debugger;
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
-        $.put(response.presignedUrl, document.getElementById('audioElement').src, function() {
+        $.ajax({
+          url : response.presignedUrl,
+          type : "PUT",
+          data : document.getElementById('audioElement').src,
+          dataType : "text",
+          cache : false,
+          contentType : 'audio/mp3',
+          processData : false
+        }, function() {
           $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction.json', { 'presignedUrl': response.presignedUrl }, function (success) {
             // location.href = '/thank-you;
           });
-        })
+        });
       });
     });
   }
