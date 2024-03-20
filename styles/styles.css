@@ -78,6 +78,10 @@ main pre {
   white-space: pre;
 }
 
+#legal-notice > p {
+  margin-top: 3.25%;
+}
+
 /* links */
 a:any-link {
   color: var(--body-font-family);
