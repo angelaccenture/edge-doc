@@ -76,6 +76,7 @@ function setup() {
 
     $('.red-four').on('click', '.create', function () {
       const formData = new FormData();
+      const create = document.getElementsByClassName("create");
       formData.append('audioFile', blob, 'recording.mp3');
 
       fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
@@ -86,7 +87,7 @@ function setup() {
           'X-OW-EXTRA-LOGGING': 'on',
           'Content-Type': 'multipart/form-data'
         }
-        $(".create").css("display","none");
+        create[0].attr("disabled","disabled");
       }).then(() => {
         location.href = '/thankyou';
       });
