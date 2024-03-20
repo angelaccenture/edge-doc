@@ -269,7 +269,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     /*ipad Air - 820x1180*/
   }
 }
-@media (width <= 959px) {
+@media (width <= 819px) {
   .headphones {
     background-position-x: 37%;
     color: orange;
