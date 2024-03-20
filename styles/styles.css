@@ -250,35 +250,10 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   width: 90%;
   background: url(/icons/headphones.svg) no-repeat 0px 0px;
 }
-@media (width >= 1000px) {
-  .headphones {
-    background-position-x: 33%;
-    /*ipad pro*/
-  }
+.headphones:after {
+  background: url(/icons/headphones.svg) no-repeat 0px 0px;
+  display: block;
 }
-@media (width >= 1180px) {
-  .headphones {
-    background-position-x: 37%;
-    /*Desktop*/
-  }
-}
-@media (width <= 999px) {
-  .headphones {
-    background-position-x: 37%;
-  }
-}
-@media (width <= 820px) {
-  .headphones {
-    background-position-x: 28%;
-  }
-}
-@media (width <= 768px) {
-  .headphones {
-    background-position-x: 37%;
-    /*phones*/
-  }
-}
-
 /*Animation*/
 .blue-one h2 {
   height: 184px;
