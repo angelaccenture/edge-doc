@@ -83,8 +83,7 @@ function setup() {
         cache: 'no-cache',
         body: JSON.stringify(formData),
         headers: {
-          'X-OW-EXTRA-LOGGING': 'on',
-          'Content-Type': 'multipart/form-data'
+          'X-OW-EXTRA-LOGGING': 'on'
         }
       }).then(() => {
         location.href = '/thankyou';
