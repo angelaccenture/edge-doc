@@ -269,7 +269,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 @media (width <= 820px) {
   .headphones {
-    background-position-x: 37%;
+    background-position-x: 28%;
   }
 }
 @media (width <= 769px) {
