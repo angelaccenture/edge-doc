@@ -52,8 +52,13 @@ $('.button').on('click', '.bluethreebutton', function () {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this)
-          .delay(2500 * index)
+          $(this).delay(3000 * index)
+          .show("slide", { direction: "down" }, 1000);
+          $(this).delay(2000).hide();
+        
+
+
+       /*   .delay(3000 * index)
           .slideDown(500, function () {
             if (index == 4) {
               //console.log("Last One");
@@ -62,7 +67,7 @@ $('.button').on('click', '.bluethreebutton', function () {
               .delay(2000)
               .fadeOut();
           }
-        });
+        });*/
 
     });
 }
