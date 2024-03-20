@@ -327,20 +327,21 @@ $('.button').on('click', '.bluethreebutton', function () {
       repeatAnim();
     });
 
-  function repeatAnim() {
     $('.blue-end-two h4')
-      .each(function (index) {
-        console.log(index);
-        console.log($(this));
-        $(this)
-          .delay(7000 * index)
-          .fadeIn(4000, function () {
-            if (index == 2){
-              $(this).delay(3000).fadeOut();
-            }
-          });
-      });
-  }
+    .each(function (index) {
+      $(this)
+        .delay(7000 * index)
+        .fadeIn(4000, function () {
+          $(this)
+            .delay(3000, function() {
+              if(index === 2) {
+                  repeatAnim()
+              }
+            })
+            .fadeOut();
+        });
+    });
+}
 /*Blue End Two - Animation from Above*/
   $('.button').on('click', '.blueendtwobutton', function () {
       playAudioRandom(TapSounds);
