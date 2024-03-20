@@ -128,9 +128,9 @@ $('.button').on('click', '.bluethreebutton', function () {
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
         $('.form .first, .formnextfirst')
-          .hide('slide', { direction: 'left' }, 600);
+          .hide('slide', { direction: 'left' }, 200);
         $('.firstformv')
-          .hide('slide', { direction: 'left' }, 600);
+          .hide('slide', { direction: 'left' }, 200);
         setTimeout(showForm, 660);
 
         function showForm() {
