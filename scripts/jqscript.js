@@ -58,7 +58,7 @@ $('.button').on('click', '.bluethreebutton', function () {
               if (index == 4) {
                 //console.log("Last One");
               } else {
-                $(this).delay(1000).hide();
+                $(this).delay(2000).hide();
               }
             });
 
