@@ -268,7 +268,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     color: blue;
   }
 }
-@media (width <= 800px) {
+@media (width <= 819px) {
   .headphones {
     background-position-x: 37%;
     color: orange;
