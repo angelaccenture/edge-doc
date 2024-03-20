@@ -86,7 +86,7 @@ function setup() {
           'X-OW-EXTRA-LOGGING': 'on',
           'Content-Type': 'multipart/form-data'
         }
-        var create = document.getElementsByClassName("create");
+        let create = document.getElementsByClassName("create");
         create[0].attr("disabled","disabled");
       }).then(() => {
         location.href = '/thankyou';
