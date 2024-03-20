@@ -52,25 +52,21 @@ $('.button').on('click', '.bluethreebutton', function () {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this).delay(1000 * index).slideDown(500, function () {
+          $(this)
+          .delay(3000 * index)
+          .delay(2000 * index)
+          .slideDown(1000, function () {
             if (index == 4) {
               //console.log("Last One");
             } else {
-              $(this).delay(2000).hide();
-            }
-          });
-        }
-          else {
-          $(this).delay(5000 * index).slideDown(500, function () {
-              if (index == 4) {
-                //console.log("Last One");
-              } else {
-                $(this).delay(2000).hide();
-              }
-            });
+              $(this)
+              .delay(2000)
+              .fadeOut();
           }
         });
-    }
+
+    });
+}
   /*Green Two - Animation Above*/
   $('.button').on('click', '.greentwobutton', function () {
         playAudioRandom(TapSounds);
