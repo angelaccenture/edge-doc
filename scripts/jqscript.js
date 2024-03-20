@@ -329,7 +329,7 @@ $('.button').on('click', '.bluethreebutton', function () {
 
     var stopFunc = false;
     function repeatAnim() {
-      if (stopFunc == true) {
+      if (stopFunc == false) {
       console.log("test");
             $('.blue-end-two h4')
               .each(function (index) {
