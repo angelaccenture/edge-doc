@@ -86,8 +86,8 @@ function setup() {
           'X-OW-EXTRA-LOGGING': 'on',
           'Content-Type': 'multipart/form-data'
         }
-        
-        document.getElementsByClassName("create").attr("disabled","disabled");
+        var create = document.getElementsByClassName("create");
+        create[0].attr("disabled","disabled");
       }).then(() => {
         location.href = '/thankyou';
       });
