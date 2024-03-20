@@ -326,8 +326,10 @@ $('.button').on('click', '.bluethreebutton', function () {
         .fadeIn();
       repeatAnim();
     });
-  
+
+    var stopFunc = false;
     function repeatAnim() {
+      if (stopFunc == true) {
       console.log("test");
             $('.blue-end-two h4')
               .each(function (index) {
@@ -340,11 +342,13 @@ $('.button').on('click', '.bluethreebutton', function () {
                     
                   });
               });
+            }
           }
 /*Blue End Two - Animation from Above*/
   $('.button').on('click', '.blueendtwobutton', function () {
       playAudioRandom(TapSounds);
       stopCurrentMusic();
+      stopFunc = true;
       $('.blue-end-two')
         .hide('slide', { direction: 'left' }, 1200);
       $('.blue-end-three')
