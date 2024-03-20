@@ -53,6 +53,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       $('.green-two h4')
         .each(function (index) {
           $(this).delay(1000 * index).slideDown(500, function () {
+            console.log("test");
               if (index == 4) {
                 //console.log("Last One");
               } else {
