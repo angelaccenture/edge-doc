@@ -85,17 +85,18 @@ function setup() {
 
       function uploadFile() {
         const fileInput = document.getElementById('audioElement');
-        const file = fileInput.files[0];
+        const file = fileInput.src;
 
         const uploadParams = {
           Bucket: '276036-01-pub',
-          Key: 'audio-recordings',
+          Key: 'audio-recordings/recording.mp3',
           Body: file,
           ACL: 'public-read'
         };
 
         // Upload file to S3
         s3.upload(uploadParams, (err, data) => {
+          debugger;
           if (err) {
             console.error('Error uploading file:', err);
           } else {
