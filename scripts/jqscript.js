@@ -327,22 +327,28 @@ $('.button').on('click', '.bluethreebutton', function () {
       repeatAnim();
     });
 
-  function repeatAnim() {
-    $('.blue-end-two h4')
-      .each(function (index) {
-        $(this)
-          .delay(7000 * index)
-          .fadeIn(4000, function () {
-            $(this)
-              .delay(3000)
-              .fadeOut();
-          });
-      });
-  }
+    var stopFunc = false;
+    function repeatAnim() {
+      if (stopFunc == false) {
+            $('.blue-end-two h4')
+              .each(function (index) {
+                $(this).delay(7000 * index).fadeIn(4000, function () {
+                $(this).delay(3000).fadeOut(function() {
+                        if(index === 2) {
+                            repeatAnim();
+                        }
+                      })
+                    
+                  });
+              });
+            }
+          }
 /*Blue End Two - Animation from Above*/
   $('.button').on('click', '.blueendtwobutton', function () {
       playAudioRandom(TapSounds);
       stopCurrentMusic();
+      /*JOSH - CALL THIS INTO API WHEN VIDEO RETURNS*/
+      stopFunc = true;
       $('.blue-end-two')
         .hide('slide', { direction: 'left' }, 1200);
       $('.blue-end-three')

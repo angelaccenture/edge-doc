@@ -1,10 +1,16 @@
 .textarea {
  	border: 1px solid #0924A3;
 	margin: 7%;
-	padding: 5%;
+	padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 6%;
 	overflow-y: auto;
 	position: fixed;
-    	height: 72%; 
+    height: 72%; 
+}
+
+.textarea > p {
+	margin-top: 3.25%;
 }
 @media (width >= 1025px) {
 	.textarea {
