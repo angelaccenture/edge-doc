@@ -348,6 +348,7 @@ $('.button').on('click', '.bluethreebutton', function () {
   $('.button').on('click', '.blueendtwobutton', function () {
       playAudioRandom(TapSounds);
       stopCurrentMusic();
+      /*JOSH - CALL THIS INTO API WHEN VIDEO RETURNS*/
       stopFunc = true;
       $('.blue-end-two')
         .hide('slide', { direction: 'left' }, 1200);
