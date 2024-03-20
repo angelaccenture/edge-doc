@@ -274,6 +274,12 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     color: orange;
   }
 }
+@media (width <= 768px) {
+  .headphones {
+    background-position-x: 37%;
+    color: green;
+  }
+}
 
 /*Animation*/
 .blue-one h2 {
