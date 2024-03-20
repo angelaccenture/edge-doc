@@ -330,19 +330,14 @@ $('.button').on('click', '.bluethreebutton', function () {
   function repeatAnim() {
     $('.blue-end-two h4')
       .each(function (index) {
-        if (index == 2) {
-            // repeatAnim();
-        }
         console.log(index);
         console.log($(this));
         $(this)
           .delay(7000 * index)
           .fadeIn(4000, function () {
-            $(this)
-              .delay(3000)
-              .fadeOut(
-                console.log("test");
-              );
+            if (index == 2){
+              $(this).delay(3000).fadeOut();
+            }
           });
       });
   }
