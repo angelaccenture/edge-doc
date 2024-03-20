@@ -74,23 +74,11 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      debugger;
-      fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', {
-        method: 'GET',
-        cache: 'no-cache',
-        headers: {
-          'X-OW-EXTRA-LOGGING': 'on'
-        }
-      }).then((response) => {
-        fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
-          method: 'POST',
-          cache: 'no-cache',
-          body: { 'location': response.presignedUrl },
-          headers: {
-            'X-OW-EXTRA-LOGGING': 'on'
-          }
-        }).then(() => {
-          //location.href = '/thankyou';
+      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
+        $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
+          'presignedUrl': response.presignedUrl ? response.presignedUrl : 'https://www.google.com'
+        }, function (success) {
+          // location.href = '/thank-you;
         });
       });
     });
