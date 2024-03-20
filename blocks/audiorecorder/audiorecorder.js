@@ -74,12 +74,25 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
+      debugger;
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
-        $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
-          'presignedUrl': response.presignedUrl ? response.presignedUrl : 'https://www.google.com'
-        }, function (success) {
-          // location.href = '/thank-you;
+        const result = fetch(response.presignedUrl, {
+          method: 'PUT',
+          body: document.getElementById('audioElement').src,
+          headers: {
+            'Content-Type': 'audio/mp3'
+          }
+        }).then((success) => {
+          $.post('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', { 'presignedUrl': response.presignedUrl }, function (success) {
+            // location.href = '/thank-you;
+          });
         });
+
+        if (result.ok) {
+          console.log('File uploaded successfully!');
+        } else {
+          console.error('Failed to upload file:', result.statusText);
+        }
       });
     });
   }
