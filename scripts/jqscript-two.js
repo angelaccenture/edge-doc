@@ -15,7 +15,7 @@ $(document).ready (function() {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this).delay(4000 * index).fadeIn(4000, function (index) {
+          $(this).delay(4000 * index).fadeIn(4000, function () {
             if (index == 4) {
               console.log("Last One");
             } else {
