@@ -49,7 +49,7 @@ $(document).ready (function() {
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
          $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
-        $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
+        $('.formnextfirst').hide('slide', { direction: 'left' }, 100);
         $('.firstformv').hide('slide', { direction: 'left' }, 200);
         setTimeout(showForm, 260);
 
