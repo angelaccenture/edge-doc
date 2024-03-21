@@ -25,20 +25,6 @@ $(document).ready (function() {
 
     });
 }
-/*
-function repeatAnimGreen-ORIGINAL() {
-  $('.green-two h4')
-    .each(function (index) {
-      $(this).delay(3000 * index).slideDown(1000, function () {
-        if (index == 4) {
-          //console.log("Last One");
-        } else {
-          $(this).delay(2000).fadeOut();
-      }
-    });
-
-});
-}*/
   /*Green Two - Animation Above*/
   $('.button').on('click', '.greentwobutton', function () {
         playAudioRandom(TapSounds);

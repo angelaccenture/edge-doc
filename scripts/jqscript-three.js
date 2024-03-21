@@ -173,17 +173,21 @@ $(document).ready (function() {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      $('.red-four').css('background-color', '#EB1000');
-      $('.red-four').css('color', 'white');
       $('.recordstory').hide();
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
-      $('.countdown-wrapper').show();
       $('.audiorecorder-wrapper').hide();
+
+      $('.red-four').css('background-color', '#EB1000').delay(400).fadeIn('slow','','');
+      $('.red-four').css('color', 'white');
+      $('.countdown-wrapper').show();
       setTimeout(function() {
         $('.audiotimer-wrapper').show();
       }, 4000);
+
+      $(".blue-one").hide();
+      $(".blue-two").delay(400).fadeIn('slow','','');
 
 
       $(".button .stoprecording").delay(3000).queue(function(next){
