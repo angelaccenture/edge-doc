@@ -312,6 +312,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       });
       $('.button').on('click', '.create', function () {
         playAudioRandom(TapSounds);
+       $('.red-four').hide(); 
        $('.blue-end-one').delay(600).fadeIn('slow', '', '');
        $('.button').on('click', '.blueendonebutton', function () {
            initAudio();
