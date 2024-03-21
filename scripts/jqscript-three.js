@@ -213,7 +213,8 @@ $(document).ready (function() {
         $(this).stop();
         $(this).removeClass('fullshow');
         $('.redorec').addClass('textshow');
-        $('.red-four').css('background-color', 'white');
+        $('.red-four').animate({backgroundColor: 'white'}, 'slow');
+       // $('.red-four').css('background-color', 'white');
         $('.red-four').css('color', '#EB1000');
         $('.dyncontent').hide();
         $('.red-four .default-content-wrapper p').hide();
