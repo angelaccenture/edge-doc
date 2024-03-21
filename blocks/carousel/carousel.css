@@ -200,9 +200,13 @@
 }
 .carousel .carousel-slide-content li {
     display: inline-block;
+    position: relative;
+    right: 2.5%;
 }
 .carousel .carousel-slide-content li:first-of-type  {
     float: right;
+    position: relative;
+    left: 3%;
 }
 #carousel-1-slide-0 p {
   position: relative;
@@ -227,6 +231,8 @@
 #carousel-1-slide-0 h3 {
     width: 62%;
     margin: 3% 0 5% 0;
+    position: relative;
+    bottom: 11%;
 }
 #carousel-1-slide-0 .carousel-slide-content {
     padding: 0;
@@ -249,8 +255,8 @@
 #carousel-1-slide-1 .carousel-slide-content {
   width: 90%;
   color: white;
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: -45%;
   margin: 11% 5% 0 3%;
 }
 #carousel-1-slide-2  {
