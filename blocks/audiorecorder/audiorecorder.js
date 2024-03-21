@@ -96,7 +96,7 @@ function setup() {
     $('.red-four').on('click', '.create', function () {
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
         uploadFile(blob, response.presignedUrl).then((result) => {
-          $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', { 'presignedUrl': response.presignedUrl }, function (success) {
+          $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction.json', { 'presignedUrl': response.presignedUrl }, function (success) {
             //location.href = '/thankyou';
           });
         });
