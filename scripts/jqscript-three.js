@@ -18,19 +18,16 @@ $(document).ready (function() {
     /*Animation on words -red two*/
     function repeatAnimRed() {
       $('.red-two h4')
-        .each(function (index) {
-          $(this)
-            .delay(3000 * index)
-            .slideDown(1000, function () {
-              if (index == 2) {
-                //console.log("Last One");
-              } else {
-                $(this)
-                  .delay(2000)
-                  .fadeOut();
-              }
-            });
-        });
+      .each(function (index) {
+        $(this).delay(3000 * index).fadeIn(3000, function () {
+          if (index == 2) {
+            //console.log("Last One");
+          } else {
+            $(this).delay(3000).hide();
+        }
+      });
+
+  });
     }
  /*Red Two - Animation from Above*/
     $('.button').on('click', '.redtwobutton', function () {
