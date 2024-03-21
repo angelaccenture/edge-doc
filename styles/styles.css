@@ -82,7 +82,19 @@ main pre {
 #legal-notice{
   margin-block-start: 0;
   margin-block-end: 0;
+  padding-top: 6%;
 }
+
+#everyone-has-a-hero-our-heroes-have-heroes {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 16%;
+}
+
+/* nav {
+  position: relative;
+  bottom: 4.5%;
+} */
 
 /* links */
 a:any-link {
@@ -201,6 +213,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .default-content-wrapper {
   padding: 8% 5%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 13%;
 }
 .blue-end-three .default-content-wrapper {
   padding: 8% 5% 0 5%;
@@ -236,12 +251,12 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin-block-end: 6%;
 }
 .blue-one h3 {
-  max-width: 89%;
+  max-width: 73%;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 .blue-three h2 {
-  max-width: 86%;
+  max-width: 89%;
 }
 .green-one h1 {
   max-width: 89%;
