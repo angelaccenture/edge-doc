@@ -78,8 +78,7 @@ $(document).ready (function() {
         setTimeout(showSecForm, 460);
 
         function showSecForm() {
-          $('.red-three .form .third')
-            .show('slide', { direction: 'right' }, 200)
+          $('.red-three .form .third').show('slide', { direction: 'right' }, 200)
             .addClass('showgrid');
           $('.red-three .default-content-wrapper')
             .show('slide', { direction: 'right' }, 200);
