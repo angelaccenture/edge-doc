@@ -50,7 +50,6 @@ $(document).ready (function() {
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
         console.log("first form button selected");
-        e.stopPropagation();
         $('.form .first').hide('slide', { direction: 'left' }, 200);
         $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
         $('.firstformv').hide('slide', { direction: 'left' }, 200);
