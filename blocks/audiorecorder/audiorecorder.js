@@ -96,11 +96,12 @@ function setup() {
     $('.red-four').on('click', '.create', function () {
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
         uploadFile(blob, response.presignedUrl).then((result) => {
-          fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
-            method: 'POST',
-            cache: 'no-cache',
-            body: { 'presignedUrl': response.presignedUrl },
+          $.post({
+            url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
+            cache: false,
+            data: JSON.stringify({ 'presignedUrl': response.presignedUrl }),
             headers: {
+              'Content-Type': 'application/json',
               'X-OW-EXTRA-LOGGING': 'on'
             }
           });
