@@ -96,8 +96,13 @@ function setup() {
     $('.red-four').on('click', '.create', function () {
       $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
         uploadFile(blob, response.presignedUrl).then((result) => {
-          $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction.json', { 'presignedUrl': response.presignedUrl }, function (success) {
-            //location.href = '/thankyou';
+          fetch('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction', {
+            method: 'POST',
+            cache: 'no-cache',
+            body: { 'presignedUrl': response.presignedUrl },
+            headers: {
+              'X-OW-EXTRA-LOGGING': 'on'
+            }
           });
         });
       });
