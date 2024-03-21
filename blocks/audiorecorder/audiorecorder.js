@@ -101,7 +101,7 @@ function setup() {
 
       const data = {
         'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
-        'object_name': (Math.floor(Math.random() * 9000000000) + 1000000000) + '/recording.m4a'
+        'object_name': crypto.randomUUID() + '/recording.m4a'
       };
 
       $.ajax({
