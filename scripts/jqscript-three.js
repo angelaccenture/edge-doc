@@ -56,7 +56,7 @@ $(document).ready (function() {
         setTimeout(showForm, 660);
 
         function showForm() {
-          $('.form .second')
+          $('.red-three .form .second')
             .show('slide', { direction: 'right' }, 200)
             .addClass('showgrid');
           $('.red-three .default-content-wrapper')
@@ -76,7 +76,7 @@ $(document).ready (function() {
         console.log("second form button selected");
         $('.red-three .form .second')
           .removeClass('showgrid');
-        $('.form .second, .formnextsecond')
+        $('.red-three .form .second, .formnextsecond')
           .hide('slide', { direction: 'left' }, 600);
         $('.secondformv')
           .hide('slide', { direction: 'left' }, 600);
