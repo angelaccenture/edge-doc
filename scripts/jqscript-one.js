@@ -1,5 +1,4 @@
 /*Initial Blue Section - now purple*/
-
 $(document).ready (function() {
   /*Blue One - Intro Get Started*/
   $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
