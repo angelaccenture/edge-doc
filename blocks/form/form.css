@@ -35,7 +35,7 @@
 .form input,
 .form select,
 .form textarea {
-  width: 98%;
+  width: 100%;
   display: block;
   padding: 12px 8px;
   border-radius: 4px;
@@ -151,12 +151,14 @@
     background-color: var(--red-color);
     color: white;
 }
+/*
 @media (width >= 1000px) {
   .button .formnextfirst, .button .formnextsecond, .button .formnextthird {
     right: 68px;
     top: 25px;
   }
 }
+*/
 /*Spacing*/
 .form-wrapper {
   padding: 8% 5% 0% 5%;
