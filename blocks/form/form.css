@@ -116,7 +116,7 @@
   transform: translateX(24px);
 }
 /*Hide/Show Stuff*/
-.form .second, .form .third, .form .recording, .form .submit-wrapper {
+.red-three .form .second, .red-three .form .third, .form .recording, .form .submit-wrapper {
     display: none;
 }
 .button .formnextsecond, .button .formnextthird, {
