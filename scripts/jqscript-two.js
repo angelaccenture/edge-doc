@@ -17,7 +17,7 @@ $(document).ready (function() {
         .each(function (index) {
           $(this).delay(4000 * index).fadeIn(4000, function (index) {
             if (index == 4) {
-              //console.log("Last One");
+              console.log("Last One");
             } else {
               $(this).delay(4000).hide();
           }
