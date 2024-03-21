@@ -104,6 +104,8 @@ function setup() {
               'Content-Type': 'application/json',
               'X-OW-EXTRA-LOGGING': 'on'
             }
+          }, function() {
+            location.href = '/thankyou';
           });
         });
       });
