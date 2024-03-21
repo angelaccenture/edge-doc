@@ -94,8 +94,9 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
-        uploadFile(blob, response.presignedUrl).then((result) => {
+      $.get('https://genheroes.accenture.com/api/upload', function(response) {
+        debugger;
+        /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
@@ -107,7 +108,7 @@ function setup() {
           }, function() {
             location.href = '/thankyou';
           });
-        });
+        });*/
       });
     });
   }
