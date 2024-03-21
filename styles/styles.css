@@ -82,6 +82,13 @@ main pre {
 #legal-notice{
   margin-block-start: 0;
   margin-block-end: 0;
+  padding-top: 6%;
+}
+
+#everyone-has-a-hero-our-heroes-have-heroes {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 16%;
 }
 
 /* links */
@@ -201,6 +208,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .default-content-wrapper {
   padding: 8% 5%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-top: 16%;
 }
 .blue-end-three .default-content-wrapper {
   padding: 8% 5% 0 5%;
