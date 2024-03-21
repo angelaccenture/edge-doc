@@ -180,7 +180,7 @@ $(document).ready (function() {
       $('.audiorecorder-wrapper').hide();
 
      // $('.red-four').css('background-color', '#EB1000').delay(400).fadeIn('slow','','');
-      $('.red-four').animate({backgroundColor: ‘#EB1000}, ‘slow’);
+      $('.red-four').animate({backgroundColor: '#EB1000'}, 'slow');
       $('.red-four').css('color', 'white');
       $('.countdown-wrapper').show();
       setTimeout(function() {
