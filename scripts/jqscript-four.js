@@ -54,19 +54,15 @@ $('.blue-end-four')
 });
 
 $('.form').on('input', '#form-email', function () {
-playAudioRandom(TapSounds);
-$('.blue-end-four .submit-wrapper')
- .delay(400)
- .fadeIn();
+    playAudioRandom(TapSounds);
+    $('.blue-end-four .submit-wrapper').delay(400).fadeIn();
 });
 /*Blue End Four*/
 $('.blue-end-four').on('click', '.button', function () {
-playAudioRandom(TapSounds);
-$('.blue-end-four')
- .fadeOut();
-$('.blue-end-five')
- .delay(400)
- .fadeIn();
+    console.log("what button is this?");
+    playAudioRandom(TapSounds);
+    $('.blue-end-four').fadeOut();
+    $('.blue-end-five').delay(400).fadeIn();
 });
 /*Blue End Five*/
 $('.button').on('click', '.blueendfivebutton', function () {
