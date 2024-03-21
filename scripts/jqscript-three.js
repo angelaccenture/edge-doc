@@ -48,14 +48,13 @@ $(document).ready (function() {
   /*Red Three -- Form Section*/
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
-        $('.form .first, .formnextfirst')
-          .hide('slide', { direction: 'left' }, 200);
-        $('.firstformv')
-          .hide('slide', { direction: 'left' }, 200);
-        setTimeout(showForm, 660);
+         $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
+        $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
+        $('.firstformv').hide('slide', { direction: 'left' }, 200);
+        setTimeout(showForm, 260);
 
         function showForm() {
-          $('.form .second')
+          $('.red-three .form .second')
             .show('slide', { direction: 'right' }, 200)
             .addClass('showgrid');
           $('.red-three .default-content-wrapper')
@@ -72,17 +71,14 @@ $(document).ready (function() {
       });
       $('.red-three').on('click', '.formnextsecond', function () {
         playAudioRandom(TapSounds);
-        $('.form .second')
-          .removeClass('showgrid');
-        $('.form .second, .formnextsecond')
-          .hide('slide', { direction: 'left' }, 600);
-        $('.secondformv')
-          .hide('slide', { direction: 'left' }, 600);
-        setTimeout(showSecForm, 660);
+        $('.red-three .form .second').removeClass('showgrid');
+        $('.red-three .form .second').hide('slide', { direction: 'left' }, 200);
+        $('.formnextsecond').hide('slide', { direction: 'left' }, 200);
+        $('.secondformv').hide('slide', { direction: 'left' }, 200);
+        setTimeout(showSecForm, 260);
 
         function showSecForm() {
-          $('.form .third')
-            .show('slide', { direction: 'right' }, 200)
+          $('.red-three .form .third').show('slide', { direction: 'right' }, 200)
             .addClass('showgrid');
           $('.red-three .default-content-wrapper')
             .show('slide', { direction: 'right' }, 200);
@@ -91,7 +87,6 @@ $(document).ready (function() {
             .parent()
             .show('slide', { direction: 'right' }, 200);
         }
-
         $('.red-three .carousel-slide-indicator:eq(1)')
           .removeAttr('id');
         $('.red-three .carousel-slide-indicator:eq(2)')
@@ -165,12 +160,9 @@ $(document).ready (function() {
           .show();
       });
     $('.form').on('input', '#form-describe', function () {
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.secondformv')
-          .hide();
-        $('.formnextsecond')
-          .show();
+        $('.red-three .default-content-wrapper').hide();
+        $('.secondformv').hide();
+        $('.formnextsecond').show();
       });
     $('.form').on('input', '#form-makefeel', function () {
         $('.red-three .default-content-wrapper')
