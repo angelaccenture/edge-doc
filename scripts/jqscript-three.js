@@ -51,7 +51,7 @@ $(document).ready (function() {
          $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
         $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
         $('.firstformv').hide('slide', { direction: 'left' }, 200);
-        setTimeout(showForm, 460);
+        setTimeout(showForm, 260);
 
         function showForm() {
           $('.red-three .form .second')
@@ -75,7 +75,7 @@ $(document).ready (function() {
         $('.red-three .form .second').hide('slide', { direction: 'left' }, 200);
         $('.formnextsecond').hide('slide', { direction: 'left' }, 200);
         $('.secondformv').hide('slide', { direction: 'left' }, 200);
-        setTimeout(showSecForm, 460);
+        setTimeout(showSecForm, 260);
 
         function showSecForm() {
           $('.red-three .form .third').show('slide', { direction: 'right' }, 200)
