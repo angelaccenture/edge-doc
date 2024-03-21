@@ -4,9 +4,6 @@ $(document).ready (function() {
   /*Blue One - Intro Get Started*/
   $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
   $(".blue-one h1").hide();
-  setTimeout(function() {
-    $(".blue-one h1").slideDown(600);
-  }, 1260);
   $('.button').on("click", ".blueonebutton", function() {
     initAudio();
     playMusic("MUS_Staccato.mp3");
