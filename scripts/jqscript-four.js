@@ -57,7 +57,7 @@ $('.form').on('input', '#form-email', function () {
     playAudioRandom(TapSounds);
     $('.blue-end-four .submit-wrapper').delay(400).fadeIn();
 });
-/*Blue End Four -- Email gets submitted here*/
+/*Blue End Four -- Email gets submitted here -- put API call here*/
 $('.button').on('click', '.blueendfourbutton', function () {
     playAudioRandom(TapSounds);
     $('.blue-end-four').fadeOut();
