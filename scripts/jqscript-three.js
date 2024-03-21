@@ -74,12 +74,10 @@ $(document).ready (function() {
       $('.red-three').on('click', '.formnextsecond', function () {
         playAudioRandom(TapSounds);
         console.log("second form button selected");
-        $('.red-three .form .second')
-          .removeClass('showgrid');
-        $('.red-three .form .second, .formnextsecond')
-          .hide('slide', { direction: 'left' }, 600);
-        $('.secondformv')
-          .hide('slide', { direction: 'left' }, 600);
+        $('.red-three .form .second').removeClass('showgrid');
+        $('.red-three .form .second').hide('slide', { direction: 'left' }, 600);
+        $('.formnextsecond').hide('slide', { direction: 'left' }, 600);
+        $('.secondformv').hide('slide', { direction: 'left' }, 600);
         setTimeout(showSecForm, 660);
 
         function showSecForm() {
