@@ -94,7 +94,6 @@ $(document).ready (function() {
       });
 
     $('.red-three').on('click', '.formnextthird', async function () {
-      console.log("third form button selected");
         playAudioRandom(TapSounds);
         $('.red-three')
           .hide();
