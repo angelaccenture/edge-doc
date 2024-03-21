@@ -19,7 +19,7 @@ $(document).ready (function() {
             if (index == 4) {
               //console.log("Last One");
             } else {
-              $(this).delay(500).hide();
+              $(this).delay(5000).hide();
           }
         });
 
