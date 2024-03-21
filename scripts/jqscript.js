@@ -313,7 +313,7 @@ $('.button').on('click', '.bluethreebutton', function () {
       });
 
       //**THANK YOU PAGE STARTS HERE */
-  /*Blue End One*/
+  /*Blue End One -- Needs to be onclick
   $('.blue-end-one').delay(600).fadeIn('slow', '', '');
   $('.button').on('click', '.blueendonebutton', function () {
       initAudio();
@@ -326,7 +326,7 @@ $('.button').on('click', '.bluethreebutton', function () {
         .fadeIn();
       repeatAnim();
     });
-
+*/
     var stopFunc = false;
     function repeatAnim() {
       if (stopFunc == false) {
