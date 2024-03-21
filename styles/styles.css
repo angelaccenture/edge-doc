@@ -91,6 +91,11 @@ main pre {
   padding-top: 16%;
 }
 
+/* nav {
+  position: relative;
+  bottom: 4.5%;
+} */
+
 /* links */
 a:any-link {
   color: var(--body-font-family);
