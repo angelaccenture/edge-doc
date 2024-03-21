@@ -311,22 +311,22 @@ $('.button').on('click', '.bluethreebutton', function () {
         $('.hideexample').hide();
         $('.create').show();
       });
+      $('.button').on('click', '.create', function () {
+        playAudioRandom(TapSounds);
+       $('.blue-end-one').delay(600).fadeIn('slow', '', '');
+       $('.button').on('click', '.blueendonebutton', function () {
+           initAudio();
+           playMusic('MUS_Staccato.mp3');
+           playAudioRandom(TapSounds);
+           $('.blue-end-one')
+             .fadeOut();
+           $('.blue-end-two')
+             .delay(400)
+             .fadeIn();
+           repeatAnim();
+         });
+      });
 
-      //**THANK YOU PAGE STARTS HERE */
-  /*Blue End One -- Needs to be onclick
-  $('.blue-end-one').delay(600).fadeIn('slow', '', '');
-  $('.button').on('click', '.blueendonebutton', function () {
-      initAudio();
-      playMusic('MUS_Staccato.mp3');
-      playAudioRandom(TapSounds);
-      $('.blue-end-one')
-        .fadeOut();
-      $('.blue-end-two')
-        .delay(400)
-        .fadeIn();
-      repeatAnim();
-    });
-*/
     var stopFunc = false;
     function repeatAnim() {
       if (stopFunc == false) {
