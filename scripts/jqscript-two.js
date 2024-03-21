@@ -19,7 +19,7 @@ $(document).ready (function() {
             if (index == 4) {
               //console.log("Last One");
             } else {
-              $(this).delay(1900).fadeOut();
+              $(this).delay(1850).fadeOut();
           }
         });
 
