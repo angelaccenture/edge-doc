@@ -94,7 +94,7 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      $.get('https://genheroes.accenture.com/api/upload', function(response) {
+      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
         debugger;
         /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
