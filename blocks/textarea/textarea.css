@@ -6,7 +6,11 @@
     padding-bottom: 6%;
 	overflow-y: auto;
 	position: fixed;
-    height: 72%; 
+    height: 74%; 
+	width: 82.35%;
+    margin-top: 8%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .textarea > p {
