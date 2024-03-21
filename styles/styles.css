@@ -241,7 +241,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin-block-end: 0;
 }
 .blue-three h2 {
-  max-width: 82%;
+  max-width: 86%;
 }
 .green-one h1 {
   max-width: 89%;
@@ -256,7 +256,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
     top: 32%;*/
 }
 .red-two h1 {
-  width: 80%;
+  width: 81%;
 }
 /*Other Stuff*/
 .headphones {
