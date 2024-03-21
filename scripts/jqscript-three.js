@@ -48,10 +48,11 @@ $(document).ready (function() {
   /*Red Three -- Form Section*/
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
-        $('.form .first, .formnextfirst')
-          .hide('slide', { direction: 'left' }, 200);
-        $('.firstformv')
-          .hide('slide', { direction: 'left' }, 200);
+        console.log("first form button selected");
+        e.stopPropagation();
+        $('.form .first').hide('slide', { direction: 'left' }, 200);
+        $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
+        $('.firstformv').hide('slide', { direction: 'left' }, 200);
         setTimeout(showForm, 660);
 
         function showForm() {
@@ -165,12 +166,9 @@ $(document).ready (function() {
           .show();
       });
     $('.form').on('input', '#form-describe', function () {
-        $('.red-three .default-content-wrapper')
-          .hide();
-        $('.secondformv')
-          .hide();
-        $('.formnextsecond')
-          .show();
+        $('.red-three .default-content-wrapper').hide();
+        $('.secondformv').hide();
+        $('.formnextsecond').show();
       });
     $('.form').on('input', '#form-makefeel', function () {
         $('.red-three .default-content-wrapper')
