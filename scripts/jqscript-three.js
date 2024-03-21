@@ -50,7 +50,7 @@ $(document).ready (function() {
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
         console.log("first form button selected");
-        $('.form .first').hide('slide', { direction: 'left' }, 200);
+        $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
         $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
         $('.firstformv').hide('slide', { direction: 'left' }, 200);
         setTimeout(showForm, 660);
@@ -74,7 +74,7 @@ $(document).ready (function() {
       $('.red-three').on('click', '.formnextsecond', function () {
         playAudioRandom(TapSounds);
         console.log("second form button selected");
-        $('.form .second')
+        $('.red-three .form .second')
           .removeClass('showgrid');
         $('.form .second, .formnextsecond')
           .hide('slide', { direction: 'left' }, 600);
@@ -83,7 +83,7 @@ $(document).ready (function() {
         setTimeout(showSecForm, 660);
 
         function showSecForm() {
-          $('.form .third')
+          $('.red-three .form .third')
             .show('slide', { direction: 'right' }, 200)
             .addClass('showgrid');
           $('.red-three .default-content-wrapper')
