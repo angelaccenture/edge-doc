@@ -34,6 +34,7 @@ $(document).ready (function() {
     }
  /*Red Two - Animation from Above*/
     $('.button').on('click', '.redtwobutton', function () {
+      console.log("red two");
         playAudioRandom(TapSounds);
         $('.red-two')
           .fadeOut();
@@ -73,6 +74,7 @@ $(document).ready (function() {
       });
       $('.red-three').on('click', '.formnextsecond', function () {
         playAudioRandom(TapSounds);
+        console.log("second form button selected");
         $('.form .second')
           .removeClass('showgrid');
         $('.form .second, .formnextsecond')
@@ -92,7 +94,6 @@ $(document).ready (function() {
             .parent()
             .show('slide', { direction: 'right' }, 200);
         }
-
         $('.red-three .carousel-slide-indicator:eq(1)')
           .removeAttr('id');
         $('.red-three .carousel-slide-indicator:eq(2)')
@@ -100,6 +101,7 @@ $(document).ready (function() {
       });
 
     $('.red-three').on('click', '.formnextthird', async function () {
+      console.log("third form button selected");
         playAudioRandom(TapSounds);
         $('.red-three')
           .hide();
