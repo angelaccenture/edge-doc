@@ -34,7 +34,6 @@ $(document).ready (function() {
     }
  /*Red Two - Animation from Above*/
     $('.button').on('click', '.redtwobutton', function () {
-      console.log("red two");
         playAudioRandom(TapSounds);
         $('.red-two')
           .fadeOut();
@@ -49,11 +48,10 @@ $(document).ready (function() {
   /*Red Three -- Form Section*/
     $('.red-three').on('click', '.formnextfirst', function () {
         playAudioRandom(TapSounds);
-        console.log("first form button selected");
-        $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
+         $('.red-three .form .first').hide('slide', { direction: 'left' }, 200);
         $('.formnextfirst').hide('slide', { direction: 'left' }, 200);
         $('.firstformv').hide('slide', { direction: 'left' }, 200);
-        setTimeout(showForm, 660);
+        setTimeout(showForm, 460);
 
         function showForm() {
           $('.red-three .form .second')
@@ -73,12 +71,11 @@ $(document).ready (function() {
       });
       $('.red-three').on('click', '.formnextsecond', function () {
         playAudioRandom(TapSounds);
-        console.log("second form button selected");
         $('.red-three .form .second').removeClass('showgrid');
         $('.red-three .form .second').hide('slide', { direction: 'left' }, 200);
         $('.formnextsecond').hide('slide', { direction: 'left' }, 200);
         $('.secondformv').hide('slide', { direction: 'left' }, 200);
-        setTimeout(showSecForm, 660);
+        setTimeout(showSecForm, 460);
 
         function showSecForm() {
           $('.red-three .form .third')
