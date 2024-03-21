@@ -73,7 +73,7 @@ $(document).ready (function() {
         playAudioRandom(TapSounds);
         $('.red-three .form .second').removeClass('showgrid');
         $('.red-three .form .second').hide('slide', { direction: 'left' }, 200);
-        $('.formnextsecond').hide('slide', { direction: 'left' }, 200);
+        $('.formnextsecond').hide();
         $('.secondformv').hide('slide', { direction: 'left' }, 200);
         setTimeout(showSecForm, 260);
 
