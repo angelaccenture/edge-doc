@@ -187,10 +187,6 @@ $(document).ready (function() {
         $('.audiotimer-wrapper').show();
       }, 4000);
 
-      $(".blue-one").hide();
-      $(".blue-two").delay(400).fadeIn('slow','','');
-
-
       $(".button .stoprecording").delay(3000).queue(function(next){
         $(this).addClass("fullshow");
         next();
@@ -227,8 +223,8 @@ $(document).ready (function() {
       });
       $('.button').on('click', '.create', function () {
         playAudioRandom(TapSounds);
-       $('.red-four').hide();
-       $('.blue-end-one').delay(600).fadeIn('slow', '', '');
+        $('.red-four').hide();
+        $('.blue-end-one').delay(600).fadeIn('slow', '', '');
       });
       
 
