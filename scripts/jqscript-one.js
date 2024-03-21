@@ -31,8 +31,6 @@ $('.button').on('click', '.bluethreebutton', function () {
     playAudioRandom(TapSounds);
     $('.blue-three')
       .hide();
-    $('.green-one')
-      .delay(400)
-      .fadeIn('slow', '', '');
+    $('.green-one').delay(400).fadeIn('slow', '', '');
   });
 });

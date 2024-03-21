@@ -18,19 +18,16 @@ $(document).ready (function() {
     /*Animation on words -red two*/
     function repeatAnimRed() {
       $('.red-two h4')
-        .each(function (index) {
-          $(this)
-            .delay(3000 * index)
-            .slideDown(1000, function () {
-              if (index == 2) {
-                //console.log("Last One");
-              } else {
-                $(this)
-                  .delay(2000)
-                  .fadeOut();
-              }
-            });
-        });
+      .each(function (index) {
+        $(this).delay(3000 * index).fadeIn(3000, function () {
+          if (index == 2) {
+            //console.log("Last One");
+          } else {
+            $(this).delay(3000).hide();
+        }
+      });
+
+  });
     }
  /*Red Two - Animation from Above*/
     $('.button').on('click', '.redtwobutton', function () {
@@ -176,18 +173,19 @@ $(document).ready (function() {
     $('.red-four').on("click", ".recordstory", function() {
       stopCurrentMusic();
       playAudioRandom(TapSounds);
-      $('.red-four').css('background-color', '#EB1000');
-      $('.red-four').css('color', 'white');
       $('.recordstory').hide();
       $('.recordexample-wrapper').hide();
       $("#startRecording").hide();
       $("#stopRecording").hide();
-      $('.countdown-wrapper').show();
       $('.audiorecorder-wrapper').hide();
+
+     // $('.red-four').css('background-color', '#EB1000').delay(400).fadeIn('slow','','');
+      $('.red-four').animate({backgroundColor: '#EB1000'}, 'slow');
+      $('.red-four').css('color', 'white');
+      $('.countdown-wrapper').show();
       setTimeout(function() {
         $('.audiotimer-wrapper').show();
       }, 4000);
-
 
       $(".button .stoprecording").delay(3000).queue(function(next){
         $(this).addClass("fullshow");
@@ -211,7 +209,8 @@ $(document).ready (function() {
         $(this).stop();
         $(this).removeClass('fullshow');
         $('.redorec').addClass('textshow');
-        $('.red-four').css('background-color', 'white');
+        $('.red-four').animate({backgroundColor: 'white'}, 'slow');
+       // $('.red-four').css('background-color', 'white');
         $('.red-four').css('color', '#EB1000');
         $('.dyncontent').hide();
         $('.red-four .default-content-wrapper p').hide();
@@ -224,8 +223,8 @@ $(document).ready (function() {
       });
       $('.button').on('click', '.create', function () {
         playAudioRandom(TapSounds);
-       $('.red-four').hide();
-       $('.blue-end-one').delay(600).fadeIn('slow', '', '');
+        $('.red-four').hide();
+        $('.blue-end-one').delay(600).fadeIn('slow', '', '');
       });
       
 

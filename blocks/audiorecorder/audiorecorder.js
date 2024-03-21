@@ -94,8 +94,25 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
-        uploadFile(blob, response.presignedUrl).then((result) => {
+      const headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      };
+
+      const data = {
+        'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
+        'object_name': crypto.randomUUID() + '/recording.m4a'
+      };
+
+      $.ajax({
+        'url': 'https://genheroes.accenture.com/api/upload',
+        'headers': headers,
+        'data': data,
+        success: function (response) {
+          debugger;
+        }
+      });
+        /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
@@ -107,8 +124,7 @@ function setup() {
           }, function() {
             location.href = '/thankyou';
           });
-        });
-      });
+        });*/
     });
   }
 }
