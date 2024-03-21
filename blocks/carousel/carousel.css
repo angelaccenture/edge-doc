@@ -48,7 +48,7 @@
 }
 
 .carousel .carousel-slide .carousel-slide-image picture > img {
-  height: 100%;
+  height: 105.3%;
   width: 100%;
   object-fit: cover;
 }
@@ -102,7 +102,7 @@
 
 .carousel .carousel-navigation-buttons {
   position: absolute;
-  top: 90%;
+  top: 94%;
   transform: translateY(-50%);
   left: 0.5rem;
   right: 0.5rem;
@@ -204,6 +204,10 @@
 .carousel .carousel-slide-content li:first-of-type  {
     float: right;
 }
+#carousel-1-slide-0 p {
+  position: relative;
+    top: 30%;
+}
 #carousel-1-slide-0 p, #carousel-1-slide-4 p, #carousel-1-slide-6 p {
   display: inline-block; 
   width: 46.5%;
@@ -217,6 +221,8 @@
 }
 #carousel-1-slide-0 p:first-of-type {
   vertical-align: top;
+  position: relative;
+  top: 30%;
 }
 #carousel-1-slide-0 h3 {
     width: 62%;
@@ -225,6 +231,8 @@
 #carousel-1-slide-0 .carousel-slide-content {
     padding: 0;
     margin: 5% auto;
+    position: relative;
+    top: 4%;
 }
 @media (width >= 1180px) {
   #carousel-1-slide-0 {
@@ -263,12 +271,14 @@
 }
 #carousel-1-slide-3 .carousel-slide-image picture > img {
   object-fit: contain;
+  width: 89.5%;
+  height: 93.7%;
 }
 #carousel-1-slide-3 .carousel-slide-content {
   position: absolute;
-  bottom: -6%;
+  bottom: 0%;
   width: 62%;
-  padding-left: 11%;
+  padding-left: 5.5%;
 }
 @media (width >= 1180px) {
   #carousel-1-slide-3 .carousel-slide-content {
@@ -280,6 +290,7 @@
 }
 #carousel-1-slide-4 {
   height: 55%;
+  top: 2%;
 }
 #carousel-1-slide-4 p {
     margin-top: 0;
@@ -297,8 +308,9 @@
   inset: 5%;
 }
 #carousel-1-slide-4 .carousel-slide-content {
-  position: absolute;
-  bottom: -30%;
+  position: relative;
+  top: 62%;
+  right: 1%;
   padding: 0;
 }
 @media (width >= 1180px) {
@@ -307,11 +319,11 @@
   }
 }
 #carousel-1-slide-5 {
-  height: 73%;
+  height: 69.5%;
 }
 #carousel-1-slide-5 .carousel-slide-content {
   position: absolute;
-  bottom: -25%;
+  bottom: -28.5%;
   width: 62%;
   padding-left: 0;
 }
@@ -363,10 +375,13 @@
 }
 #carousel-1-slide-7 .carousel-slide-image picture > img {
   object-fit: contain;
+  width: 89.5%;
+  height: 93.7%;
 }
 #carousel-1-slide-7 .carousel-slide-content {
-  position: absolute;
-    bottom: -8%;
+  position: relative;
+    top: 44%;
+    right: 5%;
     width: 62%;
     padding-left: 11%;
 }
@@ -380,6 +395,11 @@
 
   .slide-next{
     content: "\2192";
+  }
+
+  #antonio-gaudi-had-eusebi-güell-the-man-who-materialized-his-visions {
+    position: relative;
+    bottom: 16%;
   }
 }
 
