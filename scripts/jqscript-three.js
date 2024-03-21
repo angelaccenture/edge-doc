@@ -1,84 +1,5 @@
+/*Third Section - Red and stayed Red -- Form and Audio Recorder are here*/
 $(document).ready (function() {
-  /*Blue One - Intro Get Started*/
-  $(".blue-one").delay(500).show("slide", { direction: "left" }, 1200);
-  $(".blue-one h1").hide();
-  setTimeout(function() {
-    $(".blue-one h1").slideDown(600);
-  }, 1260);
-  $('.button').on("click", ".blueonebutton", function() {
-    initAudio();
-    playMusic("MUS_Staccato.mp3");
-    $(".blue-one").hide();
-    $(".blue-two").delay(400).fadeIn('slow','','');
-  });
-  $('.blue-one p:last-child').addClass("headphones");
-  /*Blue Two - Legal*/
-  $('.button').on('click', '.acceptbutton', function () {
-    playAudioRandom(TapSounds);
-    $('.blue-two')
-      .fadeOut();
-    $('.blue-three')
-      .delay(400)
-      .fadeIn();
-  });
-  $('.button').on('click', '.declinebutton', function () {
-    playAudio('SFX_UI_Decline.mp3');
-    stopCurrentMusic();
-    $('.blue-one')
-      .show();
-    $('.blue-two')
-      .hide();
-  });
- /*Blue Three - Create Story*/
-$('.button').on('click', '.bluethreebutton', function () {
-    playAudioRandom(TapSounds);
-    $('.blue-three')
-      .hide();
-    $('.green-one')
-      .delay(400)
-      .fadeIn('slow', '', '');
-  });
-  /*Green One - Full Color*/
-  $('.button').on('click', '.greenonebutton', function () {
-        playAudioRandom(TapSounds);
-        $('.green-one')
-          .hide('slide', { direction: 'left' }, 1200);
-        $('.green-two')
-          .delay(400)
-          .show('slide', { direction: 'right' }, 1200);
-        repeatAnimGreen();
-  });
-    /*Animation on words for next green two slide*/
-    function repeatAnimGreen() {
-      $('.green-two h4')
-        .each(function (index) {
-          $(this)
-       .delay(3000 * index)
-          .slideDown(1000, function () {
-            if (index == 4) {
-              //console.log("Last One");
-            } else {
-              $(this)
-              .delay(2000)
-              .fadeOut();
-          }
-        });
-
-    });
-}
-  /*Green Two - Animation Above*/
-  $('.button').on('click', '.greentwobutton', function () {
-        playAudioRandom(TapSounds);
-        $('.green-two')
-          .fadeOut();
-        $('.green-three')
-          .delay(400)
-          .fadeIn()
-          .addClass('greencar');
-  });
-
-  /*Green Three - carousel*/
-
   /*Red One - Full Color*/
     $('.button').on('click', '.redonebutton', function () {
         musicTransitionTo('MUS_Orchestral.mp3');
@@ -144,7 +65,6 @@ $('.button').on('click', '.bluethreebutton', function () {
             .parent()
             .show('slide', { direction: 'right' }, 200);
         }
-
         $('.red-three .carousel-slide-indicator:eq(0)')
           .removeAttr('id');
         $('.red-three .carousel-slide-indicator:eq(1)')
@@ -312,90 +232,9 @@ $('.button').on('click', '.bluethreebutton', function () {
       });
       $('.button').on('click', '.create', function () {
         playAudioRandom(TapSounds);
-       $('.red-four').hide(); 
+       $('.red-four').hide();
        $('.blue-end-one').delay(600).fadeIn('slow', '', '');
-       $('.button').on('click', '.blueendonebutton', function () {
-           initAudio();
-           playMusic('MUS_Staccato.mp3');
-           playAudioRandom(TapSounds);
-           $('.blue-end-one')
-             .fadeOut();
-           $('.blue-end-two')
-             .delay(400)
-             .fadeIn();
-           repeatAnim();
-         });
       });
-
-    var stopFunc = false;
-    function repeatAnim() {
-      if (stopFunc == false) {
-            $('.blue-end-two h4')
-              .each(function (index) {
-                $(this).delay(7000 * index).fadeIn(4000, function () {
-                $(this).delay(3000).fadeOut(function() {
-                        if(index === 2) {
-                            repeatAnim();
-                        }
-                      })
-                    
-                  });
-              });
-            }
-          }
-/*Blue End Two - Animation from Above*/
-  $('.button').on('click', '.blueendtwobutton', function () {
-      playAudioRandom(TapSounds);
-      stopCurrentMusic();
-      /*JOSH - CALL THIS INTO API WHEN VIDEO RETURNS*/
-      stopFunc = true;
-      $('.blue-end-two')
-        .hide('slide', { direction: 'left' }, 1200);
-      $('.blue-end-three')
-        .delay(400)
-        .show('slide', { direction: 'right' }, 1200);
-    });
-
-/*Blue End Three*/
-  $('.button').on('click', '.blueendthreebutton', function () {
-      playAudioRandom(TapSounds);
-      playMusic('MUS_Staccato.mp3');
-      $('.blue-end-three')
-        .fadeOut();
-      $('.blue-end-four')
-        .delay(400)
-        .fadeIn();
-    });
-
-  $('.form').on('input', '#form-email', function () {
-      playAudioRandom(TapSounds);
-      $('.blue-end-four .submit-wrapper')
-        .delay(400)
-        .fadeIn();
-    });
-/*Blue End Four*/
-  $('.blue-end-four').on('click', '.button', function () {
-      playAudioRandom(TapSounds);
-      $('.blue-end-four')
-        .fadeOut();
-      $('.blue-end-five')
-        .delay(400)
-        .fadeIn();
-    });
-/*Blue End Five*/
-  $('.button').on('click', '.blueendfivebutton', function () {
-      stopCurrentMusic();
-      playAudioRandom(TapSounds);
-      $('.blue-end-five')
-        .fadeOut();
-      $('.blue-end-six')
-        .delay(400)
-        .fadeIn();
-    });
-  $('.button').on('click', '.startover', function () {
-      playAudioRandom(TapSounds);
-      location.href = '/';
-    });
-
+      
 
 });
