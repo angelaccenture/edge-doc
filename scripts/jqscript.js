@@ -210,8 +210,7 @@ $('.button').on('click', '.bluethreebutton', function () {
             .html());
         $('.red-three .default-content-wrapper')
           .hide();
-        $('.firstformv')
-          .hide();
+        $('.firstformv').hide();
         $('.formnextfirst')
           .show();
       });
