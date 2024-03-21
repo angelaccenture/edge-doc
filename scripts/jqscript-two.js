@@ -15,13 +15,11 @@ $(document).ready (function() {
     function repeatAnimGreen() {
       $('.green-two h4')
         .each(function (index) {
-          $(this).fadeIn(2000, function () {
-            console.log("fadein");
+          $(this).delay(4000 * index).fadeIn(2000, function () {
             if (index == 4) {
               //console.log("Last One");
             } else {
-              $(this).delay(5000).hide();
-              console.log("else");
+              $(this).delay(2000).hide();
           }
         });
 
