@@ -75,9 +75,9 @@ $(document).ready (function() {
         playAudioRandom(TapSounds);
         console.log("second form button selected");
         $('.red-three .form .second').removeClass('showgrid');
-        $('.red-three .form .second').hide('slide', { direction: 'left' }, 600);
-        $('.formnextsecond').hide('slide', { direction: 'left' }, 600);
-        $('.secondformv').hide('slide', { direction: 'left' }, 600);
+        $('.red-three .form .second').hide('slide', { direction: 'left' }, 200);
+        $('.formnextsecond').hide('slide', { direction: 'left' }, 200);
+        $('.secondformv').hide('slide', { direction: 'left' }, 200);
         setTimeout(showSecForm, 660);
 
         function showSecForm() {
