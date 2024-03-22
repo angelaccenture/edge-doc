@@ -3,12 +3,11 @@ export default function decorate(block) {
     video.setAttribute("id","video");
     video.setAttribute("controls","");
    // video.setAttribute("autoplay","");
+   video.setAttribute("src","/blocks/video/stream.m3u8");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
-     li.setAttribute("src","/blocks/video/stream.m3u8");
-      li.setAttribute("type","application/vnd.apple.mpegurl");
-    //   li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
-    //  li.setAttribute("type","video/x-mpegURL");
+    // li.setAttribute("src","/blocks/video/stream.m3u8");
+     // li.setAttribute("type","application/vnd.apple.mpegurl");
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
         //removediv.removeChild(div);
