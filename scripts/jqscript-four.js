@@ -1,5 +1,7 @@
 /*Section Four - the final section with Video Player*/
-$(document).ready (function() {    
+$(document).ready (function() {   
+  var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+
   $('.button').on('click', '.blueendonebutton', function () {
     initAudio();
     playMusic('MUS_Staccato.mp3');
@@ -29,12 +31,22 @@ if (stopFunc == false) {
      }
    }
 
-
-/*Blue End Two - Animation from Above*/
-
 function videoWait() {
   console.log("videWait Starts");
-  $.get('https://genheroes.accenture.com/test/stream/stream.m3u8', function(data){ 
+  $.ajax({
+          context: document.body,
+          url: videourl,
+          type: "get",
+          success: function() {  
+              console.log("yes video is back");
+          },
+          error : function () {
+              console.log('error');
+          }
+      });
+
+  /*$.get(videourl, function(data){ 
+
       console.log("yes good");
 
     }).fail(function() {
@@ -42,7 +54,7 @@ function videoWait() {
       setInterval(function () {
         videoWait();
       }, 10000);
-  });
+  });*/
 }
 
 
