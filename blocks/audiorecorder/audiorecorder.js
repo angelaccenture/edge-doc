@@ -94,24 +94,23 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      let data = JSON.stringify({
-        "object_name": "foo.aac",
-        "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
+      let settings = {
+        "url": "https://genheroes.accenture.com/api/upload",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        "data": {
+          "object_name": "foo.aac",
+          "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
+        },
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
       });
-
-      let xhr = new XMLHttpRequest();
-
-      xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-          console.log(this.responseText);
-        }
-      });
-
-      xhr.open("GET", "https://genheroes.accenture.com/api/upload");
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.setRequestHeader("Accept", "application/json");
-
-      xhr.send(data);
     });
   }
 }
