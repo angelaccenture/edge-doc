@@ -88,7 +88,7 @@ main pre {
 #everyone-has-a-hero-our-heroes-have-heroes {
   margin-block-start: 0;
   margin-block-end: 0;
-  padding-top: 0%;
+  padding-top: 13%;
 }
 
 /* nav {
@@ -289,6 +289,9 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 }
 .green-two h1, .red-two h1 {
   margin: 0;
+}
+.green-two h1 {
+  padding-top: 13%;
 }
 .red-two p {
   position: absolute;
