@@ -59,7 +59,7 @@ function setup() {
         rec.ondataavailable = (e) => {
           audioChunks.push(e.data);
           if (rec.state === "inactive") {
-            blob = new Blob(audioChunks, { type: "audio/mp3" });
+            blob = new Blob(audioChunks, { type: "audio/m4a" });
             document.getElementById("audioElement").src = URL.createObjectURL(blob);
           }
         };
@@ -122,7 +122,7 @@ function setup() {
             }
           };
 
-          const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
+          const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
 
           debugger;
 
