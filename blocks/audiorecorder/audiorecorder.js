@@ -95,7 +95,7 @@ function setup() {
 
     $('.red-four').on('click', '.create', function () {
       let settings = {
-        "url": "https://genheroes.accenture.com/api/upload",
+        "url": "https://genheroes.accenture.com/api/upload?object_name=recording.m4a&secret=gA2jj%2FdYrpI6ZXiGjFmZ9MSX1lZ544a8",
         "method": "GET",
         "timeout": 0,
         "headers": {
