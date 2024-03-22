@@ -36,11 +36,12 @@ function videoWait() {
   console.log("videWait Starts");
   $.get('https://genheroes.accenture.com/test/stream/stream.m3u8', function(data){ 
       console.log("yes good");
+
     }).fail(function() {
       console.log("repeat function");
       setInterval(function () {
         videoWait();
-      }, 1000);
+      }, 10000);
   });
 }
 
