@@ -2,6 +2,8 @@
 import { playVideo } from '../blocks/video/video.js';
 
 $(document).ready (function() {   
+
+  /*Make this URL dynamic*/
   var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
 
   $('.button').on('click', '.blueendonebutton', function () {
