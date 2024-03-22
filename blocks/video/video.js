@@ -18,6 +18,12 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(video);
   }
+
+
+  flowplayer(function (api) {
+    api.on("load", function (e, api, video) {
+      $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
+    }); });
 /*
        var video = document.getElementById('video');
     var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
