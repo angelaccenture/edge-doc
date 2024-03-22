@@ -49,6 +49,7 @@ function videoWait() {
           type: "get",
           success: function() { 
             console.log("Yes video ready");
+            console.log(videourl);
             setTimeout(function () {
               videoscreens();
             }, 10000);
