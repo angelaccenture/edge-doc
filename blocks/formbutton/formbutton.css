@@ -2,11 +2,13 @@
     position: relative;
   }
 .firstformv, .secondformv, .thirdformv {
-  color: black;
-  margin: 5px 10px 5px 0;
-  padding: 8px 24px;
-  border: none;
-  font-size: 16px;
+color: black;
+background-color: #E3E3DF;
+margin: 0px 12px 12px 0;
+padding: 8px 24px;
+border: none;
+font-size: 16px;
+font-family: 'Graphik';
 font-style: normal;
 font-weight: 600;
 line-height: 20.8px 
