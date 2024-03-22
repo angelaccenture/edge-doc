@@ -48,13 +48,13 @@ function videoWait() {
           },
           error : function () {
             console.log("error - repeat function");
-           if (videosuccess = false) {
+          // if (videosuccess = false) {
             setTimeout(function () {
               console.log("run funcition");
               videoWait();
             }, 10000);
             }
-          }
+          //}
       });
 
 }
