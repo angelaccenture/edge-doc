@@ -101,7 +101,7 @@ function setup() {
 
       const data = {
         'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
-        'object_name': 'recording.m4a'
+        'object_name': crypto.randomUUID() + '/recording.m4a'
       };
 
       const sampleResponse = {
@@ -120,8 +120,8 @@ function setup() {
 
       $.ajax({
         'url': 'https://genheroes.accenture.com/api/upload',
-        'headers': headers,
-        'data': data,
+        'headers': headers ,
+        'data': JSON.stringify(data),
         success: function (response) {
           debugger;
         },
