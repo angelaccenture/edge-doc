@@ -101,11 +101,7 @@ function setup() {
         "headers": {
           "Content-Type": "application/json",
           "Accept": "application/json"
-        },
-        "data": JSON.stringify({
-          "object_name": "foo.aac",
-          "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
-        }),
+        }
       };
 
       $.ajax(settings).done(function (response) {
