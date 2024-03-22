@@ -117,6 +117,7 @@ function setup() {
             }
           }, function(success) {
           //  debugger;
+            console.log(response);
             console.log('Successful call to audioAction: ', success);
           });
         });
