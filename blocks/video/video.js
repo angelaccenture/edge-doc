@@ -3,7 +3,7 @@ export default function decorate(block) {
     video.setAttribute("id","video");
     video.setAttribute("controls","");
    // video.setAttribute("autoplay","");
-   video.setAttribute("src","/blocks/video/stream.m3u8");
+   video.setAttribute("src","blob:https://genheroes.accenture.com/5e2fbb60-b44c-49b1-9049-b022f1cbeeb1");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
     // li.setAttribute("src","/blocks/video/stream.m3u8");
