@@ -121,17 +121,35 @@ function setup() {
           };
 
           //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
-          const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
-          const headers = {
-            'x-amz-security-token': sampleResponse['signed-url']['fields']['x-amz-security-token'],
-            'Content-Type': 'audio/m4a'
-          };
+          //const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
+          const { url, fields } = response['signed-url'];
 
-          debugger;
+          const formData = new FormData();
+          formData.append('file', blob);
 
-          uploadFile(blob, url, headers).then((result) => {
-            debugger;
+          Object.entries(fields).forEach(([name, value]) => {
+            formData.append(name, value);
           });
+
+          fetch(url, {
+            method: 'PUT',
+            body: formData
+          })
+            .then(response => {
+              if (response.ok) {
+                debugger;
+                console.log('File uploaded successfully');
+                // Handle success
+              } else {
+                debugger;
+                console.error('File upload failed:', response.statusText);
+                // Handle failure
+              }
+            })
+            .catch(error => {
+              debugger;
+              console.error('Error uploading file:', error);
+            });
         },
         error: function(error) {
           debugger;
