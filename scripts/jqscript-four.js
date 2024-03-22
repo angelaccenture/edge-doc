@@ -60,7 +60,7 @@ function videoWait() {
 
 }
 
-function videoscreens {
+function videoscreens() {
     stopCurrentMusic();
     stopFunc = true;
     $('.blue-end-two')
@@ -68,7 +68,7 @@ function videoscreens {
     $('.blue-end-three')
     .delay(400)
   .show('slide', { direction: 'right' }, 1200);
-  playVideo();
+    playVideo();
 }
 
 
