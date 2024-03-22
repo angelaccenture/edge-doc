@@ -1,11 +1,17 @@
 /*Section Four - the final section with Video Player*/
 import { playVideo } from '../blocks/video/video.js';
 
-$(document).ready (function() {   
-
+//var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+var videourl = "";
   /*Make this URL dynamic*/
-  var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+  export async function getuuid(uuid) {
+      console.log("YES");
+      console.log(uuid);
+      videourl = "https://genheroes.accenture.com/streams/" + uuid + "/stream.m3u8";
+      console.log(videourl);
+}
 
+$(document).ready (function() {   
   $('.button').on('click', '.blueendonebutton', function () {
     initAudio();
     playMusic('MUS_Staccato.mp3');
@@ -16,8 +22,9 @@ $(document).ready (function() {
       .delay(400)
       .fadeIn();
     repeatAnim();
-    //* 30 sec delay goes here*/
-    videoWait();
+    setTimeout(function () {
+      videoWait();
+    }, 30000);
   });
 var stopFunc = false;
 function repeatAnim() {
@@ -37,14 +44,11 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
-  var videosuccess = false;
   $.ajax({
           context: document.body,
           url: videourl,
           type: "get",
           success: function() { 
-            videosuccess = true;
-            console.log("Yes video ready");
             setTimeout(function () {
               videoscreens();
             }, 10000);
