@@ -90,11 +90,9 @@ function setup() {
         rec.stop();
         isRecording.textContent = "Recording hit end of timer";
       }, 90000);
-
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      debugger;
       let settings = {
         "url": "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json",
         "method": "GET",
@@ -104,27 +102,25 @@ function setup() {
         },
       };
 
+      let uuid = '';
       $.ajax(settings).done(function (response) {
-        debugger;
-        console.log(response);
-        uploadFile(blob, response.presignedUrl).then((result) => {
+        uuid = response.uuid;
+        uploadFile(blob, response.signedUrl).then((result) => {
           debugger;
-        });
-      });
-
-        /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
-            data: JSON.stringify({ 'presignedUrl': response.presignedUrl }),
+            data: JSON.stringify({ 'presignedUrl': response.signedUrl, 'uuid': uuid }),
             headers: {
               'Content-Type': 'application/json',
               'X-OW-EXTRA-LOGGING': 'on'
             }
-          }, function() {
-            location.href = '/thankyou';
+          }, function(success) {
+            debugger;
+            console.log('Successful call to audioAction: ', success);
           });
-        });*/
+        });
+      });
     });
   }
 }
