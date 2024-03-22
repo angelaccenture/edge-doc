@@ -1,6 +1,7 @@
 /*Section Four - the final section with Video Player*/
 import { playVideo } from '../blocks/video/video.js';
 var uuid = "";
+var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
   /*Make this URL dynamic*/
   export async function getuuid(uuid) {
       console.log("YES");
@@ -9,8 +10,6 @@ var uuid = "";
 }
 
 $(document).ready (function() {   
-  var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
-
   $('.button').on('click', '.blueendonebutton', function () {
     initAudio();
     playMusic('MUS_Staccato.mp3');
