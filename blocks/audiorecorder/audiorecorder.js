@@ -119,9 +119,8 @@ function setup() {
       };
 
       $.ajax({
-        'url': 'https://genheroes.accenture.com/api/upload',
-        'headers': headers ,
-        'data': JSON.stringify(data),
+        'url': 'https://genheroes.accenture.com/api/upload?secret=' + data.secret + '&object_name=' + data.object_name,
+        'headers': headers,
         success: function (response) {
           debugger;
         },
