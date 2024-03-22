@@ -10,6 +10,7 @@ $(document).ready (function() {
       .delay(400)
       .fadeIn();
     repeatAnim();
+    videoWait();
   });
 var stopFunc = false;
 function repeatAnim() {
@@ -30,17 +31,32 @@ if (stopFunc == false) {
 
 
 /*Blue End Two - Animation from Above*/
+
+function videoWait() {
+  /*Put the loop in here with if/else*/
+    if (https://genheroes.accenture.com/test/stream/stream.m3u8) {
+      console.log("if yes");
+    }
+    else {
+      console.log("else");
+    }
+
+}
+
+
+
+/*Use this code after loop is true and then add a 10 sec delay*/
 $('.button').on('click', '.blueendtwobutton', function () {
-playAudioRandom(TapSounds);
-stopCurrentMusic();
-/*JOSH - CALL THIS INTO API WHEN VIDEO RETURNS*/
-stopFunc = true;
-$('.blue-end-two')
- .hide('slide', { direction: 'left' }, 1200);
-$('.blue-end-three')
- .delay(400)
- .show('slide', { direction: 'right' }, 1200);
+                  playAudioRandom(TapSounds);
+                  stopCurrentMusic();
+                  stopFunc = true;
+                  $('.blue-end-two')
+                  .hide('slide', { direction: 'left' }, 1200);
+                  $('.blue-end-three')
+                  .delay(400)
+                  .show('slide', { direction: 'right' }, 1200);
 });
+
 
 /*Blue End Three*/
 $('.button').on('click', '.blueendthreebutton', function () {
