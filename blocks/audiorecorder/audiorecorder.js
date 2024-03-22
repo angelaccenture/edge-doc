@@ -94,17 +94,40 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      fetch('https://genheroes.accenture.com/api/upload', {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+      const headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      };
+
+      const data = {
+        'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
+        'object_name': 'recording.m4a'
+      };
+
+      $.ajax({
+        'url': 'https://genheroes.accenture.com/api/upload?object_name=' + data.object_name + '&secret=' + encodeURIComponent(data.secret),
+        'headers': headers,
+        success: function(response) {
+          debugger;
         },
-        body: JSON.stringify({
-            object_name: 'foo.aac',
-            secret: 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8'
-          })
-      }).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error))
+        error: function(error) {
+          debugger;
+        }
+      });
+
+        /*uploadFile(blob, response.presignedUrl).then((result) => {
+          $.post({
+            url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
+            cache: false,
+            data: JSON.stringify({ 'presignedUrl': response.presignedUrl }),
+            headers: {
+              'Content-Type': 'application/json',
+              'X-OW-EXTRA-LOGGING': 'on'
+            }
+          }, function() {
+            location.href = '/thankyou';
+          });
+        });*/
     });
   }
 }
