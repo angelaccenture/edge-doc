@@ -1,11 +1,9 @@
-async function uploadFile(file, presignedUrl) {
+async function uploadFile(file, presignedUrl, headers) {
   try {
     const response = await fetch(presignedUrl, {
       method: 'PUT',
-      body: file,
-      headers: {
-        'Content-Type': 'audio/m4a' // Set the content type based on your file type
-      }
+      headers: headers,
+      body: file
     });
 
     if (response.ok) {
@@ -122,11 +120,16 @@ function setup() {
             }
           };
 
-          const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
+          //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
+          const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
+          const headers = {
+            'x-amz-security-token': sampleResponse['signed-url']['fields']['x-amz-security-token'],
+            'Content-Type': 'audio/m4a'
+          };
 
           debugger;
 
-          uploadFile(blob, url).then((result) => {
+          uploadFile(blob, url, headers).then((result) => {
             debugger;
           });
         },
