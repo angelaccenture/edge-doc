@@ -48,51 +48,41 @@
   line-height: 43.2px
 }
 
-/*flashing text indicator */
+/* flashing text indicator */
 .form-field::placeholder {
   opacity: 1;
 }
 
-/* make placeholder flash */
+/* flashing animation */
 @keyframes flash {
   0% {
       opacity: 0.5;
+      color: var(--red-color);
   }
   50% {
       opacity: 1;
+      color: var(--red-color);
   }
   100% {
       opacity: 0.5;
+      color: var(--red-color);
   }
 }
 
-/* make placeholder stop flashing */
-@keyframes stopFlash {
-  0% {
-      opacity: 1;
-  }
+/* apply animation to input fields */
+#form-believed::placeholder,
+#form-makefeel::placeholder,
+#form-describe::placeholder {
+    animation: flash 1s infinite;
 }
 
-/* revoving flash when the field is focused */
+/* stop flashing when focused */
+#form-believed:focus::placeholder,
+#form-makefeel:focus::placeholder,
 #form-describe:focus::placeholder {
-
-  animation: none;
-  animation: stopFlash 0.1s 1;
-  opacity: 0.5;
-}
-
-#form-makefeel:focus::placeholder {
-  
-  animation: none;
-  animation: stopFlash 0.1s 1;
-  opacity: 0.5;
-}
-
-#form-believed:focus::placeholder {
-
-  animation: none;
-  animation: stopFlash 0.1s 1;
-  opacity: 0.5;
+    animation: none;
+    opacity: 0.5;
+    color: inherit; 
 }
 
 .form textarea {
