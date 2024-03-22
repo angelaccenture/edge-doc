@@ -14,3 +14,9 @@
 .toparea h2 {
     max-width: 50%;
 }
+.blue-end-six .topbutton {
+    position: absolute; 
+    left: 5%;
+    padding-top: 10%;
+    border: none;
+}
