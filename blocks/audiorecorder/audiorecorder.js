@@ -122,34 +122,20 @@ function setup() {
 
           //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
           //const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
-          const { url, fields } = response['signed-url'];
+          const urlSearchParams = new URLSearchParams(response['signed-url'].fields);
+          const url = response['signed-url'].url + response['signed-url'].fields.key + "?" + urlSearchParams.toString();
 
-          const formData = new FormData();
-          formData.append('file', blob);
-
-          Object.entries(fields).forEach(([name, value]) => {
-            formData.append(name, value);
-          });
-
-          fetch(url, {
-            method: 'PUT',
-            body: formData
-          })
-            .then(response => {
-              if (response.ok) {
-                debugger;
-                console.log('File uploaded successfully');
-                // Handle success
-              } else {
-                debugger;
-                console.error('File upload failed:', response.statusText);
-                // Handle failure
-              }
-            })
-            .catch(error => {
+          $.ajax({
+            'url': url,
+            'method': 'PUT',
+            'body': blob,
+            success: function(success) {
               debugger;
-              console.error('Error uploading file:', error);
-            });
+            },
+            error: function(error) {
+              debugger;
+            }
+          });
         },
         error: function(error) {
           debugger;
