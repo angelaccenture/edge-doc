@@ -6,7 +6,7 @@ export default function decorate(block) {
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
      li.setAttribute("src","/blocks/video/stream.m3u8");
-      li.setAttribute("type","application/x-mpegURL");
+      li.setAttribute("type","application/vnd.apple.mpegurl");
     //   li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
     //  li.setAttribute("type","video/x-mpegURL");
       while (row.firstElementChild) li.append(row.firstElementChild);
@@ -18,12 +18,6 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(video);
   }
-
-
-  flowplayer(function (api) {
-    api.on("load", function (e, api, video) {
-      $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
-    }); });
 /*
        var video = document.getElementById('video');
     var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
