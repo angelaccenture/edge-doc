@@ -1,12 +1,12 @@
 export default function decorate(block) {
    const video = document.createElement('video');
-    video.setAttribute("id","video-player");
+    video.setAttribute("id","video");
     video.setAttribute("controls","");
     video.setAttribute("autoplay","");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
-      li.setAttribute("src","/blocks/video/seed-225721745_scene-0_profile-colorful_strength-100.mp4");
-      li.setAttribute("type","video/mp4");
+      li.setAttribute("src","blob:https://genheroes.accenture.com/c2628ac3-15b7-49ae-a998-e3e51fb66df44");
+     // li.setAttribute("type","video/mp4");
     //   li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
     //  li.setAttribute("type","video/x-mpegURL");
       while (row.firstElementChild) li.append(row.firstElementChild);
@@ -19,7 +19,24 @@ export default function decorate(block) {
     block.append(video);
   }
 
-    var video = document.getElementById("video-player");
+       var video = document.getElementById('video');
+    var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
+    if (Hls.isSupported()) {
+          var hls = new Hls();
+          hls.loadSource(videoSrc);
+          hls.attachMedia(video);
+        }
+    // HLS.js is not supported on platforms that do not have Media Source
+    // Extensions (MSE) enabled.
+    //
+    // When the browser has built-in HLS support (check using `canPlayType`),
+    // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
+    // element through the `src` property. This is using the built-in support
+    // of the plain video element, without using HLS.js.
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = videoSrc;
+        }
+    
 /*New HTML*
 
 <video controls autoplay>
