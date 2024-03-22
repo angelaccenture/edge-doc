@@ -43,18 +43,17 @@ function videoWait() {
           type: "get",
           success: function() { 
             videosuccess = true;
-            //videoscreens();
+            videoscreens();
             console.log("yes video is back");
           },
           error : function () {
             console.log("error - repeat function");
-            videoscreens();
-         /*   if (videosuccess) {
+           if (videosuccess) {
             setTimeout(function () {
               console.log("run funcition");
               videoWait();
             }, 10000);
-            }*/
+            }
           }
       });
 
