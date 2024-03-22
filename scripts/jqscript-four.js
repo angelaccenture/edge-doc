@@ -12,6 +12,7 @@ $(document).ready (function() {
       .delay(400)
       .fadeIn();
     repeatAnim();
+    //* 30 sec delay goes here*/
     videoWait();
   });
 var stopFunc = false;
@@ -41,7 +42,11 @@ function videoWait() {
               console.log("yes video is back");
           },
           error : function () {
-              console.log('error');
+            console.log("repeat function");
+            setInterval(function () {
+              console.log("run funcition");
+              videoWait();
+            }, 10000);
           }
       });
 
