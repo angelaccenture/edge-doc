@@ -119,7 +119,7 @@ function setup() {
       };
 
       $.ajax({
-        'url': 'https://genheroes.accenture.com/api/upload?secret=' + data.secret + '&object_name=' + data.object_name,
+        'url': 'https://genheroes.accenture.com/api/upload?secret=' + encodeURIComponent(data.secret) + '&object_name=' + encodeURIComponent(data.object_name),
         'headers': headers,
         success: function (response) {
           debugger;
