@@ -44,6 +44,8 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
+  console.log("start of function");
+  console.log(videourl);
   $.ajax({
           context: document.body,
           url: videourl,
