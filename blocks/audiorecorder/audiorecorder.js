@@ -90,7 +90,6 @@ function setup() {
         rec.stop();
         isRecording.textContent = "Recording hit end of timer";
       }, 90000);
-
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
@@ -103,13 +102,15 @@ function setup() {
         },
       };
 
+      let uuid = '';
       $.ajax(settings).done(function (response) {
+        uuid = response.uuid;
         uploadFile(blob, response.signedUrl).then((result) => {
           debugger;
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
-            data: JSON.stringify({ 'presignedUrl': response.signedUrl }),
+            data: JSON.stringify({ 'presignedUrl': response.signedUrl, 'uuid': uuid }),
             headers: {
               'Content-Type': 'application/json',
               'X-OW-EXTRA-LOGGING': 'on'
