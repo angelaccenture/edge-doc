@@ -118,26 +118,24 @@ function setup() {
         }
       };
 
-      const myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Accept", "application/json");
-
-      const raw = JSON.stringify({
-        "object_name": "foo.aac",
-        "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
-      });
-
-      const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow"
+      let settings = {
+        "url": "https://genheroes.accenture.com/api/upload",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        "data": JSON.stringify({
+          "object_name": "foo.aac",
+          "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
+        }),
       };
 
-      fetch("https://genheroes.accenture.com/api/upload", requestOptions)
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.error(error));
+      $.ajax(settings).done(function (response) {
+        debugger;
+        console.log(response);
+      });
         /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
