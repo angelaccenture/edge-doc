@@ -32,28 +32,6 @@
   margin-bottom: 6%;
 }
 
-.form input,
-.form select,
-.form textarea {
-  width: 100%;
-  display: block;
-  padding: 15px 8px;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 1.5px solid var(--red-color);
-  color: var(--red-color);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 43.2px
-}
-
-/* flashing text indicator */
-.form-field::placeholder {
-  opacity: 1;
-}
-
-/* flashing animation */
 @keyframes flash {
   0% {
       opacity: 0.5;
@@ -69,20 +47,21 @@
   }
 }
 
-/* apply animation to input fields */
-#form-believed::placeholder,
-#form-makefeel::placeholder,
-#form-describe::placeholder {
-    animation: flash 1s infinite;
-}
-
-/* stop flashing when focused */
-#form-believed:focus::placeholder,
-#form-makefeel:focus::placeholder,
-#form-describe:focus::placeholder {
-    animation: none;
-    opacity: 0.5;
-    color: inherit; 
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  display: block;
+  padding: 15px 8px;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 1.5px solid var(--red-color);
+  color: var(--red-color);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43.2px;
+  animation: flash 1s infinite;
 }
 
 .form textarea {
