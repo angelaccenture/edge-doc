@@ -1,12 +1,14 @@
 /*Section Four - the final section with Video Player*/
 import { playVideo } from '../blocks/video/video.js';
-var uuid = "";
-var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+
+//var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+var videourl = "";
   /*Make this URL dynamic*/
   export async function getuuid(uuid) {
       console.log("YES");
-      uuid = uuid;
       console.log(uuid);
+      videourl = "https://genheroes.accenture.com/streams/" + uuid + "/stream.m3u8";
+      console.log(videourl);
 }
 
 $(document).ready (function() {   
