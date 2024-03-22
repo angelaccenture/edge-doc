@@ -1,10 +1,10 @@
 .dyncontent {
-    margin: 16% 5% 0 5%;
+    margin: 13% 5% 0 5%;
     width: 80%;
 }
 .dyncontent h2 {
-    font-size: 58px;
-    line-height: 66.7px;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 .dyncontent-wrapper {

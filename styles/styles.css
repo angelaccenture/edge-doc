@@ -265,6 +265,14 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
   margin-block-end: 0;
 }
 
+#give-us-just-a-moment {
+  font-family: 'Graphik';
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 66.7px;
+}
+
 /*Other Stuff*/
 .headphones {
   position: absolute;
