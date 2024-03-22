@@ -2,7 +2,7 @@
 import { playVideo } from '../blocks/video/video.js';
 var uuid = "";
   /*Make this URL dynamic*/
-  export default function getuuid(uuid) {
+  export async function getuuid(uuid) {
       console.log("YES");
       uuid = uuid;
       console.log(uuid);
