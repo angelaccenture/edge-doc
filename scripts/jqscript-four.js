@@ -33,15 +33,14 @@ if (stopFunc == false) {
 /*Blue End Two - Animation from Above*/
 
 function videoWait() {
-  /*Put the loop in here with if/else*/
-    if ("https://genheroes.accenture.com/test/stream/stream.m3u8" == true) {
-      console.log("if yes");
-    }
-    else {
-      console.log("else");
-    }
-
+  $.get('https://genheroes.accenture.com/test/stream/stream.m3u8', function(data){ 
+      console.log("yes good");
+    }).fail(function() {
+      console.log("repeat function");
+      delay(1000).videoWait();
+  });
 }
+
 
 
 
