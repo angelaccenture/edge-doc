@@ -19,7 +19,7 @@ export default function decorate(block) {
     block.textContent = '';
     block.append(video);
   }
-
+/*
        var video = document.getElementById('video');
     var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
     if (Hls.isSupported()) {
