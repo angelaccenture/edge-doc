@@ -44,15 +44,11 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
-  console.log("start of function");
-  console.log(videourl);
   $.ajax({
           context: document.body,
           url: videourl,
           type: "get",
           success: function() { 
-            console.log("Yes video ready");
-            console.log(videourl);
             setTimeout(function () {
               videoscreens();
             }, 10000);
