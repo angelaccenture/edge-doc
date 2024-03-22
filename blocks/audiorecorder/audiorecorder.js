@@ -107,7 +107,7 @@ function setup() {
       $.ajax(settings).done(function (response) {
         debugger;
         console.log(response);
-        uploadFile(blob, response.presignedUrl).then((result) => {
+        uploadFile(blob, response.signedUrl).then((result) => {
           debugger;
         });
       });
