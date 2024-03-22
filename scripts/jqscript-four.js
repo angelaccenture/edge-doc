@@ -22,8 +22,9 @@ $(document).ready (function() {
       .delay(400)
       .fadeIn();
     repeatAnim();
-    //* 30 sec delay goes here*/
-    videoWait();
+    setTimeout(function () {
+      videoWait();
+    }, 30000);
   });
 var stopFunc = false;
 function repeatAnim() {
