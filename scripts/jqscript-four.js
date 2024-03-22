@@ -1,5 +1,5 @@
 /*Section Four - the final section with Video Player*/
-import { playVideo } from '../blocks/video';
+import { playVideo } from '../blocks/video/video.js';
 
 $(document).ready (function() {   
   var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
