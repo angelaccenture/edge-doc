@@ -38,7 +38,9 @@ function videoWait() {
       console.log("yes good");
     }).fail(function() {
       console.log("repeat function");
-      videoWait().delay(1000);
+      setInterval(function () {
+        videoWait();
+      }, 1000);
   });
 }
 
