@@ -42,7 +42,10 @@ function videoWait() {
           type: "get",
           success: function() { 
             videosuccess = true;
-            videoscreens();
+            console.log("Yes video ready");
+            setTimeout(function () {
+              videoscreens();
+            }, 10000);
           },
           error : function () {
              setTimeout(function () {
@@ -61,7 +64,7 @@ function videoscreens() {
     $('.blue-end-three')
     .delay(400)
   .show('slide', { direction: 'right' }, 1200);
-    playVideo();
+    playVideo(videourl);
 }
 
 
