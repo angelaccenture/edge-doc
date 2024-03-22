@@ -4,6 +4,10 @@
     margin-right: 10%;
 }
 
+.recordexample-wrapper .recordexample > div  {
+    width: 81%;
+}
+
 .recordexample-wrapper .recordexample > div > div > p:first-child {
     margin-top: 4%;
 }
@@ -11,5 +15,4 @@
 .recordexample-wrapper .recordexample > div > div > p {
     font-size: 20px;
     line-height: 26px;
-    width: 81%;
 }
