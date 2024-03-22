@@ -290,7 +290,7 @@ header, footer, .blue-two, .blue-three, .green-one, .green-two, .green-three, .r
 .green-two h1, .red-two h1 {
   margin: 0;
 }
-.green-two h1 {
+#that-person-who {
   padding-top: 13%;
 }
 .red-two p {
