@@ -1,9 +1,11 @@
-async function uploadFile(file, presignedUrl, headers) {
+async function uploadFile(file, presignedUrl) {
   try {
     const response = await fetch(presignedUrl, {
       method: 'PUT',
-      headers: headers,
-      body: file
+      body: file,
+      headers: {
+        'Content-Type': 'audio/m4a'
+      }
     });
 
     if (response.ok) {
@@ -93,13 +95,22 @@ function setup() {
 
     $('.red-four').on('click', '.create', function () {
       debugger;
-      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', {
-        cache: 'no-cache',
-        headers: {
-          'X-OW-EXTRA-LOGGING': 'on'
-        }}, function (success) {
+      let settings = {
+        "url": "https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "X-OW-EXTRA-LOGGING": "on"
+        },
+      };
+
+      $.ajax(settings).done(function (response) {
+        debugger;
+        console.log(response);
+        uploadFile(blob, response.presignedUrl).then((result) => {
           debugger;
         });
+      });
 
         /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
