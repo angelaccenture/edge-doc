@@ -2,7 +2,7 @@ export default function decorate(block) {
    const video = document.createElement('video');
     video.setAttribute("id","video");
     video.setAttribute("controls","");
-    video.setAttribute("autoplay","");
+   // video.setAttribute("autoplay","");
     video.setAttribute("src","https://genheroes.accenture.com/test/stream_0/stream.m3u8");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
