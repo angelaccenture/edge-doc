@@ -17,9 +17,13 @@ export default function decorate(block) {
     });
     block.textContent = '';
     block.append(video);
+
+    playVideo();
   }
-/*
-       var video = document.getElementById('video');
+
+  function playVideo () {
+    console.log("playVideo");
+    var video = document.getElementById('video');
     var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
     if (Hls.isSupported()) {
           var hls = new Hls();
@@ -36,6 +40,7 @@ export default function decorate(block) {
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
           video.src = videoSrc;
         }
+  }
     
 /*New HTML*
 
