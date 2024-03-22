@@ -34,7 +34,7 @@ if (stopFunc == false) {
 
 function videoWait() {
   /*Put the loop in here with if/else*/
-    if (https://genheroes.accenture.com/test/stream/stream.m3u8) {
+    if ("https://genheroes.accenture.com/test/stream/stream.m3u8" == true) {
       console.log("if yes");
     }
     else {
