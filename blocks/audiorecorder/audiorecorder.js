@@ -94,8 +94,23 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', function(response) {
+      let settings = {
+        "url": "https://genheroes.accenture.com/api/upload",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        "data": JSON.stringify({
+          "object_name": "foo.aac",
+          "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
+        }),
+      };
+
+      $.ajax(settings).done(function (response) {
         debugger;
+        console.log(response);
       });
     });
   }
