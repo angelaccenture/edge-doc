@@ -94,20 +94,25 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      let settings = {
-        "url": "https://genheroes.accenture.com/api/upload?object_name=recording.m4a&secret=gA2jj%2FdYrpI6ZXiGjFmZ9MSX1lZ544a8",
-        "method": "GET",
-        "timeout": 0,
-        "headers": {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        }
-      };
-
-      $.ajax(settings).done(function (response) {
-        debugger;
-        console.log(response);
+      let data = JSON.stringify({
+        "object_name": "foo.aac",
+        "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
       });
+
+      let xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+
+      xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+          console.log(this.responseText);
+        }
+      });
+
+      xhr.open("GET", "https://genheroes.accenture.com/api/upload");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Accept", "application/json");
+
+      xhr.send(data);
     });
   }
 }
