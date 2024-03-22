@@ -42,13 +42,11 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
-  var videosuccess = false;
   $.ajax({
           context: document.body,
           url: videourl,
           type: "get",
           success: function() { 
-            videosuccess = true;
             console.log("Yes video ready");
             setTimeout(function () {
               videoscreens();
