@@ -113,14 +113,12 @@ function setup() {
         'object_name': crypto.randomUUID() + 'recording.m4a'
       };
 
-      $.ajax({
-        'url': 'https://genheroes.accenture.com/api/upload',
-        'headers': headers,
-        'data': data,
-        success: function (response) {
-          debugger;
-        }
-      });
+      fetch('https://genheroes.accenture.com/api/upload', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ object_name: 'foo.aac', secret: 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8' })
+      }).then(response => response.json()).then(data => console.log(data)).catch(error => console.error('Error:', error));
 
       /*let uuid = '';
       $.ajax(settings).done(function (response) {
