@@ -1,3 +1,5 @@
+import { getuuid } from '../../scripts/jqscript-four.js';
+
 async function uploadFile(file, presignedUrl) {
   try {
     const response = await fetch(presignedUrl, {
@@ -117,7 +119,7 @@ function setup() {
             }
           }, function(success) {
           //  debugger;
-            console.log(response);
+            getuuid(uuid);
             console.log('Successful call to audioAction: ', success);
           });
         });

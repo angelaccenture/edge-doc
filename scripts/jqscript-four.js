@@ -1,9 +1,14 @@
 /*Section Four - the final section with Video Player*/
 import { playVideo } from '../blocks/video/video.js';
+var uuid = "";
+  /*Make this URL dynamic*/
+  export default function getuuid(uuid) {
+      console.log("YES");
+      uuid = uuid;
+      console.log(uuid);
+}
 
 $(document).ready (function() {   
-
-  /*Make this URL dynamic*/
   var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
 
   $('.button').on('click', '.blueendonebutton', function () {
