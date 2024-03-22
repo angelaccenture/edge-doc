@@ -122,7 +122,7 @@ function setup() {
             }
           };
 
-          const url = sampleResponse['signed-url'].url + '/' + sampleResponse['signed-url'].fields.key + '?signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
+          const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
 
           debugger;
 
