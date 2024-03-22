@@ -5,7 +5,7 @@ export default function decorate(block) {
     video.setAttribute("autoplay","");
     [...block.children].forEach((row) => {
       const li = document.createElement('source');
-      li.setAttribute("src","blob:https://genheroes.accenture.com/c2628ac3-15b7-49ae-a998-e3e51fb66df4");
+      li.setAttribute("src","https://genheroes.accenture.com/test/stream_0/stream.m3u8");
      // li.setAttribute("type","video/mp4");
     //   li.setAttribute("src","https://10.89.130.229/test/stream_0/stream.m3u8");
     //  li.setAttribute("type","video/x-mpegURL");
