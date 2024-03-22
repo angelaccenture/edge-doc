@@ -35,7 +35,6 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
-  console.log("videoWait Starts");
   var videosuccess = false;
   $.ajax({
           context: document.body,
@@ -44,17 +43,12 @@ function videoWait() {
           success: function() { 
             videosuccess = true;
             videoscreens();
-            console.log("yes video is back");
           },
           error : function () {
-            console.log("error - repeat function");
-          // if (videosuccess = false) {
-            setTimeout(function () {
-              console.log("run funcition");
+             setTimeout(function () {
               videoWait();
             }, 10000);
             }
-          //}
       });
 
 }
