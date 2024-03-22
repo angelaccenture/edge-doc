@@ -1,4 +1,6 @@
 /*Section Four - the final section with Video Player*/
+import { playVideo } from '/blocks/video.js';
+
 $(document).ready (function() {   
   var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
 
@@ -33,48 +35,52 @@ if (stopFunc == false) {
    }
 
 function videoWait() {
-  console.log("videWait Starts");
+  console.log("videoWait Starts");
+  var videosuccess = false;
   $.ajax({
           context: document.body,
           url: videourl,
           type: "get",
-          success: function() {  
-              console.log("yes video is back");
+          success: function() { 
+            videosuccess = true;
+            //videoscreens();
+            console.log("yes video is back");
           },
           error : function () {
-            console.log("repeat function");
+            console.log("error - repeat function");
+            videoscreens();
+         /*   if (videosuccess) {
             setTimeout(function () {
               console.log("run funcition");
               videoWait();
             }, 10000);
+            }*/
           }
       });
 
-  /*$.get(videourl, function(data){ 
+}
 
-      console.log("yes good");
-
-    }).fail(function() {
-      console.log("repeat function");
-      setInterval(function () {
-        videoWait();
-      }, 10000);
-  });*/
+function videoscreens {
+    stopCurrentMusic();
+    stopFunc = true;
+    $('.blue-end-two')
+    .hide('slide', { direction: 'left' }, 1200);
+    $('.blue-end-three')
+    .delay(400)
+  .show('slide', { direction: 'right' }, 1200);
+  playVideo();
 }
 
 
-
-
-/*Use this code after loop is true and then add a 10 sec delay*/
+/*DUMMY DELETE ME BUTTON*/
 $('.button').on('click', '.blueendtwobutton', function () {
-                  playAudioRandom(TapSounds);
-                  stopCurrentMusic();
-                  stopFunc = true;
-                  $('.blue-end-two')
-                  .hide('slide', { direction: 'left' }, 1200);
-                  $('.blue-end-three')
-                  .delay(400)
-                  .show('slide', { direction: 'right' }, 1200);
+    stopCurrentMusic();
+    stopFunc = true;
+    $('.blue-end-two')
+    .hide('slide', { direction: 'left' }, 1200);
+    $('.blue-end-three')
+    .delay(400)
+  .show('slide', { direction: 'right' }, 1200);       
 });
 
 
