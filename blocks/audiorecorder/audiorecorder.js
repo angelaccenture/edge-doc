@@ -1,9 +1,8 @@
-async function uploadFile(file, presignedUrl, data) {
+async function uploadFile(file, presignedUrl) {
   try {
     const response = await fetch(presignedUrl, {
-      method: 'POST',
+      method: 'PUT',
       body: file,
-      data: data,
       headers: {
         'Content-Type': 'audio/m4a' // Set the content type based on your file type
       }
@@ -123,11 +122,11 @@ function setup() {
             }
           };
 
-          //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
+          const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + sampleResponse['signed-url'].fields['x-amz-security-token'] + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
 
           debugger;
 
-          uploadFile(blob, sampleResponse['signed-url'].url, sampleResponse['signed-url'].fields).then((result) => {
+          uploadFile(blob, url).then((result) => {
             debugger;
           });
         },
