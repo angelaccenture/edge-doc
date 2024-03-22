@@ -92,56 +92,14 @@ function setup() {
     }, 4000);
 
     $('.red-four').on('click', '.create', function () {
-      const headers = {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      };
-
-      const data = {
-        'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
-        'object_name': 'recording.m4a'
-      };
-
-      $.ajax({
-        'url': 'https://genheroes.accenture.com/api/upload?object_name=' + data.object_name + '&secret=' + encodeURIComponent(data.secret),
-        'headers': headers,
-        success: function(response) {
-          const sampleResponse = {
-            "message": "success!",
-            "signed-url": {
-              "fields": {
-                "AWSAccessKeyId": "ASIA3FLDZRVKZUXO6QWU",
-                "key": "recording.m4a",
-                "policy": "eyJleHBpcmF0aW9uIjogIjIwMjQtMDMtMjJUMDI6MzM6NDRaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAiMjc2MDM2LTAxLXB1YiJ9LCB7ImtleSI6ICJyZWNvcmRpbmcubTRhIn0sIHsieC1hbXotc2VjdXJpdHktdG9rZW4iOiAiSVFvSmIzSnBaMmx1WDJWakVDRWFDWFZ6TFdWaGMzUXRNU0pITUVVQ0lDeUYxdVFVMmpYVy9xbjhPYjRKL1h2M09GSXNYNFdhUkJTMWpSSXY0KzduQWlFQXRZODlPaStMRzhkSFFUVFlBRTJjdTM3eFNwUkQzNzQ2R0dnVXAvMGc1OXdxdkFVSU9oQUFHZ3czTmpjek9UYzRNalU0TnpjaUREdmo2WTJwMy80blk4U2h4Q3FaQmJEN2lQb1hRZmU5eXFGeFFTZmRocjRnNWp4enplOFVFOUZMUENNVGt6RnJBUUtrY1MzSzlsQ1d1ZEpTOWF2VkcxY3BlKzRBVTlwdUlLZ0lRaG9RbHllRUJEblNjT292TWtRT0JjN1BROThNcGQ0RU01NjFWR1lHdmp2R2doc1l2aW4wQUJPWWdtM0lqYTg0RWlEL1pTUFFzTnVjQXE2NUZqNklibHM5NXBESU5RR2I4NmV4MFFJbkw2aHpYcW9Cc0dqalBHS2J0Ni9jQlZkbDBLcURXWEw1UGpybWR0N1lQWFJpMzI4MXNoNFVxV0ZvQ2dJSklXK3lFTWZPbStIbjVhQmt3cElrT0hkL3IvOFh6SUp0M052Z0h3NnBIaDlSeGZrV2kreTVVVm1aK1MrRlRCOGtyTDh0Q056eFg4T2pvT1JaNkZJZGJnQ2lCQUxjMzl0OU5CODR5YkhJZmM4cmtaL0JpMDd6V1RuZUJCcEt2aHpZaXZaNml1aTYxbUtyZEZaK3ZTeTlOeU54alVHT2FXNCtnZFRKc284c2RnQ2IzVzNJZ1phTU42N1B6TWpuRERBV3lrcEhHWmRvM1NkNUFXbit2UjJGVzR5QXh0MGlFbFhyYkkyMWR4cDMwRE9kMGZ4VE53UTFtYWEyeGo0WXBuNUtZRXBxSjZaRk1Xekt2bzFsM01EOTVQL0FGbTVCaVJYODE4cUgrWE9BeDYxUDdlM2lHWTQvM2sxRjJTK0VwdXRqZ3F4M1Z0dktRT0pTTFJsVm5DY1FOZ0V1cGV2M0MyanY5MFVCTW9vU2FVSVZQYStoUzJWVnNhNFNycy9EU3FDcEk5OUxZc2t5elpycXlyVXZBbnZtMVJVeklKbjNQbGthR0l5MXdXdHRyWHVXVnRFNUZVRkplR1hNOGxtaUpjVFNSR2hsQXJFL0sxU3JpTWs5dXhkdE8ybHQrTnBrRkRTQVJLZU5rL0lkOUVoV1gwOEtzTERvcEV1bHhBMk10RlJvU1drU1dweVhWbU80WjlWVHJkcUdmUzhabklnMzdmaFVPZUx2eDVoYVVhU0lUdnVDYTJQcHhlaW9idStBeHcyK3IwQVpueFc5Wk1XWVZKUlJBZkRkWlV2NTluT2kwcExyZFhDaXBncld6ejVNalpNWU02ZTFSOGhCR1g5blV4aGdqbFRvTVArdzg2OEdPckVCRlBjZmtDRWRkVnBKL0xpbUZtNDJRNDlGbmpCZ0hQTjdqb3V6RUkvbG5uVmszMzNkcGl4STgwcEJNSEttdlJRbllCdDh5eFZqd1FmZldvZVV5UkpZOUJ0UE5pQ2kxa2NkZ29DdExRM2lIdHNLbm5MNGRpSGlzWVNFZ3BmZ2s1Q0hSZjVLUC9hOGxrVldDUW8vaUhDRU83V3ZieTMwYlZpS01MMEJzRkNISDBmYTVEUW42b3FRVmhOQnRxL0FKckRjNEh2UzEzSUx2VXJTQzVGbWhZUkN0czdlU3NQRzUyNEQxa0hRQXBlNWJHZUwifV19",
-                "signature": "OylvBSzamzxYYns9D8xZSNZDACA=",
-                "x-amz-security-token": "IQoJb3JpZ2luX2VjECEaCXVzLWVhc3QtMSJHMEUCICyF1uQU2jXW/qn8Ob4J/Xv3OFIsX4WaRBS1jRIv4+7nAiEAtY89Oi+LG8dHQTTYAE2cu37xSpRD3746GGgUp/0g59wqvAUIOhAAGgw3NjczOTc4MjU4NzciDDvj6Y2p3/4nY8ShxCqZBbD7iPoXQfe9yqFxQSfdhr4g5jxzze8UE9FLPCMTkzFrAQKkcS3K9lCWudJS9avVG1cpe+4AU9puIKgIQhoQlyeEBDnScOovMkQOBc7PQ98Mpd4EM561VGYGvjvGghsYvin0ABOYgm3Ija84EiD/ZSPQsNucAq65Fj6Ibls95pDINQGb86ex0QInL6hzXqoBsGjjPGKbt6/cBVdl0KqDWXL5Pjrmdt7YPXRi3281sh4UqWFoCgIJIW+yEMfOm+Hn5aBkwpIkOHd/r/8XzIJt3NvgHw6pHh9RxfkWi+y5UVmZ+S+FTB8krL8tCNzxX8OjoORZ6FIdbgCiBALc39t9NB84ybHIfc8rkZ/Bi07zWTneBBpKvhzYivZ6iui61mKrdFZ+vSy9NyNxjUGOaW4+gdTJso8sdgCb3W3IgZaMN67PzMjnDDAWykpHGZdo3Sd5AWn+vR2FW4yAxt0iElXrbI21dxp30DOd0fxTNwQ1maa2xj4Ypn5KYEpqJ6ZFMWzKvo1l3MD95P/AFm5BiRX818qH+XOAx61P7e3iGY4/3k1F2S+Eputjgqx3VtvKQOJSLRlVnCcQNgEupev3C2jv90UBMooSaUIVPa+hS2VVsa4Srs/DSqCpI99LYskyzZrqyrUvAnvm1RUzIJn3PlkaGIy1wWttrXuWVtE5FUFJeGXM8lmiJcTSRGhlArE/K1SriMk9uxdtO2lt+NpkFDSARKeNk/Id9EhWX08KsLDopEulxA2MtFRoSWkSWpyXVmO4Z9VTrdqGfS8ZnIg37fhUOeLvx5haUaSITvuCa2Ppxeiobu+Axw2+r0AZnxW9ZMWYVJRRAfDdZUv59nOi0pLrdXCipgrWzz5MjZMYM6e1R8hBGX9nUxhgjlToMP+w868GOrEBFPcfkCEddVpJ/LimFm42Q49FnjBgHPN7jouzEI/lnnVk333dpixI80pBMHKmvRQnYBt8yxVjwQffWoeUyRJY9BtPNiCi1kcdgoCtLQ3iHtsKnnL4diHisYSEgpfgk5CHRf5KP/a8lkVWCQo/iHCEO7Wvby30bViKML0BsFCHH0fa5DQn6oqQVhNBtq/AJrDc4HvS13ILvUrSC5FmhYRCts7eSsPG524D1kHQApe5bGeL"
-              },
-              "url": "https://276036-01-pub.s3.amazonaws.com/"
-            }
-          };
-
-          //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
-          //const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
-          //const urlSearchParams = new URLSearchParams(response['signed-url'].fields);
-          //const url = response['signed-url'].url + response['signed-url'].fields.key + "?" + urlSearchParams.toString();
-
-          $.ajax({
-            'url': response['signed-url'].url,
-            'method': 'PUT',
-            'body': blob,
-            'data': response['signed-url'].fields,
-            success: function(success) {
-              debugger;
-            },
-            error: function(error) {
-              debugger;
-            }
-          });
-        },
-        error: function(error) {
+      debugger;
+      $.get('https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/uploadAction.json', {
+        cache: 'no-cache',
+        headers: {
+          'X-OW-EXTRA-LOGGING': 'on'
+        }}, function (success) {
           debugger;
-        }
-      });
+        });
 
         /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
