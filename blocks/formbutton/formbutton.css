@@ -27,10 +27,11 @@
     background-color: transparent !important;
     color: red !important;
     font-size: 58px;
-    right: 5%;
+    right: 10%;
     position: absolute;
     border: none;
     bottom: 5%;
+    padding-right: 16px;
 }
 .arrow code {
   padding: 0;

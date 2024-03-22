@@ -47,6 +47,37 @@
   font-weight: 600;
   line-height: 43.2px
 }
+
+/*flashing text indicator */
+.form input::placeholder {
+  opacity:1;
+  animation: flash 1s infinite; 
+}
+
+@keyframes flash {
+  0% {
+      opacity: 0.5;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.5;
+  }
+}
+
+@keyframes stopFlash {
+  0% {
+      opacity: 1;
+  }
+}
+
+.form input:focus::placeholder {
+  animation: none;
+  animation: stopFlash 0.1s 1;
+  opacity: 0.5;
+}
+
 .form textarea {
   resize: vertical;
 }
@@ -161,17 +192,17 @@
 */
 /*Spacing*/
 .form-wrapper {
-  padding: 16% 5% 0% 5%;
+  padding: 16% 0% 0% 0%;
   margin-left: 10%;
   margin-right: 10%;
 }
 .formbutton-wrapper {
-  padding: 0 5%;
+  /* padding: 0 0%; */
   margin-left: 10%;
   margin-right: 10%;
 }
 .red-three .default-content-wrapper {
-  padding: 9% 5% 0 5%;
+  padding: 9% 0% 0 0%;
   margin-left: 10%;
   margin-right: 10%;
   margin-block-end: 1em;
