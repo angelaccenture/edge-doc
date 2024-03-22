@@ -122,13 +122,14 @@ function setup() {
 
           //const url = sampleResponse['signed-url'].url + sampleResponse['signed-url'].fields.key + '?x-amz-security-token=' + encodeURIComponent(sampleResponse['signed-url'].fields['x-amz-security-token']) + '&policy=' + sampleResponse['signed-url'].fields.policy + '&signature=' + encodeURIComponent(sampleResponse['signed-url'].fields.signature) + '&AWSAccessKeyId=' + sampleResponse['signed-url'].fields.AWSAccessKeyId;
           //const url = sampleResponse['signed-url']['url'] + sampleResponse['signed-url']['fields']['key'];
-          const urlSearchParams = new URLSearchParams(response['signed-url'].fields);
-          const url = response['signed-url'].url + response['signed-url'].fields.key + "?" + urlSearchParams.toString();
+          //const urlSearchParams = new URLSearchParams(response['signed-url'].fields);
+          //const url = response['signed-url'].url + response['signed-url'].fields.key + "?" + urlSearchParams.toString();
 
           $.ajax({
-            'url': url,
+            'url': response['signed-url'].url,
             'method': 'PUT',
             'body': blob,
+            'data': response['signed-url'].fields,
             success: function(success) {
               debugger;
             },
