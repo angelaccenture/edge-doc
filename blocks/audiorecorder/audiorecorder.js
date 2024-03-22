@@ -118,25 +118,26 @@ function setup() {
         }
       };
 
-      $.ajax({
-        'url': 'https://genheroes.accenture.com/api/upload?secret=' + encodeURIComponent(data.secret) + '&object_name=' + encodeURIComponent(data.object_name),
-        'headers': headers,
-        success: function (response) {
-          debugger;
-        },
-        error: function (response) {
-          debugger;
-          const signedUrl = sampleResponse['signed-url'];
-          const baseUrl = signedUrl.url;
-          const fields = signedUrl.fields;
-          const queryParams = Object.keys(fields)
-            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(fields[key])}`)
-            .join('&');
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Accept", "application/json");
 
-          const fullSignedUrl = `${baseUrl}?${queryParams}`;
-          console.log(fullSignedUrl);
-        }
+      const raw = JSON.stringify({
+        "object_name": "foo.aac",
+        "secret": "gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8"
       });
+
+      const requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+      };
+
+      fetch("https://genheroes.accenture.com/api/upload", requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
         /*uploadFile(blob, response.presignedUrl).then((result) => {
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
