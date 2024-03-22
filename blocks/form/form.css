@@ -49,11 +49,11 @@
 }
 
 /*flashing text indicator */
-.form input::placeholder {
-  opacity:1;
-  animation: flash 1s infinite; 
+.form-field::placeholder {
+  opacity: 1;
 }
 
+/* make placeholder flash */
 @keyframes flash {
   0% {
       opacity: 0.5;
@@ -66,13 +66,30 @@
   }
 }
 
+/* make placeholder stop flashing */
 @keyframes stopFlash {
   0% {
       opacity: 1;
   }
 }
 
-.form input:focus::placeholder {
+/* revoving flash when the field is focused */
+#form-describe:focus::placeholder {
+
+  animation: none;
+  animation: stopFlash 0.1s 1;
+  opacity: 0.5;
+}
+
+#form-makefeel:focus::placeholder {
+  
+  animation: none;
+  animation: stopFlash 0.1s 1;
+  opacity: 0.5;
+}
+
+#form-believed:focus::placeholder {
+
   animation: none;
   animation: stopFlash 0.1s 1;
   opacity: 0.5;
