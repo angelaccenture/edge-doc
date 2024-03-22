@@ -43,7 +43,7 @@ function videoWait() {
           },
           error : function () {
             console.log("repeat function");
-            setInterval(function () {
+            setTimeout(function () {
               console.log("run funcition");
               videoWait();
             }, 10000);
