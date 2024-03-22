@@ -171,9 +171,10 @@
   margin-right: 10%;
 }
 .red-three .default-content-wrapper {
-  padding: 5% 5% 0 5%;
+  padding: 9% 5% 0 5%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-block-end: 1em;
 }
 .blue-end-four .form-wrapper .form .second {
   display: grid;
