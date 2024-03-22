@@ -102,7 +102,27 @@ function setup() {
         },
       };
 
-      let uuid = '';
+      const headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      };
+
+      const data = {
+        'secret': 'gA2jj/dYrpI6ZXiGjFmZ9MSX1lZ544a8',
+        'object_name': crypto.randomUUID() + 'recording.m4a'
+      };
+
+      $.ajax({
+        'url': 'https://genheroes.accenture.com/api/upload',
+        'headers': headers,
+        'data': data,
+        success: function (response) {
+          debugger;
+        }
+      });
+
+      /*let uuid = '';
       $.ajax(settings).done(function (response) {
         uuid = response.uuid;
         uploadFile(blob, response.signedUrl).then((result) => {
@@ -120,7 +140,7 @@ function setup() {
             console.log('Successful call to audioAction: ', success);
           });
         });
-      });
+      });*/
     });
   }
 }
