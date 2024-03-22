@@ -1,5 +1,11 @@
 /*Section Four - the final section with Video Player*/
-$(document).ready (function() {    
+import { playVideo } from '../blocks/video/video.js';
+
+$(document).ready (function() {   
+
+  /*Make this URL dynamic*/
+  var videourl = "https://genheroes.accenture.com/test/stream/stream.m3u8";
+
   $('.button').on('click', '.blueendonebutton', function () {
     initAudio();
     playMusic('MUS_Staccato.mp3');
@@ -10,6 +16,8 @@ $(document).ready (function() {
       .delay(400)
       .fadeIn();
     repeatAnim();
+    //* 30 sec delay goes here*/
+    videoWait();
   });
 var stopFunc = false;
 function repeatAnim() {
@@ -28,19 +36,51 @@ if (stopFunc == false) {
      }
    }
 
+function videoWait() {
+  var videosuccess = false;
+  $.ajax({
+          context: document.body,
+          url: videourl,
+          type: "get",
+          success: function() { 
+            videosuccess = true;
+            console.log("Yes video ready");
+            setTimeout(function () {
+              videoscreens();
+            }, 10000);
+          },
+          error : function () {
+             setTimeout(function () {
+              videoWait();
+            }, 10000);
+            }
+      });
 
-/*Blue End Two - Animation from Above*/
+}
+
+function videoscreens() {
+    stopCurrentMusic();
+    stopFunc = true;
+    $('.blue-end-two')
+    .hide('slide', { direction: 'left' }, 1200);
+    $('.blue-end-three')
+    .delay(400)
+  .show('slide', { direction: 'right' }, 1200);
+    playVideo(videourl);
+}
+
+
+/*DUMMY DELETE ME BUTTON*/
 $('.button').on('click', '.blueendtwobutton', function () {
-playAudioRandom(TapSounds);
-stopCurrentMusic();
-/*JOSH - CALL THIS INTO API WHEN VIDEO RETURNS*/
-stopFunc = true;
-$('.blue-end-two')
- .hide('slide', { direction: 'left' }, 1200);
-$('.blue-end-three')
- .delay(400)
- .show('slide', { direction: 'right' }, 1200);
+    stopCurrentMusic();
+    stopFunc = true;
+    $('.blue-end-two')
+    .hide('slide', { direction: 'left' }, 1200);
+    $('.blue-end-three')
+    .delay(400)
+  .show('slide', { direction: 'right' }, 1200);       
 });
+
 
 /*Blue End Three*/
 $('.button').on('click', '.blueendthreebutton', function () {

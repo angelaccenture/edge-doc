@@ -20,10 +20,11 @@ export default function decorate(block) {
     playVideo();
   }
 
-  function playVideo () {
+
+  export async function playVideo (videourl) {
     console.log("playVideo");
     var video = document.getElementById('video');
-    var videoSrc = 'https://genheroes.accenture.com/test/stream_0/stream.m3u8';
+    var videoSrc = videourl;
     if (Hls.isSupported()) {
           var hls = new Hls();
           hls.loadSource(videoSrc);

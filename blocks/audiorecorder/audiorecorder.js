@@ -106,7 +106,7 @@ function setup() {
       $.ajax(settings).done(function (response) {
         uuid = response.uuid;
         uploadFile(blob, response.signedUrl).then((result) => {
-          debugger;
+      //    debugger;
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
@@ -116,7 +116,7 @@ function setup() {
               'X-OW-EXTRA-LOGGING': 'on'
             }
           }, function(success) {
-            debugger;
+          //  debugger;
             console.log('Successful call to audioAction: ', success);
           });
         });
