@@ -32,21 +32,6 @@
   margin-bottom: 6%;
 }
 
-@keyframes flash {
-  0% {
-      opacity: 0.5;
-      color: var(--red-color);
-  }
-  50% {
-      opacity: 1;
-      color: var(--red-color);
-  }
-  100% {
-      opacity: 0.5;
-      color: var(--red-color);
-  }
-}
-
 .form input,
 .form select,
 .form textarea {
@@ -61,7 +46,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 43.2px;
-  animation: flash 1s infinite;
 }
 
 .form textarea {
