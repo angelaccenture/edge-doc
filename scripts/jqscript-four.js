@@ -33,6 +33,7 @@ if (stopFunc == false) {
 /*Blue End Two - Animation from Above*/
 
 function videoWait() {
+  console.log("videWait Starts");
   $.get('https://genheroes.accenture.com/test/stream/stream.m3u8', function(data){ 
       console.log("yes good");
     }).fail(function() {
