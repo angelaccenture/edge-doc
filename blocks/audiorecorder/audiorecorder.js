@@ -1,5 +1,4 @@
 import { getuuid } from '../../scripts/jqscript-four.js';
-import axios from 'axios';
 
 async function uploadFile(blob, presignedUrl) {
   try {
