@@ -2,16 +2,12 @@ import { getuuid } from '../../scripts/jqscript-four.js';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    blob.type = 'audio/m4a'
+    const myBlob = new Blob([blob], { type: "audio/m4a" });
     const fileName = "recording.m4a";
+    const file = new File([myBlob], fileName);
 
-    const file = new File([blob], fileName);
-
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-
+    let fileInput = document.getElementById('fileInput');
     fileInput.addEventListener('change', function(event) {
-      // Access the selected file
       const selectedFile = event.target.files[0];
       console.log('Selected file:', selectedFile);
     });
@@ -149,6 +145,7 @@ export default async function decorate(block) {
 
   const input = document.createElement('input');
   input.setAttribute('type', 'file');
+  input.setAttribute('id', 'fileInput');
 
   const audio = document.createElement('audio');
   audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
