@@ -1,7 +1,20 @@
 import { getuuid } from '../../scripts/jqscript-four.js';
 
-async function uploadFile(file, presignedUrl) {
+async function uploadFile(blob, presignedUrl) {
   try {
+    const file = new File([blob], "recording.m4a", {
+      type: "audio/m4a"
+    });
+
+    $.ajax({
+      'url': presignedUrl,
+      'method': 'PUT',
+      'body': file
+    }, function (success) {
+      console.log('Successfully uploaded the file');
+    }, function (error) {
+      console.log('Failed to upload the file');
+    });
     const response = await fetch(presignedUrl, {
       method: 'PUT',
       body: file,
@@ -9,12 +22,6 @@ async function uploadFile(file, presignedUrl) {
         'Content-Type': 'audio/m4a'
       }
     });
-
-    if (response.ok) {
-      console.log('File uploaded successfully!');
-    } else {
-      console.error('Failed to upload file:', response.statusText);
-    }
   } catch (error) {
     console.error('Error uploading file:', error);
   }
@@ -107,7 +114,7 @@ function setup() {
       let uuid = '';
       $.ajax(settings).done(function (response) {
         uuid = response.uuid;
-        uploadFile(blob, response.signedUrl).then((result) => {
+        uploadFile(response.signedUrl).then((result) => {
       //    debugger;
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
