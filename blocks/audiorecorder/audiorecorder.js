@@ -10,17 +10,8 @@ async function uploadFile(blob, presignedUrl) {
       'url': presignedUrl,
       'method': 'PUT',
       'body': file
-    }, function (success) {
-      console.log('Successfully uploaded the file');
-    }, function (error) {
-      console.log('Failed to upload the file');
-    });
-    const response = await fetch(presignedUrl, {
-      method: 'PUT',
-      body: file,
-      headers: {
-        'Content-Type': 'audio/m4a'
-      }
+    }).then((result) => {
+      debugger;
     });
   } catch (error) {
     console.error('Error uploading file:', error);
