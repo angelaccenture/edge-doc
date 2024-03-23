@@ -31,10 +31,15 @@ async function uploadFile(blob, presignedUrl) {
           }
         };
 
-        $.ajax(settings).done(function (response) {
-          debugger;
-          console.log(response);
-        });
+        axios.post("https://api.cleanvoice.ai/v1/edits", settings.data, settings.headers)
+          .then((response) => {
+            debugger;
+            console.log(response.data);
+          })
+          .catch((error) => {
+            debugger;
+            console.log(error);
+          });
       })
       .catch(error => {
         console.error('Error uploading audio:', error);
