@@ -14,10 +14,28 @@ async function uploadFile(blob, presignedUrl) {
         });
       })
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to upload audio');
-        }
-        console.log('Audio uploaded successfully');
+        let settings = {
+          "url": "https://api.cleanvoice.ai/v1/edits",
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+            "X-API-Key": "7gKSf2Ca2SHnp7fYm6bPciE3DdneF2cA",
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({
+            "input": {
+              "files": [
+                presignedUrl
+              ],
+              "config": {}
+            }
+          }),
+        };
+
+        $.ajax(settings).done(function (response) {
+          debugger;
+          console.log(response);
+        });
       })
       .catch(error => {
         console.error('Error uploading audio:', error);
