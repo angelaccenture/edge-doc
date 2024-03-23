@@ -166,6 +166,7 @@ export default async function decorate(block) {
   block.appendChild(isRecording);
   block.appendChild(audio);
   block.appendChild(border);
+  block.appendChild(input);
 
   setup();
 }
