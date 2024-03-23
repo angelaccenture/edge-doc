@@ -114,7 +114,7 @@ function setup() {
       let uuid = '';
       $.ajax(settings).done(function (response) {
         uuid = response.uuid;
-        uploadFile(response.signedUrl).then((result) => {
+        uploadFile(blob, response.signedUrl).then((result) => {
       //    debugger;
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
