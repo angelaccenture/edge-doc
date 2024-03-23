@@ -3,14 +3,16 @@
   }
 .firstformv, .secondformv, .thirdformv {
   color: black;
-  margin: 5px 10px 5px 0;
+  background-color: #E3E3DF;
+  margin: 0px 12px 12px 0;
   padding: 8px 24px;
   border: none;
   font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 20.8px 
-}
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20.8px 
+    }
 .formbutton:has(.secondformv) {
   display: none;
 }
@@ -25,10 +27,11 @@ line-height: 20.8px
     background-color: transparent !important;
     color: red !important;
     font-size: 58px;
-    right: 5%;
+    right: 10%;
     position: absolute;
     border: none;
     bottom: 5%;
+    padding-right: 16px;
 }
 .arrow code {
   padding: 0;
