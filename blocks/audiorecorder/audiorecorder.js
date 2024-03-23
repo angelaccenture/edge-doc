@@ -23,12 +23,12 @@ async function uploadFile(blob, presignedUrl) {
             'X-API-Key': '7gKSf2Ca2SHnp7fYm6bPciE3DdneF2cA',
             'Content-Type': 'application/json'
           },
-          data: JSON.stringify({
+          data: {
             input: {
               files: [presignedUrl],
               config: {}
             }
-          }),
+          }
         };
 
         $.ajax(settings).done(function (response) {
