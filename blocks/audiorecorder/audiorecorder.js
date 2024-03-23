@@ -9,7 +9,7 @@ async function uploadFile(blob, presignedUrl) {
     $.ajax({
       'url': presignedUrl,
       'method': 'PUT',
-      'body': file
+      'data': $('#audioElement').src
     }).then((result) => {
       debugger;
     });
