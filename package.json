@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1582.0",
+    "axios": "^1.6.8",
     "jquery": "^3.4.1",
     "normalize-scss": "^7.0.1"
   }

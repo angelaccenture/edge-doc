@@ -1,19 +1,19 @@
 import { getuuid } from '../../scripts/jqscript-four.js';
+import axios from 'axios';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    fetch(presignedUrl, {
-      method: 'PUT',
-      body: blob
-    }).then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to upload file');
-        }
-        console.log(response.status);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    const file = new File([document.getElementById('audioElement').src], "recording.m4a", {
+      type: "audio/m4a"
+    });
+
+    axios.put(presignedUrl, file).then(response => {
+      debugger;
+      console.log(response.status);
+    }).catch(error => {
+      debugger;
+      console.log(error);
+    });
   } catch (error) {
     console.error('Error uploading file:', error);
   }
