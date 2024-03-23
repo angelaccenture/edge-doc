@@ -7,27 +7,26 @@ async function uploadFile(blob, presignedUrl) {
 
     fetch(audioUrl)
       .then(response => response.blob())
-      .then(audioBlob => {
-        return fetch(presignedUrl, {
+      .then(async audioBlob => {
+        const audioFile = new File([audioBlob], 'audio.m4a', { type: 'audio/m4a' });
+        await fetch(presignedUrl, {
           method: 'PUT',
-          body: audioBlob
+          body: audioFile
         });
       })
       .then(response => {
         let settings = {
-          "url": "https://api.cleanvoice.ai/v1/edits",
-          "method": "POST",
-          "timeout": 0,
-          "headers": {
-            "X-API-Key": "7gKSf2Ca2SHnp7fYm6bPciE3DdneF2cA",
-            "Content-Type": "application/json"
+          url: 'https://api.cleanvoice.ai/v1/edits',
+          method: 'POST',
+          timeout: 0,
+          headers: {
+            'X-API-Key': '7gKSf2Ca2SHnp7fYm6bPciE3DdneF2cA',
+            'Content-Type': 'application/json'
           },
-          "data": JSON.stringify({
-            "input": {
-              "files": [
-                presignedUrl
-              ],
-              "config": {}
+          data: JSON.stringify({
+            input: {
+              files: [presignedUrl],
+              config: {}
             }
           }),
         };
