@@ -2,17 +2,18 @@ import { getuuid } from '../../scripts/jqscript-four.js';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    const file = new File([blob], "recording.m4a", {
-      type: "audio/m4a"
-    });
-
-    $.ajax({
-      'url': presignedUrl,
-      'method': 'PUT',
-      'data': $('#audioElement').src
-    }).then((result) => {
-      debugger;
-    });
+    fetch(presignedUrl, {
+      method: 'PUT',
+      body: blob
+    }).then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to upload file');
+        }
+        console.log(response.status);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   } catch (error) {
     console.error('Error uploading file:', error);
   }
