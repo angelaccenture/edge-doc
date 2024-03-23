@@ -2,17 +2,26 @@ import { getuuid } from '../../scripts/jqscript-four.js';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    const file = new File([blob], "recording.m4a", {
-      type: "audio/m4a"
-    });
+    const audioElement = document.getElementById('audioElement');
+    const audioUrl = audioElement.src;
 
-    axios.put(presignedUrl, file).then(response => {
-      debugger;
-      console.log(response.status);
-    }).catch(error => {
-      debugger;
-      console.log(error);
-    });
+    fetch(audioUrl)
+      .then(response => response.blob())
+      .then(audioBlob => {
+        return fetch(presignedUrl, {
+          method: 'PUT',
+          body: audioBlob
+        });
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to upload audio');
+        }
+        console.log('Audio uploaded successfully');
+      })
+      .catch(error => {
+        console.error('Error uploading audio:', error);
+      });
   } catch (error) {
     console.error('Error uploading file:', error);
   }
@@ -106,7 +115,6 @@ function setup() {
       $.ajax(settings).done(function (response) {
         uuid = response.uuid;
         uploadFile(blob, response.signedUrl).then((result) => {
-      //    debugger;
           $.post({
             url: 'https://adobeioruntime.net/api/v1/web/18501-631graycheetah/default/audioAction',
             cache: false,
@@ -116,7 +124,6 @@ function setup() {
               'X-OW-EXTRA-LOGGING': 'on'
             }
           }, function(success) {
-          //  debugger;
             getuuid(uuid);
             console.log('Successful call to audioAction: ', success);
           });
