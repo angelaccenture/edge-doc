@@ -2,7 +2,7 @@ import { getuuid } from '../../scripts/jqscript-four.js';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    const file = new File([document.getElementById('audioElement').src], "recording.m4a", {
+    const file = new File([blob], "recording.m4a", {
       type: "audio/m4a"
     });
 
