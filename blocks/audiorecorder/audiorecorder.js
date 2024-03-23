@@ -2,48 +2,23 @@ import { getuuid } from '../../scripts/jqscript-four.js';
 
 async function uploadFile(blob, presignedUrl) {
   try {
-    const audioElement = document.getElementById('audioElement');
-    const audioUrl = audioElement.src;
+    blob.type = 'audio/m4a'
+    const fileName = "recording.m4a";
 
-    fetch(audioUrl)
-      .then(response => response.blob())
-      .then(async audioBlob => {
-        const audioFile = new File([audioBlob], 'audio.m4a', { type: 'audio/m4a' });
-        await fetch(presignedUrl, {
-          method: 'PUT',
-          body: audioFile
-        });
-      })
-      .then(response => {
-        let settings = {
-          url: 'https://api.cleanvoice.ai/v1/edits',
-          method: 'POST',
-          timeout: 0,
-          headers: {
-            'X-API-Key': '7gKSf2Ca2SHnp7fYm6bPciE3DdneF2cA',
-            'Content-Type': 'application/json'
-          },
-          data: {
-            input: {
-              files: [presignedUrl],
-              config: {}
-            }
-          }
-        };
+    const file = new File([blob], fileName);
 
-        axios.post("https://api.cleanvoice.ai/v1/edits", settings.data, settings.headers)
-          .then((response) => {
-            debugger;
-            console.log(response.data);
-          })
-          .catch((error) => {
-            debugger;
-            console.log(error);
-          });
-      })
-      .catch(error => {
-        console.error('Error uploading audio:', error);
-      });
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+
+    fileInput.addEventListener('change', function(event) {
+      // Access the selected file
+      const selectedFile = event.target.files[0];
+      console.log('Selected file:', selectedFile);
+    });
+
+    fileInput.files = [file];
+    fileInput.click();
+    fileInput.remove();
   } catch (error) {
     console.error('Error uploading file:', error);
   }
@@ -171,6 +146,9 @@ export default async function decorate(block) {
   hidden.setAttribute('id', 'audiofileinput');
   hidden.setAttribute('type', 'file');
   hidden.innerText = 'Stop Recording';
+
+  const input = document.createElement('input');
+  input.setAttribute('type', 'file');
 
   const audio = document.createElement('audio');
   audio.setAttribute('controlslist',"nodownload noplaybackrate noremoteplayback");
